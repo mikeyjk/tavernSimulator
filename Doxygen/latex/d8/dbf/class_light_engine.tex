@@ -1,0 +1,490 @@
+\section{Light\+Engine Class Reference}
+\label{class_light_engine}\index{Light\+Engine@{Light\+Engine}}
+
+
+This Class is a very basic encapsulation of open\+G\+Ls lighting Enables the user to specify up to 8 lights(open\+G\+Ls restriction) Lightdata is stored in an array of Light\+Param objects.  
+
+
+
+
+{\ttfamily \#include $<$Light\+Engine.\+h$>$}
+
+
+
+Collaboration diagram for Light\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{dc/d66/class_light_engine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Light\+Engine} ()
+\item 
+{\bf void} {\bf Initialise} ()
+\begin{DoxyCompactList}\small\item\em Initialise. \end{DoxyCompactList}\item 
+int {\bf create\+Light} ({\bf Vec3} ambient, {\bf Vec3} specular, {\bf Vec3} Diffuse, {\bf Vec3} position, {\bf Vec3} Direction, {\bf G\+Lfloat} cutoff)
+\begin{DoxyCompactList}\small\item\em create\+Light \end{DoxyCompactList}\item 
+{\bf void} {\bf draw\+Lights} ()
+\begin{DoxyCompactList}\small\item\em draw\+Lights \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Light\+Engine} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+Lenum} {\bf get\+Light\+Glenum} (int number)
+\begin{DoxyCompactList}\small\item\em get\+Light\+Glenum \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf light\+Count}
+\begin{DoxyCompactList}\small\item\em light\+Count -\/ int \end{DoxyCompactList}\item 
+{\bf light\+Params} {\bf light\+Array} [8]
+\begin{DoxyCompactList}\small\item\em light\+Array -\/ \doxyref{light\+Params}{p.}{d2/d18/structlight_params} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This Class is a very basic encapsulation of open\+G\+Ls lighting Enables the user to specify up to 8 lights(open\+G\+Ls restriction) Lightdata is stored in an array of Light\+Param objects. 
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe \+: null 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]separate initialising of lights out of constructor Create a function for the light effects \begin{DoxyDate}{Date}
+26/08/2014
+\end{DoxyDate}
+\end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Light\+Engine@{Light\+Engine}!Light\+Engine@{Light\+Engine}}
+\index{Light\+Engine@{Light\+Engine}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{Light\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Light\+Engine\+::\+Light\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_light_engine_aadd28dfc181f612c9b2b1fc1b1a152fd}
+
+\begin{DoxyCode}
+5 \{
+6     lightCount = 0;
+7 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Light\+Engine@{Light\+Engine}!create\+Light@{create\+Light}}
+\index{create\+Light@{create\+Light}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{create\+Light}]{\setlength{\rightskip}{0pt plus 5cm}int Light\+Engine\+::create\+Light (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{ambient, }
+\item[{{\bf Vec3}}]{specular, }
+\item[{{\bf Vec3}}]{Diffuse, }
+\item[{{\bf Vec3}}]{position, }
+\item[{{\bf Vec3}}]{Direction, }
+\item[{{\bf G\+Lfloat}}]{cutoff}
+\end{DoxyParamCaption}
+)}\label{class_light_engine_ac57d11e61b9fedf8f801af149e4976bd}
+
+
+create\+Light 
+
+This function creates a light to be rendered wont create a light if there is no lights available returns -\/1 if there are no lights else it will return the value of the light in the array
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Vec3}{p.}{df/d24/class_vec3}} & ambient, \doxyref{Vec3}{p.}{df/d24/class_vec3} specular, \doxyref{Vec3}{p.}{df/d24/class_vec3} Diffuse, \doxyref{Vec3}{p.}{df/d24/class_vec3} position, \doxyref{Vec3}{p.}{df/d24/class_vec3} Direction, G\+Lfloat cutoff \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+light I\+D number -\/ int 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+creates a light for rendering 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+56 \{
+57     \textcolor{keywordtype}{int} firstFreeLight = -1;
+58     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\textcolor{keyword}{sizeof}(lightArray);i++)
+59     \{
+60         \textcolor{keywordflow}{if}(lightArray[i].clear == \textcolor{keyword}{true})
+61         \{
+62             firstFreeLight = i;
+63             \textcolor{keywordflow}{break};
+64         \}
+65     \}
+66 
+67     GLenum lightNumber = getLightGlenum(firstFreeLight);
+68 
+69     \textcolor{keywordflow}{if}(lightNumber != -1 && firstFreeLight < 8)
+70     \{
+71         lightArray[firstFreeLight].specular[0] = specular.getX();
+72         lightArray[firstFreeLight].specular[1] = specular.getY();
+73         lightArray[firstFreeLight].specular[2] = specular.getZ();
+74         lightArray[firstFreeLight].specular[3] = 1.0f;
+75 
+76 
+77         lightArray[firstFreeLight].ambient[0] = ambient.getX();
+78         lightArray[firstFreeLight].ambient[1] = ambient.getY();
+79         lightArray[firstFreeLight].ambient[2] = ambient.getZ();
+80         lightArray[firstFreeLight].ambient[3] = 1.0f;
+81 
+82         lightArray[firstFreeLight].diffuse[0] = Diffuse.getX();
+83         lightArray[firstFreeLight].diffuse[1] = Diffuse.getY();
+84         lightArray[firstFreeLight].diffuse[2] = Diffuse.getZ();
+85         lightArray[firstFreeLight].diffuse[3] = 1.0f;
+86 
+87         lightArray[firstFreeLight].position[0] = position.getX();
+88         lightArray[firstFreeLight].position[1] = position.getY();
+89         lightArray[firstFreeLight].position[2] = position.getZ();
+90         lightArray[firstFreeLight].position[3] = 1.0f;
+91 
+92         lightArray[firstFreeLight].direction[0] = Direction.getX();
+93         lightArray[firstFreeLight].direction[1] = Direction.getY();
+94         lightArray[firstFreeLight].direction[2] = Direction.getZ();
+95 
+96         lightArray[firstFreeLight].cutoff = cutoff;
+97 
+98         lightArray[firstFreeLight].active = \textcolor{keyword}{true};
+99         lightArray[firstFreeLight].clear = \textcolor{keyword}{false};
+100         lightArray[firstFreeLight].lightNumber = lightNumber;
+101 
+102         \textcolor{comment}{//lightCount ++;}
+103         \textcolor{keywordflow}{return} firstFreeLight;
+104     \}
+105     \textcolor{keywordflow}{return} -1;
+106 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dbf/class_light_engine_ac57d11e61b9fedf8f801af149e4976bd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dbf/class_light_engine_ac57d11e61b9fedf8f801af149e4976bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Light\+Engine@{Light\+Engine}!draw\+Lights@{draw\+Lights}}
+\index{draw\+Lights@{draw\+Lights}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{draw\+Lights}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Light\+Engine\+::draw\+Lights (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_light_engine_a1e11a1824f51238de862531bf5069862}
+
+
+draw\+Lights 
+
+iterates through the array of lights and renders them on open\+G\+L
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+renders all lights 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+143 \{
+144     \textcolor{comment}{//test light source}
+145     \textcolor{keywordtype}{int} count = 0;
+146     \textcolor{keywordflow}{for each}(lightParams light \textcolor{keywordflow}{in} lightArray)
+147     \{
+148         \textcolor{keywordflow}{if}(light.clear == \textcolor{keyword}{false} && light.active == \textcolor{keyword}{true})
+149         \{
+150             \textcolor{comment}{//lighting effects? .. test}
+151             lightArray[count].specular[0] += 0.005;
+152             \textcolor{keywordflow}{if}(lightArray[count].specular[0] > 1)
+153                 lightArray[count].specular[0] = 0;
+154 
+155             lightArray[count].specular[1] += 0.005;
+156             \textcolor{keywordflow}{if}(lightArray[count].specular[1] > 1)
+157                 lightArray[count].specular[1] = 0;
+158 
+159             lightArray[count].specular[2] += 0.005;
+160             \textcolor{keywordflow}{if}(lightArray[count].specular[2] > 1)
+161                 lightArray[count].specular[2] = 0;
+162             \textcolor{comment}{//end lighting effects}
+163 
+164             glLightfv(light.lightNumber, GL\_SPECULAR, light.specular);
+165             glLightfv(light.lightNumber, GL\_AMBIENT, light.specular);
+166             glLightfv(light.lightNumber, GL\_DIFFUSE, light.specular);
+167             glLightfv(light.lightNumber, GL\_POSITION, light.position);
+168             glLightf(light.lightNumber, GL\_SPOT\_CUTOFF, light.cutoff);
+169             glLightfv(light.lightNumber, GL\_SPOT\_DIRECTION, light.direction);
+170 
+171             glEnable(light.lightNumber);
+172 
+173             \textcolor{comment}{//For testing purposes.}
+174             glPushMatrix();
+175             glTranslatef(light.position[0], light.position[1], light.position[2]);
+176             glutSolidSphere(1, 10, 10);
+177             glPopMatrix();
+178         \}
+179         count++;
+180     \}
+181 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{d8/dbf/class_light_engine_a1e11a1824f51238de862531bf5069862_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dbf/class_light_engine_a1e11a1824f51238de862531bf5069862_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Light\+Engine@{Light\+Engine}!get\+Light\+Glenum@{get\+Light\+Glenum}}
+\index{get\+Light\+Glenum@{get\+Light\+Glenum}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{get\+Light\+Glenum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Lenum} Light\+Engine\+::get\+Light\+Glenum (
+\begin{DoxyParamCaption}
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_light_engine_aef64c36501cf3ca8621a8ad65f27b5d9}
+
+
+get\+Light\+Glenum 
+
+Takes an int value and turns it into Light0-\/\+Light7
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Glenum -\/ Light0 -\/ Light7 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+creates a light for rendering 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+109 \{
+110     \textcolor{keywordflow}{switch}(number)
+111         \{
+112         \textcolor{keywordflow}{case} 0:
+113             \textcolor{keywordflow}{return} GL\_LIGHT0;
+114             \textcolor{keywordflow}{break};
+115         \textcolor{keywordflow}{case} 1:
+116             \textcolor{keywordflow}{return} GL\_LIGHT1;
+117             \textcolor{keywordflow}{break};
+118         \textcolor{keywordflow}{case} 2:
+119             \textcolor{keywordflow}{return} GL\_LIGHT2;
+120             \textcolor{keywordflow}{break};
+121         \textcolor{keywordflow}{case} 3:
+122             \textcolor{keywordflow}{return} GL\_LIGHT3;
+123             \textcolor{keywordflow}{break};
+124         \textcolor{keywordflow}{case} 4:
+125             \textcolor{keywordflow}{return} GL\_LIGHT4;
+126             \textcolor{keywordflow}{break};
+127         \textcolor{keywordflow}{case} 5:
+128             \textcolor{keywordflow}{return} GL\_LIGHT5;
+129             \textcolor{keywordflow}{break};
+130         \textcolor{keywordflow}{case} 6:
+131             \textcolor{keywordflow}{return} GL\_LIGHT6;
+132             \textcolor{keywordflow}{break};
+133         \textcolor{keywordflow}{case} 7:
+134             \textcolor{keywordflow}{return} GL\_LIGHT7;
+135             \textcolor{keywordflow}{break};
+136         \textcolor{keywordflow}{default}:
+137             \textcolor{keywordflow}{return} -1;
+138             \textcolor{keywordflow}{break};
+139         \}
+140 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dbf/class_light_engine_aef64c36501cf3ca8621a8ad65f27b5d9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Light\+Engine@{Light\+Engine}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Light\+Engine\+::\+Initialise (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_light_engine_afb39bf63c48320ff39eabd095fbd9b3e}
+
+
+Initialise. 
+
+This function initialises the Light Engine, it M\+U\+S\+T be called in the \doxyref{Game\+Engine}{p.}{da/da9/class_game_engine} or input wont work.
+
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets up Input Engine 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+16 \{
+17     glEnable(GL\_LIGHTING);
+18     GLfloat global\_ambient[] = \{0.3f, 0.3f, 0.3f, 0.3f, 1.0f\};
+19     glLightModelfv(GL\_LIGHT\_MODEL\_AMBIENT, global\_ambient);
+20     glShadeModel(GL\_SMOOTH);
+21 
+22     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\textcolor{keyword}{sizeof}(lightArray);i++)
+23     \{
+24         lightArray[i].clear = \textcolor{keyword}{true};
+25     \}
+26 
+27 
+28     \textcolor{comment}{//Setting up these lights is temp in here... would be usually done through scripting}
+29     Vec3 spec(0.66f, 0.33f, 0.0f);
+30     Vec3 dir(0.0f, -1.0f, 0.0f);
+31     Vec3 pos(-135.0, 70.0f, 0.0f);
+32     createLight(spec, spec, spec, pos, dir, 60.0f);
+33 
+34     spec.setX(0.33f);
+35     spec.setY(0.66f);
+36     spec.setZ(0.0f);
+37     pos.setX(175);
+38     createLight(spec, spec, spec, pos, dir, 60.0f);
+39 
+40     pos.setZ(-175);
+41     createLight(spec, spec, spec, pos, dir, 60.0f);
+42 
+43     spec.setX(0.33f);
+44     spec.setY(0.0f);
+45     spec.setZ(0.66f);
+46     pos.setX(420);
+47     createLight(spec, spec, spec, pos, dir, 60.0f);
+48 
+49     pos.setZ(0);
+50     createLight(spec, spec, spec, pos, dir, 60.0f);
+51     
+52 
+53 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dbf/class_light_engine_afb39bf63c48320ff39eabd095fbd9b3e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dbf/class_light_engine_afb39bf63c48320ff39eabd095fbd9b3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Light\+Engine@{Light\+Engine}!Instance@{Instance}}
+\index{Instance@{Instance}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Light\+Engine} $\ast$ Light\+Engine\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_light_engine_a42af3523d56a948a10d204415fdf21b4}
+
+
+Instance. 
+
+This returns a pointer to the singleton
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Light\+Engine$\ast$ 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns \doxyref{Light\+Engine}{p.}{d8/dbf/class_light_engine} singleton 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+10 \{
+11     \textcolor{keyword}{static} LightEngine Instance;
+12     \textcolor{keywordflow}{return} &Instance;
+13 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dbf/class_light_engine_a42af3523d56a948a10d204415fdf21b4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Light\+Engine@{Light\+Engine}!light\+Array@{light\+Array}}
+\index{light\+Array@{light\+Array}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{light\+Array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf light\+Params} Light\+Engine\+::light\+Array[8]\hspace{0.3cm}{\ttfamily [private]}}\label{class_light_engine_a4add26ad37008ac6acd335c3220b854d}
+
+
+light\+Array -\/ \doxyref{light\+Params}{p.}{d2/d18/structlight_params} 
+
+\index{Light\+Engine@{Light\+Engine}!light\+Count@{light\+Count}}
+\index{light\+Count@{light\+Count}!Light\+Engine@{Light\+Engine}}
+\subsubsection[{light\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Light\+Engine\+::light\+Count\hspace{0.3cm}{\ttfamily [private]}}\label{class_light_engine_a97346b480c89b4bf944ce155424dc811}
+
+
+light\+Count -\/ int 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Light\+Engine.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Light\+Engine.\+cpp}\end{DoxyCompactItemize}

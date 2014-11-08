@@ -1,0 +1,196 @@
+\section{Vendor Class Reference}
+\label{class_vendor}\index{Vendor@{Vendor}}
+
+
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to \doxyref{Vendor}{p.}{d3/d29/class_vendor}.  
+
+
+
+
+{\ttfamily \#include $<$A\+I\+Owned\+States.\+h$>$}
+
+
+
+Inheritance diagram for Vendor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{dc/ddf/class_vendor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Vendor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{d9/df7/class_vendor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf void} {\bf Enter} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Enter function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Execute} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Execute function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Exit} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Exit function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Vendor} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vendor} ()
+\begin{DoxyCompactList}\small\item\em flee state consructor \end{DoxyCompactList}\item 
+{\bf Vendor} (const {\bf Vendor} \&)
+\item 
+{\bf Vendor} \& {\bf operator=} (const {\bf Vendor} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to \doxyref{Vendor}{p.}{d3/d29/class_vendor}. 
+
+\begin{DoxyAuthor}{Author}
+Karl 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/10/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Vendor@{Vendor}!Vendor@{Vendor}}
+\index{Vendor@{Vendor}!Vendor@{Vendor}}
+\subsubsection[{Vendor}]{\setlength{\rightskip}{0pt plus 5cm}Vendor\+::\+Vendor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_vendor_abbdc22c69977549fe59f6911f0772ef2}
+
+
+flee state consructor 
+
+
+\begin{DoxyCode}
+868 \{\}
+\end{DoxyCode}
+\index{Vendor@{Vendor}!Vendor@{Vendor}}
+\index{Vendor@{Vendor}!Vendor@{Vendor}}
+\subsubsection[{Vendor}]{\setlength{\rightskip}{0pt plus 5cm}Vendor\+::\+Vendor (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vendor} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_vendor_a5cf7af7263d3e6e4701db40591e2ffdd}
+
+
+\subsection{Member Function Documentation}
+\index{Vendor@{Vendor}!Enter@{Enter}}
+\index{Enter@{Enter}!Vendor@{Vendor}}
+\subsubsection[{Enter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Vendor\+::\+Enter (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vendor_a209574620047a136ddf3878415af9d26}
+
+
+Enter function. 
+
+Runs any functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to enter the state
+
+\begin{DoxyPostcond}{Postcondition}
+enters the state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a88e14ab108f9e28a53630c4557b9743d}.
+
+\index{Vendor@{Vendor}!Execute@{Execute}}
+\index{Execute@{Execute}!Vendor@{Vendor}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Vendor\+::\+Execute (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vendor_a6e23175e73793e308b1b03516008936b}
+
+
+Execute function. 
+
+makes the ship flee from the player
+
+\begin{DoxyPostcond}{Postcondition}
+runs the flee execution 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_af12fe8dcc213356992ae0ad9f8d315ff}.
+
+\index{Vendor@{Vendor}!Exit@{Exit}}
+\index{Exit@{Exit}!Vendor@{Vendor}}
+\subsubsection[{Exit}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Vendor\+::\+Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vendor_a5002123e4b107e97e3c4419344b7bb54}
+
+
+Exit function. 
+
+runs and functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to exit the state
+
+\begin{DoxyPostcond}{Postcondition}
+exits flee state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a1dc07d3a42d904b7e954fcfa3d27f23f}.
+
+\index{Vendor@{Vendor}!Instance@{Instance}}
+\index{Instance@{Instance}!Vendor@{Vendor}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Vendor}$\ast$ Vendor\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_vendor_a304fc67a8e6261f7603987813fdb531c}
+
+
+Instance function. 
+
+this is a singleton creates an instance of the flee state and returns it to the state machine
+
+\begin{DoxyReturn}{Returns}
+flee state 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the flee state 
+\end{DoxyPostcond}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d29/class_vendor_a304fc67a8e6261f7603987813fdb531c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vendor@{Vendor}!operator=@{operator=}}
+\index{operator=@{operator=}!Vendor@{Vendor}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vendor}\& Vendor\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vendor} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_vendor_af5f1f4f7c8dc6cdebb9111b86bcb0df7}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf A\+I\+Owned\+States.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<map id="NPC::NPC" name="NPC::NPC">
+<area shape="rect" id="node2" href="$d4/dd0/class_state_machine.html#ab84f821b25a987948375a139fc2c143e" title="StateMachine::SetCurrent\lState" alt="" coords="146,5,318,47"/>
+<area shape="rect" id="node3" href="$dd/dbb/class_wander.html#a7e5c6acd56a4e1b5efd4d7108fdb44ed" title="Instance function. " alt="" coords="170,71,294,98"/>
+<area shape="rect" id="node4" href="$d0/d2a/class_n_p_c.html#a20e0f185219efbae958bf994d56ebf3f" title="i_DrawableObject SetBufferRef " alt="" coords="167,122,297,149"/>
+<area shape="rect" id="node6" href="$d3/dde/class_brain.html#aca519ba404feeaa989d8314cb7b894b8" title="initPersonality function " alt="" coords="161,173,303,199"/>
+<area shape="rect" id="node10" href="$d3/dde/class_brain.html#af8a90b79ed2320689c9b135664368a57" title="addTrait function " alt="" coords="179,223,285,250"/>
+<area shape="rect" id="node11" href="$d0/dd1/class_game_object.html#a8b415958b6b1a8bccf290273f2fa8dcf" title="GameObject::setAffordances" alt="" coords="137,274,327,301"/>
+<area shape="rect" id="node5" href="$da/d3d/class_rendering_engine.html#a3541519b4525b18660e07869797c041d" title="Get the Handle of Rendering API. " alt="" coords="375,115,565,156"/>
+<area shape="rect" id="node7" href="$d1/da8/class_personality.html#af8a1a0fe59cc045db86828acd6ec69fc" title="addTrait function " alt="" coords="399,202,541,229"/>
+<area shape="rect" id="node8" href="$d5/de9/class_traits.html#a06481d84392a91914c7a3c208ffe3afe" title="Instance function. " alt="" coords="613,177,724,203"/>
+<area shape="rect" id="node9" href="$d5/de9/class_traits.html#af687da61f5ebe312585a59fa0736a18e" title="getTrait function " alt="" coords="616,227,721,254"/>
+</map>

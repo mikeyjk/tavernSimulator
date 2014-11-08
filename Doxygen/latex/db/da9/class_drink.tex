@@ -1,0 +1,196 @@
+\section{Drink Class Reference}
+\label{class_drink}\index{Drink@{Drink}}
+
+
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to \doxyref{Drink}{p.}{db/da9/class_drink}.  
+
+
+
+
+{\ttfamily \#include $<$A\+I\+Owned\+States.\+h$>$}
+
+
+
+Inheritance diagram for Drink\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{dd/d69/class_drink__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Drink\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{d6/d61/class_drink__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf void} {\bf Enter} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Enter function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Execute} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Execute function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Exit} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Exit function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Drink} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Drink} ()
+\begin{DoxyCompactList}\small\item\em flee state consructor \end{DoxyCompactList}\item 
+{\bf Drink} (const {\bf Drink} \&)
+\item 
+{\bf Drink} \& {\bf operator=} (const {\bf Drink} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to \doxyref{Drink}{p.}{db/da9/class_drink}. 
+
+\begin{DoxyAuthor}{Author}
+Karl 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/10/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Drink@{Drink}!Drink@{Drink}}
+\index{Drink@{Drink}!Drink@{Drink}}
+\subsubsection[{Drink}]{\setlength{\rightskip}{0pt plus 5cm}Drink\+::\+Drink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_drink_a5bf30f6584f0c4c502251d2351452b12}
+
+
+flee state consructor 
+
+
+\begin{DoxyCode}
+145 \{\}
+\end{DoxyCode}
+\index{Drink@{Drink}!Drink@{Drink}}
+\index{Drink@{Drink}!Drink@{Drink}}
+\subsubsection[{Drink}]{\setlength{\rightskip}{0pt plus 5cm}Drink\+::\+Drink (
+\begin{DoxyParamCaption}
+\item[{const {\bf Drink} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_drink_aeb2a3118b5d6368d17847d9ebe8e7776}
+
+
+\subsection{Member Function Documentation}
+\index{Drink@{Drink}!Enter@{Enter}}
+\index{Enter@{Enter}!Drink@{Drink}}
+\subsubsection[{Enter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Drink\+::\+Enter (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_drink_acdc494b9eb906671e4945a9ca854fee6}
+
+
+Enter function. 
+
+Runs any functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to enter the state
+
+\begin{DoxyPostcond}{Postcondition}
+enters the state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a88e14ab108f9e28a53630c4557b9743d}.
+
+\index{Drink@{Drink}!Execute@{Execute}}
+\index{Execute@{Execute}!Drink@{Drink}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Drink\+::\+Execute (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_drink_a8236661677ef7168134e2ded222a7a14}
+
+
+Execute function. 
+
+makes the ship flee from the player
+
+\begin{DoxyPostcond}{Postcondition}
+runs the flee execution 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_af12fe8dcc213356992ae0ad9f8d315ff}.
+
+\index{Drink@{Drink}!Exit@{Exit}}
+\index{Exit@{Exit}!Drink@{Drink}}
+\subsubsection[{Exit}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Drink\+::\+Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_drink_ad13ccac9ca716728dd711eff737a6605}
+
+
+Exit function. 
+
+runs and functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to exit the state
+
+\begin{DoxyPostcond}{Postcondition}
+exits flee state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a1dc07d3a42d904b7e954fcfa3d27f23f}.
+
+\index{Drink@{Drink}!Instance@{Instance}}
+\index{Instance@{Instance}!Drink@{Drink}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Drink}$\ast$ Drink\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_drink_aa29a2ef6ce66ef0d419debd80e615943}
+
+
+Instance function. 
+
+this is a singleton creates an instance of the flee state and returns it to the state machine
+
+\begin{DoxyReturn}{Returns}
+flee state 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the flee state 
+\end{DoxyPostcond}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/da9/class_drink_aa29a2ef6ce66ef0d419debd80e615943_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Drink@{Drink}!operator=@{operator=}}
+\index{operator=@{operator=}!Drink@{Drink}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Drink}\& Drink\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Drink} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_drink_ad6698a82a00584510ef95dce9f4737cd}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf A\+I\+Owned\+States.\+h}\end{DoxyCompactItemize}

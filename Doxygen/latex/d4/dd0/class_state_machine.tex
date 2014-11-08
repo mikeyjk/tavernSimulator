@@ -1,0 +1,313 @@
+\section{State\+Machine$<$ entity\+\_\+type $>$ Class Template Reference}
+\label{class_state_machine}\index{State\+Machine$<$ entity\+\_\+type $>$@{State\+Machine$<$ entity\+\_\+type $>$}}
+
+
+{\ttfamily \#include $<$State\+Machine.\+h$>$}
+
+
+
+Collaboration diagram for State\+Machine$<$ entity\+\_\+type $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{df/d27/class_state_machine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf State\+Machine} (entity\+\_\+type $\ast$owner)
+\item 
+virtual {\bf $\sim$\+State\+Machine} ()
+\item 
+{\bf void} {\bf Set\+Current\+State} ({\bf State}$<$ entity\+\_\+type $>$ $\ast${\bf s})
+\item 
+{\bf void} {\bf Set\+Global\+State} ({\bf State}$<$ entity\+\_\+type $>$ $\ast${\bf s})
+\item 
+{\bf void} {\bf Set\+Previous\+State} ({\bf State}$<$ entity\+\_\+type $>$ $\ast${\bf s})
+\item 
+{\bf void} {\bf Update} () const 
+\item 
+{\bf void} {\bf Change\+State} ({\bf State}$<$ entity\+\_\+type $>$ $\ast$p\+New\+State)
+\item 
+{\bf void} {\bf Revert\+To\+Previous\+State} ()
+\item 
+bool {\bf is\+In\+State} (const {\bf State}$<$ entity\+\_\+type $>$ \&st) const 
+\item 
+{\bf State}$<$ entity\+\_\+type $>$ $\ast$ {\bf Current\+State} () const 
+\item 
+{\bf State}$<$ entity\+\_\+type $>$ $\ast$ {\bf Global\+State} () const 
+\item 
+{\bf State}$<$ entity\+\_\+type $>$ $\ast$ {\bf Previous\+State} () const 
+\item 
+{\bf std\+::string} {\bf Get\+Name\+Of\+Current\+State} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+entity\+\_\+type $\ast$ {\bf m\+\_\+p\+Owner}
+\item 
+{\bf State}$<$ entity\+\_\+type $>$ $\ast$ {\bf m\+\_\+p\+Current\+State}
+\item 
+{\bf State}$<$ entity\+\_\+type $>$ $\ast$ {\bf m\+\_\+p\+Previous\+State}
+\item 
+{\bf State}$<$ entity\+\_\+type $>$ $\ast$ {\bf m\+\_\+p\+Global\+State}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{State\+Machine@{State\+Machine}!State\+Machine@{State\+Machine}}
+\index{State\+Machine@{State\+Machine}!State\+Machine@{State\+Machine}}
+\subsubsection[{State\+Machine}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::{\bf State\+Machine} (
+\begin{DoxyParamCaption}
+\item[{entity\+\_\+type $\ast$}]{owner}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_af2b7a132255e3583a20fb4712ed3d4bc}
+
+\begin{DoxyCode}
+39                                   :m_pOwner(owner),
+40                                    m_pCurrentState(NULL),
+41                                    m_pPreviousState(NULL),
+42                                    m_pGlobalState(NULL)
+43   \{\}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!````~State\+Machine@{$\sim$\+State\+Machine}}
+\index{````~State\+Machine@{$\sim$\+State\+Machine}!State\+Machine@{State\+Machine}}
+\subsubsection[{$\sim$\+State\+Machine}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ virtual {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::$\sim${\bf State\+Machine} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_state_machine_aeb736dccb71878743b8422133bdca45a}
+
+\begin{DoxyCode}
+45 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{State\+Machine@{State\+Machine}!Change\+State@{Change\+State}}
+\index{Change\+State@{Change\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Change\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf void} {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Change\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State}$<$ entity\+\_\+type $>$ $\ast$}]{p\+New\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a3b24092cc2cd2b8bc5fb04b974b97d30}
+
+\begin{DoxyCode}
+69   \{
+70     assert(pNewState && \textcolor{stringliteral}{"<StateMachine::ChangeState>:trying to assign null state to current"});
+71 
+72     \textcolor{comment}{//keep a record of the previous state}
+73     m_pPreviousState = m_pCurrentState;
+74 
+75     \textcolor{comment}{//call the exit method of the existing state}
+76     m_pCurrentState->Exit(m_pOwner);
+77 
+78     \textcolor{comment}{//change state to the new state}
+79     m_pCurrentState = pNewState;
+80 
+81     \textcolor{comment}{//call the entry method of the new state}
+82     m_pCurrentState->Enter(m_pOwner);
+83   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dd0/class_state_machine_a3b24092cc2cd2b8bc5fb04b974b97d30_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{State\+Machine@{State\+Machine}!Current\+State@{Current\+State}}
+\index{Current\+State@{Current\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Current\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf State}$<$entity\+\_\+type$>$$\ast$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Current\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a80f5405ffe9aba4ff56c2b6a2b847009}
+
+\begin{DoxyCode}
+99 \{\textcolor{keywordflow}{return} m_pCurrentState;\}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!Get\+Name\+Of\+Current\+State@{Get\+Name\+Of\+Current\+State}}
+\index{Get\+Name\+Of\+Current\+State@{Get\+Name\+Of\+Current\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Get\+Name\+Of\+Current\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf std\+::string} {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Get\+Name\+Of\+Current\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a2c325429612440a61338e237b845809d}
+
+\begin{DoxyCode}
+105   \{
+106     std::string s(\textcolor{keyword}{typeid}(*m\_pCurrentState).name());
+107 
+108     \textcolor{comment}{//remove the 'class ' part from the front of the string}
+109     \textcolor{keywordflow}{if} (s.size() > 5)
+110     \{
+111       s.erase(0, 6);
+112     \}
+113 
+114     \textcolor{keywordflow}{return} s;
+115   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dd0/class_state_machine_a2c325429612440a61338e237b845809d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{State\+Machine@{State\+Machine}!Global\+State@{Global\+State}}
+\index{Global\+State@{Global\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Global\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf State}$<$entity\+\_\+type$>$$\ast$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Global\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a016737c27e0910c7187c5cbdc6665f17}
+
+\begin{DoxyCode}
+100 \{\textcolor{keywordflow}{return} m_pGlobalState;\}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!is\+In\+State@{is\+In\+State}}
+\index{is\+In\+State@{is\+In\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{is\+In\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ bool {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::is\+In\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf State}$<$ entity\+\_\+type $>$ \&}]{st}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a1ad79d73ef0a8cd7d7034acd412d7133}
+
+\begin{DoxyCode}
+94   \{
+95     \textcolor{keywordflow}{if} (\textcolor{keyword}{typeid}(*m_pCurrentState) == \textcolor{keyword}{typeid}(st)) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+96     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+97   \}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!Previous\+State@{Previous\+State}}
+\index{Previous\+State@{Previous\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Previous\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf State}$<$entity\+\_\+type$>$$\ast$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Previous\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_aee2b5ec1d8da432dc1e773f45cdd7bdc}
+
+\begin{DoxyCode}
+101 \{\textcolor{keywordflow}{return} m_pPreviousState;\}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!Revert\+To\+Previous\+State@{Revert\+To\+Previous\+State}}
+\index{Revert\+To\+Previous\+State@{Revert\+To\+Previous\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Revert\+To\+Previous\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf void} {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Revert\+To\+Previous\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a4758f9449ecb6504c0a9a6946fa73953}
+
+\begin{DoxyCode}
+87   \{
+88     ChangeState(m_pPreviousState);
+89   \}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!Set\+Current\+State@{Set\+Current\+State}}
+\index{Set\+Current\+State@{Set\+Current\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Set\+Current\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf void} {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Set\+Current\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State}$<$ entity\+\_\+type $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_ab84f821b25a987948375a139fc2c143e}
+
+\begin{DoxyCode}
+49   \{
+50       m_pCurrentState = s;
+51       std::cout <<std::endl << std::endl << GetNameOfCurrentState();
+52       std::cout << \textcolor{stringliteral}{"something else"} ;
+53   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{d4/dd0/class_state_machine_ab84f821b25a987948375a139fc2c143e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{State\+Machine@{State\+Machine}!Set\+Global\+State@{Set\+Global\+State}}
+\index{Set\+Global\+State@{Set\+Global\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Set\+Global\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf void} {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Set\+Global\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State}$<$ entity\+\_\+type $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a8f001ebb9b17127af987700d3a1cf336}
+
+\begin{DoxyCode}
+54 \{m_pGlobalState = s;\}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!Set\+Previous\+State@{Set\+Previous\+State}}
+\index{Set\+Previous\+State@{Set\+Previous\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{Set\+Previous\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf void} {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Set\+Previous\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State}$<$ entity\+\_\+type $>$ $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a2162d76fc28fde3082c8360822d95661}
+
+\begin{DoxyCode}
+55 \{m_pPreviousState = s;\}
+\end{DoxyCode}
+\index{State\+Machine@{State\+Machine}!Update@{Update}}
+\index{Update@{Update}!State\+Machine@{State\+Machine}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf void} {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::Update (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_state_machine_a24b1f38171537058ab8040b3b42adb6c}
+
+\begin{DoxyCode}
+59   \{
+60     \textcolor{comment}{//if a global state exists, call its execute method, else do nothing}
+61    \textcolor{comment}{// if(m\_pGlobalState)   m\_pGlobalState->Execute(m\_pOwner);}
+62 
+63     \textcolor{comment}{//same for the current state}
+64     \textcolor{keywordflow}{if} (m_pCurrentState) m_pCurrentState->Execute(m_pOwner);
+65   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{d4/dd0/class_state_machine_a24b1f38171537058ab8040b3b42adb6c_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{State\+Machine@{State\+Machine}!m\+\_\+p\+Current\+State@{m\+\_\+p\+Current\+State}}
+\index{m\+\_\+p\+Current\+State@{m\+\_\+p\+Current\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{m\+\_\+p\+Current\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf State}$<$entity\+\_\+type$>$$\ast$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::m\+\_\+p\+Current\+State\hspace{0.3cm}{\ttfamily [private]}}\label{class_state_machine_ad29cc24d3a4f7a18433f2312bfe62f6a}
+\index{State\+Machine@{State\+Machine}!m\+\_\+p\+Global\+State@{m\+\_\+p\+Global\+State}}
+\index{m\+\_\+p\+Global\+State@{m\+\_\+p\+Global\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{m\+\_\+p\+Global\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf State}$<$entity\+\_\+type$>$$\ast$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::m\+\_\+p\+Global\+State\hspace{0.3cm}{\ttfamily [private]}}\label{class_state_machine_a0aae48f0742d736deb237662a7668bd1}
+\index{State\+Machine@{State\+Machine}!m\+\_\+p\+Owner@{m\+\_\+p\+Owner}}
+\index{m\+\_\+p\+Owner@{m\+\_\+p\+Owner}!State\+Machine@{State\+Machine}}
+\subsubsection[{m\+\_\+p\+Owner}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ entity\+\_\+type$\ast$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::m\+\_\+p\+Owner\hspace{0.3cm}{\ttfamily [private]}}\label{class_state_machine_a05e9bb467c5fe7bc932cf4692767592c}
+\index{State\+Machine@{State\+Machine}!m\+\_\+p\+Previous\+State@{m\+\_\+p\+Previous\+State}}
+\index{m\+\_\+p\+Previous\+State@{m\+\_\+p\+Previous\+State}!State\+Machine@{State\+Machine}}
+\subsubsection[{m\+\_\+p\+Previous\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class entity\+\_\+type$>$ {\bf State}$<$entity\+\_\+type$>$$\ast$ {\bf State\+Machine}$<$ entity\+\_\+type $>$\+::m\+\_\+p\+Previous\+State\hspace{0.3cm}{\ttfamily [private]}}\label{class_state_machine_ac8cd65b781af4078b86851855ab2443c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf State\+Machine.\+h}\end{DoxyCompactItemize}

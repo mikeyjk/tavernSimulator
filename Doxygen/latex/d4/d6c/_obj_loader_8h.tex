@@ -1,0 +1,164 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Obj\+Loader.h File Reference}
+\label{_obj_loader_8h}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Obj\+Loader.\+h@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Obj\+Loader.\+h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+Include dependency graph for Obj\+Loader.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d68/_obj_loader_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dad/_obj_loader_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Vector2f}
+\item 
+struct {\bf Vector3f}
+\item 
+struct {\bf Obj\+Mesh\+Vertex}
+\item 
+struct {\bf Obj\+Mesh\+Face}
+\item 
+struct {\bf Obj\+Mesh}
+\item 
+struct {\bf \+\_\+\+Obj\+Mesh\+Face\+Index}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf T\+O\+K\+E\+N\+\_\+\+P\+O\+S}~\char`\"{}v\char`\"{}
+\item 
+\#define {\bf T\+O\+K\+E\+N\+\_\+\+N\+O\+R}~\char`\"{}vn\char`\"{}
+\item 
+\#define {\bf T\+O\+K\+E\+N\+\_\+\+V\+E\+R\+T\+E\+X}~\char`\"{}vt\char`\"{}
+\item 
+\#define {\bf T\+O\+K\+E\+N\+\_\+\+F\+A\+C\+E}~\char`\"{}f\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Mesh} {\bf Load\+Obj\+Mesh} ({\bf string} filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Obj\+Loader.\+h@{Obj\+Loader.\+h}!T\+O\+K\+E\+N\+\_\+\+F\+A\+C\+E@{T\+O\+K\+E\+N\+\_\+\+F\+A\+C\+E}}
+\index{T\+O\+K\+E\+N\+\_\+\+F\+A\+C\+E@{T\+O\+K\+E\+N\+\_\+\+F\+A\+C\+E}!Obj\+Loader.\+h@{Obj\+Loader.\+h}}
+\subsubsection[{T\+O\+K\+E\+N\+\_\+\+F\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+K\+E\+N\+\_\+\+F\+A\+C\+E~\char`\"{}f\char`\"{}}\label{_obj_loader_8h_aca39357a463de28dc2d367b2a98d1af2}
+\index{Obj\+Loader.\+h@{Obj\+Loader.\+h}!T\+O\+K\+E\+N\+\_\+\+N\+O\+R@{T\+O\+K\+E\+N\+\_\+\+N\+O\+R}}
+\index{T\+O\+K\+E\+N\+\_\+\+N\+O\+R@{T\+O\+K\+E\+N\+\_\+\+N\+O\+R}!Obj\+Loader.\+h@{Obj\+Loader.\+h}}
+\subsubsection[{T\+O\+K\+E\+N\+\_\+\+N\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+K\+E\+N\+\_\+\+N\+O\+R~\char`\"{}vn\char`\"{}}\label{_obj_loader_8h_a546f62c3aff3a143799228472c12c1db}
+\index{Obj\+Loader.\+h@{Obj\+Loader.\+h}!T\+O\+K\+E\+N\+\_\+\+P\+O\+S@{T\+O\+K\+E\+N\+\_\+\+P\+O\+S}}
+\index{T\+O\+K\+E\+N\+\_\+\+P\+O\+S@{T\+O\+K\+E\+N\+\_\+\+P\+O\+S}!Obj\+Loader.\+h@{Obj\+Loader.\+h}}
+\subsubsection[{T\+O\+K\+E\+N\+\_\+\+P\+O\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+K\+E\+N\+\_\+\+P\+O\+S~\char`\"{}v\char`\"{}}\label{_obj_loader_8h_a56931f1370db4f7b334c2161f6b6d84f}
+\index{Obj\+Loader.\+h@{Obj\+Loader.\+h}!T\+O\+K\+E\+N\+\_\+\+V\+E\+R\+T\+E\+X@{T\+O\+K\+E\+N\+\_\+\+V\+E\+R\+T\+E\+X}}
+\index{T\+O\+K\+E\+N\+\_\+\+V\+E\+R\+T\+E\+X@{T\+O\+K\+E\+N\+\_\+\+V\+E\+R\+T\+E\+X}!Obj\+Loader.\+h@{Obj\+Loader.\+h}}
+\subsubsection[{T\+O\+K\+E\+N\+\_\+\+V\+E\+R\+T\+E\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+O\+K\+E\+N\+\_\+\+V\+E\+R\+T\+E\+X~\char`\"{}vt\char`\"{}}\label{_obj_loader_8h_a371daeffc0e071d254db2f114564be9c}
+
+
+\subsection{Function Documentation}
+\index{Obj\+Loader.\+h@{Obj\+Loader.\+h}!Load\+Obj\+Mesh@{Load\+Obj\+Mesh}}
+\index{Load\+Obj\+Mesh@{Load\+Obj\+Mesh}!Obj\+Loader.\+h@{Obj\+Loader.\+h}}
+\subsubsection[{Load\+Obj\+Mesh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Obj\+Mesh} Load\+Obj\+Mesh (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{filename}
+\end{DoxyParamCaption}
+)}\label{_obj_loader_8h_aa84c4e033f99ef54ac11d3ac558c2f9c}
+Load file, parse it Lines beginning with\+: '\#' are comments can be ignored 'v' are vertices positions 'vt' are vertices texcoords 'vn' are vertices normals 'f' are faces
+\begin{DoxyCode}
+17 \{
+18     ObjMesh myMesh;
+19     vector<Vector3f> positions;
+20     vector<Vector2f> texcoords;
+21     vector<Vector3f> normals;
+22     vector<\_ObjMeshFaceIndex> faces;
+23 
+34     ifstream filestream;
+35     filestream.open(filename);
+36 
+37     \textcolor{keywordtype}{string} line\_stream;
+38     \textcolor{keywordflow}{while}(getline(filestream, line\_stream))
+39     \{
+40         stringstream str\_stream(line\_stream);
+41         \textcolor{keywordtype}{string} type\_str;
+42         str\_stream >> type\_str;
+43         
+44         \textcolor{keywordflow}{if}(type\_str == TOKEN_POS)
+45         \{
+46            Vector3f pos;
+47            str\_stream >> pos.x >> pos.y >> pos.z;
+48            positions.push\_back(pos);
+49         \}
+50         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type\_str == TOKEN_VERTEX)
+51         \{
+52             Vector2f tex;
+53             str\_stream >> tex.x  >> tex.y;
+54             texcoords.push\_back(tex);
+55         \}
+56         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type\_str == TOKEN_NOR)
+57         \{
+58             Vector3f nor;
+59             str\_stream >> nor.x >> nor.y >> nor.z;
+60             normals.push\_back(nor);
+61         \}
+62         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type\_str == TOKEN_FACE)
+63         \{
+64             _ObjMeshFaceIndex face\_index;
+65             \textcolor{keywordtype}{char} interupt;
+66             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 4; i++)
+67             \{
+68                 str\_stream >> face\_index.pos_index[i] >> interupt
+69                            >> face\_index.tex_index[i] >> interupt
+70                            >> face\_index.nor_index[i];
+71 
+72             \}
+73 
+74             faces.push\_back(face\_index);
+75         \}
+76     \}
+77 
+78     filestream.close();
+79 
+80     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < faces.size(); i++)
+81     \{
+82         ObjMeshFace face;
+83         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j =0; j <4; j++)
+84         \{
+85             face.vertices[j].pos = positions[faces[i].pos\_index[j] -1 ];
+86             face.vertices[j].texcoord   = texcoords[faces[i].tex\_index[j] -1 ];
+87             face.vertices[j].normal     = normals[faces[i].nor\_index[j] - 1 ];
+88 
+89         
+90 
+91         \}
+92         myMesh.faces.push\_back(face);
+93     \}
+94 
+95 
+96 
+97     \textcolor{keywordflow}{return} myMesh;
+98 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d6c/_obj_loader_8h_aa84c4e033f99ef54ac11d3ac558c2f9c_icgraph}
+\end{center}
+\end{figure}
+
+

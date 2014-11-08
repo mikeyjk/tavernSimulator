@@ -1,0 +1,785 @@
+\section{Pathfinder Class Reference}
+\label{class_pathfinder}\index{Pathfinder@{Pathfinder}}
+
+
+Pathfinding class implementing the A$\ast$ algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Pathfinder.\+h$>$}
+
+
+
+Collaboration diagram for Pathfinder\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/df3/class_pathfinder__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pathfinder} ({\bf void})
+\begin{DoxyCompactList}\small\item\em Constructor initialises \doxyref{Pathfinder}{p.}{df/d0c/class_pathfinder} object. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Pathfinder} ({\bf void})
+\begin{DoxyCompactList}\small\item\em Destructor clears all memory. \end{DoxyCompactList}\item 
+{\bf void} {\bf init\+Map} ()
+\begin{DoxyCompactList}\small\item\em Initialise the world map. \end{DoxyCompactList}\item 
+{\bf void} {\bf Find\+Path} ({\bf Vec3} current\+Pos, {\bf Vec3} target\+Pos)
+\begin{DoxyCompactList}\small\item\em Find the best path from current position to target position. \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf Next\+Path\+Position} ({\bf N\+P\+C} $\ast${\bf npc})
+\begin{DoxyCompactList}\small\item\em Returns the next node to be travelled to from the best path. \end{DoxyCompactList}\item 
+{\bf void} {\bf Clear\+Open\+List} ()
+\begin{DoxyCompactList}\small\item\em Empties and frees memory of the open list. \end{DoxyCompactList}\item 
+{\bf void} {\bf Clear\+Closed\+List} ()
+\begin{DoxyCompactList}\small\item\em Empties and frees memory of the closed list. \end{DoxyCompactList}\item 
+{\bf void} {\bf Clear\+Path\+To\+Target} ()
+\begin{DoxyCompactList}\small\item\em Empties and frees memory of the path\+To\+Target list. \end{DoxyCompactList}\item 
+bool {\bf Start\+Targetl\+Initialised} ()
+\begin{DoxyCompactList}\small\item\em Determines whether or not start and target positions have been initialised. \end{DoxyCompactList}\item 
+bool {\bf Target\+Found} ()
+\begin{DoxyCompactList}\small\item\em Determines if the target has been found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Set\+Start\+And\+Target} ({\bf Path\+Node} {\bf start}, {\bf Path\+Node} {\bf target})
+\begin{DoxyCompactList}\small\item\em Set the start and target positions. \end{DoxyCompactList}\item 
+{\bf void} {\bf Path\+Opened} (int {\bf x}, int {\bf z}, float new\+Cost, {\bf Path\+Node} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Populate the open list. \end{DoxyCompactList}\item 
+{\bf Path\+Node} $\ast$ {\bf Get\+Next\+Node} ()
+\begin{DoxyCompactList}\small\item\em Get the node with the lowest cost. \end{DoxyCompactList}\item 
+{\bf void} {\bf Continue\+Path} ()
+\begin{DoxyCompactList}\small\item\em Continues looking for the best path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Path\+Node} $\ast$ {\bf m\+Start\+Node}
+\item 
+{\bf Path\+Node} $\ast$ {\bf m\+Target\+Node}
+\item 
+vector$<$ {\bf Path\+Node} $\ast$ $>$ {\bf m\+Open\+List}
+\item 
+vector$<$ {\bf Path\+Node} $\ast$ $>$ {\bf m\+Closed\+List}
+\item 
+vector$<$ {\bf Vec3} $\ast$ $>$ {\bf m\+Path\+To\+Target}
+\item 
+bool {\bf m\+Start\+And\+Target\+Initialised}
+\item 
+bool {\bf m\+Target\+Found}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pathfinding class implementing the A$\ast$ algorithm. 
+
+Pathfinding class finds the shortest path to a target location from a given start location using the A$\ast$ pathfinding algorithm
+
+\begin{DoxyAuthor}{Author}
+Raymond Forster 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/10/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pathfinder@{Pathfinder}!Pathfinder@{Pathfinder}}
+\index{Pathfinder@{Pathfinder}!Pathfinder@{Pathfinder}}
+\subsubsection[{Pathfinder}]{\setlength{\rightskip}{0pt plus 5cm}Pathfinder\+::\+Pathfinder (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_a3c9bb32a29041e93e4dfc729661f15f8}
+
+
+Constructor initialises \doxyref{Pathfinder}{p.}{df/d0c/class_pathfinder} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+5 \{
+6     mStartAndTargetInitialised = \textcolor{keyword}{false}; \textcolor{comment}{//start and target nodes not initialised to begin}
+7     mTargetFound = \textcolor{keyword}{false}; \textcolor{comment}{//target not found to begin}
+8 \}
+\end{DoxyCode}
+\index{Pathfinder@{Pathfinder}!````~Pathfinder@{$\sim$\+Pathfinder}}
+\index{````~Pathfinder@{$\sim$\+Pathfinder}!Pathfinder@{Pathfinder}}
+\subsubsection[{$\sim$\+Pathfinder}]{\setlength{\rightskip}{0pt plus 5cm}Pathfinder\+::$\sim$\+Pathfinder (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_a1c3bff25d4b79bddd191ecbb8f33861a}
+
+
+Destructor clears all memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+12 \{
+13     \textcolor{comment}{//clear start node memory and set to null}
+14     \textcolor{keyword}{delete} mStartNode;
+15     mStartNode = NULL;
+16 
+17     \textcolor{comment}{//clear target node memory and set to null}
+18     \textcolor{keyword}{delete} mTargetNode;
+19     mTargetNode = NULL;
+20 
+21     \textcolor{comment}{//clear memory of each node in open list}
+22     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mOpenList.size(); i++)
+23     \{
+24         \textcolor{keyword}{delete} mOpenList[i];
+25     \}
+26 
+27     ClearOpenList(); \textcolor{comment}{//clear vector}
+28 
+29     \textcolor{comment}{//clear memory of each node in closed list}
+30     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mClosedList.size(); i++)
+31     \{
+32         \textcolor{keyword}{delete} mClosedList[i];
+33     \}
+34 
+35     ClearClosedList(); \textcolor{comment}{//clear vector}
+36 
+37     \textcolor{comment}{//clear memory of each point in path to target list}
+38     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mPathToTarget.size(); i++)
+39     \{
+40         \textcolor{keyword}{delete} mPathToTarget[i];
+41     \}
+42 
+43     ClearPathToTarget();  \textcolor{comment}{//clear vector}
+44 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_a1c3bff25d4b79bddd191ecbb8f33861a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Pathfinder@{Pathfinder}!Clear\+Closed\+List@{Clear\+Closed\+List}}
+\index{Clear\+Closed\+List@{Clear\+Closed\+List}!Pathfinder@{Pathfinder}}
+\subsubsection[{Clear\+Closed\+List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::\+Clear\+Closed\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_afaca6788098417906974e4c705df4793}
+
+
+Empties and frees memory of the closed list. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+140 \{
+141     mClosedList.clear();
+142 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_afaca6788098417906974e4c705df4793_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Clear\+Open\+List@{Clear\+Open\+List}}
+\index{Clear\+Open\+List@{Clear\+Open\+List}!Pathfinder@{Pathfinder}}
+\subsubsection[{Clear\+Open\+List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::\+Clear\+Open\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_afe41762f2de9a5309d8991735fd9a398}
+
+
+Empties and frees memory of the open list. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+134 \{
+135     mOpenList.clear();
+136 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_afe41762f2de9a5309d8991735fd9a398_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Clear\+Path\+To\+Target@{Clear\+Path\+To\+Target}}
+\index{Clear\+Path\+To\+Target@{Clear\+Path\+To\+Target}!Pathfinder@{Pathfinder}}
+\subsubsection[{Clear\+Path\+To\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::\+Clear\+Path\+To\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_add16a7d5fa66edb2b1f9c8057cc56fe3}
+
+
+Empties and frees memory of the path\+To\+Target list. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+146 \{
+147     mPathToTarget.clear();
+148 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_add16a7d5fa66edb2b1f9c8057cc56fe3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Continue\+Path@{Continue\+Path}}
+\index{Continue\+Path@{Continue\+Path}!Pathfinder@{Pathfinder}}
+\subsubsection[{Continue\+Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::\+Continue\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_af6156950c9752ff29d137981660d914a}
+
+
+Continues looking for the best path. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+205 \{
+206     \textcolor{keywordflow}{if}(!mOpenList.empty())
+207     \{
+208         PathNode *currentNode = GetNextNode();
+209 
+210         \textcolor{keywordflow}{if}(currentNode->GetId() == mTargetNode->GetId())
+211         \{
+212             mTargetNode->SetParent(currentNode->GetParent());
+213 
+214             PathNode *getPath;
+215 
+216             \textcolor{keywordflow}{for}(getPath = mTargetNode; getPath != NULL; getPath = getPath->
+      GetParent())
+217             \{
+218                 mPathToTarget.push\_back(\textcolor{keyword}{new} Vec3(getPath->GetXcoord(), 0, getPath->
+      GetZcoord()));
+219             \}
+220 
+221             mTargetFound = \textcolor{keyword}{true};
+222         \}
+223         \textcolor{keywordflow}{else}
+224         \{
+225             \textcolor{comment}{//west node}
+226             PathOpened(currentNode->GetXcoord() - 1, currentNode->GetZcoord(), currentNode->
+      GetGval() + 1, currentNode);
+227             \textcolor{comment}{//east node}
+228             PathOpened(currentNode->GetXcoord() + 1, currentNode->GetZcoord(), currentNode->
+      GetGval() + 1, currentNode);
+229             \textcolor{comment}{//north node}
+230             PathOpened(currentNode->GetXcoord(), currentNode->GetZcoord() + 1, currentNode->
+      GetGval() + 1, currentNode);
+231             \textcolor{comment}{//south node}
+232             PathOpened(currentNode->GetXcoord(), currentNode->GetZcoord() - 1, currentNode->
+      GetGval() + 1, currentNode);
+233 
+234             \textcolor{comment}{//north west node}
+235             PathOpened(currentNode->GetXcoord() - 1, currentNode->GetZcoord() + 1, currentNode->
+      GetGval() + 1.414f, currentNode);
+236             \textcolor{comment}{//north east node}
+237             PathOpened(currentNode->GetXcoord() + 1, currentNode->GetZcoord() + 1, currentNode->
+      GetGval() + 1.414f, currentNode);
+238             \textcolor{comment}{//south east node}
+239             PathOpened(currentNode->GetXcoord() + 1, currentNode->GetZcoord() - 1, currentNode->
+      GetGval() + 1.414f, currentNode);
+240             \textcolor{comment}{//south west node}
+241             PathOpened(currentNode->GetXcoord() - 1, currentNode->GetZcoord() - 1, currentNode->
+      GetGval() + 1.414f, currentNode);
+242 
+243             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mOpenList.size(); i++)
+244             \{
+245                 \textcolor{keywordflow}{if}(currentNode->GetId() == mOpenList[i]->GetId())
+246                 \{
+247                     mOpenList.erase(mOpenList.begin() + i);
+248                 \}
+249             \}
+250         \}
+251     \}
+252 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_af6156950c9752ff29d137981660d914a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{df/d0c/class_pathfinder_af6156950c9752ff29d137981660d914a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Find\+Path@{Find\+Path}}
+\index{Find\+Path@{Find\+Path}!Pathfinder@{Pathfinder}}
+\subsubsection[{Find\+Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::\+Find\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{current\+Pos, }
+\item[{{\bf Vec3}}]{target\+Pos}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_aa3444fbf5c27dba89810319547eef766}
+
+
+Find the best path from current position to target position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Vec3}{p.}{df/d24/class_vec3}} & current\+Pos -\/ the starting position \\
+\hline
+{\em \doxyref{Vec3}{p.}{df/d24/class_vec3}} & target\+Pos -\/ the target position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+48 \{
+49     \textcolor{keywordflow}{if}(!mStartAndTargetInitialised)
+50     \{
+51         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mOpenList.size(); i++)
+52         \{
+53             \textcolor{keyword}{delete} mOpenList[i];
+54         \}
+55 
+56         ClearOpenList();
+57 
+58         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mClosedList.size(); i++)
+59         \{
+60             \textcolor{keyword}{delete} mClosedList[i];
+61         \}
+62 
+63         ClearClosedList();
+64 
+65         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mPathToTarget.size(); i++)
+66         \{
+67             \textcolor{keyword}{delete} mPathToTarget[i];
+68         \}
+69 
+70         ClearPathToTarget();
+71 
+72         \textcolor{comment}{//initialise start}
+73         PathNode start;
+74         start.SetXcoord(currentPos.getX());
+75         start.SetZcoord(currentPos.getZ());
+76 
+77         \textcolor{comment}{//initialise target}
+78         PathNode target;
+79         target.SetXcoord(targetPos.getX());
+80         target.SetZcoord(targetPos.getZ());
+81 
+82         SetStartAndTarget(start, target);
+83         mStartAndTargetInitialised = \textcolor{keyword}{true};
+84     \}
+85 
+86     \textcolor{keywordflow}{if}(mStartAndTargetInitialised)
+87     \{
+88         ContinuePath();
+89     \}
+90 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_aa3444fbf5c27dba89810319547eef766_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Get\+Next\+Node@{Get\+Next\+Node}}
+\index{Get\+Next\+Node@{Get\+Next\+Node}!Pathfinder@{Pathfinder}}
+\subsubsection[{Get\+Next\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path\+Node} $\ast$ Pathfinder\+::\+Get\+Next\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_ae3810caf75cf4811c5ff8fed27e862a2}
+
+
+Get the node with the lowest cost. 
+
+\begin{DoxyReturn}{Returns}
+Path\+Node$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+108 \{
+109     \textcolor{keywordtype}{float} bestFval = mOpenList[0]->GetF();
+110     \textcolor{keywordtype}{int} index = -1;
+111     PathNode *nextNode = NULL;
+112 
+113     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=1; i< mOpenList.size(); i++)
+114     \{
+115         \textcolor{keywordflow}{if}(mOpenList[i]->GetF() < bestFval)
+116         \{
+117             bestFval = mOpenList[i]->GetF();
+118             index = i;
+119         \}
+120     \}
+121 
+122     \textcolor{keywordflow}{if}(index >= 0)
+123     \{
+124         nextNode = mOpenList[index];
+125         mClosedList.push\_back(nextNode);
+126         mOpenList.erase(mOpenList.begin() + index);
+127     \}
+128 
+129     \textcolor{keywordflow}{return} nextNode;
+130 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_ae3810caf75cf4811c5ff8fed27e862a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!init\+Map@{init\+Map}}
+\index{init\+Map@{init\+Map}!Pathfinder@{Pathfinder}}
+\subsubsection[{init\+Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::init\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_a2126dc2d0842d5e6e87b00f0fa70ad79}
+
+
+Initialise the world map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Pathfinder@{Pathfinder}!Next\+Path\+Position@{Next\+Path\+Position}}
+\index{Next\+Path\+Position@{Next\+Path\+Position}!Pathfinder@{Pathfinder}}
+\subsubsection[{Next\+Path\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Pathfinder\+::\+Next\+Path\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{npc}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_aeee07a6a00fd29c7c5c0b6f4a4f8ee9b}
+
+
+Returns the next node to be travelled to from the best path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c}} & $\ast$npc -\/ the traveller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+256 \{
+257     \textcolor{keywordtype}{int} index = 1;
+258     Vec3 nextPosition;
+259     \textcolor{keywordtype}{int} radius = 30;
+260 
+261     nextPosition.setX(mPathToTarget[mPathToTarget.size()-index]->getX());
+262     nextPosition.setX(mPathToTarget[mPathToTarget.size()-index]->getZ());
+263 
+264     \textcolor{keywordflow}{if}(index < mPathToTarget.size())
+265     \{
+266         \textcolor{keywordflow}{if}((nextPosition - npc->getPos()).length() < radius)\textcolor{comment}{//npc->GetRadius())}
+267         \{
+268             mPathToTarget.erase(mPathToTarget.end() - index);
+269         \}
+270     \}
+271 
+272     \textcolor{keywordflow}{return} nextPosition;
+273 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_aeee07a6a00fd29c7c5c0b6f4a4f8ee9b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Path\+Opened@{Path\+Opened}}
+\index{Path\+Opened@{Path\+Opened}!Pathfinder@{Pathfinder}}
+\subsubsection[{Path\+Opened}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::\+Path\+Opened (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{z, }
+\item[{float}]{new\+Cost, }
+\item[{{\bf Path\+Node} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_a2a09760b7b647f6e189040fbbf60d4a0}
+
+
+Populate the open list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & x -\/ the x position \\
+\hline
+{\em int} & z -\/ the z position \\
+\hline
+{\em float} & new\+Cost -\/ the cost to move to the node \\
+\hline
+{\em \doxyref{Path\+Node}{p.}{d0/d75/class_path_node}} & $\ast$parent -\/ the parent node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+164 \{
+165     \textcolor{comment}{//if(NODE\_BLOCKED)}
+166     \textcolor{comment}{//  return;}
+167 
+168     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = z * WORLD_SIZE + z;
+169     \textcolor{keywordtype}{float} newFval;
+170 
+171     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mClosedList.size(); i++)
+172     \{
+173         \textcolor{keywordflow}{if}(\textcolor{keywordtype}{id} == mClosedList[i]->GetId())
+174             \textcolor{keywordflow}{return};
+175     \}
+176 
+177     PathNode* newChildNode = \textcolor{keyword}{new} PathNode(x, z, parent);
+178     newChildNode->SetGval(newCost);
+179     newChildNode->SetHval(parent->GetManhattanDistance(mTargetNode));
+180 
+181     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<mOpenList.size(); i++)
+182     \{
+183         \textcolor{keywordflow}{if}(\textcolor{keywordtype}{id} == mOpenList[i]->GetId())
+184         \{
+185             newFval = newChildNode->GetGval() + newCost + mOpenList[i]->GetHval();
+186 
+187             \textcolor{keywordflow}{if}(mOpenList[i]->GetF() > newFval)
+188             \{
+189                 mOpenList[i]->SetGval(newChildNode->GetGval() + newCost);
+190                 mOpenList[i]->SetParent(newChildNode);
+191             \}
+192             \textcolor{keywordflow}{else} \textcolor{comment}{//if the F value isnt better}
+193             \{
+194                 \textcolor{keyword}{delete} newChildNode;
+195                 \textcolor{keywordflow}{return};
+196             \}
+197         \}
+198     \}
+199 
+200     mOpenList.push\_back(newChildNode);
+201 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_a2a09760b7b647f6e189040fbbf60d4a0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_a2a09760b7b647f6e189040fbbf60d4a0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Set\+Start\+And\+Target@{Set\+Start\+And\+Target}}
+\index{Set\+Start\+And\+Target@{Set\+Start\+And\+Target}!Pathfinder@{Pathfinder}}
+\subsubsection[{Set\+Start\+And\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Pathfinder\+::\+Set\+Start\+And\+Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Path\+Node}}]{start, }
+\item[{{\bf Path\+Node}}]{target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_a5abed1edcbd22e38f97b07296de9a28d}
+
+
+Set the start and target positions. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+94 \{
+95     mStartNode = \textcolor{keyword}{new} PathNode(start.GetXcoord(), start.GetZcoord(), NULL);
+96     mTargetNode = \textcolor{keyword}{new} PathNode(target.GetXcoord(), target.GetZcoord(), &target);
+97 
+98     mStartNode->SetGval(0);
+99     mStartNode->SetHval(mStartNode->GetManhattanDistance(mTargetNode));
+100     mStartNode->SetParent(NULL);
+101 
+102     mOpenList.push\_back(mStartNode);
+103 
+104 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_a5abed1edcbd22e38f97b07296de9a28d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d0c/class_pathfinder_a5abed1edcbd22e38f97b07296de9a28d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pathfinder@{Pathfinder}!Start\+Targetl\+Initialised@{Start\+Targetl\+Initialised}}
+\index{Start\+Targetl\+Initialised@{Start\+Targetl\+Initialised}!Pathfinder@{Pathfinder}}
+\subsubsection[{Start\+Targetl\+Initialised}]{\setlength{\rightskip}{0pt plus 5cm}bool Pathfinder\+::\+Start\+Targetl\+Initialised (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_a2052fc5ea81c729145b879ed947569e8}
+
+
+Determines whether or not start and target positions have been initialised. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+152 \{
+153     \textcolor{keywordflow}{return} mStartAndTargetInitialised;
+154 \}
+\end{DoxyCode}
+\index{Pathfinder@{Pathfinder}!Target\+Found@{Target\+Found}}
+\index{Target\+Found@{Target\+Found}!Pathfinder@{Pathfinder}}
+\subsubsection[{Target\+Found}]{\setlength{\rightskip}{0pt plus 5cm}bool Pathfinder\+::\+Target\+Found (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pathfinder_a3980806bc3101111b1d83c87e96cc709}
+
+
+Determines if the target has been found. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+158 \{
+159     \textcolor{keywordflow}{return} mTargetFound;
+160 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Pathfinder@{Pathfinder}!m\+Closed\+List@{m\+Closed\+List}}
+\index{m\+Closed\+List@{m\+Closed\+List}!Pathfinder@{Pathfinder}}
+\subsubsection[{m\+Closed\+List}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Path\+Node}$\ast$$>$ Pathfinder\+::m\+Closed\+List\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_a170b2f2e17cafeb392d1973ef8cd4980}
+\index{Pathfinder@{Pathfinder}!m\+Open\+List@{m\+Open\+List}}
+\index{m\+Open\+List@{m\+Open\+List}!Pathfinder@{Pathfinder}}
+\subsubsection[{m\+Open\+List}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Path\+Node}$\ast$$>$ Pathfinder\+::m\+Open\+List\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_a891a57e0bba05322bacae7d2924823dc}
+\index{Pathfinder@{Pathfinder}!m\+Path\+To\+Target@{m\+Path\+To\+Target}}
+\index{m\+Path\+To\+Target@{m\+Path\+To\+Target}!Pathfinder@{Pathfinder}}
+\subsubsection[{m\+Path\+To\+Target}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Vec3}$\ast$$>$ Pathfinder\+::m\+Path\+To\+Target\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_ab7818635337dacd48b24ad104310c9c9}
+\index{Pathfinder@{Pathfinder}!m\+Start\+And\+Target\+Initialised@{m\+Start\+And\+Target\+Initialised}}
+\index{m\+Start\+And\+Target\+Initialised@{m\+Start\+And\+Target\+Initialised}!Pathfinder@{Pathfinder}}
+\subsubsection[{m\+Start\+And\+Target\+Initialised}]{\setlength{\rightskip}{0pt plus 5cm}bool Pathfinder\+::m\+Start\+And\+Target\+Initialised\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_aa001f53f23713ded39e7df81ee291aa7}
+\index{Pathfinder@{Pathfinder}!m\+Start\+Node@{m\+Start\+Node}}
+\index{m\+Start\+Node@{m\+Start\+Node}!Pathfinder@{Pathfinder}}
+\subsubsection[{m\+Start\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path\+Node}$\ast$ Pathfinder\+::m\+Start\+Node\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_a0110d40b6c6615fb4d5022c5c7656900}
+\index{Pathfinder@{Pathfinder}!m\+Target\+Found@{m\+Target\+Found}}
+\index{m\+Target\+Found@{m\+Target\+Found}!Pathfinder@{Pathfinder}}
+\subsubsection[{m\+Target\+Found}]{\setlength{\rightskip}{0pt plus 5cm}bool Pathfinder\+::m\+Target\+Found\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_ad930e48a5692c1cc9d0b2bef7dccde09}
+\index{Pathfinder@{Pathfinder}!m\+Target\+Node@{m\+Target\+Node}}
+\index{m\+Target\+Node@{m\+Target\+Node}!Pathfinder@{Pathfinder}}
+\subsubsection[{m\+Target\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path\+Node}$\ast$ Pathfinder\+::m\+Target\+Node\hspace{0.3cm}{\ttfamily [private]}}\label{class_pathfinder_a2420b7623b132c6e49624c3ef620986d}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Pathfinder.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Pathfinder.\+cpp}\end{DoxyCompactItemize}

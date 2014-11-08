@@ -1,0 +1,8 @@
+<map id="Pathfinder::SetStartAndTarget" name="Pathfinder::SetStartAndTarget">
+<area shape="rect" id="node2" href="$d0/d75/class_path_node.html#a480bd277f58ef007cb5ca8209d5ca408" title="Gets the x coordinate. " alt="" coords="285,5,431,32"/>
+<area shape="rect" id="node3" href="$d0/d75/class_path_node.html#a1c50bd346ef44e0d0f1f86fd81bf3299" title="Gets the z coordinate. " alt="" coords="285,56,431,83"/>
+<area shape="rect" id="node4" href="$d0/d75/class_path_node.html#acc57baaef1000e0f71e87506e7d66fe0" title="Sets this node&#39;s cost. " alt="" coords="292,107,424,133"/>
+<area shape="rect" id="node5" href="$d0/d75/class_path_node.html#acbb94c9b29226a4ac29df626363a4e02" title="Sets this node&#39;s estimated distance to target. " alt="" coords="293,157,423,184"/>
+<area shape="rect" id="node6" href="$d0/d75/class_path_node.html#ab404e77d3dc61335c06b8600cbebe72e" title="Calculates the estimated distance to target using Manhattan Distance. " alt="" coords="248,208,468,235"/>
+<area shape="rect" id="node7" href="$d0/d75/class_path_node.html#a5d593540c7a20422acff5a8b08d7d63b" title="Sets the parent node. " alt="" coords="285,259,431,285"/>
+</map>

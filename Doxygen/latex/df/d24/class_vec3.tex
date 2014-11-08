@@ -1,0 +1,1162 @@
+\section{Vec3 Class Reference}
+\label{class_vec3}\index{Vec3@{Vec3}}
+
+
+this class is the basic vector/point class. It can handle vector type operations like dot and cross product. It can also be used purely as a 3d point.  
+
+
+
+
+{\ttfamily \#include $<$Vec3.\+h$>$}
+
+
+
+Collaboration diagram for Vec3\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{d2/d83/class_vec3__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vec3} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Vec3}{p.}{df/d24/class_vec3} constructor. \end{DoxyCompactList}\item 
+{\bf Vec3} (float {\bf x}, float {\bf y}, float {\bf z})
+\begin{DoxyCompactList}\small\item\em \doxyref{Vec3}{p.}{df/d24/class_vec3} param constructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf clear} ()
+\begin{DoxyCompactList}\small\item\em clear function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+X} (float {\bf x})
+\begin{DoxyCompactList}\small\item\em set\+X function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Y} (float {\bf y})
+\begin{DoxyCompactList}\small\item\em set\+Y function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Z} (float {\bf z})
+\begin{DoxyCompactList}\small\item\em set\+Z function \end{DoxyCompactList}\item 
+float {\bf get\+X} ()
+\begin{DoxyCompactList}\small\item\em get\+X function \end{DoxyCompactList}\item 
+float {\bf get\+Y} ()
+\begin{DoxyCompactList}\small\item\em get\+Y function \end{DoxyCompactList}\item 
+float {\bf get\+Z} ()
+\begin{DoxyCompactList}\small\item\em get\+Z function \end{DoxyCompactList}\item 
+float {\bf dot\+Prod} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em dot Product function \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf x\+Prod} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em cross product function \end{DoxyCompactList}\item 
+float {\bf length} ()
+\begin{DoxyCompactList}\small\item\em Length function. \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf normalize} ()
+\begin{DoxyCompactList}\small\item\em Normalize function. \end{DoxyCompactList}\item 
+float {\bf degrees\+To\+Radians} (float deg)
+\begin{DoxyCompactList}\small\item\em degrees to radians function \end{DoxyCompactList}\item 
+{\bf void} {\bf rotate} (float {\bf angle})
+\begin{DoxyCompactList}\small\item\em rotate function \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf operator+} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em operator+ override \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf operator-\/} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em operator-\/ override \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf operator$\ast$} (float {\bf value})
+\begin{DoxyCompactList}\small\item\em operator$\ast$ override \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf operator+=} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em operator+= override \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf operator-\/=} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em operator-\/= override \end{DoxyCompactList}\item 
+bool {\bf operator==} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em operator== override \end{DoxyCompactList}\item 
+{\bf void} {\bf operator=} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em operator= override \end{DoxyCompactList}\item 
+float {\bf operator$\ast$} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em new operator$\ast$$\ast$ Allows the user to dot product this \doxyref{Vec3}{p.}{df/d24/class_vec3} with another one \end{DoxyCompactList}\item 
+{\bf void} {\bf rotate\+By\+Point} ({\bf Vec3} Center, float {\bf angle})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf X}
+\begin{DoxyCompactList}\small\item\em X variable -\/ float. \end{DoxyCompactList}\item 
+float {\bf Y}
+\begin{DoxyCompactList}\small\item\em Y variable -\/ float. \end{DoxyCompactList}\item 
+float {\bf Z}
+\begin{DoxyCompactList}\small\item\em Z variable -\/ float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this class is the basic vector/point class. It can handle vector type operations like dot and cross product. It can also be used purely as a 3d point. 
+
+\begin{DoxyAuthor}{Author}
+Karl Tysoe 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+8/09/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Vec3@{Vec3}!Vec3@{Vec3}}
+\index{Vec3@{Vec3}!Vec3@{Vec3}}
+\subsubsection[{Vec3}]{\setlength{\rightskip}{0pt plus 5cm}Vec3\+::\+Vec3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vec3_aae7a1ffaa1108a30c281da216d1cd312}
+
+
+\doxyref{Vec3}{p.}{df/d24/class_vec3} constructor. 
+
+the basic constructor for the \doxyref{Vec3}{p.}{df/d24/class_vec3} Class 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+calls the clear function to set everything to 0 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+4     \{
+5         clear();
+6     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{df/d24/class_vec3_aae7a1ffaa1108a30c281da216d1cd312_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!Vec3@{Vec3}}
+\index{Vec3@{Vec3}!Vec3@{Vec3}}
+\subsubsection[{Vec3}]{\setlength{\rightskip}{0pt plus 5cm}Vec3\+::\+Vec3 (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a842ccdcdb2b4c7ca7cef20e6e786a231}
+
+
+\doxyref{Vec3}{p.}{df/d24/class_vec3} param constructor. 
+
+The param constructor for the \doxyref{Vec3}{p.}{df/d24/class_vec3} Class, initializes x, y, z, to the given coord. 
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ float, y -\/ float, z -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+initializes everything to the given data 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+9     \{
+10         X = x;
+11         Y = y;
+12         Z = z;
+13     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Vec3@{Vec3}!clear@{clear}}
+\index{clear@{clear}!Vec3@{Vec3}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Vec3\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ae8489ac3e6a368f22b5e0f7ca5d2bc2e}
+
+
+clear function 
+
+This function resets x, y, z to 0 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+re-\/initialises everything to 0 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+16     \{
+17         X = 0;
+18         Y = 0;
+19         Z = 0;
+20     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{df/d24/class_vec3_ae8489ac3e6a368f22b5e0f7ca5d2bc2e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!degrees\+To\+Radians@{degrees\+To\+Radians}}
+\index{degrees\+To\+Radians@{degrees\+To\+Radians}!Vec3@{Vec3}}
+\subsubsection[{degrees\+To\+Radians}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::degrees\+To\+Radians (
+\begin{DoxyParamCaption}
+\item[{float}]{deg}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ac213de97ad254eeb537c0421f1a1a1c7}
+
+
+degrees to radians function 
+
+Not specifically oriented with \doxyref{Vec3}{p.}{df/d24/class_vec3}, but a handy function. calculates the radian value for a given degree.
+
+
+\begin{DoxyParams}{Parameters}
+{\em deg} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the radian value of a degree 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+67     \{
+68         \textcolor{keyword}{const} \textcolor{keywordtype}{float} pi = 3.14159f;
+69         \textcolor{keywordflow}{return} (deg / 180) * pi;
+70     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_ac213de97ad254eeb537c0421f1a1a1c7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!dot\+Prod@{dot\+Prod}}
+\index{dot\+Prod@{dot\+Prod}!Vec3@{Vec3}}
+\subsubsection[{dot\+Prod}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::dot\+Prod (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a8f1919faffa42fa73ee72d8f321402d2}
+
+
+dot Product function 
+
+Calculates the dot product, with the supplied \doxyref{Vec3}{p.}{df/d24/class_vec3}, and the one its called from. Example\+: 2 Vec3s , Vec1 and \doxyref{Vec2}{p.}{db/db1/struct_vec2}, call by Vec1.\+dot\+Prod(\+Vec2)
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the dot product as a float 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+35     \{
+36         \textcolor{keywordflow}{return}((this->getX()*v.getX()) + (this->getY()*v.getY()) + (this->getZ()*v.
+      getZ()));
+37     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{df/d24/class_vec3_a8f1919faffa42fa73ee72d8f321402d2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_a8f1919faffa42fa73ee72d8f321402d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!Vec3@{Vec3}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vec3_adf8fef45a6920dae9962e7f73c2694e1}
+
+
+get\+X function 
+
+basic getter for the X float 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns X 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+28 \{\textcolor{keywordflow}{return} X;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_adf8fef45a6920dae9962e7f73c2694e1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!Vec3@{Vec3}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ab2b7ff578872d185d35479c8a9b77c29}
+
+
+get\+Y function 
+
+basic getter for the Y float 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns Y 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+30 \{\textcolor{keywordflow}{return} Y;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_ab2b7ff578872d185d35479c8a9b77c29_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!get\+Z@{get\+Z}}
+\index{get\+Z@{get\+Z}!Vec3@{Vec3}}
+\subsubsection[{get\+Z}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::get\+Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a89e72080b8746be3e25ac992849a4e9d}
+
+
+get\+Z function 
+
+basic getter for the Z float 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns Z 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+32 \{\textcolor{keywordflow}{return} Z;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_a89e72080b8746be3e25ac992849a4e9d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!length@{length}}
+\index{length@{length}!Vec3@{Vec3}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a83f735a0f3fb84e34b3225801cfc1df8}
+
+
+Length function. 
+
+Calculates the length of the vector Example\+: Vec1.\+length()
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the length as a float 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+50     \{
+51         \textcolor{keywordflow}{return} sqrt( (this->getX()*this->getX()) + (this->getY()*this->getY()) + (this->
+      getZ()*this->getZ()) );
+52     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{df/d24/class_vec3_a83f735a0f3fb84e34b3225801cfc1df8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_a83f735a0f3fb84e34b3225801cfc1df8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!normalize@{normalize}}
+\index{normalize@{normalize}!Vec3@{Vec3}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Vec3\+::normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vec3_addb4fc8b8f3a27a0b95d0a07fbb98a7a}
+
+
+Normalize function. 
+
+Calculates the Unit Normal Vector of the defined vector Example\+: Vec1 = Vec1.\+normalize()
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the unit normal of the vector called 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+55     \{
+56         \textcolor{keywordtype}{float} mag = length();
+57         Vec3 Normal;
+58 
+59         Normal.setX(this->getX()/mag);
+60         Normal.setY(this->getY()/mag);
+61         Normal.setZ(this->getZ()/mag);
+62 
+63         \textcolor{keywordflow}{return} Normal;
+64     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_addb4fc8b8f3a27a0b95d0a07fbb98a7a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_addb4fc8b8f3a27a0b95d0a07fbb98a7a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vec3@{Vec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Vec3\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a4e71bab6fb3520b76092b5bb69c1af27}
+
+
+operator$\ast$ override 
+
+Allows the user to multiply a vector with a scalar
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the multiplied \doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+95     \{
+96         Vec3 multi((this->getX() * value),
+97                    (this->getY() * value),
+98                    (this->getZ() * value));
+99         \textcolor{keywordflow}{return} multi;
+100     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{df/d24/class_vec3_a4e71bab6fb3520b76092b5bb69c1af27_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Vec3@{Vec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a088029136148e6ae7eaa42bdcaeb106f}
+
+
+new operator$\ast$$\ast$ Allows the user to dot product this \doxyref{Vec3}{p.}{df/d24/class_vec3} with another one 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ another \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float -\/ the result of this dot product 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+151     \{
+152         \textcolor{keywordflow}{return} (this->getX()*v.getX() + this->getY()*v.getY() + this->getZ()*v.
+      getZ());
+153     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{df/d24/class_vec3_a088029136148e6ae7eaa42bdcaeb106f_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator+@{operator+}}
+\index{operator+@{operator+}!Vec3@{Vec3}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Vec3\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ab9f4d9c5b5376161994482e86c8c3e65}
+
+
+operator+ override 
+
+Allows the user to add 2 vectors together Example\+: 2 Vec3s , Vec1 and \doxyref{Vec2}{p.}{db/db1/struct_vec2}, call by Vec1 + \doxyref{Vec2}{p.}{db/db1/struct_vec2}
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the added Vec3s 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+79     \{
+80         Vec3 add((this->getX() + v.getX()),
+81                  (this->getY() + v.getY()),
+82                  (this->getZ() + v.getZ()));
+83         \textcolor{keywordflow}{return} add;
+84      \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{df/d24/class_vec3_ab9f4d9c5b5376161994482e86c8c3e65_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Vec3@{Vec3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Vec3\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ac6b1a7155241bb07c4436ce9b63a4c40}
+
+
+operator+= override 
+
+Allows the user to add 2 vectors together Example\+: 2 Vec3s , Vec1 and \doxyref{Vec2}{p.}{db/db1/struct_vec2}, call by Vec1 += \doxyref{Vec2}{p.}{db/db1/struct_vec2}
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this \doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the \doxyref{Vec3}{p.}{df/d24/class_vec3} to itself. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+110     \{
+111         this->setX(this->getX() + v.getX());
+112         this->setY(this->getY() + v.getY());
+113         this->setZ(this->getZ() + v.getZ());
+114         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+115     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{df/d24/class_vec3_ac6b1a7155241bb07c4436ce9b63a4c40_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Vec3@{Vec3}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Vec3\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a4ab007ea472c5fbd5725fb75d4b1a9d4}
+
+
+operator-\/ override 
+
+Allows the user to subtract 2 vectors together Example\+: 2 Vec3s , Vec1 and \doxyref{Vec2}{p.}{db/db1/struct_vec2}, call by Vec1 -\/ \doxyref{Vec2}{p.}{db/db1/struct_vec2}
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the subtracted \doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+87     \{
+88         Vec3 sub((this->getX() - v.getX()),
+89                  (this->getY() - v.getY()),
+90                  (this->getZ() - v.getZ()));
+91         \textcolor{keywordflow}{return} sub;
+92      \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{df/d24/class_vec3_a4ab007ea472c5fbd5725fb75d4b1a9d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Vec3@{Vec3}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Vec3\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ab6e2e4f4fbe07e0de3701677ce669b58}
+
+
+operator-\/= override 
+
+Allows the user to subtract 2 vectors together Example\+: 2 Vec3s , Vec1 and \doxyref{Vec2}{p.}{db/db1/struct_vec2}, call by Vec1 -\/= \doxyref{Vec2}{p.}{db/db1/struct_vec2}
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this \doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the \doxyref{Vec3}{p.}{df/d24/class_vec3} to itself. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+117     \{
+118         this->setX(this->getX() - v.getX());
+119         this->setY(this->getY() - v.getY());
+120         this->setZ(this->getZ() - v.getZ());
+121         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+122     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{df/d24/class_vec3_ab6e2e4f4fbe07e0de3701677ce669b58_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator=@{operator=}}
+\index{operator=@{operator=}!Vec3@{Vec3}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Vec3\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ae00f8cc5d27c669565c2c3723d569f60}
+
+
+operator= override 
+
+Allows the user to copy another \doxyref{Vec3}{p.}{df/d24/class_vec3} to this one
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+copies the \doxyref{Vec3}{p.}{df/d24/class_vec3} to this 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+103     \{
+104         this->setX(v.getX());
+105         this->setY(v.getY());
+106         this->setZ(v.getZ());
+107      \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{df/d24/class_vec3_ae00f8cc5d27c669565c2c3723d569f60_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!operator==@{operator==}}
+\index{operator==@{operator==}!Vec3@{Vec3}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Vec3\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a70306b3b5637afe23b63b7c7eb09cb6a}
+
+
+operator== override 
+
+Allows the user to test if the vector is equal to another vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns true if the same, or false if not the same 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+125     \{
+126         \textcolor{keywordflow}{if}(this->getX() == v.getX())
+127         \{
+128             \textcolor{keywordflow}{if}(this->getY() == v.getY())
+129             \{
+130                 \textcolor{keywordflow}{if}(this->getZ() == v.getZ())
+131                 \{
+132                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+133                 \}
+134                 \textcolor{keywordflow}{else}
+135                 \{
+136                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+137                 \}
+138             \}
+139             \textcolor{keywordflow}{else}
+140             \{
+141                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+142             \}
+143         \}
+144         \textcolor{keywordflow}{else}
+145         \{
+146             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+147         \}
+148     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{df/d24/class_vec3_a70306b3b5637afe23b63b7c7eb09cb6a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!rotate@{rotate}}
+\index{rotate@{rotate}!Vec3@{Vec3}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Vec3\+::rotate (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ad95b53d66bb7f71ce4335a3a834c1e07}
+
+
+rotate function 
+
+rotates the vector to the given angle actually changes the vec3 used
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+changes the vector to point to the angle provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+73     \{
+74         this->setX(this->getX() * cos(angle) - this->getY() * sin(angle));
+75         this->setY(this->getX() * sin(angle) - this->getY() * cos(angle));
+76     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{df/d24/class_vec3_ad95b53d66bb7f71ce4335a3a834c1e07_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!rotate\+By\+Point@{rotate\+By\+Point}}
+\index{rotate\+By\+Point@{rotate\+By\+Point}!Vec3@{Vec3}}
+\subsubsection[{rotate\+By\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Vec3\+::rotate\+By\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{Center, }
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a50f693e3bfd8ed139309b5aebd78bc73}
+
+\begin{DoxyCode}
+157     \{
+158         
+159         \textcolor{keywordtype}{float} radius = degreesToRadians(angle);
+160         \textcolor{keywordtype}{float} x = Center.getX() +  (this->getX() - Center.getX()) * cos(radius) - (this->
+      getZ() - Center.getZ()) * sin(radius);
+161         \textcolor{keywordtype}{float} z = Center.getZ() +  (this->getX() - Center.getX()) * sin(radius) + (this->
+      getZ() - Center.getZ()) * cos(radius);
+162         this->setX(x);
+163         this->setZ(z);
+164     \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{df/d24/class_vec3_a50f693e3bfd8ed139309b5aebd78bc73_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{df/d24/class_vec3_a50f693e3bfd8ed139309b5aebd78bc73_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!set\+X@{set\+X}}
+\index{set\+X@{set\+X}!Vec3@{Vec3}}
+\subsubsection[{set\+X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Vec3\+::set\+X (
+\begin{DoxyParamCaption}
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)}\label{class_vec3_ab951f3320ac854125cd9adecea8d5331}
+
+
+set\+X function 
+
+basic setter for the X float 
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+sets X to given x 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+22 \{X = x;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_ab951f3320ac854125cd9adecea8d5331_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!set\+Y@{set\+Y}}
+\index{set\+Y@{set\+Y}!Vec3@{Vec3}}
+\subsubsection[{set\+Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Vec3\+::set\+Y (
+\begin{DoxyParamCaption}
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a1fcc44395e5ad47d864fd0f7591d7615}
+
+
+set\+Y function 
+
+basic setter for the Y float 
+\begin{DoxyParams}{Parameters}
+{\em y} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+sets Y to given y 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+24 \{Y = y;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_a1fcc44395e5ad47d864fd0f7591d7615_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!set\+Z@{set\+Z}}
+\index{set\+Z@{set\+Z}!Vec3@{Vec3}}
+\subsubsection[{set\+Z}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Vec3\+::set\+Z (
+\begin{DoxyParamCaption}
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)}\label{class_vec3_a899f6301df50d9a4851a1e64ce384fca}
+
+
+set\+Z function 
+
+basic setter for the Z float 
+\begin{DoxyParams}{Parameters}
+{\em z} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+sets Z to given z 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+26 \{Z = z;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_a899f6301df50d9a4851a1e64ce384fca_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Vec3@{Vec3}!x\+Prod@{x\+Prod}}
+\index{x\+Prod@{x\+Prod}!Vec3@{Vec3}}
+\subsubsection[{x\+Prod}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Vec3\+::x\+Prod (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_vec3_abc6e5cfcbbfb6b3f0948382375c5f858}
+
+
+cross product function 
+
+Calculates the cross product, with the supplied \doxyref{Vec3}{p.}{df/d24/class_vec3}, and the one its called from. Example\+: 2 Vec3s , Vec1 and \doxyref{Vec2}{p.}{db/db1/struct_vec2}, call by Vec1.\+dot\+Prod(\+Vec2)
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the cross product as a \doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+40     \{
+41         Vec3 cross;
+42         cross.setX( (this->getY()*v.getZ()) - (this->getZ()*v.getY()) );
+43         cross.setY( (this->getZ()*v.getX()) - (this->getX()*v.getZ()) );
+44         cross.setZ( (this->getX()*v.getY()) - (this->getY()*v.getX()) );
+45 
+46         \textcolor{keywordflow}{return} cross;
+47     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{df/d24/class_vec3_abc6e5cfcbbfb6b3f0948382375c5f858_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d24/class_vec3_abc6e5cfcbbfb6b3f0948382375c5f858_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Vec3@{Vec3}!X@{X}}
+\index{X@{X}!Vec3@{Vec3}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::\+X}\label{class_vec3_a11e316f7f9654c39dc0ae0843d58882a}
+
+
+X variable -\/ float. 
+
+\index{Vec3@{Vec3}!Y@{Y}}
+\index{Y@{Y}!Vec3@{Vec3}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::\+Y}\label{class_vec3_a5cb084577e40b5fb152dc2d375ff07f2}
+
+
+Y variable -\/ float. 
+
+\index{Vec3@{Vec3}!Z@{Z}}
+\index{Z@{Z}!Vec3@{Vec3}}
+\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}float Vec3\+::\+Z}\label{class_vec3_ae7177886a74ecc6b6bed33afa16f6336}
+
+
+Z variable -\/ float. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Vec3.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Vec3.\+cpp}\end{DoxyCompactItemize}

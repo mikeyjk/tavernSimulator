@@ -1,0 +1,10 @@
+<map id="NPC::giveHudMoreData" name="NPC::giveHudMoreData">
+<area shape="rect" id="node2" href="$d3/dde/class_brain.html#a6d9f401d3f51b3636b04d3a4c128357b" title="giveHudModeData function " alt="" coords="241,81,403,108"/>
+<area shape="rect" id="node8" href="$d0/dd1/class_game_object.html#add964e473761c04f3406efb37d23b37a" title="getID function " alt="" coords="255,132,389,159"/>
+<area shape="rect" id="node9" href="$d4/dd0/class_state_machine.html#a2c325429612440a61338e237b845809d" title="StateMachine::GetNameOfCurrent\lState" alt="" coords="212,183,432,225"/>
+<area shape="rect" id="node3" href="$d1/da8/class_personality.html#adaf5627e1a67b5d93c3281fdf957bd0b" title="giveHudMoreData function " alt="" coords="480,56,676,83"/>
+<area shape="rect" id="node6" href="$d3/dde/class_brain.html#ae65c2384880e3bb239caa7d1a2e756e2" title="getNeedsStr function " alt="" coords="512,107,644,133"/>
+<area shape="rect" id="node4" href="$da/df5/class_control_system.html#aa3b24cbd4e40b867422d9cd4443e63db" title="Instance. " alt="" coords="724,5,889,32"/>
+<area shape="rect" id="node5" href="$d7/d05/class_h_u_d.html#a17d80fb1334f544a7198d9ae4289fb09" title="HUD::giveHudNPCData" alt="" coords="729,56,885,83"/>
+<area shape="rect" id="node7" href="$d8/dfe/class_affordance.html#af6a45d7dc33a939b4820ff2c4e97b87d" title="Affordance::tagToString" alt="" coords="728,107,885,133"/>
+</map>

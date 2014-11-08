@@ -1,0 +1,474 @@
+\section{Quaternion Class Reference}
+\label{class_quaternion}\index{Quaternion@{Quaternion}}
+
+
+{\ttfamily \#include $<$Quaternion.\+h$>$}
+
+
+
+Collaboration diagram for Quaternion\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{d4/dfc/class_quaternion__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Quaternion} ()
+\item 
+{\bf Quaternion} (float {\bf w}, float {\bf x}, float {\bf y}, float {\bf z})
+\item 
+{\bf Quaternion} ({\bf Vec3} axis, float {\bf angle})
+\item 
+float {\bf degrees\+To\+Radians} (float deg)
+\item 
+float {\bf length} ()
+\item 
+{\bf Quaternion} {\bf mult} ({\bf Quaternion} {\bf q})
+\item 
+{\bf Quaternion} {\bf mult} ({\bf Vec3} {\bf r})
+\item 
+{\bf Quaternion} {\bf conjugate} ()
+\item 
+{\bf Quaternion} {\bf Inverted} ()
+\item 
+{\bf Quaternion} {\bf normalize} ()
+\item 
+float {\bf get\+X} ()
+\item 
+float {\bf get\+Y} ()
+\item 
+float {\bf get\+Z} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf W}
+\item 
+float {\bf X}
+\item 
+float {\bf Y}
+\item 
+float {\bf Z}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quaternion@{Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!Quaternion@{Quaternion}}
+\subsubsection[{Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}Quaternion\+::\+Quaternion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_abcc01358aada56ea5f0db4da18aaf77d}
+
+\begin{DoxyCode}
+15     \{
+16       W = 1.0;
+17       X = 0.0;
+18       Y = 0.0;
+19       Z = 0.0;
+20     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_abcc01358aada56ea5f0db4da18aaf77d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!Quaternion@{Quaternion}}
+\subsubsection[{Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}Quaternion\+::\+Quaternion (
+\begin{DoxyParamCaption}
+\item[{float}]{w, }
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_ab13d6ced50c96438115b30cb91fc7d6c}
+
+\begin{DoxyCode}
+25   \{
+26       W = w;
+27       X = x;
+28       Y = y;
+29       Z = z;
+30   \}
+\end{DoxyCode}
+\index{Quaternion@{Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!Quaternion@{Quaternion}}
+\subsubsection[{Quaternion}]{\setlength{\rightskip}{0pt plus 5cm}Quaternion\+::\+Quaternion (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{axis, }
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_a148788b151595ab4fd00713b23c3dd1a}
+
+\begin{DoxyCode}
+35   \{
+36       \textcolor{keywordtype}{float} sinHalfAngle = (float)sin(degreesToRadians(angle/2));
+37       \textcolor{keywordtype}{float} cosHalfAngle = (float)cos(degreesToRadians(angle/2));
+38 
+39       X = axis.getX() * sinHalfAngle;
+40       Y = axis.getY() * sinHalfAngle;
+41       Z = axis.getZ() * sinHalfAngle;
+42       W = cosHalfAngle;
+43 
+44   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_a148788b151595ab4fd00713b23c3dd1a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Quaternion@{Quaternion}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!Quaternion@{Quaternion}}
+\subsubsection[{conjugate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} Quaternion\+::conjugate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_ab674ea67691cea70557aa3a7b5f6950f}
+
+\begin{DoxyCode}
+97   \{
+98     \textcolor{comment}{// X = -X;}
+99      \textcolor{comment}{//Y = -Y;}
+100      \textcolor{comment}{//Z = -Z;}
+101 
+102     \textcolor{keywordflow}{return} Quaternion(W,-X,-Y,-Z);
+103   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{dc/de3/class_quaternion_ab674ea67691cea70557aa3a7b5f6950f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_ab674ea67691cea70557aa3a7b5f6950f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!degrees\+To\+Radians@{degrees\+To\+Radians}}
+\index{degrees\+To\+Radians@{degrees\+To\+Radians}!Quaternion@{Quaternion}}
+\subsubsection[{degrees\+To\+Radians}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::degrees\+To\+Radians (
+\begin{DoxyParamCaption}
+\item[{float}]{deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_a21f7c6d642c53dbda0d14538f16db764}
+
+\begin{DoxyCode}
+47   \{
+48         \textcolor{keyword}{const} \textcolor{keywordtype}{float} pi = 3.14159f;
+49         \textcolor{keywordflow}{return} (deg / 180) * pi;
+50   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_a21f7c6d642c53dbda0d14538f16db764_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!Quaternion@{Quaternion}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_a94c3251e8a4f95f1b1ce038ac6182921}
+
+\begin{DoxyCode}
+144   \{
+145       \textcolor{keywordflow}{return} X;
+146   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_a94c3251e8a4f95f1b1ce038ac6182921_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!Quaternion@{Quaternion}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_a20a8361e5067f32fef29d335b36c6545}
+
+\begin{DoxyCode}
+149   \{
+150       \textcolor{keywordflow}{return} Y;
+151   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_a20a8361e5067f32fef29d335b36c6545_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!get\+Z@{get\+Z}}
+\index{get\+Z@{get\+Z}!Quaternion@{Quaternion}}
+\subsubsection[{get\+Z}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::get\+Z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_aa1be936f634eb6b947b55f2bb8e59ca3}
+
+\begin{DoxyCode}
+154   \{
+155       \textcolor{keywordflow}{return} Z;
+156   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_aa1be936f634eb6b947b55f2bb8e59ca3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!Inverted@{Inverted}}
+\index{Inverted@{Inverted}!Quaternion@{Quaternion}}
+\subsubsection[{Inverted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} Quaternion\+::\+Inverted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_a63bf1c28e1345067ddd2783cb7dc1d73}
+
+\begin{DoxyCode}
+109  \{
+110     \textcolor{keywordtype}{float} len = length();
+111     \textcolor{keywordflow}{if} (len == 0.0)
+112       len = 1.0;
+113 
+114     \textcolor{keywordtype}{float} recip = 1.0 / len;
+115 
+116     \textcolor{keywordtype}{float} w =  W * recip;
+117     \textcolor{keywordtype}{float} x = -X * recip;
+118     \textcolor{keywordtype}{float} y = -Y * recip;
+119     \textcolor{keywordtype}{float} z = -Z * recip;
+120 
+121     \textcolor{keywordflow}{return} Quaternion(w,x,y,z);
+122   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{dc/de3/class_quaternion_a63bf1c28e1345067ddd2783cb7dc1d73_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!length@{length}}
+\index{length@{length}!Quaternion@{Quaternion}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_aff836b6e1d413b1c84e69cda96778ab0}
+
+\begin{DoxyCode}
+53   \{
+54       \textcolor{keywordflow}{return} (\textcolor{keywordtype}{float})sqrt(X * X + Y * Y + Z * Z + W * W);
+55   \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{dc/de3/class_quaternion_aff836b6e1d413b1c84e69cda96778ab0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!mult@{mult}}
+\index{mult@{mult}!Quaternion@{Quaternion}}
+\subsubsection[{mult}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} Quaternion\+::mult (
+\begin{DoxyParamCaption}
+\item[{{\bf Quaternion}}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_ae14f10e9911d8b12f9070c651cb1ecdf}
+
+\begin{DoxyCode}
+60   \{
+61     \textcolor{keywordtype}{float} w = W * q.W - (X * q.X + Y * q.Y + Z * q.Z);
+62 
+63     \textcolor{keywordtype}{float} x = W * q.X + q.W * X + Y * q.Z - Z * q.Y;
+64 
+65     \textcolor{keywordtype}{float} y = W * q.Y + q.W * Y + Z * q.X - X * q.Z;
+66 
+67     \textcolor{keywordtype}{float} z = W * q.Z + q.W * Z + X * q.Y - Y * q.X;
+68 
+69     \textcolor{comment}{//W = w;}
+70     \textcolor{comment}{//X = x;}
+71     \textcolor{comment}{//Y = y;}
+72     \textcolor{comment}{//Z = z;}
+73 
+74     \textcolor{keywordflow}{return} Quaternion(w,x,y,z);
+75   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{dc/de3/class_quaternion_ae14f10e9911d8b12f9070c651cb1ecdf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de3/class_quaternion_ae14f10e9911d8b12f9070c651cb1ecdf_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!mult@{mult}}
+\index{mult@{mult}!Quaternion@{Quaternion}}
+\subsubsection[{mult}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} Quaternion\+::mult (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_a13d33b343567f992208ac9ae0b3630f0}
+
+\begin{DoxyCode}
+80   \{
+81 
+82       \textcolor{keywordtype}{float} w = -X * r.getX() - Y * r.getY() - Z * r.getZ();
+83       \textcolor{keywordtype}{float} x =  W * r.getX() + Y * r.getZ() - Z * r.getY();
+84       \textcolor{keywordtype}{float} y =  W * r.getY() + Z * r.getX() - X * r.getZ();
+85       \textcolor{keywordtype}{float} z =  W * r.getZ() + X * r.getY() - Y * r.getX();
+86 
+87       \textcolor{comment}{//W = w\_;}
+88       \textcolor{comment}{//X = x\_;}
+89       \textcolor{comment}{//Y = y\_;}
+90       \textcolor{comment}{//Z = z\_;}
+91 
+92       \textcolor{keywordflow}{return} Quaternion(w,x,y,z);
+93   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{dc/de3/class_quaternion_a13d33b343567f992208ac9ae0b3630f0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Quaternion@{Quaternion}!normalize@{normalize}}
+\index{normalize@{normalize}!Quaternion@{Quaternion}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} Quaternion\+::normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quaternion_a0375e51f80a4885ac210422856dcefa7}
+
+\begin{DoxyCode}
+126   \{
+127     \textcolor{keywordtype}{float} len= length();
+128     \textcolor{keywordflow}{if} (len == 0.0)
+129     \{
+130       W = 1.0; 
+131       X = Y = Z = 0.0;
+132     \}
+133     \textcolor{keywordflow}{else}
+134     \{
+135        X /= len;
+136        Y /= len;
+137        Z /= len;
+138        W /= len;
+139     \}
+140     \textcolor{keywordflow}{return} * \textcolor{keyword}{this};
+141   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{dc/de3/class_quaternion_a0375e51f80a4885ac210422856dcefa7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Quaternion@{Quaternion}!W@{W}}
+\index{W@{W}!Quaternion@{Quaternion}}
+\subsubsection[{W}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::\+W}\label{class_quaternion_adc2e55b935dcc2daefd60739bdb31cec}
+\index{Quaternion@{Quaternion}!X@{X}}
+\index{X@{X}!Quaternion@{Quaternion}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::\+X}\label{class_quaternion_a2676f1a5ec3a2f69ebb953e4b5741c4b}
+\index{Quaternion@{Quaternion}!Y@{Y}}
+\index{Y@{Y}!Quaternion@{Quaternion}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::\+Y}\label{class_quaternion_aa3353a9f5afdf3614e37f9681441ae05}
+\index{Quaternion@{Quaternion}!Z@{Z}}
+\index{Z@{Z}!Quaternion@{Quaternion}}
+\subsubsection[{Z}]{\setlength{\rightskip}{0pt plus 5cm}float Quaternion\+::\+Z}\label{class_quaternion_a533b5e90b6333d89190828f28721e61d}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Quaternion.\+h}\end{DoxyCompactItemize}

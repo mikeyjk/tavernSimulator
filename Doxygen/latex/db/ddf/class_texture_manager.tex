@@ -1,0 +1,444 @@
+\section{Texture\+Manager Class Reference}
+\label{class_texture_manager}\index{Texture\+Manager@{Texture\+Manager}}
+
+
+{\ttfamily \#include $<$Texture\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Texture\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{d0/d05/class_texture_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf print\+Texs} ()
+\item 
+{\bf void} {\bf add\+Texture} (char $\ast$Path, {\bf string} Name)
+\begin{DoxyCompactList}\small\item\em Adds a texture to the texture manager by the file's path, which will become known to the texture manager by the passed name. \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Created\+Texture} ({\bf G\+Luint} tex, {\bf string} Name)
+\begin{DoxyCompactList}\small\item\em Adds a precreated texture to the texture manager, which will become known to the texture manager by the passed name. \end{DoxyCompactList}\item 
+{\bf G\+Luint} {\bf get\+Texture} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Gets the texture from the texture manager with the matching name. \end{DoxyCompactList}\item 
+{\bf G\+Luint} {\bf load\+Cube} (char $\ast$front, char $\ast$back, char $\ast${\bf top}, char $\ast${\bf bottom}, char $\ast${\bf left}, char $\ast${\bf right})
+\item 
+{\bf void} {\bf add\+Cube\+Texture} (char $\ast$front, char $\ast$back, char $\ast${\bf top}, char $\ast${\bf bottom}, char $\ast${\bf left}, char $\ast${\bf right}, {\bf string} {\bf name})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Texture\+Manager} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Gets the instance of the texture manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Texture\+Manager} ()
+\item 
+{\bf $\sim$\+Texture\+Manager} ()
+\item 
+{\bf G\+Luint} {\bf load\+P\+N\+G} (char $\ast${\bf name})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ {\bf string}, {\bf G\+Luint} $>$ {\bf textures}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Texture\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::\+Texture\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_texture_manager_ad76abb178b37cedf4514eb0154349935}
+
+\begin{DoxyCode}
+88 \{\}              \textcolor{comment}{// Creates a texture manager object.}
+\end{DoxyCode}
+\index{Texture\+Manager@{Texture\+Manager}!````~Texture\+Manager@{$\sim$\+Texture\+Manager}}
+\index{````~Texture\+Manager@{$\sim$\+Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{$\sim$\+Texture\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::$\sim$\+Texture\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_texture_manager_a001d6d74674961db79987e3222682576}
+
+\begin{DoxyCode}
+89 \{\}          \textcolor{comment}{// Deletes the texture manager.}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Texture\+Manager@{Texture\+Manager}!add\+Created\+Texture@{add\+Created\+Texture}}
+\index{add\+Created\+Texture@{add\+Created\+Texture}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{add\+Created\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Texture\+Manager\+::add\+Created\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Luint}}]{tex, }
+\item[{{\bf string}}]{Name}
+\end{DoxyParamCaption}
+)}\label{class_texture_manager_a61e18b69d7b51941a9a3e9f60a874487}
+
+
+Adds a precreated texture to the texture manager, which will become known to the texture manager by the passed name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+Luint} & tex, string Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The texture is added to the texture manager and is known by the manager by the name given. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+40 \{
+41     map<string, GLuint>::iterator iterator;
+42     iterator = textures.find(Name);
+43     \textcolor{keywordflow}{if}(iterator == textures.end())
+44     \{
+45         textures.insert(pair<string, GLuint>(Name, tex));
+46     \}
+47 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a61e18b69d7b51941a9a3e9f60a874487_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Texture\+Manager@{Texture\+Manager}!add\+Cube\+Texture@{add\+Cube\+Texture}}
+\index{add\+Cube\+Texture@{add\+Cube\+Texture}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{add\+Cube\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Texture\+Manager\+::add\+Cube\+Texture (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{front, }
+\item[{char $\ast$}]{back, }
+\item[{char $\ast$}]{top, }
+\item[{char $\ast$}]{bottom, }
+\item[{char $\ast$}]{left, }
+\item[{char $\ast$}]{right, }
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_texture_manager_a9eed0a527feeba21e377fdcb0852c85a}
+
+\begin{DoxyCode}
+75 \{
+76     map<string, GLuint>::iterator iterator;
+77     iterator = textures.find(name);
+78 
+79     \textcolor{keywordflow}{if}(iterator == textures.end())
+80     \{
+81         GLuint temp;
+82         temp = loadCube(front,back,top,bottom,left,right);
+83         textures.insert(pair<string,GLuint>(name,temp));
+84     \}
+85 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a9eed0a527feeba21e377fdcb0852c85a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a9eed0a527feeba21e377fdcb0852c85a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Texture\+Manager@{Texture\+Manager}!add\+Texture@{add\+Texture}}
+\index{add\+Texture@{add\+Texture}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{add\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Texture\+Manager\+::add\+Texture (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Path, }
+\item[{{\bf string}}]{Name}
+\end{DoxyParamCaption}
+)}\label{class_texture_manager_a83425ee1ee0e71587664f59440491b94}
+
+
+Adds a texture to the texture manager by the file's path, which will become known to the texture manager by the passed name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$ Path, string Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The texture is added to the texture manager and is known by the manager by the name given. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+18 \{
+19     map<string, GLuint>::iterator iterator;
+20     iterator = textures.find(Name);
+21     
+22     \textcolor{keywordflow}{if}(iterator == textures.end())
+23     \{
+24         GLint temp;
+25         temp = loadPNG(Path);
+26         textures.insert(pair<string, GLuint>(Name, temp));
+27     \}
+28 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a83425ee1ee0e71587664f59440491b94_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a83425ee1ee0e71587664f59440491b94_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Texture\+Manager@{Texture\+Manager}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Texture\+Manager\+::get\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_texture_manager_a7b048c19418b825cc6f453dcccd1d82e}
+
+
+Gets the texture from the texture manager with the matching name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A texture with a name matching the passed name must exist.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The texture with the matching name is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+58 \{
+59     map<string, GLuint>::iterator iterator;
+60     iterator = textures.find(name);
+61     
+62     \textcolor{keywordflow}{if}(iterator != textures.end())
+63     \{
+64         \textcolor{keywordflow}{return}(iterator->second);
+65     \}
+66     \textcolor{keywordflow}{else}
+67     \{
+68         \textcolor{keywordflow}{return}(-1);
+69         std::cout << \textcolor{stringliteral}{"Texture error!"} << std::endl;
+70         exit(-1);
+71     \}
+72 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a7b048c19418b825cc6f453dcccd1d82e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a7b048c19418b825cc6f453dcccd1d82e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Texture\+Manager@{Texture\+Manager}!Instance@{Instance}}
+\index{Instance@{Instance}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Texture\+Manager} $\ast$ Texture\+Manager\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_texture_manager_abab38cdb8503fde6288cb07330c10dc6}
+
+
+Gets the instance of the texture manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The instance of the texture manager is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+12 \{
+13     \textcolor{keyword}{static} TextureManager Instance;
+14     \textcolor{keywordflow}{return} &Instance;
+15 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_abab38cdb8503fde6288cb07330c10dc6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Texture\+Manager@{Texture\+Manager}!load\+Cube@{load\+Cube}}
+\index{load\+Cube@{load\+Cube}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{load\+Cube}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Texture\+Manager\+::load\+Cube (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{front, }
+\item[{char $\ast$}]{back, }
+\item[{char $\ast$}]{top, }
+\item[{char $\ast$}]{bottom, }
+\item[{char $\ast$}]{left, }
+\item[{char $\ast$}]{right}
+\end{DoxyParamCaption}
+)}\label{class_texture_manager_a59c6885c0bd41f478442791f63e3ba22}
+
+\begin{DoxyCode}
+88 \{
+89     GLuint textureId;
+90     textureId = SOIL_load_OGL_cubemap(right, left, top, bottom, back, front, 
+      SOIL_LOAD_RGB, SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS);\textcolor{comment}{//SOIL\_FLAG\_MIPMAPS}
+91     glBindTexture(GL_TEXTURE_CUBE_MAP, textureId);
+92     \textcolor{keywordflow}{return} textureId;
+93 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a59c6885c0bd41f478442791f63e3ba22_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a59c6885c0bd41f478442791f63e3ba22_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Texture\+Manager@{Texture\+Manager}!load\+P\+N\+G@{load\+P\+N\+G}}
+\index{load\+P\+N\+G@{load\+P\+N\+G}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{load\+P\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Texture\+Manager\+::load\+P\+N\+G (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_texture_manager_a9fbf8d38e1709b44ec41401858a2700c}
+
+\begin{DoxyCode}
+50 \{
+51     GLuint textureId;
+52     textureId = SOIL_load_OGL_texture(name, SOIL_LOAD_RGBA, SOIL_CREATE_NEW_ID, 
+      SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | 
+      SOIL_FLAG_COMPRESS_TO_DXT);
+53     glBindTexture(GL\_TEXTURE\_2D, textureId);
+54     \textcolor{keywordflow}{return} textureId;
+55 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a9fbf8d38e1709b44ec41401858a2700c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/class_texture_manager_a9fbf8d38e1709b44ec41401858a2700c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Texture\+Manager@{Texture\+Manager}!print\+Texs@{print\+Texs}}
+\index{print\+Texs@{print\+Texs}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{print\+Texs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Texture\+Manager\+::print\+Texs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_texture_manager_a83d1e2917d5d1a7ad2d70bb0b4af15d0}
+
+\begin{DoxyCode}
+31 \{
+32     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& i : textures)
+33     \{
+34         std::cout << \textcolor{stringliteral}{"texname: "} << i.first << std::endl;
+35         std::cout << \textcolor{stringliteral}{"texid: "} << i.second << std::endl;
+36     \}
+37 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Texture\+Manager@{Texture\+Manager}!textures@{textures}}
+\index{textures@{textures}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{textures}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, {\bf G\+Luint}$>$ Texture\+Manager\+::textures\hspace{0.3cm}{\ttfamily [private]}}\label{class_texture_manager_ab74250155ea1d976c6e615e6084fbf02}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Texture\+Manager.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Texture\+Manager.\+cpp}\end{DoxyCompactItemize}

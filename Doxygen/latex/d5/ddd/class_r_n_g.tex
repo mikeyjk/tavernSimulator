@@ -1,0 +1,228 @@
+\section{R\+N\+G Class Reference}
+\label{class_r_n_g}\index{R\+N\+G@{R\+N\+G}}
+
+
+{\ttfamily \#include $<$R\+N\+G.\+h$>$}
+
+
+
+Collaboration diagram for R\+N\+G\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{de/d2c/class_r_n_g__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf R\+N\+G} ({\bf string} {\bf seed})
+\item 
+{\bf void} {\bf set\+Seed} ({\bf string} {\bf seed})
+\item 
+{\bf void} {\bf random\+Seed} ()
+\item 
+{\bf string} {\bf retrieve\+Seed} ()
+\item 
+int {\bf random\+Int} (int max)
+\item 
+int {\bf random\+Int\+Range} (int min, int max)
+\item 
+float {\bf random\+Float} (float max)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf R\+N\+G} $\ast$ {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf R\+N\+G} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf string} {\bf seed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{R\+N\+G@{R\+N\+G}!R\+N\+G@{R\+N\+G}}
+\index{R\+N\+G@{R\+N\+G}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{R\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}R\+N\+G\+::\+R\+N\+G (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{seed}
+\end{DoxyParamCaption}
+)}\label{class_r_n_g_af3db2bc0429ddb410c086914cd009580}
+
+\begin{DoxyCode}
+18     \{
+19         \textcolor{keywordtype}{int} total = 0;
+20         \textcolor{keywordflow}{for each}(\textcolor{keywordtype}{char} c \textcolor{keywordflow}{in} seed)
+21         \{
+22             \textcolor{keywordtype}{int} cI = (int)c;
+23             total += cI;
+24         \}
+25 
+26         srand (total); 
+27         this->seed = seed;
+28     \}
+\end{DoxyCode}
+\index{R\+N\+G@{R\+N\+G}!R\+N\+G@{R\+N\+G}}
+\index{R\+N\+G@{R\+N\+G}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{R\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}R\+N\+G\+::\+R\+N\+G (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_r_n_g_a0028b717ff3d402a5829fc09ab1c5ed4}
+
+\begin{DoxyCode}
+13     \{
+14 
+15     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{R\+N\+G@{R\+N\+G}!Instance@{Instance}}
+\index{Instance@{Instance}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+N\+G} $\ast$ R\+N\+G\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_r_n_g_a7f1025bb8d78d6f62aeca60707a48b17}
+
+\begin{DoxyCode}
+5     \{
+6         \textcolor{keyword}{static} RNG Instance;
+7         \textcolor{keywordflow}{return} &Instance;
+8     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{d5/ddd/class_r_n_g_a7f1025bb8d78d6f62aeca60707a48b17_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{R\+N\+G@{R\+N\+G}!random\+Float@{random\+Float}}
+\index{random\+Float@{random\+Float}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{random\+Float}]{\setlength{\rightskip}{0pt plus 5cm}float R\+N\+G\+::random\+Float (
+\begin{DoxyParamCaption}
+\item[{float}]{max}
+\end{DoxyParamCaption}
+)}\label{class_r_n_g_a9d8574a4643a4b4e73eec7f9a57fc5cc}
+
+\begin{DoxyCode}
+71     \{
+72         \textcolor{keywordflow}{return} 1;
+73     \}\end{DoxyCode}
+\index{R\+N\+G@{R\+N\+G}!random\+Int@{random\+Int}}
+\index{random\+Int@{random\+Int}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{random\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int R\+N\+G\+::random\+Int (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{class_r_n_g_af5ef43e20123cb6e99566671db596d65}
+
+\begin{DoxyCode}
+59     \{
+60         \textcolor{keywordflow}{return} rand()%max;
+61     \}
+\end{DoxyCode}
+\index{R\+N\+G@{R\+N\+G}!random\+Int\+Range@{random\+Int\+Range}}
+\index{random\+Int\+Range@{random\+Int\+Range}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{random\+Int\+Range}]{\setlength{\rightskip}{0pt plus 5cm}int R\+N\+G\+::random\+Int\+Range (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}\label{class_r_n_g_a13f04b75f8c5d3350f97ba3820b89ef2}
+
+\begin{DoxyCode}
+64     \{
+65         \textcolor{keywordtype}{float} r = (float)rand() / (float)RAND\_MAX;
+66         \textcolor{keywordflow}{return} min + r * (max - min);
+67         \textcolor{comment}{//return rand()% max+min;}
+68     \}
+\end{DoxyCode}
+\index{R\+N\+G@{R\+N\+G}!random\+Seed@{random\+Seed}}
+\index{random\+Seed@{random\+Seed}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{random\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} R\+N\+G\+::random\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_r_n_g_abfe8006ee7178905ad4650a2dceb8689}
+
+\begin{DoxyCode}
+44     \{
+45         \textcolor{keywordtype}{int} s = time(NULL);
+46         \textcolor{keywordtype}{char} buffer[50];
+47         sprintf(buffer, \textcolor{stringliteral}{"%d"}, s);
+48         seed = buffer;
+49         \textcolor{comment}{//seed = to\_string(s);}
+50         srand(s);
+51     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{d5/ddd/class_r_n_g_abfe8006ee7178905ad4650a2dceb8689_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{R\+N\+G@{R\+N\+G}!retrieve\+Seed@{retrieve\+Seed}}
+\index{retrieve\+Seed@{retrieve\+Seed}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{retrieve\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} R\+N\+G\+::retrieve\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_r_n_g_a70f7a51f704fc89082a4ed0e8c63ecfa}
+
+\begin{DoxyCode}
+54     \{
+55         \textcolor{keywordflow}{return} seed;
+56     \}
+\end{DoxyCode}
+\index{R\+N\+G@{R\+N\+G}!set\+Seed@{set\+Seed}}
+\index{set\+Seed@{set\+Seed}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{set\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} R\+N\+G\+::set\+Seed (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{seed}
+\end{DoxyParamCaption}
+)}\label{class_r_n_g_a3697ca31dd73743eb717692f91b8e688}
+
+\begin{DoxyCode}
+31     \{
+32         \textcolor{keywordtype}{int} total = 0;
+33         \textcolor{keywordflow}{for each}(\textcolor{keywordtype}{char} c \textcolor{keywordflow}{in} seed)
+34         \{
+35             \textcolor{keywordtype}{int} cI = (int)c;
+36             total += cI;
+37         \}
+38 
+39         srand (total); 
+40         this->seed = seed;
+41     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{R\+N\+G@{R\+N\+G}!seed@{seed}}
+\index{seed@{seed}!R\+N\+G@{R\+N\+G}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} R\+N\+G\+::seed\hspace{0.3cm}{\ttfamily [private]}}\label{class_r_n_g_aca53b8888746b89a972a197de72ad8fc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf R\+N\+G.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf R\+N\+G.\+cpp}\end{DoxyCompactItemize}

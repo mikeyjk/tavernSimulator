@@ -1,0 +1,111 @@
+# unsupported on basis the engine doesn't support it
+BackgroundSound: Sounds/Background.ogg
+
+# tex1, tex2, tex3, tex4, tex5, tex6, name
+CubeTexture: Textures/zneg.png, Textures/zpos.png, Textures/ypos.png, Textures/yneg.png, Textures/xneg.png, Textures/xpos.png, CubeSky
+
+# NPC example
+#traits Aggressive, Conservative, AntiSocial, Social, LikesToEat, LikesToDrink, NightOwl, Sleepy, Forgetful, Weak, Strong,  Cheerful, Depressed
+#Entity: NPC, 20, -30, 20, 0, 0, Alchemist, Alchemist, true, 1, 100, talk(0.8), eat(0.01), touch(0.5), push(0.5), pull(0.5), trait::Conservative, trait::NightOwl, trait::Forgetful
+
+#Entity: NPC, -400, -30, 100, 0, 0, Alchemist, Alchemist, true, 1, 100, talk(0.8), eat(0.01), touch(0.5), push(0.5), pull(0.5), trait::Aggressive, trait::Antisocial, trait::Depressed
+
+#Entity: NPC, -300, -30, 100, 0, 0, Alchemist, Alchemist, true, 1, 100, talk(0.8), eat(0.01), touch(0.5), push(0.5), pull(0.5), trait::Social, trait::Conservative, trait::Sleepy
+
+# type, positionx, positiony, positionz, ObjName, TextureName, isBound, transparency, weight, affordances
+#Possible Affordances: 
+Entity: Character, -600, 0, 0, 0, 0, Alchemist, Alchemist, false, 0, 100, talk(0.8), eat(0.01), touch(0.5), push(0.5), pull(0.5)
+Entity: Geometry, 0, -50, 0, 0, 0, TavernWall, Concrete, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, WindowFrames, BlackMetal, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, Roof, ConcretePlain, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, TavernGround, groundTiled, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, Grass, Grass, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, GrassWall, OrangeRender, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, OuterWall, ConcretePlain, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, GlassFenceFrame, BlackMetal, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, Arches, Arch, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, ToiletWalls, ConcreteDark, false, 1, 100
+Entity: Geometry, 0, -45, 0, 0, 0, GroundPlane, groundPlaneGrass, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, ToiletWalls, ConcreteDark, false, 1, 100
+
+Entity: Geometry, 0, -50, 0, 0, 0, MeshSupport, Wood, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, Mesh1, Mesh, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, Mesh2, Mesh, false, 1, 100
+Entity: Geometry, 0, -50, 0, 0, 0, Mesh3, Mesh, false, 1, 100
+
+Entity: Geometry, 0, -53, 0, 0, 0, meme2, meme1, false, 1, 100
+Entity: Geometry, 0, -53, 0, 0, 0, meme1, meme2, false, 1, 100
+
+Entity: Geometry, -800, -50, 250, 0, 0, PalmTree, PalmTree, false, 1, 100, toilet(1.0)
+Entity: Geometry, -815, -60, 250, 0, 0, PalmTree, PalmTree, false, 1, 100, toilet(1.0)
+Entity: Geometry, -800, -60, 270, 0, 0, PalmTree, PalmTree, false, 1, 100, toilet(1.0)
+
+
+
+
+
+Entity: Geometry, -170, -45, 70, 0, 0, PoolTable, PoolTable, true, 1, 500, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.7), touch(1)
+Entity: Geometry, 450, -45, 0, 0, 0, PoolTable, PoolTable, true, 1, 500, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.7), touch(1)
+Entity: Geometry, -170, 8, -200, 0, 0, BarFridge, BarFridge, true, 1, 500, push(0.5), vendor(0.5), touch(1)
+Entity: Geometry, -220, 8, -200, 0, 0, BarFridge, BarFridge, true, 1, 500, push(0.5), vendor(0.5), touch(1)
+Entity: Geometry, 0, -45, 0, 0, 0, Bar, Bar, false, 1, 1000, placeable(0.7), touch(1)
+Entity: Geometry, -350, -5, -150, 0, 0, Table, Table, true, 1, 150, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.7), touch(1)
+Entity: Geometry, -450, -5, -150, 0, 0, Table, Table, true, 1, 150, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.7), touch(1)
+Entity: Geometry, -350, -5, -30, 0, 0, Table, Table, true, 1, 150, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.7), touch(1)
+Entity: Geometry, -450, -5, -30, 0, 0, Table, Table, true, 1, 150, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.7), touch(1)
+
+Entity: Geometry, -30, -25, 0, 0, 0, Barrel, Barrel, true, 1, 50, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.5)
+Entity: Geometry, -28, -4, 5, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+Entity: Geometry, -33, -4, 0, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, -30, -4, -5, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+
+Entity: Geometry, 70, -25, 0, 0, 0, Barrel, Barrel, true, 1, 50, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.5)
+Entity: Geometry, 72, -4, 5, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+Entity: Geometry, 65, -4, 0, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, 75, -4, -5, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+
+Entity: Geometry, 170, -25, 0, 0, 0, Barrel, Barrel, true, 1, 50, push(0.5), pull(0.5), sleep(0.2), sit(0.2), placeable(0.5)
+Entity: Geometry, 173, -4, 2, 0, 0, GlassEmpty, clearGlass, true, 0.7, 1, drink(0.1), throw(0.7), touch(1)
+Entity: Geometry, 169, -4, 0, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, 170, -4, -3, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+Entity: Geometry, 165, -4, 2, 0, 0, GlassEmpty, clearGlass, true, 0.7, 1, drink(0.1), throw(0.7), touch(1)
+Entity: Geometry, 169, -4, 7, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, 176, -4, -3, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+
+Entity: Geometry, -125, -2, -90, 0, 0, beerTap, beerTap, false, 1, 2
+Entity: Geometry, -170, -2, -90, 0, 0, beerTap, beerTap, false, 1, 2
+Entity: Geometry, -225, -2, -90, 0, 0, beerTap, beerTap, false, 1, 2
+
+Entity: Geometry, -100, -12, -100, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+Entity: Geometry, -105, -12, -100, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+Entity: Geometry, -110, -12, -100, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+Entity: Geometry, -115, -12, -100, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+Entity: Geometry, -120, -12, -100, 0, 0, BeerBottle, BeerBottle_Bear, true, 1, 2, drink(0.7), throw(0.5), touch(1), toxic(0.3)
+
+Entity: Geometry, -100, -12, -105, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 1.5, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, -105, -12, -105, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 1.5, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, -110, -12, -105, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 1.5, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, -115, -12, -105, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 1.5, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+Entity: Geometry, -120, -12, -105, 0, 0, BeerBottle, BeerBottleLite_Bear, true, 1, 1.5, drink(0.7), throw(0.5), touch(1), toxic(0.2)
+
+
+Entity: Geometry, -130, -12, -100, 0, 0, Burger, Burger, true, 1, 1, eat(0.7), throw(0.5), touch(1)
+Entity: Geometry, -140, -12, -100, 0, 0, Burger, Burger, true, 1, 1, eat(0.7), throw(0.5), touch(1)
+Entity: Geometry, -125, -12, -105, 0, 0, Burger, Burger, true, 1, 1, eat(0.7), throw(0.5), touch(1)
+Entity: Geometry, -135, -12, -105, 0, 0, Burger, Burger, true, 1, 1, eat(0.7), throw(0.5), touch(1)
+Entity: Geometry, -145, -12, -105, 0, 0, Burger, Burger, true, 1, 1, eat(0.7), throw(0.5), touch(1)
+
+Entity: Geometry, -125, -25, -60, 0, 0, BarStool, BarStool, true, 1, 20, throw(0.5), touch(1), pickup(0.5), push(0.5), pull(0.5), sit(1)
+Entity: Geometry, -170, -25, -60, 0, 0, BarStool, BarStool, true, 1, 20, throw(0.5), touch(1), pickup(0.5), push(0.5), pull(0.5), sit(1)
+Entity: Geometry, -225, -25, -60, 0, 0, BarStool, BarStool, true, 1, 20, throw(0.5), touch(1), pickup(0.5), push(0.5), pull(0.5), sit(1)
+
+Entity: Geometry, 450, -25, -150, 0, 0, Toilet, Toilet, false, 1, 200, toilet(1), sit(1)
+Entity: Geometry, 35, -35, -90, 0, 0, Lounge, Lounge, false, 1, 200
+Entity: Geometry, -250, -10, -100, 0, 0, GlassEmpty, clearGlass, true, 0.5, 1
+Entity: Geometry, 0, -50, 0, 0, 0, GlassPanes, clearGlass, false, 0.5, 200
+
+Entity: Geometry, 0, -4000, -4000, 0, 0, Plane, thanks, false, 1, 20
+Entity: Geometry, 0, -4000, -500, 0, 0, Plane, AIPanel, false, 1, 20
+
+# true or false
+Skybox: true

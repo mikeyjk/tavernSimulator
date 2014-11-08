@@ -1,0 +1,8 @@
+<map id="ResourceManager::addTexture" name="ResourceManager::addTexture">
+<area shape="rect" id="node2" href="$db/ddf/class_texture_manager.html#abab38cdb8503fde6288cb07330c10dc6" title="Gets the instance of the texture manager. " alt="" coords="259,5,431,32"/>
+<area shape="rect" id="node3" href="$db/ddf/class_texture_manager.html#a83425ee1ee0e71587664f59440491b94" title="Adds a texture to the texture manager by the file&#39;s path, which will become known to the texture mana..." alt="" coords="252,56,439,83"/>
+<area shape="rect" id="node4" href="$dc/dd2/glext_8h.html#aacf898e4ecb940565baac883dc587ff0" title="GLint" alt="" coords="547,31,601,57"/>
+<area shape="rect" id="node5" href="$db/ddf/class_texture_manager.html#a9fbf8d38e1709b44ec41401858a2700c" title="TextureManager::loadPNG" alt="" coords="487,81,661,108"/>
+<area shape="rect" id="node6" href="$dc/dd2/glext_8h.html#a2f0c8cd5c21f9fcbd931c3f48bc90dfc" title="GLuint" alt="" coords="761,56,821,83"/>
+<area shape="rect" id="node7" href="$d2/d93/_s_o_i_l_8h.html#a67332563e7bbbabb1fc194ffadbb9a46" title="SOIL_load_OGL_texture" alt="" coords="709,107,872,133"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="SkyBox::Draw" name="SkyBox::Draw">
+<area shape="rect" id="node2" href="$de/dda/class_sky_box.html#a96695f89ed3843655b826467cf93b375" title="SkyBox::UpdateSkyBoxPos" alt="" coords="159,5,345,32"/>
+<area shape="rect" id="node3" href="$da/d3d/class_rendering_engine.html#a3541519b4525b18660e07869797c041d" title="Get the Handle of Rendering API. " alt="" coords="393,23,584,65"/>
+</map>

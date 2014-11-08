@@ -1,0 +1,4 @@
+<map id="Personality::giveHudData" name="Personality::giveHudData">
+<area shape="rect" id="node2" href="$d3/dde/class_brain.html#a32b4574600c3e13f8501c6e64caa5c00" title="giveHudData function " alt="" coords="220,5,352,32"/>
+<area shape="rect" id="node3" href="$d0/d2a/class_n_p_c.html#ac1476c6a002620b58490693e901aa51c" title="NPC::giveHudData" alt="" coords="400,5,529,32"/>
+</map>

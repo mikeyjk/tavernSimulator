@@ -1,0 +1,21 @@
+<map id="SkyBox::GenerateBuffer" name="SkyBox::GenerateBuffer">
+<area shape="rect" id="node2" href="$d1/da9/class_resource_manager.html#a63d542726087c4f2ae121a05060a15e9" title="ResourceManager::Instance" alt="" coords="218,297,402,324"/>
+<area shape="rect" id="node3" href="$d1/da9/class_resource_manager.html#a9727d10473be5ab4ca15b278883069a4" title="ResourceManager::Generate\lShader" alt="" coords="216,349,404,390"/>
+<area shape="rect" id="node6" href="$dc/dd2/glext_8h.html#a2f0c8cd5c21f9fcbd931c3f48bc90dfc" title="GLuint" alt="" coords="752,461,812,488"/>
+<area shape="rect" id="node16" href="$dc/dd2/glext_8h.html#afb586952866409c82b50c9995210cd03" title="GLfloat" alt="" coords="279,465,341,492"/>
+<area shape="rect" id="node17" href="$dc/dd2/glext_8h.html#ac598505ab84c515754305ba95ed6ce11" title="glGenBuffersARB" alt="" coords="249,516,371,543"/>
+<area shape="rect" id="node18" href="$dc/dd2/glext_8h.html#a497852a18f1db7c2811cb51b6a9e8aa3" title="glBindBufferARB" alt="" coords="251,567,369,593"/>
+<area shape="rect" id="node19" href="$dc/dd2/glext_8h.html#aaa8cf17344c08c820c35923616ce6bce" title="glBufferDataARB" alt="" coords="251,617,369,644"/>
+<area shape="rect" id="node20" href="$dc/dd2/glext_8h.html#a9af764cb0e23c8c3fbdf0cd07a51087a" title="glGetAttribLocation" alt="" coords="243,668,377,695"/>
+<area shape="rect" id="node4" href="$d2/d24/class_shader_manager.html#aa44be88ba01b54aeb5e914563010bbfc" title="ShaderManager::Instance" alt="" coords="474,356,645,383"/>
+<area shape="rect" id="node5" href="$d2/d24/class_shader_manager.html#a1e96c2429cbd7d39aab608b4063d7ee3" title="ShaderManager::GenerateShader" alt="" coords="452,259,667,285"/>
+<area shape="rect" id="node7" href="$dc/dd2/glext_8h.html#a2f67007d0216a1db2d4a6714f9faad25" title="glCreateShader" alt="" coords="727,56,837,83"/>
+<area shape="rect" id="node8" href="$dc/dd2/glext_8h.html#a5f943ccf58ed556c795b5ce284625cb4" title="glShaderSource" alt="" coords="725,107,839,133"/>
+<area shape="rect" id="node9" href="$dc/dd2/glext_8h.html#a6eca3b13b42f83cc4ee5b28deb71e109" title="glCompileShader" alt="" coords="722,157,842,184"/>
+<area shape="rect" id="node10" href="$dc/dd2/glext_8h.html#aacf898e4ecb940565baac883dc587ff0" title="GLint" alt="" coords="755,208,809,235"/>
+<area shape="rect" id="node11" href="$dc/dd2/glext_8h.html#a385a60ae1592d3169bb047caf3b6302b" title="glGetShaderiv" alt="" coords="731,259,833,285"/>
+<area shape="rect" id="node12" href="$dc/dd2/glext_8h.html#aa65afaf77985bc551a396fa6f67d6c93" title="glGetShaderInfoLog" alt="" coords="715,309,849,336"/>
+<area shape="rect" id="node13" href="$dc/dd2/glext_8h.html#a0f491f1360091e38b1e39c83dbee2a2e" title="glCreateProgram" alt="" coords="723,360,841,387"/>
+<area shape="rect" id="node14" href="$dc/dd2/glext_8h.html#a55677a523e83827f372384949cdaf960" title="glAttachShader" alt="" coords="727,411,837,437"/>
+<area shape="rect" id="node15" href="$dc/dd2/glext_8h.html#a7dfa812681ae81b309cf0f8b12f3e865" title="glLinkProgram" alt="" coords="729,5,835,32"/>
+</map>

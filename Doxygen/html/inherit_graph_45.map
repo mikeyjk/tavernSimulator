@@ -1,0 +1,18 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d0/d8b/class_state.html" title="State\&lt; NPC \&gt;" alt="" coords="5,360,109,387"/>
+<area shape="rect" id="node2" href="$de/db8/class_climb.html" title="This class is the state for the AI ships to Climb. " alt="" coords="173,5,228,32"/>
+<area shape="rect" id="node3" href="$db/da9/class_drink.html" title="This class is the state for the AI to Drink. " alt="" coords="175,56,227,83"/>
+<area shape="rect" id="node4" href="$d1/d5d/class_eat.html" title="This class is the state for the AI to Eat. " alt="" coords="179,107,222,133"/>
+<area shape="rect" id="node5" href="$df/dfa/class_pickup.html" title="This class is the state for the AI ships to Pickup. " alt="" coords="169,157,232,184"/>
+<area shape="rect" id="node6" href="$dd/d21/class_place.html" title="This class is the state for the AI to Place. " alt="" coords="173,208,228,235"/>
+<area shape="rect" id="node7" href="$de/de1/class_pull.html" title="This class is the state for the AI ships to Pull. " alt="" coords="179,259,223,285"/>
+<area shape="rect" id="node8" href="$d5/d33/class_push.html" title="This class is the state for the AI ships to Push. " alt="" coords="175,309,227,336"/>
+<area shape="rect" id="node9" href="$d2/dcd/class_sit.html" title="This class is the state for the AI to Sit. " alt="" coords="181,360,220,387"/>
+<area shape="rect" id="node10" href="$da/dbc/class_sleep_state.html" title="SleepState" alt="" coords="157,411,244,437"/>
+<area shape="rect" id="node11" href="$d2/d6c/class_talk.html" title="This class is the state for the AI ships to Talk. " alt="" coords="177,461,224,488"/>
+<area shape="rect" id="node12" href="$d5/de4/class_throw.html" title="This class is the state for the AI ships to Throw. " alt="" coords="173,512,229,539"/>
+<area shape="rect" id="node13" href="$d9/d29/class_toilet.html" title="Toilet" alt="" coords="174,563,227,589"/>
+<area shape="rect" id="node14" href="$d1/dff/class_touch.html" title="This class is the state for the AI ships to Touch. " alt="" coords="172,613,229,640"/>
+<area shape="rect" id="node15" href="$d3/d29/class_vendor.html" title="This class is the state for the AI to Vendor. " alt="" coords="169,664,232,691"/>
+<area shape="rect" id="node16" href="$dd/dbb/class_wander.html" title="This class is the state for the AI to Wander. " alt="" coords="167,715,234,741"/>
+</map>

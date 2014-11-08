@@ -1,0 +1,1059 @@
+\section{Game\+Object Class Reference}
+\label{class_game_object}\index{Game\+Object@{Game\+Object}}
+
+
+The Parent class of all the entities in the Engine.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Game\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/da3/class_game_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Object\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d62/class_game_object__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} Constructor. \end{DoxyCompactList}\item 
+{\bf Game\+Object} ({\bf Rendering\+Engine} $\ast${\bf ref}, {\bf Vec3} pos, float rot\+X, float rot\+Y, {\bf std\+::string} {\bf model}, {\bf std\+::string} {\bf texture}, bool Isbound, float transparency, float {\bf weight})
+\begin{DoxyCompactList}\small\item\em \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} Destructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Position} ({\bf Vec3} pos)
+\begin{DoxyCompactList}\small\item\em set\+Position \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Position} (float {\bf x}, float {\bf y}, float {\bf z})
+\begin{DoxyCompactList}\small\item\em set\+Position \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf get\+Pos} ()
+\begin{DoxyCompactList}\small\item\em get\+Position \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Rotation} (float rot\+X, float rot\+Y, float rot\+Z)
+\begin{DoxyCompactList}\small\item\em Set\+Rotation. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Transparency} (float transparency)
+\item 
+float {\bf get\+Rotation\+X} ()
+\begin{DoxyCompactList}\small\item\em get\+Rotation\+X \end{DoxyCompactList}\item 
+float {\bf get\+Rotation\+Y} ()
+\begin{DoxyCompactList}\small\item\em get\+Rotation\+Y \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Texture} ({\bf std\+::string} tex)
+\begin{DoxyCompactList}\small\item\em Set\+Texture. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Model} ({\bf std\+::string} mod)
+\begin{DoxyCompactList}\small\item\em Set\+Model. \end{DoxyCompactList}\item 
+{\bf std\+::string} {\bf get\+Texture} ()
+\begin{DoxyCompactList}\small\item\em get\+Texture \end{DoxyCompactList}\item 
+{\bf std\+::string} {\bf get\+Model} ()
+\begin{DoxyCompactList}\small\item\em get\+Model \end{DoxyCompactList}\item 
+int {\bf get\+I\+D} ()
+\begin{DoxyCompactList}\small\item\em get\+I\+D function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Object\+Type} ({\bf game\+Object\+Type} {\bf t})
+\begin{DoxyCompactList}\small\item\em set\+Object\+Type function \end{DoxyCompactList}\item 
+{\bf game\+Object\+Type} {\bf get\+Objec\+Type} ()
+\begin{DoxyCompactList}\small\item\em get\+Object\+Type function \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em virtual i\+\_\+\+Drawable\+Object Draw \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Set\+Buffer\+Ref} ()
+\begin{DoxyCompactList}\small\item\em virtual i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Destory} ()
+\begin{DoxyCompactList}\small\item\em virtual i\+\_\+\+Drawable\+Object Destroy \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em virtual Update \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+B\+Box} ()
+\item 
+{\bf void} {\bf set\+Affordances} (std\+::vector$<$ {\bf Affordance} $>$ affordances)
+\item 
+{\bf Vec3} {\bf get\+Rotation} ()
+\item 
+std\+::vector$<$ {\bf Affordance} $>$ {\bf get\+Affordances} () const 
+\item 
+{\bf void} {\bf add\+Affordance} (const {\bf Affordance} new\+Affordance)
+\item 
+{\bf void} {\bf set\+Bounding\+Pos} ({\bf Vec3} {\bf p})
+\item 
+{\bf void} {\bf set\+Target\+Object} ({\bf Game\+Object} $\ast${\bf t})
+\item 
+{\bf Game\+Object} $\ast$ {\bf get\+Target} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Id\+Generator} $\ast$ {\bf Id\+Gen}
+\item 
+{\bf Rendering\+Engine} $\ast$ {\bf Redering\+Handle}
+\item 
+{\bf game\+Object\+Type} {\bf type}
+\item 
+int {\bf m\+\_\+object\+I\+D}
+\item 
+{\bf Vec3} {\bf m\+\_\+position}
+\item 
+{\bf Vec3} {\bf m\+\_\+rotation}
+\item 
+{\bf std\+::string} {\bf texture}
+\begin{DoxyCompactList}\small\item\em texture string (used for getting the texture from the resource\+Manager) \end{DoxyCompactList}\item 
+{\bf std\+::string} {\bf model}
+\begin{DoxyCompactList}\small\item\em model string (used for getting the model from the resource\+Manager) \end{DoxyCompactList}\item 
+float {\bf trans}
+\item 
+Bbox $\ast$ {\bf Bounding}
+\item 
+bool {\bf is\+Bounding}
+\item 
+std\+::vector$<$ {\bf Affordance} $>$ {\bf m\+\_\+affordances}
+\item 
+{\bf Game\+Object} $\ast$ {\bf target\+Object}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Parent class of all the entities in the Engine. 
+
+The Game\+World class is basically the Entity Management class.
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe \+: \doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/03/2014
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+\+: Liu Yi, Karl Tysoe 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/03/2014
+\end{DoxyDate}
+Michael J. Kiernam 13/09/2014 Refactored Game\+World -\/$>$ \doxyref{World}{p.}{d3/d21/class_world}. Removed pragma, introduced include guards. Changed indenting. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Game\+Object@{Game\+Object}!Game\+Object@{Game\+Object}}
+\index{Game\+Object@{Game\+Object}!Game\+Object@{Game\+Object}}
+\subsubsection[{Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object\+::\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}
+
+
+\doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} Constructor. 
+
+This is the basic Constructor inisialises everything to 0
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     m_position = Vec3(0, 0, 0);
+6     m_rotation = Vec3(0, 0, 0);
+7     model = \textcolor{stringliteral}{""};
+8     texture = \textcolor{stringliteral}{""};
+9     trans = 1.0;
+10     RederingHandle = RederingHandle = RenderingEngine::Instance();
+11     IdGen = IdGenerator::Instance();
+12     m_objectID = IdGen->GetID();
+13     Bounding = \textcolor{keyword}{nullptr};
+14 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_a0348e3ee2e83d56eafca7a3547f432c4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!Game\+Object@{Game\+Object}}
+\index{Game\+Object@{Game\+Object}!Game\+Object@{Game\+Object}}
+\subsubsection[{Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object\+::\+Game\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Rendering\+Engine} $\ast$}]{ref, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{{\bf std\+::string}}]{model, }
+\item[{{\bf std\+::string}}]{texture, }
+\item[{bool}]{Isbound, }
+\item[{float}]{transparency, }
+\item[{float}]{weight}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a77b518b7c9e56349111fac5b01087efc}
+
+
+\doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} Constructor. 
+
+This is the parameter Constructor initialises or points to all parameters specified
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rendering\+Engine$\ast$} & ref, \doxyref{Vec3}{p.}{df/d24/class_vec3} pos, float rot\+X, float rot\+Y, string model, string texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+Constructor chain with \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+18 \{
+19     RederingHandle = ref;
+20     IdGen = IdGenerator::Instance();
+21     m_objectID = IdGen->GetID();
+22 
+23     m_position = pos;
+24     m_rotation.X = rotX;
+25     m_rotation.Y = rotY;
+26     trans = transparency;
+27 
+28     \textcolor{keywordflow}{if}(model != \textcolor{stringliteral}{""} && model != \textcolor{stringliteral}{"NULL"})
+29     \{
+30         Vec3* min = \textcolor{keyword}{new} Vec3(10000000,10000000,10000000);
+31         Vec3* max = \textcolor{keyword}{new} Vec3(0,0,0);
+32         std::string modelPath = \textcolor{stringliteral}{"Models/"} + model + \textcolor{stringliteral}{".obj"};
+33         ResourceManager::Instance()->addModel(modelPath, model, min, max);
+34         isBounding = Isbound;
+35         \textcolor{keywordflow}{if}(Isbound)
+36         \{
+37             glm::vec3 glmPos(pos.X, pos.Y, pos.Z);
+38             \textcolor{keywordflow}{if}(weight <= 0)
+39                 weight = 10;
+40             
+41             Bounding = \textcolor{keyword}{new} Bbox(  (max->getX() - min->getX())/2,  
+42                                   (max->getY() - min->getY())/2,  
+43                                   (max->getZ() - min->getZ())/2,
+44                                   glmPos,
+45                                   weight,
+46                                   cyclone::collisionType::NORMAL,
+47                                   0.0001,0.00001,0.0001);
+48 
+49           Bounding->myGameObject = \textcolor{keyword}{this};
+50 
+51           PhysicEngine::Instance()->WorldSimu->AddBBox(Bounding);
+52             
+53         \}
+54         this->model = model;
+55     \}
+56 
+57     \textcolor{keywordflow}{if}(texture != \textcolor{stringliteral}{""} && texture != \textcolor{stringliteral}{"NULL"})
+58     \{
+59         std::string texPath = \textcolor{stringliteral}{"Textures/"} + texture + \textcolor{stringliteral}{".png"};
+60         \textcolor{keywordtype}{char}* tex = strdup(texPath.c\_str());
+61         ResourceManager::Instance()->addTexture(tex, texture);
+62         this->texture = texture;
+63     \}
+64 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_a77b518b7c9e56349111fac5b01087efc_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!````~Game\+Object@{$\sim$\+Game\+Object}}
+\index{````~Game\+Object@{$\sim$\+Game\+Object}!Game\+Object@{Game\+Object}}
+\subsubsection[{$\sim$\+Game\+Object}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Object\+::$\sim$\+Game\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}
+
+
+\doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} Destructor. 
+
+This is the Destructor Sets all pointers to nullptr
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets all pointers to null 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+67 \{
+68     RederingHandle = \textcolor{keyword}{nullptr};
+69     IdGen = \textcolor{keyword}{nullptr};
+70 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Game\+Object@{Game\+Object}!add\+Affordance@{add\+Affordance}}
+\index{add\+Affordance@{add\+Affordance}!Game\+Object@{Game\+Object}}
+\subsubsection[{add\+Affordance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::add\+Affordance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Affordance}}]{new\+Affordance}
+\end{DoxyParamCaption}
+)}\label{class_game_object_ac9d907a37cbbd748b7d6dab0975af631}
+
+\begin{DoxyCode}
+150 \{
+151     m_affordances.push\_back(newAffordance);
+152 \}\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!Destory@{Destory}}
+\index{Destory@{Destory}!Game\+Object@{Game\+Object}}
+\subsubsection[{Destory}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Game\+Object\+::\+Destory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_game_object_a9f5e20361956b3181420f2f040ef496a}
+
+
+virtual i\+\_\+\+Drawable\+Object Destroy 
+
+put here to make invisible Game\+Objects Possible
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_aa4f2b2580134165b3d1aad0b6a9d1a4f}.
+
+
+
+Reimplemented in {\bf Character} \doxyref{}{p.}{d7/da7/class_character_adc64dd2ccc01050e59e3ebe3f37c7be2}, {\bf Geometry} \doxyref{}{p.}{db/d0b/class_geometry_a3efb7bdf562dcef8d2766c7b12ab5fc1}, {\bf N\+P\+C} \doxyref{}{p.}{d0/d2a/class_n_p_c_a4f7afe3bfedfbbfafe43b7b7cb36dfe1}, and {\bf Sky\+Box} \doxyref{}{p.}{de/dda/class_sky_box_a04a507e77b90d469d77fdae3271de731}.
+
+
+\begin{DoxyCode}
+241 \{\}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!Draw@{Draw}}
+\index{Draw@{Draw}!Game\+Object@{Game\+Object}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Game\+Object\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_game_object_a54f25ff4076e03a40309085bcf826e53}
+
+
+virtual i\+\_\+\+Drawable\+Object Draw 
+
+put here to make invisible Game\+Objects Possible
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_a3ac7ece844fc14e2b179fb2cdb55ccf6}.
+
+
+
+Reimplemented in {\bf Character} \doxyref{}{p.}{d7/da7/class_character_a681d67b227b0f7abb8508958841c6976}, {\bf Geometry} \doxyref{}{p.}{db/d0b/class_geometry_a164925c8b8713b573e3a50e54bff287a}, {\bf N\+P\+C} \doxyref{}{p.}{d0/d2a/class_n_p_c_a8109b8858cace4f2e8afe78ae7d1a6d3}, and {\bf Sky\+Box} \doxyref{}{p.}{de/dda/class_sky_box_ab9db46f2e34683cae517ba97a44aee9e}.
+
+
+\begin{DoxyCode}
+221 \{\}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!get\+Affordances@{get\+Affordances}}
+\index{get\+Affordances@{get\+Affordances}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Affordances}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Affordance} $>$ Game\+Object\+::get\+Affordances (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_game_object_aec29676b199895e48cdfe30a1a78128d}
+
+\begin{DoxyCode}
+145 \{
+146     \textcolor{keywordflow}{return}(m_affordances);
+147 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!get\+I\+D@{get\+I\+D}}
+\index{get\+I\+D@{get\+I\+D}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+Object\+::get\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_object_add964e473761c04f3406efb37d23b37a}
+
+
+get\+I\+D function 
+
+The basic getter function for the \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} I\+D
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+m\+\_\+object\+I\+D -\/ int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+191 \{\textcolor{keywordflow}{return} m_objectID;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_add964e473761c04f3406efb37d23b37a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} Game\+Object\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_afbdb8f92d8332942d71069d17a1d28dc}
+
+
+get\+Model 
+
+basic getter for the model variable
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+model -\/ string 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+128 \{
+129     \textcolor{keywordflow}{return} model;
+130 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!get\+Objec\+Type@{get\+Objec\+Type}}
+\index{get\+Objec\+Type@{get\+Objec\+Type}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Objec\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf game\+Object\+Type} Game\+Object\+::get\+Objec\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_object_a18ede36e212416872af0a288c83cf306}
+
+
+get\+Object\+Type function 
+
+The basic getter for the enum for the game\+Object\+Type
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type -\/ game\+Object\+Type 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+211 \{\textcolor{keywordflow}{return} type;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_a18ede36e212416872af0a288c83cf306_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!get\+Pos@{get\+Pos}}
+\index{get\+Pos@{get\+Pos}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Game\+Object\+::get\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a0c133927fa016892816a71c40d761681}
+
+
+get\+Position 
+
+basic getter for the position varialble
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position -\/ \doxyref{Vec3}{p.}{df/d24/class_vec3} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+85 \{
+86     \textcolor{keywordflow}{return} m_position;
+87 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_a0c133927fa016892816a71c40d761681_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!get\+Rotation@{get\+Rotation}}
+\index{get\+Rotation@{get\+Rotation}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Game\+Object\+::get\+Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_ad1bb244ddabf2342f48082bfef62eaa5}
+
+\begin{DoxyCode}
+108 \{
+109     \textcolor{keywordflow}{return}(m_rotation);
+110 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!get\+Rotation\+X@{get\+Rotation\+X}}
+\index{get\+Rotation\+X@{get\+Rotation\+X}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Rotation\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Game\+Object\+::get\+Rotation\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_ad36a4c68774625460f09b46a01cf7f4f}
+
+
+get\+Rotation\+X 
+
+basic getter for the rotation\+X varialble
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rotation\+X -\/ float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+98 \{
+99     \textcolor{keywordflow}{return}(m_rotation.X);
+100 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!get\+Rotation\+Y@{get\+Rotation\+Y}}
+\index{get\+Rotation\+Y@{get\+Rotation\+Y}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Rotation\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Game\+Object\+::get\+Rotation\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_aa9da79e539f091f70778b73a02e08451}
+
+
+get\+Rotation\+Y 
+
+basic getter for the rotation\+Y varialble
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+rotation\+Y -\/ float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+103 \{
+104     \textcolor{keywordflow}{return}(m_rotation.Y);
+105 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!get\+Target@{get\+Target}}
+\index{get\+Target@{get\+Target}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object}$\ast$ Game\+Object\+::get\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_object_a78d6cacd071af5bd13e14a45c42d0e75}
+
+\begin{DoxyCode}
+272 \{\textcolor{keywordflow}{return} targetObject;\}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Game\+Object@{Game\+Object}}
+\subsubsection[{get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} Game\+Object\+::get\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_abb3bf2926ad17e296af731facf0ea695}
+
+
+get\+Texture 
+
+basic getter for the texture variable
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+texture -\/ string 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+123 \{
+124     \textcolor{keywordflow}{return} texture;
+125 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Affordances@{set\+Affordances}}
+\index{set\+Affordances@{set\+Affordances}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Affordances}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Affordances (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Affordance} $>$}]{affordances}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a8b415958b6b1a8bccf290273f2fa8dcf}
+
+\begin{DoxyCode}
+140 \{
+141     m_affordances = affordances;
+142 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_a8b415958b6b1a8bccf290273f2fa8dcf_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!set\+B\+Box@{set\+B\+Box}}
+\index{set\+B\+Box@{set\+B\+Box}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+B\+Box}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+B\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a9736481b634f6d2d23878bf8d0e9fb56}
+
+\begin{DoxyCode}
+134 \{
+135     \textcolor{comment}{// ModelManager::instance()->getModel}
+136     \textcolor{comment}{// Bounding = new Bbox(w, h, d);}
+137 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Bounding\+Pos@{set\+Bounding\+Pos}}
+\index{set\+Bounding\+Pos@{set\+Bounding\+Pos}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Bounding\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Bounding\+Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_object_a7bef569a86a7d1507fff31030b7eb7eb}
+
+\begin{DoxyCode}
+264         \{
+265             Bounding->body->setPosition(p.X, p.Y, p.Z);
+266             Bounding->body->calculateDerivedData();
+267             Bounding->calculateInternals();
+268         \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!Set\+Buffer\+Ref@{Set\+Buffer\+Ref}}
+\index{Set\+Buffer\+Ref@{Set\+Buffer\+Ref}!Game\+Object@{Game\+Object}}
+\subsubsection[{Set\+Buffer\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Game\+Object\+::\+Set\+Buffer\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_game_object_a34436ba977aafaff056f3f5022f992b9}
+
+
+virtual i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref 
+
+put here to make invisible Game\+Objects Possible
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_a5d623d75130432ad07cddf78e165f8fc}.
+
+
+
+Reimplemented in {\bf Character} \doxyref{}{p.}{d7/da7/class_character_af0b9eefe47647ce706a7d2bda31a515b}, {\bf Geometry} \doxyref{}{p.}{db/d0b/class_geometry_a6d04090067816eb17bc4076e3b361237}, {\bf N\+P\+C} \doxyref{}{p.}{d0/d2a/class_n_p_c_a20e0f185219efbae958bf994d56ebf3f}, and {\bf Sky\+Box} \doxyref{}{p.}{de/dda/class_sky_box_aeeb16ac3c6e20b83ea10a4658acba83d}.
+
+
+\begin{DoxyCode}
+231 \{\}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Model@{set\+Model}}
+\index{set\+Model@{set\+Model}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{mod}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a0041ccf074c638a3462b1ea392c840da}
+
+
+Set\+Model. 
+
+This sets the model name to the one provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & mod \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets model to mod 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+118 \{
+119     model = mod;
+120 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Object\+Type@{set\+Object\+Type}}
+\index{set\+Object\+Type@{set\+Object\+Type}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Object\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Object\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf game\+Object\+Type}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_object_acd41e3a6555eac9930ce29b30f9f804f}
+
+
+set\+Object\+Type function 
+
+The basic setter for the enum for the game\+Object\+Type
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object\+Type} & t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+201 \{type = t;\}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a6c1e79b2fbbdf2ff6ca2a534f5061697}
+
+
+set\+Position 
+
+This sets the position with a vector provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Vec3}{p.}{df/d24/class_vec3}} & -\/ pos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets position to pos 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+73 \{
+74     m_position = pos;
+75 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{z}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a2d9fab58928bad7ac5e5c8b98f154724}
+
+
+set\+Position 
+
+This sets the position with the floats provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & x, float y, float z \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets position to floats 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+78 \{
+79     m_position.setX(x);
+80     m_position.setY(y);
+81     m_position.setZ(z);
+82 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{d0/dd1/class_game_object_a2d9fab58928bad7ac5e5c8b98f154724_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{float}]{rot\+Z}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a008b9c188ec491a4783921b7dd96bac0}
+
+
+Set\+Rotation. 
+
+This sets the rotation for X and Y Probably to be changed for \doxyref{Quaternion}{p.}{dc/de3/class_quaternion}
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & rot\+X, float rot\+Y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets rotations to once provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+90 \{
+91     m_rotation.X = rotX;
+92     m_rotation.Y = rotY;
+93     m_rotation.Z = rotZ;
+94     Bounding->body->setRotation(rotX, rotY, rotZ);
+95 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_a008b9c188ec491a4783921b7dd96bac0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!set\+Target\+Object@{set\+Target\+Object}}
+\index{set\+Target\+Object@{set\+Target\+Object}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Target\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Target\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Object} $\ast$}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_object_abba602c002d07035dfffd890351ddc8d}
+
+\begin{DoxyCode}
+270 \{targetObject = t;\}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Texture@{set\+Texture}}
+\index{set\+Texture@{set\+Texture}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{tex}
+\end{DoxyParamCaption}
+)}\label{class_game_object_a4a27c9c4e963fa2214506455980a2299}
+
+
+Set\+Texture. 
+
+This sets the texture name to the one provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & tex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets texture to tex 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+113 \{
+114     texture = tex;
+115 \}
+\end{DoxyCode}
+\index{Game\+Object@{Game\+Object}!set\+Transparency@{set\+Transparency}}
+\index{set\+Transparency@{set\+Transparency}!Game\+Object@{Game\+Object}}
+\subsubsection[{set\+Transparency}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Object\+::set\+Transparency (
+\begin{DoxyParamCaption}
+\item[{float}]{transparency}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_game_object_a6b351d6ff299b77ef91fd514b332af4a}
+
+\begin{DoxyCode}
+119 \{trans = transparency;\};
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/dd1/class_game_object_a6b351d6ff299b77ef91fd514b332af4a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Object@{Game\+Object}!Update@{Update}}
+\index{Update@{Update}!Game\+Object@{Game\+Object}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Game\+Object\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_game_object_a67476ffb30d41305f25be7b3fee11173}
+
+
+virtual Update 
+
+Put here to be able to call Update for all child Game\+Objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented in {\bf Character} \doxyref{}{p.}{d7/da7/class_character_a495652bce60ee4c5557cfb250b814d75}, {\bf N\+P\+C} \doxyref{}{p.}{d0/d2a/class_n_p_c_a49d73fb1d0b5fc4dab086a15a9fca058}, {\bf Geometry} \doxyref{}{p.}{db/d0b/class_geometry_a5022b6cc33e9772ffaf14d1b753bc761}, and {\bf Sky\+Box} \doxyref{}{p.}{de/dda/class_sky_box_ae0d46784e42bf0fc003c6943b5357846}.
+
+
+\begin{DoxyCode}
+251 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Game\+Object@{Game\+Object}!Bounding@{Bounding}}
+\index{Bounding@{Bounding}!Game\+Object@{Game\+Object}}
+\subsubsection[{Bounding}]{\setlength{\rightskip}{0pt plus 5cm}Bbox$\ast$ Game\+Object\+::\+Bounding\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_a8475e7677f73e5378b73f1e1a403ac0e}
+\index{Game\+Object@{Game\+Object}!Id\+Gen@{Id\+Gen}}
+\index{Id\+Gen@{Id\+Gen}!Game\+Object@{Game\+Object}}
+\subsubsection[{Id\+Gen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id\+Generator}$\ast$ Game\+Object\+::\+Id\+Gen\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_a21cc7269f4b50f2dce4dc9986125dc4e}
+\index{Game\+Object@{Game\+Object}!is\+Bounding@{is\+Bounding}}
+\index{is\+Bounding@{is\+Bounding}!Game\+Object@{Game\+Object}}
+\subsubsection[{is\+Bounding}]{\setlength{\rightskip}{0pt plus 5cm}bool Game\+Object\+::is\+Bounding\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_a9b5bb1b4d3e3ac1dbf8c0bc10c6f187f}
+\index{Game\+Object@{Game\+Object}!m\+\_\+affordances@{m\+\_\+affordances}}
+\index{m\+\_\+affordances@{m\+\_\+affordances}!Game\+Object@{Game\+Object}}
+\subsubsection[{m\+\_\+affordances}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Affordance}$>$ Game\+Object\+::m\+\_\+affordances\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_af75584500b2af1b4c707b142b92c01f4}
+\index{Game\+Object@{Game\+Object}!m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}}
+\index{m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}!Game\+Object@{Game\+Object}}
+\subsubsection[{m\+\_\+object\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}int Game\+Object\+::m\+\_\+object\+I\+D\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_aa9d16d4190ee9959611891c1204ee6eb}
+\index{Game\+Object@{Game\+Object}!m\+\_\+position@{m\+\_\+position}}
+\index{m\+\_\+position@{m\+\_\+position}!Game\+Object@{Game\+Object}}
+\subsubsection[{m\+\_\+position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Game\+Object\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_a4619f5293bfc566693cecee85c949dc9}
+\index{Game\+Object@{Game\+Object}!m\+\_\+rotation@{m\+\_\+rotation}}
+\index{m\+\_\+rotation@{m\+\_\+rotation}!Game\+Object@{Game\+Object}}
+\subsubsection[{m\+\_\+rotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Game\+Object\+::m\+\_\+rotation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_a7ef0d47e8777510b947ffe96013591de}
+\index{Game\+Object@{Game\+Object}!model@{model}}
+\index{model@{model}!Game\+Object@{Game\+Object}}
+\subsubsection[{model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} Game\+Object\+::model\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_ab73b6318fb0c90576e1896a9c88cc9d0}
+
+
+model string (used for getting the model from the resource\+Manager) 
+
+\index{Game\+Object@{Game\+Object}!Redering\+Handle@{Redering\+Handle}}
+\index{Redering\+Handle@{Redering\+Handle}!Game\+Object@{Game\+Object}}
+\subsubsection[{Redering\+Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rendering\+Engine}$\ast$ Game\+Object\+::\+Redering\+Handle\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_a49d4df233d631e2b01b34f95944700f0}
+\index{Game\+Object@{Game\+Object}!target\+Object@{target\+Object}}
+\index{target\+Object@{target\+Object}!Game\+Object@{Game\+Object}}
+\subsubsection[{target\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object}$\ast$ Game\+Object\+::target\+Object\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_af06f25e6343e2a8f8e1aba413b995578}
+\index{Game\+Object@{Game\+Object}!texture@{texture}}
+\index{texture@{texture}!Game\+Object@{Game\+Object}}
+\subsubsection[{texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} Game\+Object\+::texture\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_acefd146f7772f3644322a43127b518e8}
+
+
+texture string (used for getting the texture from the resource\+Manager) 
+
+\index{Game\+Object@{Game\+Object}!trans@{trans}}
+\index{trans@{trans}!Game\+Object@{Game\+Object}}
+\subsubsection[{trans}]{\setlength{\rightskip}{0pt plus 5cm}float Game\+Object\+::trans\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_a8bbb880a1786f46e611334d0ad17bf14}
+\index{Game\+Object@{Game\+Object}!type@{type}}
+\index{type@{type}!Game\+Object@{Game\+Object}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf game\+Object\+Type} Game\+Object\+::type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_game_object_abca5290500e89ad2413aa7d512fa7a9c}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Game\+Object.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Game\+Object.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="GameObject" name="GameObject">
+<area shape="rect" id="node3" href="$d7/da7/class_character.html" title="The Character Class, the main controller that the user of a game would see. " alt="" coords="5,659,120,898"/>
+<area shape="rect" id="node4" href="$db/d0b/class_geometry.html" title="The Geometry Class, Basically static renderable objects The class doesnt need to update at the moment..." alt="" coords="145,681,266,876"/>
+<area shape="rect" id="node5" href="$d0/d2a/class_n_p_c.html" title="NPC Class. Defines non playable character / artifically intelligent agents. " alt="" coords="291,608,432,949"/>
+<area shape="rect" id="node6" href="$de/dda/class_sky_box.html" title="{SkyBox\n|&#45; m_width\l&#45; m_height\l&#45; elementbuffer\l&#45; vetexbuffer\l&#45; TextureCoorbuffer\l|+ SkyBox()\l+ ~SkyBox()\l+ Draw()\l+ SetBufferRef()\l+ Destory()\l+ Update()\l+ SetAttributes()\l&#45; GenerateBuffer()\l&#45; UpdateSkyBoxPos()\l}" alt="" coords="457,652,605,905"/>
+<area shape="rect" id="node2" href="$d2/da6/class_i___drawable_object.html" title="{I_DrawableObject\n||+ Draw()\l+ SetBufferRef()\l+ Destory()\l}" alt="" coords="221,5,344,112"/>
+</map>

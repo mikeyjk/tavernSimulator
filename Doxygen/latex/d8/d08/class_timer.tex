@@ -1,0 +1,197 @@
+\section{Timer Class Reference}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+
+
+Collaboration diagram for Timer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d9/d26/class_timer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Timer} ()
+\item 
+{\bf void} {\bf C\+P\+U\+Start\+Timer} ()
+\item 
+{\bf void} {\bf C\+P\+U\+End\+Timer} ()
+\item 
+{\bf void} {\bf update\+Time} ()
+\item 
+float {\bf C\+P\+U\+Get\+Time\+Passed} ()
+\item 
+float {\bf get\+Delta\+Time} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+clock\+\_\+t {\bf init}
+\item 
+clock\+\_\+t {\bf final\+Time}
+\item 
+clock\+\_\+t {\bf last\+Time}
+\item 
+clock\+\_\+t {\bf delta\+Time}
+\item 
+clock\+\_\+t {\bf curr\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}Timer\+::\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_timer_a5f16e8da27d2a5a5242dead46de05d97}
+
+\begin{DoxyCode}
+12 \{
+13     CPUStartTimer();
+14 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{d8/d08/class_timer_a5f16e8da27d2a5a5242dead46de05d97_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Timer@{Timer}!C\+P\+U\+End\+Timer@{C\+P\+U\+End\+Timer}}
+\index{C\+P\+U\+End\+Timer@{C\+P\+U\+End\+Timer}!Timer@{Timer}}
+\subsubsection[{C\+P\+U\+End\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Timer\+::\+C\+P\+U\+End\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_timer_a8e50838b2c4412492cabb5fd8ae5da5b}
+
+\begin{DoxyCode}
+23 \{
+24     finalTime=clock()-init;
+25 \}
+\end{DoxyCode}
+\index{Timer@{Timer}!C\+P\+U\+Get\+Time\+Passed@{C\+P\+U\+Get\+Time\+Passed}}
+\index{C\+P\+U\+Get\+Time\+Passed@{C\+P\+U\+Get\+Time\+Passed}!Timer@{Timer}}
+\subsubsection[{C\+P\+U\+Get\+Time\+Passed}]{\setlength{\rightskip}{0pt plus 5cm}float Timer\+::\+C\+P\+U\+Get\+Time\+Passed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_timer_af2e81d2cee4d5457948d8c623be63568}
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{double})(currTime - init) / ((\textcolor{keywordtype}{double})CLOCKS\_PER\_SEC);
+37 \}
+\end{DoxyCode}
+\index{Timer@{Timer}!C\+P\+U\+Start\+Timer@{C\+P\+U\+Start\+Timer}}
+\index{C\+P\+U\+Start\+Timer@{C\+P\+U\+Start\+Timer}!Timer@{Timer}}
+\subsubsection[{C\+P\+U\+Start\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Timer\+::\+C\+P\+U\+Start\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_timer_af027b4ced8351f5e015fb6f393d6e2b1}
+
+\begin{DoxyCode}
+17 \{
+18     init = clock();
+19     currTime = init;
+20 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{d8/d08/class_timer_af027b4ced8351f5e015fb6f393d6e2b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Timer@{Timer}!get\+Delta\+Time@{get\+Delta\+Time}}
+\index{get\+Delta\+Time@{get\+Delta\+Time}!Timer@{Timer}}
+\subsubsection[{get\+Delta\+Time}]{\setlength{\rightskip}{0pt plus 5cm}float Timer\+::get\+Delta\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_timer_a834027d81d942b0e84a9f0a83415096f}
+
+\begin{DoxyCode}
+40 \{
+41     \textcolor{keywordflow}{return} deltaTime / ((double)CLOCKS\_PER\_SEC);
+42 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d08/class_timer_a834027d81d942b0e84a9f0a83415096f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Timer@{Timer}!update\+Time@{update\+Time}}
+\index{update\+Time@{update\+Time}!Timer@{Timer}}
+\subsubsection[{update\+Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Timer\+::update\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_timer_abf4cceb18e080ff467092fc3352c0b8d}
+
+\begin{DoxyCode}
+28 \{
+29     lastTime = currTime;
+30     currTime = clock();
+31     deltaTime = currTime - lastTime;
+32 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d08/class_timer_abf4cceb18e080ff467092fc3352c0b8d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Timer@{Timer}!curr\+Time@{curr\+Time}}
+\index{curr\+Time@{curr\+Time}!Timer@{Timer}}
+\subsubsection[{curr\+Time}]{\setlength{\rightskip}{0pt plus 5cm}clock\+\_\+t Timer\+::curr\+Time\hspace{0.3cm}{\ttfamily [private]}}\label{class_timer_af49068258630469cc88806ee557b626e}
+\index{Timer@{Timer}!delta\+Time@{delta\+Time}}
+\index{delta\+Time@{delta\+Time}!Timer@{Timer}}
+\subsubsection[{delta\+Time}]{\setlength{\rightskip}{0pt plus 5cm}clock\+\_\+t Timer\+::delta\+Time\hspace{0.3cm}{\ttfamily [private]}}\label{class_timer_a512bec9968ee9b451a7c11b3279b366a}
+\index{Timer@{Timer}!final\+Time@{final\+Time}}
+\index{final\+Time@{final\+Time}!Timer@{Timer}}
+\subsubsection[{final\+Time}]{\setlength{\rightskip}{0pt plus 5cm}clock\+\_\+t Timer\+::final\+Time\hspace{0.3cm}{\ttfamily [private]}}\label{class_timer_a04f2fc3b23b6f7b629395e38341fdca4}
+\index{Timer@{Timer}!init@{init}}
+\index{init@{init}!Timer@{Timer}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}clock\+\_\+t Timer\+::init\hspace{0.3cm}{\ttfamily [private]}}\label{class_timer_ac21537502a274627c7a1eb11bf9e5ad9}
+\index{Timer@{Timer}!last\+Time@{last\+Time}}
+\index{last\+Time@{last\+Time}!Timer@{Timer}}
+\subsubsection[{last\+Time}]{\setlength{\rightskip}{0pt plus 5cm}clock\+\_\+t Timer\+::last\+Time\hspace{0.3cm}{\ttfamily [private]}}\label{class_timer_acf6310656f7f405df0af5853a05b63dd}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Timer.\+h}\end{DoxyCompactItemize}

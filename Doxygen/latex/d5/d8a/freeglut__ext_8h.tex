@@ -1,0 +1,758 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+G\+L/freeglut\+\_\+ext.h File Reference}
+\label{freeglut__ext_8h}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+G\+L/freeglut\+\_\+ext.\+h@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+G\+L/freeglut\+\_\+ext.\+h}}
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+Include dependency graph for freeglut\+\_\+ext.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{df/dc0/freeglut__ext_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/df8/freeglut__ext_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+K}~0x006\+D
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+B\+E\+G\+I\+N}~0x006\+E
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+T\+E}~0x006\+F
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+L}~0x0070
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R}~0x0071
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+L}~0x0072
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+R}~0x0073
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+L}~0x0074
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+R}~0x0075
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+I\+T}~0
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+L\+U\+T\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+R\+E\+T\+U\+R\+N\+S}~1
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N}~2
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T}~0
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}~1
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}~0
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}~1
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+T\+R\+Y\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}~2
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}~3
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+T\+E}~0x007\+C
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+O\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+L\+O\+S\+E}~0x01\+F9
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+W\+I\+D\+T\+H}~0x01\+F\+A
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}~0x01\+F\+B
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}~0x01\+F\+B  /$\ast$ Docs say it should always have been G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T, keep this for backward compatibility $\ast$/
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N}~0x01\+F\+C
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+C\+O\+N\+T\+E\+X\+T}~0x01\+F\+D
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G}~0x01\+F\+E
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+F\+U\+L\+L\+\_\+\+S\+C\+R\+E\+E\+N}~0x01\+F\+F
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+S\+K\+I\+P\+\_\+\+S\+T\+A\+L\+E\+\_\+\+M\+O\+T\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T\+S}~0x0204
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+U\+X}~0x1000
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+U\+X1}~0x1000
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+U\+X2}~0x2000
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+U\+X3}~0x4000
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+A\+U\+X4}~0x8000
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~0x0200
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}~0x0201
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+A\+G\+S}~0x0202
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E}~0x0203
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+D\+E\+B\+U\+G}~0x0001
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E}~0x0002
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+L\+E}~0x0001
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+O\+F\+I\+L\+E}~0x0002
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+H\+A\+S\+\_\+\+M\+U\+L\+T\+I}~1
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+C\+A\+P\+T\+I\+O\+N\+L\+E\+S\+S}~0x0400
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+S\+S}~0x0800
+\item 
+\#define {\bf G\+L\+U\+T\+\_\+\+S\+R\+G\+B}~0x1000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef {\bf void}($\ast$ {\bf G\+L\+U\+Tproc} )()
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Main\+Loop\+Event} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Leave\+Main\+Loop} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Exit} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Full\+Screen\+Toggle} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Leave\+Full\+Screen} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Mouse\+Wheel\+Func} ({\bf void}($\ast$callback)(int, int, int, int))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Close\+Func} ({\bf void}($\ast$callback)({\bf void}))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+W\+M\+Close\+Func} ({\bf void}($\ast$callback)({\bf void}))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Menu\+Destroy\+Func} ({\bf void}($\ast$callback)({\bf void}))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Set\+Option} ({\bf G\+Lenum} option\+\_\+flag, int {\bf value})
+\item 
+{\bf F\+G\+A\+P\+I} int $\ast${\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Get\+Mode\+Values} ({\bf G\+Lenum} {\bf mode}, int $\ast${\bf size})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} $\ast${\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Get\+Window\+Data} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Set\+Window\+Data} ({\bf void} $\ast${\bf data})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} $\ast${\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Get\+Menu\+Data} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Set\+Menu\+Data} ({\bf void} $\ast${\bf data})
+\item 
+{\bf F\+G\+A\+P\+I} int {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Bitmap\+Height} ({\bf void} $\ast$font)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf G\+Lfloat} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Stroke\+Height} ({\bf void} $\ast$font)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Bitmap\+String} ({\bf void} $\ast$font, const unsigned char $\ast${\bf string})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Stroke\+String} ({\bf void} $\ast$font, const unsigned char $\ast${\bf string})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Wire\+Rhombic\+Dodecahedron} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Solid\+Rhombic\+Dodecahedron} ({\bf void})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Wire\+Sierpinski\+Sponge} (int num\+\_\+levels, G\+Ldouble {\bf offset}[3], G\+Ldouble {\bf scale})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Solid\+Sierpinski\+Sponge} (int num\+\_\+levels, G\+Ldouble {\bf offset}[3], G\+Ldouble {\bf scale})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Wire\+Cylinder} (G\+Ldouble radius, G\+Ldouble {\bf height}, {\bf G\+Lint} slices, {\bf G\+Lint} stacks)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Solid\+Cylinder} (G\+Ldouble radius, G\+Ldouble {\bf height}, {\bf G\+Lint} slices, {\bf G\+Lint} stacks)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf G\+L\+U\+Tproc} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Get\+Proc\+Address} (const char $\ast$proc\+Name)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Multi\+Entry\+Func} ({\bf void}($\ast$callback)(int, int))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Multi\+Button\+Func} ({\bf void}($\ast$callback)(int, int, int, int, int))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Multi\+Motion\+Func} ({\bf void}($\ast$callback)(int, int, int))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Multi\+Passive\+Func} ({\bf void}($\ast$callback)(int, int, int))
+\item 
+int {\bf glut\+Joystick\+Get\+Num\+Axes} (int ident)
+\item 
+int {\bf glut\+Joystick\+Get\+Num\+Buttons} (int ident)
+\item 
+int {\bf glut\+Joystick\+Not\+Working} (int ident)
+\item 
+float {\bf glut\+Joystick\+Get\+Dead\+Band} (int ident, int axis)
+\item 
+{\bf void} {\bf glut\+Joystick\+Set\+Dead\+Band} (int ident, int axis, float db)
+\item 
+float {\bf glut\+Joystick\+Get\+Saturation} (int ident, int axis)
+\item 
+{\bf void} {\bf glut\+Joystick\+Set\+Saturation} (int ident, int axis, float st)
+\item 
+{\bf void} {\bf glut\+Joystick\+Set\+Min\+Range} (int ident, float $\ast$axes)
+\item 
+{\bf void} {\bf glut\+Joystick\+Set\+Max\+Range} (int ident, float $\ast$axes)
+\item 
+{\bf void} {\bf glut\+Joystick\+Set\+Center} (int ident, float $\ast$axes)
+\item 
+{\bf void} {\bf glut\+Joystick\+Get\+Min\+Range} (int ident, float $\ast$axes)
+\item 
+{\bf void} {\bf glut\+Joystick\+Get\+Max\+Range} (int ident, float $\ast$axes)
+\item 
+{\bf void} {\bf glut\+Joystick\+Get\+Center} (int ident, float $\ast$axes)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Init\+Context\+Version} (int major\+Version, int minor\+Version)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Init\+Context\+Flags} (int {\bf flags})
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Init\+Context\+Profile} (int profile)
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Init\+Error\+Func} ({\bf void}($\ast$v\+Error)(const char $\ast$fmt, va\+\_\+list ap))
+\item 
+{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} {\bf glut\+Init\+Warning\+Func} ({\bf void}($\ast$v\+Warning)(const char $\ast$fmt, va\+\_\+list ap))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N}}
+\index{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+E\+X\+E\+C\+U\+T\+I\+O\+N~2}\label{freeglut__ext_8h_a0e0a287babe8d4b54b2ce867c6cbd291}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+I\+T@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+I\+T}}
+\index{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+I\+T@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+I\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+E\+X\+I\+T~0}\label{freeglut__ext_8h_afd0be6a00ae9f8c204c2989a81cf8328}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+L\+U\+T\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+R\+E\+T\+U\+R\+N\+S@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+L\+U\+T\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+R\+E\+T\+U\+R\+N\+S}}
+\index{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+L\+U\+T\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+R\+E\+T\+U\+R\+N\+S@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+L\+U\+T\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+R\+E\+T\+U\+R\+N\+S}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+L\+U\+T\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+R\+E\+T\+U\+R\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+G\+L\+U\+T\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+R\+E\+T\+U\+R\+N\+S~1}\label{freeglut__ext_8h_a31645582890ce22c225d33fcd2c4e303}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+O\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+L\+O\+S\+E@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+O\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+L\+O\+S\+E}}
+\index{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+O\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+L\+O\+S\+E@{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+O\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+L\+O\+S\+E}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+O\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+L\+O\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+O\+N\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+C\+L\+O\+S\+E~0x01\+F9}\label{freeglut__ext_8h_ace20ae5a0f4d4e23014f190b00aeab6f}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}}
+\index{G\+L\+U\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+L\+L\+O\+W\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T~1}\label{freeglut__ext_8h_a34219dc7cb4017c248bb37b10ff8da68}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+U\+X@{G\+L\+U\+T\+\_\+\+A\+U\+X}}
+\index{G\+L\+U\+T\+\_\+\+A\+U\+X@{G\+L\+U\+T\+\_\+\+A\+U\+X}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+U\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+U\+X~0x1000}\label{freeglut__ext_8h_a136ef9b31c160542efa0ec1080db387f}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+U\+X1@{G\+L\+U\+T\+\_\+\+A\+U\+X1}}
+\index{G\+L\+U\+T\+\_\+\+A\+U\+X1@{G\+L\+U\+T\+\_\+\+A\+U\+X1}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+U\+X1}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+U\+X1~0x1000}\label{freeglut__ext_8h_a7ca0aedd93dcaec8c4d759509d2f5e00}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+U\+X2@{G\+L\+U\+T\+\_\+\+A\+U\+X2}}
+\index{G\+L\+U\+T\+\_\+\+A\+U\+X2@{G\+L\+U\+T\+\_\+\+A\+U\+X2}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+U\+X2}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+U\+X2~0x2000}\label{freeglut__ext_8h_a95f362751944799cf69656aa646d8a6d}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+U\+X3@{G\+L\+U\+T\+\_\+\+A\+U\+X3}}
+\index{G\+L\+U\+T\+\_\+\+A\+U\+X3@{G\+L\+U\+T\+\_\+\+A\+U\+X3}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+U\+X3}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+U\+X3~0x4000}\label{freeglut__ext_8h_ac1259e84e57f9597327cdd8d9493ab6b}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+A\+U\+X4@{G\+L\+U\+T\+\_\+\+A\+U\+X4}}
+\index{G\+L\+U\+T\+\_\+\+A\+U\+X4@{G\+L\+U\+T\+\_\+\+A\+U\+X4}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+A\+U\+X4}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+A\+U\+X4~0x8000}\label{freeglut__ext_8h_a9dfc07c3e6836560404d0ac0d42ef74c}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+S\+S@{G\+L\+U\+T\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+S\+S}}
+\index{G\+L\+U\+T\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+S\+S@{G\+L\+U\+T\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+S\+S}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+S\+S~0x0800}\label{freeglut__ext_8h_a8e290f090594f9367a2f4ba020ffa324}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+C\+A\+P\+T\+I\+O\+N\+L\+E\+S\+S@{G\+L\+U\+T\+\_\+\+C\+A\+P\+T\+I\+O\+N\+L\+E\+S\+S}}
+\index{G\+L\+U\+T\+\_\+\+C\+A\+P\+T\+I\+O\+N\+L\+E\+S\+S@{G\+L\+U\+T\+\_\+\+C\+A\+P\+T\+I\+O\+N\+L\+E\+S\+S}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+C\+A\+P\+T\+I\+O\+N\+L\+E\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+C\+A\+P\+T\+I\+O\+N\+L\+E\+S\+S~0x0400}\label{freeglut__ext_8h_a683792c5c16fecf9bf0e42bd970dc164}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+O\+F\+I\+L\+E@{G\+L\+U\+T\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+O\+F\+I\+L\+E}}
+\index{G\+L\+U\+T\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+O\+F\+I\+L\+E@{G\+L\+U\+T\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+O\+F\+I\+L\+E}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+O\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+O\+F\+I\+L\+E~0x0002}\label{freeglut__ext_8h_ad3a392deb930418d442a52e9044ab664}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+L\+E@{G\+L\+U\+T\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+L\+E}}
+\index{G\+L\+U\+T\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+L\+E@{G\+L\+U\+T\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+L\+E}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+C\+O\+R\+E\+\_\+\+P\+R\+O\+F\+I\+L\+E~0x0001}\label{freeglut__ext_8h_a5d49c522bbf2d83c7e411c78df51bd93}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T}}
+\index{G\+L\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+C\+O\+N\+T\+E\+X\+T~0}\label{freeglut__ext_8h_a675a424ad1520ab6d27821753b9450d3}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+D\+E\+B\+U\+G@{G\+L\+U\+T\+\_\+\+D\+E\+B\+U\+G}}
+\index{G\+L\+U\+T\+\_\+\+D\+E\+B\+U\+G@{G\+L\+U\+T\+\_\+\+D\+E\+B\+U\+G}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+D\+E\+B\+U\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+D\+E\+B\+U\+G~0x0001}\label{freeglut__ext_8h_a8627dc76b3bd129a27d5b6ada48a8a83}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G@{G\+L\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G}}
+\index{G\+L\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G@{G\+L\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G~0x01\+F\+E}\label{freeglut__ext_8h_aecd17a8a361d7cba6793b371c5bb07c9}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}}
+\index{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T~3}\label{freeglut__ext_8h_adc60ca8afb0dcbca161260f353d286dd}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}}
+\index{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T~0}\label{freeglut__ext_8h_a72004074b5d9a2a24678a384a1d80764}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E@{G\+L\+U\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E}}
+\index{G\+L\+U\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E@{G\+L\+U\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E~0x0002}\label{freeglut__ext_8h_ab49da1f1c45ec950b3bfa6a57a3b0fee}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+F\+U\+L\+L\+\_\+\+S\+C\+R\+E\+E\+N@{G\+L\+U\+T\+\_\+\+F\+U\+L\+L\+\_\+\+S\+C\+R\+E\+E\+N}}
+\index{G\+L\+U\+T\+\_\+\+F\+U\+L\+L\+\_\+\+S\+C\+R\+E\+E\+N@{G\+L\+U\+T\+\_\+\+F\+U\+L\+L\+\_\+\+S\+C\+R\+E\+E\+N}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+F\+U\+L\+L\+\_\+\+S\+C\+R\+E\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+F\+U\+L\+L\+\_\+\+S\+C\+R\+E\+E\+N~0x01\+F\+F}\label{freeglut__ext_8h_af43aa9c0f56e0397da1c0d16613d212f}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+H\+A\+S\+\_\+\+M\+U\+L\+T\+I@{G\+L\+U\+T\+\_\+\+H\+A\+S\+\_\+\+M\+U\+L\+T\+I}}
+\index{G\+L\+U\+T\+\_\+\+H\+A\+S\+\_\+\+M\+U\+L\+T\+I@{G\+L\+U\+T\+\_\+\+H\+A\+S\+\_\+\+M\+U\+L\+T\+I}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+H\+A\+S\+\_\+\+M\+U\+L\+T\+I}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+H\+A\+S\+\_\+\+M\+U\+L\+T\+I~1}\label{freeglut__ext_8h_af25cc58f66bf15cde50fa5345d87adf9}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+A\+G\+S@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+A\+G\+S}}
+\index{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+A\+G\+S@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+A\+G\+S}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+A\+G\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+L\+A\+G\+S~0x0202}\label{freeglut__ext_8h_a0743c57473db04cc7d8d835fa301c3ff}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~0x0200}\label{freeglut__ext_8h_a9d73ef9c12dcc38358971560b3c651a1}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+O\+N~0x0201}\label{freeglut__ext_8h_a58e41cd81caafe21100776cb87efd991}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E}}
+\index{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E~0x0203}\label{freeglut__ext_8h_ad0718fd881fef6c4f2b4c8ae486d208f}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+T\+E@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+T\+E}}
+\index{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+T\+E@{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+T\+E}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+I\+N\+I\+T\+\_\+\+S\+T\+A\+T\+E~0x007\+C}\label{freeglut__ext_8h_a5e02edb6e5086d0f1585782f32fab9f3}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+L@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+L}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+L@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+L}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+L~0x0074}\label{freeglut__ext_8h_acba2dc74a3437934a5efad91b8725686}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+R@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+R}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+R@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+R}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+T\+\_\+\+R~0x0075}\label{freeglut__ext_8h_a772ebe335166d3e9acc2ea0f4c3d9215}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+B\+E\+G\+I\+N@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+B\+E\+G\+I\+N}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+B\+E\+G\+I\+N@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+B\+E\+G\+I\+N}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+B\+E\+G\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+B\+E\+G\+I\+N~0x006\+E}\label{freeglut__ext_8h_a00024a01093240008dfd30445d5c1a66}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+L@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+L}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+L@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+L}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+L~0x0072}\label{freeglut__ext_8h_a1a34aead1fa9a123871075397f9dc6d5}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+R@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+R}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+R@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+R}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+C\+T\+R\+L\+\_\+\+R~0x0073}\label{freeglut__ext_8h_afa1c6b9e1967e4b6653a902030af1333}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+T\+E@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+T\+E}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+T\+E@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+T\+E}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+D\+E\+L\+E\+T\+E~0x006\+F}\label{freeglut__ext_8h_aef49717758c978650c8c87a965c864e3}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+K@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+K}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+K@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+K}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+N\+U\+M\+\_\+\+L\+O\+C\+K~0x006\+D}\label{freeglut__ext_8h_a9c5f5b3262cd42a3608321a4939d34ac}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+L@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+L}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+L@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+L}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+L~0x0070}\label{freeglut__ext_8h_a985ff7ec32f335b6a070de858e569e9e}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R}}
+\index{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R@{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+K\+E\+Y\+\_\+\+S\+H\+I\+F\+T\+\_\+\+R~0x0071}\label{freeglut__ext_8h_ab8606bb4e6b2930e3606f0fcc9d3aeef}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+C\+O\+N\+T\+E\+X\+T}}
+\index{G\+L\+U\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+C\+O\+N\+T\+E\+X\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+C\+O\+N\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+R\+E\+N\+D\+E\+R\+I\+N\+G\+\_\+\+C\+O\+N\+T\+E\+X\+T~0x01\+F\+D}\label{freeglut__ext_8h_ac4cad3cad0e362ee5506bfe17f7ac671}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+S\+K\+I\+P\+\_\+\+S\+T\+A\+L\+E\+\_\+\+M\+O\+T\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T\+S@{G\+L\+U\+T\+\_\+\+S\+K\+I\+P\+\_\+\+S\+T\+A\+L\+E\+\_\+\+M\+O\+T\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T\+S}}
+\index{G\+L\+U\+T\+\_\+\+S\+K\+I\+P\+\_\+\+S\+T\+A\+L\+E\+\_\+\+M\+O\+T\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T\+S@{G\+L\+U\+T\+\_\+\+S\+K\+I\+P\+\_\+\+S\+T\+A\+L\+E\+\_\+\+M\+O\+T\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T\+S}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+S\+K\+I\+P\+\_\+\+S\+T\+A\+L\+E\+\_\+\+M\+O\+T\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+S\+K\+I\+P\+\_\+\+S\+T\+A\+L\+E\+\_\+\+M\+O\+T\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T\+S~0x0204}\label{freeglut__ext_8h_a6ceb9892e540d6236a3cae31665e73dd}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+S\+R\+G\+B@{G\+L\+U\+T\+\_\+\+S\+R\+G\+B}}
+\index{G\+L\+U\+T\+\_\+\+S\+R\+G\+B@{G\+L\+U\+T\+\_\+\+S\+R\+G\+B}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+S\+R\+G\+B}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+S\+R\+G\+B~0x1000}\label{freeglut__ext_8h_a8b0ef442c6d59a8deec61525db16e59b}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+T\+R\+Y\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+T\+R\+Y\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}}
+\index{G\+L\+U\+T\+\_\+\+T\+R\+Y\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+T\+R\+Y\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+T\+R\+Y\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+T\+R\+Y\+\_\+\+D\+I\+R\+E\+C\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T~2}\label{freeglut__ext_8h_a231a34307085019df418c6a92ff8f0ef}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}}
+\index{G\+L\+U\+T\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T@{G\+L\+U\+T\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+U\+S\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+X\+T~1}\label{freeglut__ext_8h_a16148fe2711c0e8e001d1d91e2672692}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N@{G\+L\+U\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N}}
+\index{G\+L\+U\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N@{G\+L\+U\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N~0x01\+F\+C}\label{freeglut__ext_8h_a4d2e63523cbd4c3f0b71f4f7fcecd4f5}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T@{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}}
+\index{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T@{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T~0x01\+F\+B}\label{freeglut__ext_8h_a9ea1afd6ae1ce6809b71cc6f1a7bb345}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+W\+I\+D\+T\+H@{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+W\+I\+D\+T\+H}}
+\index{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+W\+I\+D\+T\+H@{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+W\+I\+D\+T\+H}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+W\+I\+D\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+W\+I\+D\+T\+H~0x01\+F\+A}\label{freeglut__ext_8h_ae0bb1de0cb531d7d29152c7b258a47f9}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T@{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}}
+\index{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T@{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T~0x01\+F\+B  /$\ast$ Docs say it should always have been G\+L\+U\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+\_\+\+H\+E\+I\+G\+H\+T, keep this for backward compatibility $\ast$/}\label{freeglut__ext_8h_a208018159647fb801fd550c56a6f54ba}
+
+
+\subsection{Typedef Documentation}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!G\+L\+U\+Tproc@{G\+L\+U\+Tproc}}
+\index{G\+L\+U\+Tproc@{G\+L\+U\+Tproc}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{G\+L\+U\+Tproc}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf void}($\ast$ G\+L\+U\+Tproc)()}\label{freeglut__ext_8h_a174e812c673840793f25673ecf2338d8}
+
+
+\subsection{Function Documentation}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Bitmap\+Height@{glut\+Bitmap\+Height}}
+\index{glut\+Bitmap\+Height@{glut\+Bitmap\+Height}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Bitmap\+Height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} int {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Bitmap\+Height (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{font}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a5b6f22e0919265e3f1f2a5fe0267b4e9}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Bitmap\+String@{glut\+Bitmap\+String}}
+\index{glut\+Bitmap\+String@{glut\+Bitmap\+String}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Bitmap\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Bitmap\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{font, }
+\item[{const unsigned char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a49d2f57dbb22d136b9843e48bc4f6936}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Close\+Func@{glut\+Close\+Func}}
+\index{glut\+Close\+Func@{glut\+Close\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Close\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Close\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)({\bf void})}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_aefa43f2bacd50aa3fb851ed50af99520}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Exit@{glut\+Exit}}
+\index{glut\+Exit@{glut\+Exit}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Exit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a354d9a39b095c4dc22ad6f6d163826ec}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d8a/freeglut__ext_8h_a354d9a39b095c4dc22ad6f6d163826ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Full\+Screen\+Toggle@{glut\+Full\+Screen\+Toggle}}
+\index{glut\+Full\+Screen\+Toggle@{glut\+Full\+Screen\+Toggle}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Full\+Screen\+Toggle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Full\+Screen\+Toggle (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a1b189e2ab9719c6f12251dbe9b03faa1}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Get\+Menu\+Data@{glut\+Get\+Menu\+Data}}
+\index{glut\+Get\+Menu\+Data@{glut\+Get\+Menu\+Data}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Get\+Menu\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void}$\ast$ {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Get\+Menu\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a2b5d7a167b80cec5effe50267eb19a62}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Get\+Mode\+Values@{glut\+Get\+Mode\+Values}}
+\index{glut\+Get\+Mode\+Values@{glut\+Get\+Mode\+Values}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Get\+Mode\+Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} int$\ast$ {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Get\+Mode\+Values (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Lenum}}]{mode, }
+\item[{int $\ast$}]{size}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a92e09b4b85ee152f0d24b13a4804a85c}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Get\+Proc\+Address@{glut\+Get\+Proc\+Address}}
+\index{glut\+Get\+Proc\+Address@{glut\+Get\+Proc\+Address}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Get\+Proc\+Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf G\+L\+U\+Tproc} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Get\+Proc\+Address (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{proc\+Name}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_ae4d0f4651650924d24ce5c13edee0e06}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Get\+Window\+Data@{glut\+Get\+Window\+Data}}
+\index{glut\+Get\+Window\+Data@{glut\+Get\+Window\+Data}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Get\+Window\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void}$\ast$ {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Get\+Window\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a59fc2ca766faed45184291b1db1f5b41}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Init\+Context\+Flags@{glut\+Init\+Context\+Flags}}
+\index{glut\+Init\+Context\+Flags@{glut\+Init\+Context\+Flags}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Init\+Context\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Init\+Context\+Flags (
+\begin{DoxyParamCaption}
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a161686883fdccf9ca181605438779795}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Init\+Context\+Profile@{glut\+Init\+Context\+Profile}}
+\index{glut\+Init\+Context\+Profile@{glut\+Init\+Context\+Profile}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Init\+Context\+Profile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Init\+Context\+Profile (
+\begin{DoxyParamCaption}
+\item[{int}]{profile}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_ad7f3455a601c63b75310a3ad61d54dd4}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Init\+Context\+Version@{glut\+Init\+Context\+Version}}
+\index{glut\+Init\+Context\+Version@{glut\+Init\+Context\+Version}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Init\+Context\+Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Init\+Context\+Version (
+\begin{DoxyParamCaption}
+\item[{int}]{major\+Version, }
+\item[{int}]{minor\+Version}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_abe52eb31edbf01b16cd347ac88b2f71f}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Init\+Error\+Func@{glut\+Init\+Error\+Func}}
+\index{glut\+Init\+Error\+Func@{glut\+Init\+Error\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Init\+Error\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Init\+Error\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(const char $\ast$fmt, va\+\_\+list ap)}]{v\+Error}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_ac36f541fc55288cae8478fde66b18b25}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Init\+Warning\+Func@{glut\+Init\+Warning\+Func}}
+\index{glut\+Init\+Warning\+Func@{glut\+Init\+Warning\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Init\+Warning\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Init\+Warning\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(const char $\ast$fmt, va\+\_\+list ap)}]{v\+Warning}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_aad9f54aaf994578312a42a2e7093070b}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Get\+Center@{glut\+Joystick\+Get\+Center}}
+\index{glut\+Joystick\+Get\+Center@{glut\+Joystick\+Get\+Center}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Get\+Center}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Get\+Center (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{float $\ast$}]{axes}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_ad636ed6a5796fb860986b3f60ef4208d}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Get\+Dead\+Band@{glut\+Joystick\+Get\+Dead\+Band}}
+\index{glut\+Joystick\+Get\+Dead\+Band@{glut\+Joystick\+Get\+Dead\+Band}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Get\+Dead\+Band}]{\setlength{\rightskip}{0pt plus 5cm}float glut\+Joystick\+Get\+Dead\+Band (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_af8827f7a77db26c2839e6a8c541643cf}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Get\+Max\+Range@{glut\+Joystick\+Get\+Max\+Range}}
+\index{glut\+Joystick\+Get\+Max\+Range@{glut\+Joystick\+Get\+Max\+Range}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Get\+Max\+Range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Get\+Max\+Range (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{float $\ast$}]{axes}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_ae2f47100d658bcdf6c375d71fe02ddcc}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Get\+Min\+Range@{glut\+Joystick\+Get\+Min\+Range}}
+\index{glut\+Joystick\+Get\+Min\+Range@{glut\+Joystick\+Get\+Min\+Range}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Get\+Min\+Range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Get\+Min\+Range (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{float $\ast$}]{axes}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a8d8d7d08e10b13738aba738322ee7e3b}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Get\+Num\+Axes@{glut\+Joystick\+Get\+Num\+Axes}}
+\index{glut\+Joystick\+Get\+Num\+Axes@{glut\+Joystick\+Get\+Num\+Axes}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Get\+Num\+Axes}]{\setlength{\rightskip}{0pt plus 5cm}int glut\+Joystick\+Get\+Num\+Axes (
+\begin{DoxyParamCaption}
+\item[{int}]{ident}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_ab7f38f57eb585b9729f586f8456801c1}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Get\+Num\+Buttons@{glut\+Joystick\+Get\+Num\+Buttons}}
+\index{glut\+Joystick\+Get\+Num\+Buttons@{glut\+Joystick\+Get\+Num\+Buttons}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Get\+Num\+Buttons}]{\setlength{\rightskip}{0pt plus 5cm}int glut\+Joystick\+Get\+Num\+Buttons (
+\begin{DoxyParamCaption}
+\item[{int}]{ident}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a1fb7799b5e666941df23a96bfe50b590}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Get\+Saturation@{glut\+Joystick\+Get\+Saturation}}
+\index{glut\+Joystick\+Get\+Saturation@{glut\+Joystick\+Get\+Saturation}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Get\+Saturation}]{\setlength{\rightskip}{0pt plus 5cm}float glut\+Joystick\+Get\+Saturation (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{int}]{axis}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a72c3fd24f981c303084384a57081906a}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Not\+Working@{glut\+Joystick\+Not\+Working}}
+\index{glut\+Joystick\+Not\+Working@{glut\+Joystick\+Not\+Working}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Not\+Working}]{\setlength{\rightskip}{0pt plus 5cm}int glut\+Joystick\+Not\+Working (
+\begin{DoxyParamCaption}
+\item[{int}]{ident}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a12e27b530800e931493867834a428fe6}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Set\+Center@{glut\+Joystick\+Set\+Center}}
+\index{glut\+Joystick\+Set\+Center@{glut\+Joystick\+Set\+Center}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Set\+Center}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Set\+Center (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{float $\ast$}]{axes}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a2f71a97351526922047a3dec887d1acc}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Set\+Dead\+Band@{glut\+Joystick\+Set\+Dead\+Band}}
+\index{glut\+Joystick\+Set\+Dead\+Band@{glut\+Joystick\+Set\+Dead\+Band}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Set\+Dead\+Band}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Set\+Dead\+Band (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{int}]{axis, }
+\item[{float}]{db}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a68362f5d4eb25af37426b780dce0fab9}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Set\+Max\+Range@{glut\+Joystick\+Set\+Max\+Range}}
+\index{glut\+Joystick\+Set\+Max\+Range@{glut\+Joystick\+Set\+Max\+Range}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Set\+Max\+Range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Set\+Max\+Range (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{float $\ast$}]{axes}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a653525349c4ebe5af4c2cdfa23a2ac92}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Set\+Min\+Range@{glut\+Joystick\+Set\+Min\+Range}}
+\index{glut\+Joystick\+Set\+Min\+Range@{glut\+Joystick\+Set\+Min\+Range}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Set\+Min\+Range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Set\+Min\+Range (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{float $\ast$}]{axes}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a1f4e3c75e1ca330ea75bd8280f1cc98b}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Joystick\+Set\+Saturation@{glut\+Joystick\+Set\+Saturation}}
+\index{glut\+Joystick\+Set\+Saturation@{glut\+Joystick\+Set\+Saturation}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Joystick\+Set\+Saturation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} glut\+Joystick\+Set\+Saturation (
+\begin{DoxyParamCaption}
+\item[{int}]{ident, }
+\item[{int}]{axis, }
+\item[{float}]{st}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a1ea1d3fac954b1918633c04d0c9e9e1e}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Leave\+Full\+Screen@{glut\+Leave\+Full\+Screen}}
+\index{glut\+Leave\+Full\+Screen@{glut\+Leave\+Full\+Screen}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Leave\+Full\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Leave\+Full\+Screen (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a227f0301219e24dfbba6a562c47f8252}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Leave\+Main\+Loop@{glut\+Leave\+Main\+Loop}}
+\index{glut\+Leave\+Main\+Loop@{glut\+Leave\+Main\+Loop}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Leave\+Main\+Loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Leave\+Main\+Loop (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a49fa089383daefbddc005f2bfcd04071}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d8a/freeglut__ext_8h_a49fa089383daefbddc005f2bfcd04071_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Main\+Loop\+Event@{glut\+Main\+Loop\+Event}}
+\index{glut\+Main\+Loop\+Event@{glut\+Main\+Loop\+Event}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Main\+Loop\+Event}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Main\+Loop\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a6ab07848a855e45793d05bcce93faba3}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Menu\+Destroy\+Func@{glut\+Menu\+Destroy\+Func}}
+\index{glut\+Menu\+Destroy\+Func@{glut\+Menu\+Destroy\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Menu\+Destroy\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Menu\+Destroy\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)({\bf void})}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_afe6f085e3599cda08e5b784a1a5f499f}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Mouse\+Wheel\+Func@{glut\+Mouse\+Wheel\+Func}}
+\index{glut\+Mouse\+Wheel\+Func@{glut\+Mouse\+Wheel\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Mouse\+Wheel\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Mouse\+Wheel\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(int, int, int, int)}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a9161e4426b136e1929b95c1780acba81}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Multi\+Button\+Func@{glut\+Multi\+Button\+Func}}
+\index{glut\+Multi\+Button\+Func@{glut\+Multi\+Button\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Multi\+Button\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Multi\+Button\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(int, int, int, int, int)}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a4e76b8c3f851f285b16ccf10dd52497a}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Multi\+Entry\+Func@{glut\+Multi\+Entry\+Func}}
+\index{glut\+Multi\+Entry\+Func@{glut\+Multi\+Entry\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Multi\+Entry\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Multi\+Entry\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(int, int)}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_af8782fcb6ef57235d4833857581c34b4}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Multi\+Motion\+Func@{glut\+Multi\+Motion\+Func}}
+\index{glut\+Multi\+Motion\+Func@{glut\+Multi\+Motion\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Multi\+Motion\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Multi\+Motion\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(int, int, int)}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_adfa134cbbac7fc808c0a656ade6b8c25}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Multi\+Passive\+Func@{glut\+Multi\+Passive\+Func}}
+\index{glut\+Multi\+Passive\+Func@{glut\+Multi\+Passive\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Multi\+Passive\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Multi\+Passive\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(int, int, int)}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_af362999e14f86407ae7c40fff8ea2939}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Set\+Menu\+Data@{glut\+Set\+Menu\+Data}}
+\index{glut\+Set\+Menu\+Data@{glut\+Set\+Menu\+Data}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Set\+Menu\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Set\+Menu\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_af89db03e5b31ffe1bb56b91c57f94e8a}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Set\+Option@{glut\+Set\+Option}}
+\index{glut\+Set\+Option@{glut\+Set\+Option}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Set\+Option}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Set\+Option (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Lenum}}]{option\+\_\+flag, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a18f94be444502efce3eee0ca1c5fd5b3}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d8a/freeglut__ext_8h_a18f94be444502efce3eee0ca1c5fd5b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Set\+Window\+Data@{glut\+Set\+Window\+Data}}
+\index{glut\+Set\+Window\+Data@{glut\+Set\+Window\+Data}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Set\+Window\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Set\+Window\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a77097f59115b3fdc6e4c7b1a05a30688}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Solid\+Cylinder@{glut\+Solid\+Cylinder}}
+\index{glut\+Solid\+Cylinder@{glut\+Solid\+Cylinder}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Solid\+Cylinder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Solid\+Cylinder (
+\begin{DoxyParamCaption}
+\item[{G\+Ldouble}]{radius, }
+\item[{G\+Ldouble}]{height, }
+\item[{{\bf G\+Lint}}]{slices, }
+\item[{{\bf G\+Lint}}]{stacks}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a7415d348b7ea09c2281e52bc9df1d2bb}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Solid\+Rhombic\+Dodecahedron@{glut\+Solid\+Rhombic\+Dodecahedron}}
+\index{glut\+Solid\+Rhombic\+Dodecahedron@{glut\+Solid\+Rhombic\+Dodecahedron}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Solid\+Rhombic\+Dodecahedron}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Solid\+Rhombic\+Dodecahedron (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a5bbf9c4c34980fb79b34ce6f8237f80e}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Solid\+Sierpinski\+Sponge@{glut\+Solid\+Sierpinski\+Sponge}}
+\index{glut\+Solid\+Sierpinski\+Sponge@{glut\+Solid\+Sierpinski\+Sponge}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Solid\+Sierpinski\+Sponge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Solid\+Sierpinski\+Sponge (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+\_\+levels, }
+\item[{G\+Ldouble}]{offset[3], }
+\item[{G\+Ldouble}]{scale}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a50409328e958d946d5e3219e15015d34}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Stroke\+Height@{glut\+Stroke\+Height}}
+\index{glut\+Stroke\+Height@{glut\+Stroke\+Height}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Stroke\+Height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf G\+Lfloat} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Stroke\+Height (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{font}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_aa92ad14a94a3e52fbce036983f7cb81b}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Stroke\+String@{glut\+Stroke\+String}}
+\index{glut\+Stroke\+String@{glut\+Stroke\+String}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Stroke\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Stroke\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf void} $\ast$}]{font, }
+\item[{const unsigned char $\ast$}]{string}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_aa08192f6d743e1db38a54d0ffdcdf813}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Wire\+Cylinder@{glut\+Wire\+Cylinder}}
+\index{glut\+Wire\+Cylinder@{glut\+Wire\+Cylinder}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Wire\+Cylinder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Wire\+Cylinder (
+\begin{DoxyParamCaption}
+\item[{G\+Ldouble}]{radius, }
+\item[{G\+Ldouble}]{height, }
+\item[{{\bf G\+Lint}}]{slices, }
+\item[{{\bf G\+Lint}}]{stacks}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a9e89165415295a9db5904929d70b6cbb}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Wire\+Rhombic\+Dodecahedron@{glut\+Wire\+Rhombic\+Dodecahedron}}
+\index{glut\+Wire\+Rhombic\+Dodecahedron@{glut\+Wire\+Rhombic\+Dodecahedron}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Wire\+Rhombic\+Dodecahedron}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Wire\+Rhombic\+Dodecahedron (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a0646e97fa16eae6264801a2a5a20ebb7}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+Wire\+Sierpinski\+Sponge@{glut\+Wire\+Sierpinski\+Sponge}}
+\index{glut\+Wire\+Sierpinski\+Sponge@{glut\+Wire\+Sierpinski\+Sponge}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+Wire\+Sierpinski\+Sponge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+Wire\+Sierpinski\+Sponge (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+\_\+levels, }
+\item[{G\+Ldouble}]{offset[3], }
+\item[{G\+Ldouble}]{scale}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a6fac6d6a4a8f7a2f8050a8ed6ff53d03}
+\index{freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}!glut\+W\+M\+Close\+Func@{glut\+W\+M\+Close\+Func}}
+\index{glut\+W\+M\+Close\+Func@{glut\+W\+M\+Close\+Func}!freeglut\+\_\+ext.\+h@{freeglut\+\_\+ext.\+h}}
+\subsubsection[{glut\+W\+M\+Close\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+G\+A\+P\+I} {\bf void} {\bf F\+G\+A\+P\+I\+E\+N\+T\+R\+Y} glut\+W\+M\+Close\+Func (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)({\bf void})}]{callback}
+\end{DoxyParamCaption}
+)}\label{freeglut__ext_8h_a1f14c9f686d40ac81838ba0096c64815}

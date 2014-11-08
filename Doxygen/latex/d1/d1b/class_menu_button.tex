@@ -1,0 +1,356 @@
+\section{Menu\+Button Class Reference}
+\label{class_menu_button}\index{Menu\+Button@{Menu\+Button}}
+
+
+The \doxyref{Menu\+Button}{p.}{d1/d1b/class_menu_button} class is menu button.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+Button.\+h$>$}
+
+
+
+Inheritance diagram for Menu\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{dc/d74/class_menu_button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Menu\+Button\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d9/db6/class_menu_button__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Menu\+Button} (float {\bf x}, float {\bf y}, float {\bf w}, float {\bf h}, {\bf string} {\bf t}, {\bf string} dt)
+\begin{DoxyCompactList}\small\item\em structure function \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em draw function inherit from menu component \end{DoxyCompactList}\item 
+{\bf void} {\bf Active} (float {\bf x}, float {\bf y})
+\begin{DoxyCompactList}\small\item\em Active function. \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Listener} ({\bf listener} l)
+\begin{DoxyCompactList}\small\item\em add\+Listener function \end{DoxyCompactList}\item 
+{\bf void} {\bf check\+Pressed\+Button} (float {\bf x}, float {\bf y})
+\begin{DoxyCompactList}\small\item\em check\+Pressed\+Button function \end{DoxyCompactList}\item 
+{\bf void} {\bf pop\+Up} ()
+\begin{DoxyCompactList}\small\item\em pop\+Up function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+D\+Texture} ({\bf string} {\bf s})
+\begin{DoxyCompactList}\small\item\em set the pressed texture of the button \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf listener} {\bf func}
+\begin{DoxyCompactList}\small\item\em reference of callback function \end{DoxyCompactList}\item 
+{\bf string} {\bf up\+Texture}
+\begin{DoxyCompactList}\small\item\em name of the original texture \end{DoxyCompactList}\item 
+{\bf string} {\bf down\+Texture}
+\begin{DoxyCompactList}\small\item\em name of the pressed texture \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \doxyref{Menu\+Button}{p.}{d1/d1b/class_menu_button} class is menu button. 
+
+\begin{DoxyAuthor}{Author}
+Fang Xiang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+026/05/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Menu\+Button@{Menu\+Button}!Menu\+Button@{Menu\+Button}}
+\index{Menu\+Button@{Menu\+Button}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{Menu\+Button}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+Button\+::\+Menu\+Button (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{w, }
+\item[{float}]{h, }
+\item[{{\bf string}}]{t, }
+\item[{{\bf string}}]{dt}
+\end{DoxyParamCaption}
+)}\label{class_menu_button_a9a0c9c20a1b5d2ee0eb925b79ea0b2e0}
+
+
+structure function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ position x \\
+\hline
+{\em y} & -\/ position y \\
+\hline
+{\em w} & -\/ width \\
+\hline
+{\em y} & -\/ height \\
+\hline
+{\em t} & -\/ texture name \\
+\hline
+{\em dt} & -\/ name of pressed button texture \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+7     :MenuComponent(x,y,w,h,t)
+8 \{
+9     upTexture = t;
+10     downTexture = dt;
+11     func = NULL;
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Menu\+Button@{Menu\+Button}!Active@{Active}}
+\index{Active@{Active}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{Active}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Button\+::\+Active (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}\label{class_menu_button_a448bfa95f4b6750275b466bdc75f84c9}
+
+
+Active function. 
+
+function for calling the bounded function with this button when its pressed
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & -\/ mouse position \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{keywordflow}{if}( posX < x && x <(posX+sizeW) && posY < y && y< (posY+sizeH))
+27     \{
+28         \textcolor{keywordflow}{if}(func != NULL)
+29             (*func)();
+30     \}
+31 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d1b/class_menu_button_a448bfa95f4b6750275b466bdc75f84c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Button@{Menu\+Button}!add\+Listener@{add\+Listener}}
+\index{add\+Listener@{add\+Listener}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{add\+Listener}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Button\+::add\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf listener}}]{l}
+\end{DoxyParamCaption}
+)}\label{class_menu_button_a4877a25b9efaa5ed8738f3abb8a34e33}
+
+
+add\+Listener function 
+
+function for registing function to this button
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & -\/ callback function \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+20 \{
+21     func = l;
+22 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d1b/class_menu_button_a4877a25b9efaa5ed8738f3abb8a34e33_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Button@{Menu\+Button}!check\+Pressed\+Button@{check\+Pressed\+Button}}
+\index{check\+Pressed\+Button@{check\+Pressed\+Button}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{check\+Pressed\+Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Button\+::check\+Pressed\+Button (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_menu_button_a19617cf1c1bcea87b1e5a1edd0900674}
+
+
+check\+Pressed\+Button function 
+
+inherit from menu component for check if buttons are pressed
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & -\/ mouse position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from {\bf Menu\+Component} \doxyref{}{p.}{d6/dee/class_menu_component_a1abca66a179b539e69fcb1e78418fc63}.
+
+
+\begin{DoxyCode}
+34 \{
+35     \textcolor{keywordflow}{if}( posX < x && x <(posX+sizeW) && posY < y && y< (posY+sizeH))
+36     \{
+37         setTexture(downTexture);
+38         MenuSystem::Instance()->setPressedButton(\textcolor{keyword}{this});
+39     \}
+40 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d1b/class_menu_button_a19617cf1c1bcea87b1e5a1edd0900674_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Button@{Menu\+Button}!Draw@{Draw}}
+\index{Draw@{Draw}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Button\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_menu_button_aac414152e785dbc256aa307b23792143}
+
+
+draw function inherit from menu component 
+
+
+
+Reimplemented from {\bf Menu\+Component} \doxyref{}{p.}{d6/dee/class_menu_component_ad572f0e556e76f1ce068ab8118f322bd}.
+
+
+\begin{DoxyCode}
+15 \{
+16     ((OpenGL *)RenderingEngine::Instance()->GetRenderHandle())->RenderOverlay(
+      posX,posY,sizeW,sizeH,texture);
+17 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d1b/class_menu_button_aac414152e785dbc256aa307b23792143_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Button@{Menu\+Button}!pop\+Up@{pop\+Up}}
+\index{pop\+Up@{pop\+Up}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{pop\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Button\+::pop\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_menu_button_ac4b6c137f1b64c7728a320ee8df9e8cc}
+
+
+pop\+Up function 
+
+change the button's texture to its original 
+\begin{DoxyCode}
+43 \{
+44     setTexture(upTexture);
+45 
+46 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d1b/class_menu_button_ac4b6c137f1b64c7728a320ee8df9e8cc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d1b/class_menu_button_ac4b6c137f1b64c7728a320ee8df9e8cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Button@{Menu\+Button}!set\+D\+Texture@{set\+D\+Texture}}
+\index{set\+D\+Texture@{set\+D\+Texture}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{set\+D\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Button\+::set\+D\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{s}
+\end{DoxyParamCaption}
+)}\label{class_menu_button_a627994b068faab649d1cfdae215bc125}
+
+
+set the pressed texture of the button 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & -\/ name of the string \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+49 \{
+50     downTexture = s;
+51 \}\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Menu\+Button@{Menu\+Button}!down\+Texture@{down\+Texture}}
+\index{down\+Texture@{down\+Texture}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{down\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} Menu\+Button\+::down\+Texture\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_button_ace073edbd439aa89b0a37437d7b38703}
+
+
+name of the pressed texture 
+
+\index{Menu\+Button@{Menu\+Button}!func@{func}}
+\index{func@{func}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf listener} Menu\+Button\+::func\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_button_a7c2dcf054c23e1b3f10980bd01cb17be}
+
+
+reference of callback function 
+
+\index{Menu\+Button@{Menu\+Button}!up\+Texture@{up\+Texture}}
+\index{up\+Texture@{up\+Texture}!Menu\+Button@{Menu\+Button}}
+\subsubsection[{up\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} Menu\+Button\+::up\+Texture\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_button_ad1da26928853f13b087af781beaab649}
+
+
+name of the original texture 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+Button.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+Button.\+cpp}\end{DoxyCompactItemize}

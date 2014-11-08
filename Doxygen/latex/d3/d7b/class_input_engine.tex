@@ -1,0 +1,1222 @@
+\section{Input\+Engine Class Reference}
+\label{class_input_engine}\index{Input\+Engine@{Input\+Engine}}
+
+
+The Control of all input for the system, created as a singleton so that users will only ever use one instance.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Engine.\+h$>$}
+
+
+
+Collaboration diagram for Input\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/dad/class_input_engine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf init\+Input\+Control} ({\bf std\+::string} {\bf type})
+\begin{DoxyCompactList}\small\item\em init\+Input\+Control \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Mouse\+Fixed} (bool fix)
+\begin{DoxyCompactList}\small\item\em Set Mouse Fixed. \end{DoxyCompactList}\item 
+bool {\bf get\+Mouse\+Fixed} ()
+\begin{DoxyCompactList}\small\item\em Get Mouse Fixed. \end{DoxyCompactList}\item 
+{\bf void} {\bf reset\+All\+Keys} ()
+\begin{DoxyCompactList}\small\item\em Reset All Keys. \end{DoxyCompactList}\item 
+bool {\bf get\+Key\+Down} ({\bf Key\+Code} key)
+\begin{DoxyCompactList}\small\item\em Get Key Down. \end{DoxyCompactList}\item 
+bool {\bf get\+Key} ({\bf Key\+Code} key)
+\begin{DoxyCompactList}\small\item\em Get Key. \end{DoxyCompactList}\item 
+bool {\bf get\+Key\+Up} ({\bf Key\+Code} key)
+\begin{DoxyCompactList}\small\item\em Get Key Up. \end{DoxyCompactList}\item 
+bool {\bf get\+Mouse\+Down} ({\bf Mouse\+Code} key)
+\begin{DoxyCompactList}\small\item\em Get Mouse Down. \end{DoxyCompactList}\item 
+bool {\bf get\+Mouse} ({\bf Mouse\+Code} key)
+\begin{DoxyCompactList}\small\item\em Get Mouse. \end{DoxyCompactList}\item 
+bool {\bf get\+Mouse\+Up} ({\bf Mouse\+Code} key)
+\begin{DoxyCompactList}\small\item\em Get Mouse Up. \end{DoxyCompactList}\item 
+{\bf Vec2} {\bf get\+Mouse\+Point} ()
+\begin{DoxyCompactList}\small\item\em Get Mouse Point. \end{DoxyCompactList}\item 
+{\bf Vec2} {\bf get\+Alpha\+Mouse\+Point} ()
+\begin{DoxyCompactList}\small\item\em Get Alpha Point. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Cursor\+Mid} ()
+\begin{DoxyCompactList}\small\item\em Set Cursor Mid. \end{DoxyCompactList}\item 
+{\bf void} {\bf switch\+Fixed\+Mouse} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Input\+Engine} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Input\+Engine} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Input\+Engine}{p.}{d3/d7b/class_input_engine} Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf void} {\bf key\+Pressed} (unsigned char key, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em key\+Pressed -\/ static void \end{DoxyCompactList}\item 
+static {\bf void} {\bf key\+Up} (unsigned char key, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em key\+Up -\/ static void \end{DoxyCompactList}\item 
+static {\bf void} {\bf Special\+Func} (int key, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em Special\+Func -\/ static void. \end{DoxyCompactList}\item 
+static {\bf void} {\bf Special\+Up\+Func} (int key, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em Special\+Up\+Func -\/ static void. \end{DoxyCompactList}\item 
+static {\bf void} {\bf Mouse\+Motion} (int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em Mouse\+Motion -\/ static void. \end{DoxyCompactList}\item 
+static {\bf void} {\bf Mouse\+Function} (int button, int state, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em Mouse\+Function -\/ static void. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vec2} {\bf mouse\+Point}
+\begin{DoxyCompactList}\small\item\em Holds the position of the mouse at any frame it is called. \end{DoxyCompactList}\item 
+{\bf Vec2} {\bf alpha\+Mouse\+Point}
+\begin{DoxyCompactList}\small\item\em This is the difference from last frame to this frame. \end{DoxyCompactList}\item 
+bool {\bf key\+States\+Down} [256]
+\begin{DoxyCompactList}\small\item\em this will only be true for the one frame that this key is Down \end{DoxyCompactList}\item 
+bool {\bf special\+Keys\+Down} [120]
+\begin{DoxyCompactList}\small\item\em this will only be true for the one frame that this key is Down \end{DoxyCompactList}\item 
+bool {\bf mouse\+Buttons\+Down} [5]
+\begin{DoxyCompactList}\small\item\em this will only be true for the one frame that this key is Down \end{DoxyCompactList}\item 
+bool {\bf key\+States} [256]
+\begin{DoxyCompactList}\small\item\em will be true when the button is down, false as soon as its up \end{DoxyCompactList}\item 
+bool {\bf special\+Keys} [120]
+\begin{DoxyCompactList}\small\item\em will be true when the button is down, false as soon as its up \end{DoxyCompactList}\item 
+bool {\bf mouse\+Buttons} [5]
+\begin{DoxyCompactList}\small\item\em will be true when the button is down, false as soon as its up \end{DoxyCompactList}\item 
+bool {\bf key\+States\+Up} [256]
+\begin{DoxyCompactList}\small\item\em will be true for the one frame that the button comes up, false all other times. \end{DoxyCompactList}\item 
+bool {\bf special\+Keys\+Up} [120]
+\begin{DoxyCompactList}\small\item\em will be true for the one frame that the button comes up, false all other times. \end{DoxyCompactList}\item 
+bool {\bf mouse\+Buttons\+Up} [5]
+\begin{DoxyCompactList}\small\item\em will be true for the one frame that the button comes up, false all other times. \end{DoxyCompactList}\item 
+bool {\bf fixed\+Mouse}
+\begin{DoxyCompactList}\small\item\em this is used to determine if the user of the system wants to set the mouse point to be fixed and invisible \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Control of all input for the system, created as a singleton so that users will only ever use one instance. 
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe \+: null 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/03/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Input\+Engine@{Input\+Engine}!Input\+Engine@{Input\+Engine}}
+\index{Input\+Engine@{Input\+Engine}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{Input\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Input\+Engine\+::\+Input\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_ab1e1c1fad0069c085e9ffe56157267ac}
+
+
+\doxyref{Input\+Engine}{p.}{d3/d7b/class_input_engine} Constructor. 
+
+Basic constructor of the Input Engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+13 \{
+14     resetAllKeys();
+15 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Input\+Engine@{Input\+Engine}!get\+Alpha\+Mouse\+Point@{get\+Alpha\+Mouse\+Point}}
+\index{get\+Alpha\+Mouse\+Point@{get\+Alpha\+Mouse\+Point}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Alpha\+Mouse\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec2} Input\+Engine\+::get\+Alpha\+Mouse\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a832e0912d324465e60846fc8c57bcf5c}
+
+
+Get Alpha Point. 
+
+Gets the difference between the last frames mouse positon and this position
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mouse\+Position -\/ \doxyref{Vec2}{p.}{db/db1/struct_vec2} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+return a \doxyref{Vec2}{p.}{db/db1/struct_vec2} mouse point 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+610 \{
+611     \textcolor{keywordflow}{return} alphaMousePoint;
+612 \}
+\end{DoxyCode}
+\index{Input\+Engine@{Input\+Engine}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Key}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::get\+Key (
+\begin{DoxyParamCaption}
+\item[{{\bf Key\+Code}}]{key}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a0d06866134fcd78fb7a13561cb8bd56d}
+
+
+Get Key. 
+
+Use the Keycode provided to check to see if that key is being pressed. This will be true for the entire time the key is pressed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key\+Code} & -\/ key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns true or false based on the key\+Code provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+554 \{
+555     \textcolor{keywordflow}{return} switchCase(key, keyStates, specialKeys);
+556 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{d3/d7b/class_input_engine_a0d06866134fcd78fb7a13561cb8bd56d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!get\+Key\+Down@{get\+Key\+Down}}
+\index{get\+Key\+Down@{get\+Key\+Down}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Key\+Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::get\+Key\+Down (
+\begin{DoxyParamCaption}
+\item[{{\bf Key\+Code}}]{key}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_aca797e02ec6fbb3cf627a50abd4b09c8}
+
+
+Get Key Down. 
+
+Use the Keycode provided to check to see if that key has been pressed down in this frame. This will only be true for the first frame of the down press.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key\+Code} & -\/ key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+returns true or false based on the key\+Code provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+549 \{
+550     \textcolor{keywordflow}{return} switchCase(key, keyStatesDown, specialKeysDown);
+551 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{d3/d7b/class_input_engine_aca797e02ec6fbb3cf627a50abd4b09c8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!get\+Key\+Up@{get\+Key\+Up}}
+\index{get\+Key\+Up@{get\+Key\+Up}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Key\+Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::get\+Key\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Key\+Code}}]{key}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a83e458686a2f5f225b72c84938359c89}
+
+
+Get Key Up. 
+
+Use the Keycode provided to check to see if that key has been released in this frame. This will only be true for the first one frame of key release
+
+
+\begin{DoxyParams}{Parameters}
+{\em Key\+Code} & -\/ key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns true or false based on the key\+Code provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+559 \{
+560     \textcolor{keywordflow}{return} switchCase(key, keyStatesUp, specialKeysUp);
+561 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{d3/d7b/class_input_engine_a83e458686a2f5f225b72c84938359c89_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!get\+Mouse@{get\+Mouse}}
+\index{get\+Mouse@{get\+Mouse}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Mouse}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::get\+Mouse (
+\begin{DoxyParamCaption}
+\item[{{\bf Mouse\+Code}}]{key}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a95dd2ed95895ede211c966b04ce8b6cb}
+
+
+Get Mouse. 
+
+Use the Mouse\+Code provided to check to see if the Mouse Button is clicked down in this frame. This will be true for the entire time of the down press.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mouse\+Code} & -\/ key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns true or false based on the Mouse\+Code provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+569 \{
+570     \textcolor{keywordflow}{return} mouseSwitchCase(key, mouseButtons);
+571 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{d3/d7b/class_input_engine_a95dd2ed95895ede211c966b04ce8b6cb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!get\+Mouse\+Down@{get\+Mouse\+Down}}
+\index{get\+Mouse\+Down@{get\+Mouse\+Down}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Mouse\+Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::get\+Mouse\+Down (
+\begin{DoxyParamCaption}
+\item[{{\bf Mouse\+Code}}]{key}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_af7868670a5178f654bc561b7181d62ad}
+
+
+Get Mouse Down. 
+
+Use the Mouse\+Code provided to check to see if that Mouse Button has been clicked down in this frame. This will only be true for the first frame of the down press.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mouse\+Code} & -\/ key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns true or false based on the Mouse\+Code provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+564 \{
+565     \textcolor{keywordflow}{return} mouseSwitchCase(key, mouseButtonsDown);
+566 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_af7868670a5178f654bc561b7181d62ad_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!get\+Mouse\+Fixed@{get\+Mouse\+Fixed}}
+\index{get\+Mouse\+Fixed@{get\+Mouse\+Fixed}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Mouse\+Fixed}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::get\+Mouse\+Fixed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a91397b1b8d3ee395ed1a734536aa06e0}
+
+
+Get Mouse Fixed. 
+
+This returns the boolean value for fixed\+Mouse Used to determine if the user wants the cursor to be free moving or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Fixed\+Mouse -\/ Bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns Fixed\+Mouse 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+260 \{
+261     \textcolor{keywordflow}{return} fixedMouse;
+262 \}
+\end{DoxyCode}
+\index{Input\+Engine@{Input\+Engine}!get\+Mouse\+Point@{get\+Mouse\+Point}}
+\index{get\+Mouse\+Point@{get\+Mouse\+Point}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Mouse\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec2} Input\+Engine\+::get\+Mouse\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a80bed0b879a77fcdf370aff621c1eefa}
+
+
+Get Mouse Point. 
+
+Get the \doxyref{Vec2}{p.}{db/db1/struct_vec2} that contains the mouses current position
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+return a vec2 of the mouses current position 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+605 \{
+606     \textcolor{keywordflow}{return} mousePoint;
+607 \}
+\end{DoxyCode}
+\index{Input\+Engine@{Input\+Engine}!get\+Mouse\+Up@{get\+Mouse\+Up}}
+\index{get\+Mouse\+Up@{get\+Mouse\+Up}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{get\+Mouse\+Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::get\+Mouse\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Mouse\+Code}}]{key}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a5bbb31e76659d00daa0202d47f909cbe}
+
+
+Get Mouse Up. 
+
+Use the Mouse\+Code provided to check to see if that Mouse Button has been released in this frame. This will only be true for the one frame of key release
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mouse\+Code} & -\/ key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns true or false based on the Mouse\+Code provided 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+574 \{
+575     \textcolor{keywordflow}{return} mouseSwitchCase(key, mouseButtonsUp);
+576 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{d3/d7b/class_input_engine_a5bbb31e76659d00daa0202d47f909cbe_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!init\+Input\+Control@{init\+Input\+Control}}
+\index{init\+Input\+Control@{init\+Input\+Control}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{init\+Input\+Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::init\+Input\+Control (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_ab260cbccd793d3fa870f80761db6767f}
+
+
+init\+Input\+Control 
+
+This function initialises the Input Engine, it M\+U\+S\+T be called in the \doxyref{Game\+Engine}{p.}{da/da9/class_game_engine} or input wont work. The string determines weather the engine uses open\+G\+L or \doxyref{Direct\+X}{p.}{d2/dee/class_direct_x}
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets up Input Engine 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+20 \{
+21     InputEngine* input;
+22     input = InputEngine::Instance();
+23     
+24     \textcolor{keywordflow}{if}(type == \textcolor{stringliteral}{"OpenGL"})
+25     \{
+26         glutKeyboardFunc(keyPressed);
+27         glutKeyboardUpFunc(keyUp);
+28         glutSpecialFunc(SpecialFunc);
+29         glutSpecialUpFunc(SpecialUpFunc);
+30         glutPassiveMotionFunc(MouseMotion);
+31         glutMouseFunc(MouseFunction);
+32         mousePoint.x = 0;
+33         mousePoint.y = 0;
+34         alphaMousePoint.x = 0;
+35         alphaMousePoint.y = 0;
+36         
+37     \}
+38     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == \textcolor{stringliteral}{"DirectX"})
+39     \{
+40 
+41     \}
+42 
+43 
+44     
+45 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_ab260cbccd793d3fa870f80761db6767f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_ab260cbccd793d3fa870f80761db6767f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!Instance@{Instance}}
+\index{Instance@{Instance}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\+Engine} $\ast$ Input\+Engine\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_input_engine_a1f67c167338a95cfdffb01fabf28eb92}
+
+
+Instance. 
+
+This returns a pointer to the singleton
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Input\+Engine$\ast$ 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns \doxyref{Input\+Engine}{p.}{d3/d7b/class_input_engine} singleton 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+7 \{
+8     \textcolor{keyword}{static} InputEngine Instance;
+9     \textcolor{keywordflow}{return} &Instance;
+10 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_a1f67c167338a95cfdffb01fabf28eb92_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!key\+Pressed@{key\+Pressed}}
+\index{key\+Pressed@{key\+Pressed}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{key\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::key\+Pressed (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_input_engine_a25b9dceafbf5a3f96071f7fbdb7f69a6}
+
+
+key\+Pressed -\/ static void 
+
+Function for setting all the keyboard input through open\+G\+L. Keyboard Down presses Sets the bool arrays for key\+Pressed, Key\+Pressed\+Down
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char key, int x, int y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+126 \{
+127     InputEngine* input;
+128     input = InputEngine::Instance();
+129 
+130     key = ShiftCheck(key);
+131 
+132     \textcolor{keywordflow}{if}(input->keyStates[key] == \textcolor{keyword}{false})
+133     \{
+134         input->keyStatesDown[key] = \textcolor{keyword}{true};
+135         input->keyStates[key] = \textcolor{keyword}{true};
+136     \}
+137     \textcolor{keywordflow}{else}
+138     \{
+139         input->keyStatesDown[key] = \textcolor{keyword}{false};
+140         input->keyStates[key] = \textcolor{keyword}{true};
+141     \}
+142 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_a25b9dceafbf5a3f96071f7fbdb7f69a6_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!key\+Up@{key\+Up}}
+\index{key\+Up@{key\+Up}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{key\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::key\+Up (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_input_engine_a3334fd728ec3bfb795397e6da8b8c77c}
+
+
+key\+Up -\/ static void 
+
+Function for setting all the keyboard input through open\+G\+L. Keyboard releases Sets the bool arrays for key\+Pressed, Key\+Pressed\+Up
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char key, int x, int y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+145 \{
+146     InputEngine* input;
+147     input = InputEngine::Instance();
+148 
+149     key = ShiftCheck(key);
+150 
+151     input->keyStates[key] = \textcolor{keyword}{false};
+152     input->keyStatesUp[key] = \textcolor{keyword}{true};
+153 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d3/d7b/class_input_engine_a3334fd728ec3bfb795397e6da8b8c77c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!Mouse\+Function@{Mouse\+Function}}
+\index{Mouse\+Function@{Mouse\+Function}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{Mouse\+Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::\+Mouse\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_input_engine_ac01b2a284deedd9c0a91bb802e033730}
+
+
+Mouse\+Function -\/ static void. 
+
+Function for setting the Mouse button clicks and releases sets mouse\+Button\+Down on the first frame of a click mouse\+Buttons for the whole duration and mouse\+Buttons\+Up on the first frame of release.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & button, int x, int y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+202 \{
+203     InputEngine* input;
+204     input = InputEngine::Instance();
+205 
+206     input->mousePoint.x = (float)x;
+207     input->mousePoint.y = (float)y;
+208 
+209     
+210 
+211      input->alphaMousePoint.x = glutGet(GLUT_WINDOW_WIDTH)/2 - (float)x;
+212      input->alphaMousePoint.y = (float)y - glutGet(GLUT_WINDOW_HEIGHT)/2;
+213 
+214      \textcolor{keywordflow}{if} (button == 35)
+215          button = 3;
+216      \textcolor{keywordflow}{if} (button == 36)
+217          button = 4;
+218 
+219     input->mouseButtonsDown[button] = \textcolor{keyword}{true};
+220 
+221     \textcolor{keywordflow}{if}(input->mouseButtons[button] == \textcolor{keyword}{false} && state == GLUT_DOWN)
+222     \{
+223         input->mouseButtonsDown[button] = \textcolor{keyword}{true};
+224         input->mouseButtons[button] = \textcolor{keyword}{true};
+225     \}
+226     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(state == GLUT_UP)
+227     \{
+228         input->mouseButtonsUp[button] = \textcolor{keyword}{true};
+229 
+230         \textcolor{keywordflow}{if}(button != 3 && button != 4)\textcolor{comment}{//added because the mouse scroll doesnt work the same as the others}
+231         \{
+232             input->mouseButtons[button] = \textcolor{keyword}{false};
+233             input->mouseButtonsDown[button] = \textcolor{keyword}{false};
+234         \}
+235     \}
+236     \textcolor{keywordflow}{else}
+237     \{
+238         input->mouseButtonsDown[button] = \textcolor{keyword}{false};
+239         input->mouseButtons[button] = \textcolor{keyword}{true};
+240         
+241     \}
+242 
+243     \textcolor{comment}{//need to add function for mouseDown, and mouseButtons}
+244 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_ac01b2a284deedd9c0a91bb802e033730_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!Mouse\+Motion@{Mouse\+Motion}}
+\index{Mouse\+Motion@{Mouse\+Motion}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{Mouse\+Motion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::\+Mouse\+Motion (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_input_engine_ac5949977cadb3aca97be4a7e274206d0}
+
+
+Mouse\+Motion -\/ static void. 
+
+Function for setting the Mouse point sets the position that the user can get back from the Input Engine sets the delta position of the mouse as well
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & x, int y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+189 \{
+190     InputEngine* input;
+191     input = InputEngine::Instance();
+192 
+193 
+194     input->mousePoint.x = (float)x;
+195     input->mousePoint.y = (float)y;
+196 
+197      input->alphaMousePoint.x = glutGet(GLUT_WINDOW_WIDTH)/2 - (float)x;
+198      input->alphaMousePoint.y = (float)y - glutGet(GLUT_WINDOW_HEIGHT)/2;
+199 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_ac5949977cadb3aca97be4a7e274206d0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!reset\+All\+Keys@{reset\+All\+Keys}}
+\index{reset\+All\+Keys@{reset\+All\+Keys}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{reset\+All\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::reset\+All\+Keys (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_aac233d4c77a59cabf900aa12a21a9b13}
+
+
+Reset All Keys. 
+
+This resets all mouse\+Down, Mouse\+U\+P, Key\+Down and Key\+Up arrays to false. must be called after the inputs have been used, at the end of the game loop
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+resets the arrays for input 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+579 \{
+580     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<256;i++)
+581     \{
+582         keyStatesDown[i] = \textcolor{keyword}{false};
+583         keyStatesUp[i] = \textcolor{keyword}{false};
+584 
+585         \textcolor{keywordflow}{if}(i<120)
+586         \{
+587             specialKeysDown[i] = \textcolor{keyword}{false};
+588             specialKeysUp[i] = \textcolor{keyword}{false};
+589         \}
+590 
+591         \textcolor{keywordflow}{if}(i < 5)
+592         \{
+593             mouseButtonsDown[i] = \textcolor{keyword}{false};
+594             mouseButtonsUp[i] = \textcolor{keyword}{false};
+595         \}
+596     \}
+597 
+598     \textcolor{keywordflow}{if}(fixedMouse)
+599     \{
+600         setCursorMid();
+601     \}
+602 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_aac233d4c77a59cabf900aa12a21a9b13_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!set\+Cursor\+Mid@{set\+Cursor\+Mid}}
+\index{set\+Cursor\+Mid@{set\+Cursor\+Mid}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{set\+Cursor\+Mid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::set\+Cursor\+Mid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_ab7991f7ed12fa839e634153f292e0a6d}
+
+
+Set Cursor Mid. 
+
+Sets the cursor to be stuck at the middle of the screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Alpha\+Mouse\+Position -\/ \doxyref{Vec2}{p.}{db/db1/struct_vec2} 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets the cursor to mid of screen 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+615 \{
+616     SetCursorPos(glutGet(GLUT_WINDOW_X) + glutGet(GLUT_WINDOW_WIDTH)/2, glutGet(
+      GLUT_WINDOW_Y) +  glutGet(GLUT_WINDOW_HEIGHT)/2);
+617     \textcolor{comment}{//glutSetCursor(GLUT\_CURSOR\_NONE);}
+618 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{d3/d7b/class_input_engine_ab7991f7ed12fa839e634153f292e0a6d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!set\+Mouse\+Fixed@{set\+Mouse\+Fixed}}
+\index{set\+Mouse\+Fixed@{set\+Mouse\+Fixed}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{set\+Mouse\+Fixed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::set\+Mouse\+Fixed (
+\begin{DoxyParamCaption}
+\item[{bool}]{fix}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a07e7dd39b41e62c5d8145aff784833d4}
+
+
+Set Mouse Fixed. 
+
+This sets the boolean value for Fixed Mouse
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & -\/ fix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets Fixed\+Mouse to fix 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+247 \{
+248     fixedMouse = fix;
+249     \textcolor{keywordflow}{if}(fix)
+250     \{
+251         glutSetCursor(GLUT_CURSOR_NONE);
+252     \}
+253     \textcolor{keywordflow}{else}
+254     \{
+255         glutSetCursor(GLUT_CURSOR_LEFT_ARROW);
+256     \}
+257 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{d3/d7b/class_input_engine_a07e7dd39b41e62c5d8145aff784833d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_a07e7dd39b41e62c5d8145aff784833d4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!Special\+Func@{Special\+Func}}
+\index{Special\+Func@{Special\+Func}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{Special\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::\+Special\+Func (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_input_engine_ae311d18855bf1a80845ed937ecd9a7c1}
+
+
+Special\+Func -\/ static void. 
+
+Function for setting special keyboard input through open\+G\+L. Keyboard down presses Sets the bool arrays for key\+Pressed, Key\+Pressed\+Down
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & char key, int x, int y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+156 \{
+157 
+158     InputEngine* input;
+159     input = InputEngine::Instance();
+160 
+161     \textcolor{keywordflow}{if}(input->specialKeys[key] == \textcolor{keyword}{false})
+162     \{
+163         input->specialKeysDown[key] = \textcolor{keyword}{true};
+164         input->specialKeys[key] = \textcolor{keyword}{true};
+165     \}
+166     \textcolor{keywordflow}{else}
+167     \{
+168         input->specialKeysDown[key] = \textcolor{keyword}{false};
+169         input->specialKeys[key] = \textcolor{keyword}{true};
+170     \}
+171 
+172 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_ae311d18855bf1a80845ed937ecd9a7c1_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!Special\+Up\+Func@{Special\+Up\+Func}}
+\index{Special\+Up\+Func@{Special\+Up\+Func}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{Special\+Up\+Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::\+Special\+Up\+Func (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_input_engine_ab799107404c9fc0143f31d408196ffc2}
+
+
+Special\+Up\+Func -\/ static void. 
+
+Function for setting special keyboard input through open\+G\+L. Keyboard releases Sets the bool arrays for key\+Pressed, Key\+Pressed\+Up
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & char key, int x, int y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+175 \{
+176     InputEngine* input;
+177     input = InputEngine::Instance();
+178 
+179 
+180     input->specialKeys[key] = \textcolor{keyword}{false};
+181     input->specialKeysUp[key] = \textcolor{keyword}{true};
+182 
+183 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_ab799107404c9fc0143f31d408196ffc2_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine@{Input\+Engine}!switch\+Fixed\+Mouse@{switch\+Fixed\+Mouse}}
+\index{switch\+Fixed\+Mouse@{switch\+Fixed\+Mouse}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{switch\+Fixed\+Mouse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Input\+Engine\+::switch\+Fixed\+Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_input_engine_a7a44d8397064f560cdb8134e76beb3ba}
+
+\begin{DoxyCode}
+621 \{
+622     fixedMouse = !fixedMouse;
+623     \textcolor{keywordflow}{if}(fixedMouse)
+624     \{
+625         glutSetCursor(GLUT_CURSOR_NONE);
+626     \}
+627     \textcolor{keywordflow}{else}
+628     \{
+629         glutSetCursor(GLUT_CURSOR_LEFT_ARROW);
+630     \}
+631 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{d3/d7b/class_input_engine_a7a44d8397064f560cdb8134e76beb3ba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d7b/class_input_engine_a7a44d8397064f560cdb8134e76beb3ba_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Input\+Engine@{Input\+Engine}!alpha\+Mouse\+Point@{alpha\+Mouse\+Point}}
+\index{alpha\+Mouse\+Point@{alpha\+Mouse\+Point}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{alpha\+Mouse\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec2} Input\+Engine\+::alpha\+Mouse\+Point\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_ac7b7bbb590803fbcd914e5761904af2e}
+
+
+This is the difference from last frame to this frame. 
+
+\index{Input\+Engine@{Input\+Engine}!fixed\+Mouse@{fixed\+Mouse}}
+\index{fixed\+Mouse@{fixed\+Mouse}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{fixed\+Mouse}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::fixed\+Mouse\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_af9b3c7cffc197f9d9c9aa60182728956}
+
+
+this is used to determine if the user of the system wants to set the mouse point to be fixed and invisible 
+
+\index{Input\+Engine@{Input\+Engine}!key\+States@{key\+States}}
+\index{key\+States@{key\+States}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{key\+States}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::key\+States[256]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a79c945d5a34fd76692a5e660c37b132b}
+
+
+will be true when the button is down, false as soon as its up 
+
+\index{Input\+Engine@{Input\+Engine}!key\+States\+Down@{key\+States\+Down}}
+\index{key\+States\+Down@{key\+States\+Down}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{key\+States\+Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::key\+States\+Down[256]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a0ab3aad49a2b0636c6fad7eb132f33d7}
+
+
+this will only be true for the one frame that this key is Down 
+
+\index{Input\+Engine@{Input\+Engine}!key\+States\+Up@{key\+States\+Up}}
+\index{key\+States\+Up@{key\+States\+Up}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{key\+States\+Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::key\+States\+Up[256]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a4b3f76dc326f2167a95a22802ae83396}
+
+
+will be true for the one frame that the button comes up, false all other times. 
+
+\index{Input\+Engine@{Input\+Engine}!mouse\+Buttons@{mouse\+Buttons}}
+\index{mouse\+Buttons@{mouse\+Buttons}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{mouse\+Buttons}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::mouse\+Buttons[5]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a1741be74c3bbab6605dbe7af0e7c2cc7}
+
+
+will be true when the button is down, false as soon as its up 
+
+\index{Input\+Engine@{Input\+Engine}!mouse\+Buttons\+Down@{mouse\+Buttons\+Down}}
+\index{mouse\+Buttons\+Down@{mouse\+Buttons\+Down}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{mouse\+Buttons\+Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::mouse\+Buttons\+Down[5]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a0a0339dbc6f2b7a4fc4c22379cd9ce08}
+
+
+this will only be true for the one frame that this key is Down 
+
+\index{Input\+Engine@{Input\+Engine}!mouse\+Buttons\+Up@{mouse\+Buttons\+Up}}
+\index{mouse\+Buttons\+Up@{mouse\+Buttons\+Up}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{mouse\+Buttons\+Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::mouse\+Buttons\+Up[5]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_ac968b8e546add0b038e42ab23a1e80ce}
+
+
+will be true for the one frame that the button comes up, false all other times. 
+
+\index{Input\+Engine@{Input\+Engine}!mouse\+Point@{mouse\+Point}}
+\index{mouse\+Point@{mouse\+Point}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{mouse\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec2} Input\+Engine\+::mouse\+Point\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_ad3417528d6d6a957728a952217320062}
+
+
+Holds the position of the mouse at any frame it is called. 
+
+\index{Input\+Engine@{Input\+Engine}!special\+Keys@{special\+Keys}}
+\index{special\+Keys@{special\+Keys}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{special\+Keys}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::special\+Keys[120]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a872584fbd478f1935f24883243f85b44}
+
+
+will be true when the button is down, false as soon as its up 
+
+\index{Input\+Engine@{Input\+Engine}!special\+Keys\+Down@{special\+Keys\+Down}}
+\index{special\+Keys\+Down@{special\+Keys\+Down}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{special\+Keys\+Down}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::special\+Keys\+Down[120]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a1cdc76db816c0134d2aa06ee3cddbfd4}
+
+
+this will only be true for the one frame that this key is Down 
+
+\index{Input\+Engine@{Input\+Engine}!special\+Keys\+Up@{special\+Keys\+Up}}
+\index{special\+Keys\+Up@{special\+Keys\+Up}!Input\+Engine@{Input\+Engine}}
+\subsubsection[{special\+Keys\+Up}]{\setlength{\rightskip}{0pt plus 5cm}bool Input\+Engine\+::special\+Keys\+Up[120]\hspace{0.3cm}{\ttfamily [private]}}\label{class_input_engine_a89c25c8aeed42f3b7552a8874d93603f}
+
+
+will be true for the one frame that the button comes up, false all other times. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Input\+Engine.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Input\+Engine.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Brain::getNeeds" name="Brain::getNeeds">
+<area shape="rect" id="node2" href="$d0/d2a/class_n_p_c.html#a49d73fb1d0b5fc4dab086a15a9fca058" title="Update. " alt="" coords="391,5,489,32"/>
+<area shape="rect" id="node3" href="$d0/d2a/class_n_p_c.html#af4378d6d0057872add55770c5d3fac95" title="NPC::getLocalAffordances" alt="" coords="168,31,343,57"/>
+<area shape="rect" id="node4" href="$d0/d2a/class_n_p_c.html#a8c0a16041790f47e9bd2aa63c510e5ce" title="NPC::getNeeds" alt="" coords="199,81,311,108"/>
+</map>

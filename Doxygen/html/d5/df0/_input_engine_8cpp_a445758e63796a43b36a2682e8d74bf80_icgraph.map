@@ -1,0 +1,5 @@
+<map id="mouseSwitchCase" name="mouseSwitchCase">
+<area shape="rect" id="node2" href="$d3/d7b/class_input_engine.html#af7868670a5178f654bc561b7181d62ad" title="Get Mouse Down. " alt="" coords="184,5,371,32"/>
+<area shape="rect" id="node3" href="$d3/d7b/class_input_engine.html#a95dd2ed95895ede211c966b04ce8b6cb" title="Get Mouse. " alt="" coords="200,56,355,83"/>
+<area shape="rect" id="node4" href="$d3/d7b/class_input_engine.html#a5bbb31e76659d00daa0202d47f909cbe" title="Get Mouse Up. " alt="" coords="192,107,363,133"/>
+</map>

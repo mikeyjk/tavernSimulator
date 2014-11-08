@@ -1,0 +1,445 @@
+\section{Physic\+Engine Class Reference}
+\label{class_physic_engine}\index{Physic\+Engine@{Physic\+Engine}}
+
+
+{\ttfamily \#include $<$Physic\+Engine.\+h$>$}
+
+
+
+Collaboration diagram for Physic\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{d7/d36/class_physic_engine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$\+Physic\+Engine} ({\bf void})
+\item 
+{\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update. \end{DoxyCompactList}\item 
+{\bf void} {\bf load\+Assets} ()
+\begin{DoxyCompactList}\small\item\em load\+Assets \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em Draw. \end{DoxyCompactList}\item 
+{\bf void} {\bf switch\+Render\+Mode} ()
+\begin{DoxyCompactList}\small\item\em switch\+Render\+Mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Physic\+Engine} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Physical\+World\+Simulation $\ast$ {\bf World\+Simu}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Physic\+Engine} ({\bf void})
+\item 
+{\bf void} {\bf add\+Objects} ()
+\begin{DoxyCompactList}\small\item\em add object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf std\+::string} {\bf m\+\_\+asset\+File}
+\item 
+bool {\bf render\+B\+Boxes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Physic\+Engine@{Physic\+Engine}!````~Physic\+Engine@{$\sim$\+Physic\+Engine}}
+\index{````~Physic\+Engine@{$\sim$\+Physic\+Engine}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{$\sim$\+Physic\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Physic\+Engine\+::$\sim$\+Physic\+Engine (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_physic_engine_af604947e1597a0bb77b1db4a74f0f1ec}
+
+\begin{DoxyCode}
+175 \{
+176 \}
+\end{DoxyCode}
+\index{Physic\+Engine@{Physic\+Engine}!Physic\+Engine@{Physic\+Engine}}
+\index{Physic\+Engine@{Physic\+Engine}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{Physic\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Physic\+Engine\+::\+Physic\+Engine (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_physic_engine_ab3f33f58c7821dc95e47b300647b729f}
+
+\begin{DoxyCode}
+164 \{
+165     m_assetFile = \textcolor{stringliteral}{"ScriptData/PhysicsObjects.txt"};
+166     WorldSimu = PhysicalWorldSimulation::Instance();
+167     WorldSimu->init();
+168 
+169     \textcolor{keywordtype}{float} wallweight = 99999999999999999;
+170     loadAssets();
+171     renderBBoxes = \textcolor{keyword}{false};
+172 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d43/class_physic_engine_ab3f33f58c7821dc95e47b300647b729f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Physic\+Engine@{Physic\+Engine}!add\+Objects@{add\+Objects}}
+\index{add\+Objects@{add\+Objects}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{add\+Objects}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Physic\+Engine\+::add\+Objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_physic_engine_a00040e0fbff794cb6b1b07874136bc8f}
+
+
+add object 
+
+add objects into world
+
+Add physics objects from file. 
+\begin{DoxyCode}
+182 \{
+183 
+184 \}
+\end{DoxyCode}
+\index{Physic\+Engine@{Physic\+Engine}!Draw@{Draw}}
+\index{Draw@{Draw}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Physic\+Engine\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_physic_engine_a7133462e42a9799f870018106b1cfc7d}
+
+
+Draw. 
+
+Draw all elements in physic world 
+\begin{DoxyCode}
+207 \{
+208     \textcolor{keywordflow}{if}(WorldSimu != \textcolor{keyword}{nullptr})
+209     \{
+210         \textcolor{keywordflow}{if}(renderBBoxes)
+211             WorldSimu->Display();
+212 
+213     \}
+214 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d43/class_physic_engine_a7133462e42a9799f870018106b1cfc7d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Physic\+Engine@{Physic\+Engine}!Instance@{Instance}}
+\index{Instance@{Instance}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Physic\+Engine} $\ast$ Physic\+Engine\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_physic_engine_a4c6f86eea01ee51a782ad48fcbc7eba1}
+
+
+Singleton. 
+
+Create the singleton 
+\begin{DoxyCode}
+4 \{
+5     \textcolor{keyword}{static} PhysicEngine instance;
+6     \textcolor{keywordflow}{return} &instance;
+7 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d43/class_physic_engine_a4c6f86eea01ee51a782ad48fcbc7eba1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Physic\+Engine@{Physic\+Engine}!load\+Assets@{load\+Assets}}
+\index{load\+Assets@{load\+Assets}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{load\+Assets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Physic\+Engine\+::load\+Assets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_physic_engine_a69ba663b63af3a75527ed45f0809a5ca}
+
+
+load\+Assets 
+
+Load Assets from external file 
+\begin{DoxyCode}
+10 \{
+11     vector<vector<string>> m\_spheres;
+12     vector<vector<string>> m\_boxes;
+13 
+14     \textcolor{keywordtype}{string} assetLine; \textcolor{comment}{// store each line of the asset file}
+15     ifstream fileData; \textcolor{comment}{// file stream to asset file}
+16 
+17     \textcolor{keywordflow}{try} \textcolor{comment}{// attempt file I/O}
+18     \{
+19         fileData.open(m_assetFile); \textcolor{comment}{// open the file stream}
+20     \}
+21     \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception &err) \textcolor{comment}{// catch all}
+22     \{
+23         cout << \textcolor{stringliteral}{"Error: "} << err.what() << endl;
+24     \}
+25 
+26     \textcolor{comment}{// verify file stream was opened}
+27     \textcolor{keywordflow}{if}(fileData.fail())
+28     \{
+29         cout << \textcolor{stringliteral}{"Error: Unable to open asset file! ("} << m_assetFile << \textcolor{stringliteral}{")."} << endl;
+30     \}
+31     \textcolor{keywordflow}{else} \textcolor{comment}{// file stream opened successfully}
+32     \{
+33         \textcolor{comment}{// while getline() is able to retrieve a value}
+34         \textcolor{keywordflow}{while}(getline(fileData, assetLine))
+35         \{
+36             trim(assetLine); \textcolor{comment}{// trim whitespace at beginning/end}
+37 
+38             \textcolor{comment}{// if not a comment / not empty}
+39             \textcolor{keywordflow}{if}(!assetLine.empty() && assetLine.at(0) != \textcolor{charliteral}{'#'})
+40             \{
+41 
+42                 \textcolor{keywordflow}{if}(find\_first(assetLine, \textcolor{stringliteral}{"Sphere:"}))
+43                 \{
+44                     vector<string> sphere;
+45                     vector<string> tokens;
+46 
+47                     split(tokens, assetLine, is\_any\_of(\textcolor{stringliteral}{", "}), token\_compress\_on);
+48 
+49                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} itr : tokens) \textcolor{comment}{// for the tokens}
+50                     \{
+51                         \textcolor{keywordflow}{try}
+52                         \{
+53                             \textcolor{keywordflow}{if}(!find\_first(itr, \textcolor{stringliteral}{"Sphere:"}))
+54                             \{
+55                                 trim(itr);
+56                                 sphere.emplace(sphere.cend(), itr);
+57                             \}
+58                         \}
+59                         \textcolor{keywordflow}{catch}(bad\_lexical\_cast &) \{\}
+60                     \}
+61 
+62                     \textcolor{comment}{// store entity in vector}
+63                     m\_spheres.emplace(m\_spheres.cend(), sphere);
+64                 \}
+65 
+66                 \textcolor{keywordflow}{if}(find\_first(assetLine, \textcolor{stringliteral}{"Box:"}))
+67                 \{
+68                     vector<string> box;
+69                     vector<string> tokens;
+70 
+71                     split(tokens, assetLine, is\_any\_of(\textcolor{stringliteral}{", "}), token\_compress\_on);
+72 
+73                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} itr : tokens)
+74                     \{
+75                         \textcolor{keywordflow}{try}
+76                         \{
+77                             \textcolor{keywordflow}{if}(!find\_first(itr, \textcolor{stringliteral}{"Box:"}))
+78                             \{
+79                                 trim(itr);
+80 
+81                                 box.emplace(box.cend(), itr);
+82                             \}
+83                         \}
+84                         \textcolor{keywordflow}{catch}(bad\_lexical\_cast &) \{\}
+85                     \}
+86 
+87                     \textcolor{comment}{// store entity in vector}
+88                     m\_boxes.emplace(m\_boxes.cend(), box);
+89                 \}
+90             \}
+91         \}
+92     \}
+93 
+94     \textcolor{comment}{// SPHERE}
+95     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} itr = m\_spheres.cbegin(); itr != m\_spheres.cend(); ++itr)
+96     \{
+97         \textcolor{keywordflow}{try}
+98         \{
+99             cyclone::collisionType colType;
+100 
+101             \textcolor{keywordflow}{if}(find\_first((*itr)[5], \textcolor{stringliteral}{"normal"}))
+102             \{
+103                 colType = cyclone::collisionType::NORMAL;
+104             \}
+105 
+106             \textcolor{keywordflow}{if}(find\_first((*itr)[5], \textcolor{stringliteral}{"static"}))
+107             \{
+108                 colType = cyclone::collisionType::STATIC;
+109             \}
+110 
+111             WorldSimu->AddBSphere(lexical\_cast<float>((*itr)[0]),
+112                                   glm::vec3(lexical\_cast<float>((*itr)[1]),
+113                                             lexical\_cast<float>((*itr)[2]),
+114                                             lexical\_cast<float>((*itr)[3])),
+115                                   lexical\_cast<float>((*itr)[4]),
+116                                   colType);
+117         \}
+118         \textcolor{keywordflow}{catch}(bad\_lexical\_cast &)
+119         \{
+120             cout << \textcolor{stringliteral}{"Error converting asset data. Likely unanticipated input value."} << endl;
+121         \}
+122     \}
+123 
+124     \textcolor{comment}{// BOXES}
+125     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} itr = m\_boxes.cbegin(); itr != m\_boxes.cend(); ++itr)
+126     \{
+127         \textcolor{keywordflow}{try}
+128         \{
+129             cyclone::collisionType colType;
+130 
+131             \textcolor{keywordflow}{if}(find\_first((*itr)[7], \textcolor{stringliteral}{"normal"}))
+132             \{
+133                 colType = cyclone::collisionType::NORMAL;
+134             \}
+135 
+136             \textcolor{keywordflow}{if}(find\_first((*itr)[7], \textcolor{stringliteral}{"static"}))
+137             \{
+138                 colType = cyclone::collisionType::STATIC;
+139             \}
+140 
+141             
+142             WorldSimu->AddBBox(lexical\_cast<float>((*itr)[0]),
+143                                lexical\_cast<float>((*itr)[1]),
+144                                lexical\_cast<float>((*itr)[2]),
+145                                   glm::vec3(lexical\_cast<float>((*itr)[3]),
+146                                             lexical\_cast<float>((*itr)[4]),
+147                                             lexical\_cast<float>((*itr)[5])),
+148                                   lexical\_cast<float>((*itr)[6]),
+149                                   colType,
+150                                   lexical\_cast<float>((*itr)[8]),
+151                                   lexical\_cast<float>((*itr)[9]),
+152                                   lexical\_cast<float>((*itr)[10]));
+153         \}
+154         \textcolor{keywordflow}{catch}(bad\_lexical\_cast &)
+155         \{
+156             cout << \textcolor{stringliteral}{"Error converting asset data. Likely unanticipated input value."} << endl;
+157         \}
+158     \}
+159 
+160     \textcolor{comment}{// fileData.close() // close file stream, automatic upon destruction}
+161 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d43/class_physic_engine_a69ba663b63af3a75527ed45f0809a5ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Physic\+Engine@{Physic\+Engine}!switch\+Render\+Mode@{switch\+Render\+Mode}}
+\index{switch\+Render\+Mode@{switch\+Render\+Mode}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{switch\+Render\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Physic\+Engine\+::switch\+Render\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_physic_engine_a5ea97f3f6cc1305bce8de50b4c20a0a4}
+
+
+switch\+Render\+Mode 
+
+Draw or not draw 
+\begin{DoxyCode}
+63 \{renderBBoxes = !renderBBoxes;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d43/class_physic_engine_a5ea97f3f6cc1305bce8de50b4c20a0a4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Physic\+Engine@{Physic\+Engine}!Update@{Update}}
+\index{Update@{Update}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Physic\+Engine\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)}\label{class_physic_engine_a3c7bea94f54bb18cbd7b403a1332667f}
+
+
+Update. 
+
+Update entire physic world 
+\begin{DoxyCode}
+187 \{
+188     \textcolor{keywordtype}{float} dt = 60/ 1000.0f;
+189     \textcolor{keywordtype}{float} maxPossible\_dt = 0.002;
+190 
+191     \textcolor{keywordtype}{int} steptimes = (int)(dt/maxPossible\_dt) + 1;
+192 
+193     \textcolor{keywordflow}{if}(steptimes != 0)
+194     \{
+195         dt = dt / steptimes;
+196     \}
+197 
+198     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} a =0; a < steptimes; ++a)
+199     \{
+200 
+201         \textcolor{keywordflow}{if}(WorldSimu != \textcolor{keyword}{nullptr})
+202             WorldSimu->Update(dt);
+203     \}
+204 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d43/class_physic_engine_a3c7bea94f54bb18cbd7b403a1332667f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Physic\+Engine@{Physic\+Engine}!m\+\_\+asset\+File@{m\+\_\+asset\+File}}
+\index{m\+\_\+asset\+File@{m\+\_\+asset\+File}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{m\+\_\+asset\+File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} Physic\+Engine\+::m\+\_\+asset\+File\hspace{0.3cm}{\ttfamily [private]}}\label{class_physic_engine_ae5aa394fb7355a23a51cabff132508eb}
+\index{Physic\+Engine@{Physic\+Engine}!render\+B\+Boxes@{render\+B\+Boxes}}
+\index{render\+B\+Boxes@{render\+B\+Boxes}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{render\+B\+Boxes}]{\setlength{\rightskip}{0pt plus 5cm}bool Physic\+Engine\+::render\+B\+Boxes\hspace{0.3cm}{\ttfamily [private]}}\label{class_physic_engine_a3948c0b23b95b721fdd8a28b18d8fb87}
+\index{Physic\+Engine@{Physic\+Engine}!World\+Simu@{World\+Simu}}
+\index{World\+Simu@{World\+Simu}!Physic\+Engine@{Physic\+Engine}}
+\subsubsection[{World\+Simu}]{\setlength{\rightskip}{0pt plus 5cm}Physical\+World\+Simulation$\ast$ Physic\+Engine\+::\+World\+Simu}\label{class_physic_engine_a4540cdf29a4dab6adf029ebae89e108f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Physic/{\bf Physic\+Engine.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Physic/{\bf Physic\+Engine.\+cpp}\end{DoxyCompactItemize}

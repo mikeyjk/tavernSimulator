@@ -1,0 +1,4 @@
+<map id="Character" name="Character">
+<area shape="rect" id="node2" href="$d0/dd1/class_game_object.html" title="The Parent class of all the entities in the Engine. " alt="" coords="5,160,144,560"/>
+<area shape="rect" id="node3" href="$d2/da6/class_i___drawable_object.html" title="{I_DrawableObject\n||+ Draw()\l+ SetBufferRef()\l+ Destory()\l}" alt="" coords="13,5,136,112"/>
+</map>

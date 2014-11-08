@@ -1,0 +1,5 @@
+<map id="Wander::Instance" name="Wander::Instance">
+<area shape="rect" id="node2" href="$d8/dfe/class_affordance.html#af89fa2594e55b5f890240aa24517b5a0" title="Affordance::tagToState" alt="" coords="177,5,332,32"/>
+<area shape="rect" id="node4" href="$d0/d2a/class_n_p_c.html#a60bec493b743680f16ea7152cf6d2ddd" title="NPC ctor. " alt="" coords="213,56,297,83"/>
+<area shape="rect" id="node3" href="$d0/d2a/class_n_p_c.html#a49d73fb1d0b5fc4dab086a15a9fca058" title="Update. " alt="" coords="380,5,479,32"/>
+</map>

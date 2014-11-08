@@ -1,0 +1,5 @@
+<map id="MenuSystem::Instance" name="MenuSystem::Instance">
+<area shape="rect" id="node2" href="$df/dcb/class_menu_system.html#ad3eaf9c3c98d39f1211aa2db8b7d3728" title="MenuSystem::MenuSystem" alt="" coords="209,55,393,81"/>
+<area shape="rect" id="node3" href="$d6/d57/class_id_generator.html#a0ae3ff56ccfa23f1471a07b02eb07804" title="IdGenerator::Instance" alt="" coords="441,29,588,56"/>
+<area shape="rect" id="node4" href="$d6/d57/class_id_generator.html#a22d48faaa3b7aa4ad76bce6db737f84a" title="IdGenerator::GetID" alt="" coords="449,80,580,107"/>
+</map>

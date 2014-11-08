@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameEngine">
+      <UniqueIdentifier>{0c31d909-dabe-4ff3-9d2b-7e8caad5d42f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\Gameworld">
+      <UniqueIdentifier>{e8e737e1-9282-4cd0-9724-d813273d65aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\InputEngine">
+      <UniqueIdentifier>{5f3253af-ff80-4e07-b3cf-c7550abad2a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\RenderEngine">
+      <UniqueIdentifier>{266df680-afc0-41a4-ae5b-151f185167af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine">
+      <UniqueIdentifier>{dd053df4-075f-4095-89b7-d72a04563cd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Gameworld">
+      <UniqueIdentifier>{c494e3ce-6287-4b66-a8d4-93c596e14237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\RenderingEngine">
+      <UniqueIdentifier>{5d724ee9-28d3-4383-897e-2f2655e53e1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\InputEngine">
+      <UniqueIdentifier>{e39446f6-9480-4c9c-85a1-be79b9707f5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Utilities">
+      <UniqueIdentifier>{57096c15-b331-47d8-b1ed-e98064582772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\Utilities">
+      <UniqueIdentifier>{1c705371-6b4f-44c9-9232-fbe9b6f8975e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\ResourceManager">
+      <UniqueIdentifier>{547832aa-7077-4eaa-9707-3c246a4d07e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\ResourceManager">
+      <UniqueIdentifier>{a8b54378-41b9-45e5-95b5-8fee9f1a312c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\ControlSystem">
+      <UniqueIdentifier>{719396a1-044e-4cde-8016-46a4e25537a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\ControlSystem">
+      <UniqueIdentifier>{30abb32b-dc61-4136-b432-941effd4ca12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\MenuSystem">
+      <UniqueIdentifier>{83410fd7-ea4a-44f2-a1b8-dfcf8430a5c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\MenuSystem">
+      <UniqueIdentifier>{693454cf-ea78-4d21-bf82-3004568f6208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\Gameworld\Entity">
+      <UniqueIdentifier>{67f8e5bb-bf9e-4782-92ab-545601cfbab1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Gameworld\Entity">
+      <UniqueIdentifier>{910e0b4b-ffd0-4c0f-bb3f-3a9ea8f06e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\LightEngine">
+      <UniqueIdentifier>{ae646af7-c93a-453b-813c-22929e66883e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\LightEngine">
+      <UniqueIdentifier>{1da411a0-9f58-4500-8fa5-d857ba6e8885}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Physics">
+      <UniqueIdentifier>{d5287246-ddef-42af-9306-ffe89a34ef72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\Physics">
+      <UniqueIdentifier>{d7bbb041-da60-4046-824b-0c0e74719ab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Gameworld\Entity\Brain">
+      <UniqueIdentifier>{fb64cbea-340b-447d-bb28-61aee8b24a02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\Gameworld\Entity\Brain">
+      <UniqueIdentifier>{eb52471c-cccf-4463-ad89-ddee8fdb3bb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine\Gameworld\Entity\NPC">
+      <UniqueIdentifier>{eea31e8a-b78b-4d80-9e5e-a1e25f106264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine\Gameworld\Entity\NPC">
+      <UniqueIdentifier>{b1718aed-2052-4f6d-9efe-51dc325f6cc6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IdGenerator.h">
+      <Filter>Header Files\GameEngine\Gameworld</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="I_Graphic.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RederingFactory.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingEngine.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="3DMatrixTransform.h">
+      <Filter>Header Files\GameEngine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Quaternion.h">
+      <Filter>Header Files\GameEngine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="InputEngine.h">
+      <Filter>Header Files\GameEngine\InputEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Header Files\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="I_DrawableObject.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec3.h">
+      <Filter>Header Files\GameEngine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjLoader.h">
+      <Filter>Header Files\GameEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\GameEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelManager.h">
+      <Filter>Header Files\GameEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Header Files\GameEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>Header Files\GameEngine\ControlSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerClass.h">
+      <Filter>Source Files\GameEngine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="glWindowPos.h">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuSystem.h">
+      <Filter>Header Files\GameEngine\MenuSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuComponent.h">
+      <Filter>Header Files\GameEngine\MenuSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuContainer.h">
+      <Filter>Header Files\GameEngine\MenuSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuButton.h">
+      <Filter>Header Files\GameEngine\MenuSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>Header Files\GameEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBox.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="LightEngine.h">
+      <Filter>Header Files\GameEngine\LightEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\fgen.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\Frustum.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\PhysicalWorldSimulation.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\PhysicEngine.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\Plane.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\precision.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\Bbox.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\body.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\BSphere.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\collide_coarse.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\collide_fine.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\contacts.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\core.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physic\cyclone.h">
+      <Filter>Header Files\GameEngine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Header Files\GameEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlSystem.h">
+      <Filter>Header Files\GameEngine\ControlSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Header Files\GameEngine\Gameworld</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldFactory.h">
+      <Filter>Header Files\GameEngine\Gameworld</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Header Files\GameEngine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="FSM.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="BorrowBook.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="Brain.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="Personality.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="Affordance.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="Traits.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="AIOwnedStates.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="Global_Structs.h">
+      <Filter>Header Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClInclude>
+    <ClInclude Include="RNG.h">
+      <Filter>Header Files\GameEngine\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\GameEngine\RenderingEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX.cpp">
+      <Filter>Source Files\GameEngine\RenderingEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="IdGenerator.cpp">
+      <Filter>Source Files\GameEngine\Gameworld</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL.cpp">
+      <Filter>Source Files\GameEngine\RenderingEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="RederingFactory.cpp">
+      <Filter>Source Files\GameEngine\RenderingEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingEngine.cpp">
+      <Filter>Source Files\GameEngine\RenderingEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="InputEngine.cpp">
+      <Filter>Source Files\GameEngine\InputEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec3.cpp">
+      <Filter>Source Files\GameEngine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelManager.cpp">
+      <Filter>Source Files\GameEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\GameEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files\GameEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjLoader.cpp">
+      <Filter>Source Files\GameEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Source Files\GameEngine\ControlSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerClass.cpp">
+      <Filter>Source Files\GameEngine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="glWindowPos.c">
+      <Filter>Header Files\GameEngine\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuSystem.cpp">
+      <Filter>Source Files\GameEngine\MenuSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuComponent.cpp">
+      <Filter>Source Files\GameEngine\MenuSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuContainer.cpp">
+      <Filter>Source Files\GameEngine\MenuSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuButton.cpp">
+      <Filter>Source Files\GameEngine\MenuSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>Source Files\GameEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBox.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="LightEngine.cpp">
+      <Filter>Source Files\GameEngine\LightEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\PhysicalWorldSimulation.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\PhysicEngine.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\Plane.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\Bbox.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\body.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\BSphere.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\collide_coarse.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\collide_fine.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\contacts.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\core.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\fgen.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physic\Frustum.cpp">
+      <Filter>Source Files\GameEngine\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Source Files\GameEngine\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlSystem.cpp">
+      <Filter>Source Files\GameEngine\ControlSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Source Files\GameEngine\Gameworld</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldFactory.cpp">
+      <Filter>Source Files\GameEngine\Gameworld</Filter>
+    </ClCompile>
+    <ClCompile Include="Brain.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClCompile>
+    <ClCompile Include="Personality.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="Affordance.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClCompile>
+    <ClCompile Include="AIOwnedStates.cpp">
+      <Filter>Source Files\GameEngine\Gameworld\Entity\Brain</Filter>
+    </ClCompile>
+    <ClCompile Include="RNG.cpp">
+      <Filter>Source Files\GameEngine\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

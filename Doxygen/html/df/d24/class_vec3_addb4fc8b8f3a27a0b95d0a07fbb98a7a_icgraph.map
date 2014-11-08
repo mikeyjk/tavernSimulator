@@ -1,0 +1,8 @@
+<map id="Vec3::normalize" name="Vec3::normalize">
+<area shape="rect" id="node2" href="$da/dbb/class_camera.html#a20b5fe8c98508c6e251604497400622e" title="Camera::UpdateRotation" alt="" coords="169,81,333,108"/>
+<area shape="rect" id="node3" href="$da/dbb/class_camera.html#ab14bf413828e51f5685b0001c4247f88" title="This function will rotate the Camera by Yaw. " alt="" coords="393,5,531,32"/>
+<area shape="rect" id="node5" href="$da/dbb/class_camera.html#a8491685022f64ab54b477a45026c40d3" title="This function will rotate the Camera by Pitch. " alt="" coords="391,56,533,83"/>
+<area shape="rect" id="node6" href="$da/dbb/class_camera.html#a873b77f84501fbdf055e6b70e42ffd9e" title="Camera::RotatePitch3rd" alt="" coords="381,107,543,133"/>
+<area shape="rect" id="node7" href="$da/dbb/class_camera.html#a1296c75191df3e155323844313844b58" title="Camera::RotateYaw3rd" alt="" coords="384,157,540,184"/>
+<area shape="rect" id="node4" href="$d7/da7/class_character.html#a495652bce60ee4c5557cfb250b814d75" title="Update. " alt="" coords="591,31,717,57"/>
+</map>

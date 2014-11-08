@@ -1,0 +1,140 @@
+\section{Id\+Generator Class Reference}
+\label{class_id_generator}\index{Id\+Generator@{Id\+Generator}}
+
+
+{\ttfamily \#include $<$Id\+Generator.\+h$>$}
+
+
+
+Collaboration diagram for Id\+Generator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{d6/ded/class_id_generator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned {\bf Get\+I\+D} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Id\+Generator} $\ast$ {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Id\+Generator} ({\bf void})
+\item 
+{\bf $\sim$\+Id\+Generator} ({\bf void})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bf I\+D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Id\+Generator@{Id\+Generator}!Id\+Generator@{Id\+Generator}}
+\index{Id\+Generator@{Id\+Generator}!Id\+Generator@{Id\+Generator}}
+\subsubsection[{Id\+Generator}]{\setlength{\rightskip}{0pt plus 5cm}Id\+Generator\+::\+Id\+Generator (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_id_generator_ae53c49619fec8de76400178a169b0f01}
+
+\begin{DoxyCode}
+12 \{
+13     ID = 0;
+14 \}
+\end{DoxyCode}
+\index{Id\+Generator@{Id\+Generator}!````~Id\+Generator@{$\sim$\+Id\+Generator}}
+\index{````~Id\+Generator@{$\sim$\+Id\+Generator}!Id\+Generator@{Id\+Generator}}
+\subsubsection[{$\sim$\+Id\+Generator}]{\setlength{\rightskip}{0pt plus 5cm}Id\+Generator\+::$\sim$\+Id\+Generator (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_id_generator_a4a97c7f4b75242c984ab0027a1dac8db}
+
+\begin{DoxyCode}
+18 \{
+19 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Id\+Generator@{Id\+Generator}!Get\+I\+D@{Get\+I\+D}}
+\index{Get\+I\+D@{Get\+I\+D}!Id\+Generator@{Id\+Generator}}
+\subsubsection[{Get\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Id\+Generator\+::\+Get\+I\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_id_generator_a22d48faaa3b7aa4ad76bce6db737f84a}
+
+\begin{DoxyCode}
+23 \{
+24     ID++;
+25     \textcolor{keywordflow}{return} ID;
+26 \}\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d57/class_id_generator_a22d48faaa3b7aa4ad76bce6db737f84a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Id\+Generator@{Id\+Generator}!Instance@{Instance}}
+\index{Instance@{Instance}!Id\+Generator@{Id\+Generator}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id\+Generator} $\ast$ Id\+Generator\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_id_generator_a0ae3ff56ccfa23f1471a07b02eb07804}
+
+\begin{DoxyCode}
+5 \{
+6     \textcolor{keyword}{static} IdGenerator Instance;
+7     \textcolor{keywordflow}{return} &Instance;
+8 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{d6/d57/class_id_generator_a0ae3ff56ccfa23f1471a07b02eb07804_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d57/class_id_generator_a0ae3ff56ccfa23f1471a07b02eb07804_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Id\+Generator@{Id\+Generator}!I\+D@{I\+D}}
+\index{I\+D@{I\+D}!Id\+Generator@{Id\+Generator}}
+\subsubsection[{I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Id\+Generator\+::\+I\+D\hspace{0.3cm}{\ttfamily [private]}}\label{class_id_generator_aed56ffb10b9996b98015c76566e1c94e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Id\+Generator.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Id\+Generator.\+cpp}\end{DoxyCompactItemize}

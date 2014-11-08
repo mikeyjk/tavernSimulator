@@ -1,0 +1,6 @@
+<map id="Personality" name="Personality">
+<area shape="rect" id="node2" href="$df/d9e/struct_human_values.html" title="Human Values struct, used in the Personality class as the main structure for the needs system..." alt="" coords="93,219,233,296"/>
+<area shape="rect" id="node3" href="$de/d7c/struct_physical.html" title="internal HV struct Physical " alt="" coords="5,13,92,149"/>
+<area shape="rect" id="node4" href="$d7/d40/struct_vital.html" title="internal HV struct Vital " alt="" coords="117,13,210,149"/>
+<area shape="rect" id="node5" href="$d8/d7a/struct_mental.html" title="internal HV struct Mental " alt="" coords="235,5,321,156"/>
+</map>

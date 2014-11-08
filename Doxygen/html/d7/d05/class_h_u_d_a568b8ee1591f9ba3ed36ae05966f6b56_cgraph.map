@@ -1,0 +1,5 @@
+<map id="HUD::HUD" name="HUD::HUD">
+<area shape="rect" id="node2" href="$da/d3d/class_rendering_engine.html#a01527fd868d2d0cc73fa63b9ccf131e7" title="RenderingEngine::Instance" alt="" coords="137,5,315,32"/>
+<area shape="rect" id="node3" href="$d6/d57/class_id_generator.html#a0ae3ff56ccfa23f1471a07b02eb07804" title="IdGenerator::Instance" alt="" coords="153,80,299,107"/>
+<area shape="rect" id="node4" href="$d6/d57/class_id_generator.html#a22d48faaa3b7aa4ad76bce6db737f84a" title="IdGenerator::GetID" alt="" coords="161,131,291,157"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="NPC::giveHudData" name="NPC::giveHudData">
+<area shape="rect" id="node2" href="$d3/dde/class_brain.html#a32b4574600c3e13f8501c6e64caa5c00" title="giveHudData function " alt="" coords="198,5,330,32"/>
+<area shape="rect" id="node4" href="$da/df5/class_control_system.html#aa3b24cbd4e40b867422d9cd4443e63db" title="Instance. " alt="" coords="608,56,773,83"/>
+<area shape="rect" id="node6" href="$d7/d05/class_h_u_d.html#ac3334f6ffbb8c2b33d7908448f81d3bc" title="HUD::giveHudAffordance" alt="" coords="183,107,345,133"/>
+<area shape="rect" id="node3" href="$d1/da8/class_personality.html#afee72a4d6c673003bcc450cb13545bef" title="giveHudData function " alt="" coords="393,5,560,32"/>
+<area shape="rect" id="node5" href="$d7/d05/class_h_u_d.html#a7999acb384a496c32e7fab7fbfdd7ed0" title="HUD::giveHudHVData" alt="" coords="617,5,764,32"/>
+</map>

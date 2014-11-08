@@ -1,0 +1,654 @@
+\section{Character Class Reference}
+\label{class_character}\index{Character@{Character}}
+
+
+The \doxyref{Character}{p.}{d7/da7/class_character} Class, the main controller that the user of a game would see.  
+
+
+
+
+{\ttfamily \#include $<$Character.\+h$>$}
+
+
+
+Inheritance diagram for Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d1/daa/class_character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Character\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d0d/class_character__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Character} ({\bf Rendering\+Engine} $\ast$Ref, {\bf Vec3} pos, float rot\+X, float rot\+Y, {\bf string} {\bf model}, {\bf string} {\bf texture}, bool bound, std\+::vector$<$ {\bf Affordance} $>$ affordances)
+\begin{DoxyCompactList}\small\item\em Chracter Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Character} ({\bf void})
+\begin{DoxyCompactList}\small\item\em Chracter Destructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Terrain} (Terrain $\ast$ter)
+\begin{DoxyCompactList}\small\item\em set\+Terrain Function \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Draw \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Buffer\+Ref} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref \end{DoxyCompactList}\item 
+{\bf void} {\bf Destory} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Destroy \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update. \end{DoxyCompactList}\item 
+{\bf void} {\bf Pick\+Object} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf can\+Pick}
+\item 
+cyclone\+::\+Collision\+Primitive $\ast$ {\bf picked\+Obj}
+\item 
+Bbox $\ast$ {\bf body}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Input\+Engine} $\ast$ {\bf input}
+\begin{DoxyCompactList}\small\item\em pointer to the input engine \end{DoxyCompactList}\item 
+{\bf Control\+System} $\ast$ {\bf control}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \doxyref{Character}{p.}{d7/da7/class_character} Class, the main controller that the user of a game would see. 
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe, Liu Yi \+: \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/03/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Character@{Character}!Character@{Character}}
+\index{Character@{Character}!Character@{Character}}
+\subsubsection[{Character}]{\setlength{\rightskip}{0pt plus 5cm}Character\+::\+Character (
+\begin{DoxyParamCaption}
+\item[{{\bf Rendering\+Engine} $\ast$}]{Ref, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{{\bf string}}]{model, }
+\item[{{\bf string}}]{texture, }
+\item[{bool}]{bound, }
+\item[{std\+::vector$<$ {\bf Affordance} $>$}]{affordances}
+\end{DoxyParamCaption}
+)}\label{class_character_a7870aec530f1d006e0f9c1335e9e4495}
+
+
+Chracter Constructor. 
+
+This is the basic Constructor Contructor chains with \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} gets a poitner to the input engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Rendering\+Engine}{p.}{da/d3d/class_rendering_engine}} & $\ast$ Ref, \doxyref{Vec3}{p.}{df/d24/class_vec3} pos, float rot\+X, float rot\+Y, string model, string texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+5                     :GameObject(Ref, pos, rotX, rotY, model, texture, bound, 
+      trans, 100)
+6 \{
+7     input = InputEngine::Instance();
+8     Camera * cam = RederingHandle->GetCamera();
+9     this->RederingHandle = Ref;
+10     cam->SetPosition(pos);
+11     type = gameObjectType::character;
+12 
+13     \textcolor{comment}{//Create the BoundingBox for Camera}
+14     body = \textcolor{keyword}{new} Bbox(10,25,10, glm::vec3(pos.X, pos.Y, pos.Z),100.0, cyclone::collisionType::NORMAL,0,0,0);
+15     PhysicalWorldSimulation::Instance()->WorldContainer.push\_back(body);
+16 
+17     canPick  = \textcolor{keyword}{true};
+18     pickedObj = \textcolor{keyword}{nullptr};
+19     SetBufferRef();
+20 
+21     setAffordances(affordances);
+22     control = ControlSystem::Instance();
+23 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/da7/class_character_a7870aec530f1d006e0f9c1335e9e4495_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Character@{Character}!````~Character@{$\sim$\+Character}}
+\index{````~Character@{$\sim$\+Character}!Character@{Character}}
+\subsubsection[{$\sim$\+Character}]{\setlength{\rightskip}{0pt plus 5cm}Character\+::$\sim$\+Character (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_character_a377a3df3823a38d5aee3332a30285a04}
+
+
+Chracter Destructor. 
+
+This is the basic Destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em mil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+26 \{
+27     input = \textcolor{keyword}{nullptr};
+28     this->Destory();
+29 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/da7/class_character_a377a3df3823a38d5aee3332a30285a04_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Character@{Character}!Destory@{Destory}}
+\index{Destory@{Destory}!Character@{Character}}
+\subsubsection[{Destory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Character\+::\+Destory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_character_adc64dd2ccc01050e59e3ebe3f37c7be2}
+
+
+i\+\_\+\+Drawable\+Object Destroy 
+
+This deletes the object from the render\+Engine buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a9f5e20361956b3181420f2f040ef496a}.
+
+
+\begin{DoxyCode}
+32 \{
+33     ((OpenGL *)RederingHandle->GetRenderHandle())->EraseRefFromBuffer(m_objectID);
+34 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/da7/class_character_adc64dd2ccc01050e59e3ebe3f37c7be2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/da7/class_character_adc64dd2ccc01050e59e3ebe3f37c7be2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Character@{Character}!Draw@{Draw}}
+\index{Draw@{Draw}!Character@{Character}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Character\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_character_a681d67b227b0f7abb8508958841c6976}
+
+
+i\+\_\+\+Drawable\+Object Draw 
+
+This calls the render engine funciton to draw a box
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a54f25ff4076e03a40309085bcf826e53}.
+
+
+\begin{DoxyCode}
+219 \{
+220     \textcolor{comment}{//cyclone::Vector3 dir =
+       cyclone::Vector3(input->projectPoint.X,input->projectPoint.Y,input->projectPoint.Z);}
+221     cyclone::Vector3 dir = cyclone::Vector3(Camera::Instance()->GetDirection().X,
+      Camera::Instance()->GetDirection().Y,Camera::Instance()->GetDirection().Z);
+222     cyclone::Vector3 camPos = cyclone::Vector3(Camera::Instance()->GetPosition().
+      X,Camera::Instance()->GetPosition().Y,Camera::Instance()->GetPosition().Z);
+223     dir.normalise();
+224     
+225     glPushMatrix();
+226     glColor3f(1.0,0.0,0.0);
+227     glLineWidth(10);
+228     
+229     glBegin(GL\_LINES);
+230     glVertex3f(camPos.x, camPos.y ,camPos.z);
+231     glVertex3f(camPos.x + dir.x * 50 , camPos.y + dir.y *  50, camPos.z + dir.z *  50);
+232     glEnd();
+233 
+234     glTranslated(camPos.x + dir.x * 25 , camPos.y + dir.y *  25, camPos.z + dir.z *  25);
+235     glutSolidSphere(0.2f, 10, 10);
+236     \textcolor{comment}{//glutSolidCube(1);}
+237 
+238     glPopMatrix();
+239 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{d7/da7/class_character_a681d67b227b0f7abb8508958841c6976_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Character@{Character}!Pick\+Object@{Pick\+Object}}
+\index{Pick\+Object@{Pick\+Object}!Character@{Character}}
+\subsubsection[{Pick\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Character\+::\+Pick\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_character_a239afb275264116e8196291b7d2b3d94}
+
+\begin{DoxyCode}
+161 \{
+162     \textcolor{keywordflow}{if}(input->getMouseUp(MouseCode::LeftClick) && canPick)
+163     \{
+164             cyclone::Ray ray;
+165             \textcolor{comment}{//cyclone::Vector3 dir =
+       cyclone::Vector3(input->projectPoint.X,input->projectPoint.Y,input->projectPoint.Z);}
+166             cyclone::Vector3 dir = cyclone::Vector3(Camera::Instance()->GetDirection().
+      X,Camera::Instance()->GetDirection().Y,Camera::Instance()->GetDirection().Z);
+167             cyclone::Vector3 camPos = cyclone::Vector3(Camera::Instance()->GetPosition().
+      X,Camera::Instance()->GetPosition().Y,Camera::Instance()->GetPosition().Z);
+168 
+169             ray.original = camPos;
+170             ray.direction = dir;
+171             ray.direction.normalise();
+172             ray.length = 1;
+173 
+174             \textcolor{keywordflow}{if}( (pickedObj = PhysicalWorldSimulation::Instance()->IntersectWithRay(this->
+      body, ray)) != \textcolor{keyword}{nullptr})
+175             \{
+176                 GameObject* obj = ((GameObject*)((Bbox*)pickedObj)->myGameObject);
+177                 gameObjectType type = obj->getObjecType();
+178                 \textcolor{keywordflow}{if}( type != npc)
+179                 \{
+180                     canPick = \textcolor{keyword}{false};
+181                 \}
+182                 \textcolor{keywordflow}{else}
+183                 \{
+184                     ((NPC*)obj)->giveHudData();
+185                     pickedObj = \textcolor{keyword}{nullptr};
+186                 \}
+187             \}
+188     \}
+189     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(input->getMouseUp(MouseCode::RightClick) && !canPick)
+190     \{
+191         pickedObj = \textcolor{keyword}{nullptr};
+192         canPick = \textcolor{keyword}{true};
+193     \}
+194     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(input->getMouseUp(MouseCode::LeftClick) && !canPick)
+195     \{
+196             canPick = \textcolor{keyword}{true};
+197     \}
+198 
+199     \textcolor{keywordflow}{if}(!canPick)
+200     \{
+201         \textcolor{keywordtype}{int} len = 50;
+202         pickedObj->body->setAwake();
+203         pickedObj->body->setPosition( Camera::Instance()->GetPosition().X + 
+      Camera::Instance()->GetDirection().X * len,
+204                                       Camera::Instance()->GetPosition().Y + 
+      Camera::Instance()->GetDirection().Y * len,
+205                                       Camera::Instance()->GetPosition().Z + 
+      Camera::Instance()->GetDirection().Z * len);
+206     \}
+207     \textcolor{keywordflow}{else}
+208     \{  
+209         \textcolor{keywordflow}{if}(pickedObj)
+210         \{
+211             cyclone::Vector3 dir = cyclone::Vector3(Camera::Instance()->GetDirection().
+      X,Camera::Instance()->GetDirection().Y,Camera::Instance()->GetDirection().Z);
+212             PhysicalWorldSimulation::Instance()->ThrowObj(pickedObj,dir * 100);
+213             pickedObj = \textcolor{keyword}{nullptr};
+214         \}
+215     \}
+216 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/da7/class_character_a239afb275264116e8196291b7d2b3d94_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{d7/da7/class_character_a239afb275264116e8196291b7d2b3d94_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Character@{Character}!Set\+Buffer\+Ref@{Set\+Buffer\+Ref}}
+\index{Set\+Buffer\+Ref@{Set\+Buffer\+Ref}!Character@{Character}}
+\subsubsection[{Set\+Buffer\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Character\+::\+Set\+Buffer\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_character_af0b9eefe47647ce706a7d2bda31a515b}
+
+
+i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref 
+
+This sends the object to the render\+Engine render buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a34436ba977aafaff056f3f5022f992b9}.
+
+
+\begin{DoxyCode}
+37 \{
+38     ((OpenGL *)RederingHandle->GetRenderHandle())->AddRefToBuffer(m_objectID, \textcolor{keyword}{this});
+39 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/da7/class_character_af0b9eefe47647ce706a7d2bda31a515b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{d7/da7/class_character_af0b9eefe47647ce706a7d2bda31a515b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Character@{Character}!set\+Terrain@{set\+Terrain}}
+\index{set\+Terrain@{set\+Terrain}!Character@{Character}}
+\subsubsection[{set\+Terrain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Character\+::set\+Terrain (
+\begin{DoxyParamCaption}
+\item[{Terrain $\ast$}]{ter}
+\end{DoxyParamCaption}
+)}\label{class_character_a63bdf30348d323e2b842e269d906a602}
+
+
+set\+Terrain Function 
+
+This sets the terrain pointer to the one provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em Terrain$\ast$} & ter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\index{Character@{Character}!Update@{Update}}
+\index{Update@{Update}!Character@{Character}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Character\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_character_a495652bce60ee4c5557cfb250b814d75}
+
+
+Update. 
+
+This is the character control function
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a67476ffb30d41305f25be7b3fee11173}.
+
+
+\begin{DoxyCode}
+42 \{
+43 
+44     Camera * cam = RederingHandle->GetCamera();
+45     \textcolor{keywordtype}{float} Speed =  cam->GetSpeed();
+46     
+47     Vec2 mouse = input->getAlphaMousePoint();
+48     \textcolor{keywordtype}{float} x = mouse.x;
+49     \textcolor{keywordtype}{float} y = mouse.y;
+50     
+51     \textcolor{keywordflow}{if}(x != 0)
+52     \{
+53       cam->RotateYaw(x);
+54     \}
+55     \textcolor{keywordflow}{if}(y != 0)
+56     \{
+57       cam->RotatePitch(y);
+58     \}
+59     
+60     Vec3 velocity;
+61     Vec3 subVelLeft;
+62     Vec3 subVelRight;
+63     Vec3 subVelForward;
+64     Vec3 subVelBack;
+65 
+66     \textcolor{keywordflow}{if}(input->getKey(KeyCode::A))
+67     \{
+68         Vec3 temp(cam->GetSide().getX(), 0, cam->GetSide().getZ());
+69         Vec3 NewPosition( m_position.getX() + temp.getX() * Speed,
+70                           m_position.getY(),
+71                           m_position.getZ() + temp.getZ() * Speed);
+72         subVelLeft = NewPosition - m_position;
+73 
+74 
+75     \}
+76     
+77     \textcolor{keywordflow}{if}(input->getKey(KeyCode::D))
+78     \{
+79         Vec3 temp(cam->GetSide().getX(), 0, cam->GetSide().getZ());
+80         Vec3 NewPosition( m_position.getX() - temp.getX() * Speed,
+81                           m_position.getY(),
+82                           m_position.getZ() - temp.getZ() * Speed);
+83         subVelRight = NewPosition - m_position;
+84 
+85     \}
+86     
+87     \textcolor{keywordflow}{if}(input->getKey(KeyCode::W))
+88     \{
+89         Vec3 temp(cam->GetDirection().getX(), 0, cam->GetDirection().getZ());
+90         Vec3 NewPosition( m_position.getX() + temp.getX() * Speed,
+91                           m_position.getY(),
+92                           m_position.getZ() + temp.getZ() * Speed);
+93         
+94         subVelForward = NewPosition - m_position;
+95 
+96         
+97     \}
+98 
+99     \textcolor{keywordflow}{if}(input->getKey(KeyCode::S))
+100     \{
+101         Vec3 temp(cam->GetDirection().getX(), 0, cam->GetDirection().getZ());
+102         Vec3 NewPosition( m_position.getX() - temp.getX() * Speed,
+103                           m_position.getY(),
+104                           m_position.getZ() - temp.getZ() * Speed);
+105         
+106         subVelBack = NewPosition - m_position;
+107 
+108     
+109 
+110     \}
+111     \textcolor{keywordflow}{if}(input->getKeyUp(KeyCode::A))
+112     \{
+113         subVelLeft = Vec3(0,0,0);
+114     \}
+115 
+116     \textcolor{keywordflow}{if}(input->getKeyUp(KeyCode::D))
+117     \{
+118         subVelRight = Vec3(0,0,0);
+119     \}
+120 
+121     \textcolor{keywordflow}{if}(input->getKeyUp(KeyCode::W))
+122     \{
+123         subVelForward = Vec3(0,0,0);
+124     \}
+125 
+126     \textcolor{keywordflow}{if}(input->getKeyUp(KeyCode::S))
+127     \{
+128         subVelBack = Vec3(0,0,0);
+129     \}
+130 
+131     \textcolor{keywordflow}{if}(input->getKeyUp(KeyCode::P))
+132     \{
+133         std::cout << m_position.getX() << \textcolor{stringliteral}{", "} << m_position.getY() << \textcolor{stringliteral}{", "} << 
+      m_position.getZ() << std::endl;
+134     \}
+135     velocity = subVelLeft + subVelRight + subVelForward + subVelBack;
+136 
+137     m_position += velocity;
+138     \textcolor{comment}{//Set the camera Position when camera move}
+139     body->body->setOrientation(1,0,0,0);
+140     body->body->setRotation(0,0,0);
+141     body->body->setPosition(m_position.X, m_position.Y, m_position.Z);
+142     body->body->calculateDerivedData();
+143     body->calculateInternals();
+144     
+145     \textcolor{keywordflow}{if}(PhysicalWorldSimulation::Instance()->CollisionWithWall(this->body))
+146     \{
+147         m_position -= velocity;
+148         body->body->setOrientation(1,0,0,0);
+149         body->body->setRotation(0,0,0);
+150         body->body->setPosition(m_position.X, m_position.Y, m_position.Z);
+151         body->body->calculateDerivedData();
+152         body->calculateInternals();
+153     \}
+154 
+155     RederingHandle->GetCamera()->SetPosition(m_position);
+156 
+157     PickObject();
+158 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/da7/class_character_a495652bce60ee4c5557cfb250b814d75_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Character@{Character}!body@{body}}
+\index{body@{body}!Character@{Character}}
+\subsubsection[{body}]{\setlength{\rightskip}{0pt plus 5cm}Bbox$\ast$ Character\+::body}\label{class_character_ac54b02e775db568a0878b34d6ba66444}
+\index{Character@{Character}!can\+Pick@{can\+Pick}}
+\index{can\+Pick@{can\+Pick}!Character@{Character}}
+\subsubsection[{can\+Pick}]{\setlength{\rightskip}{0pt plus 5cm}bool Character\+::can\+Pick}\label{class_character_a6d9aa3cc90fbcdcec7ff6af4af505aa3}
+\index{Character@{Character}!control@{control}}
+\index{control@{control}!Character@{Character}}
+\subsubsection[{control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\+System}$\ast$ Character\+::control\hspace{0.3cm}{\ttfamily [private]}}\label{class_character_acef20b1b4b8849121a42d9c114f69755}
+\index{Character@{Character}!input@{input}}
+\index{input@{input}!Character@{Character}}
+\subsubsection[{input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\+Engine}$\ast$ Character\+::input\hspace{0.3cm}{\ttfamily [private]}}\label{class_character_a88a9c864f36bbf8a72f19df09f51d379}
+
+
+pointer to the input engine 
+
+\index{Character@{Character}!picked\+Obj@{picked\+Obj}}
+\index{picked\+Obj@{picked\+Obj}!Character@{Character}}
+\subsubsection[{picked\+Obj}]{\setlength{\rightskip}{0pt plus 5cm}cyclone\+::\+Collision\+Primitive$\ast$ Character\+::picked\+Obj}\label{class_character_ab3bbd5f8e75970442b115209d04ddebe}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Character.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Character.\+cpp}\end{DoxyCompactItemize}

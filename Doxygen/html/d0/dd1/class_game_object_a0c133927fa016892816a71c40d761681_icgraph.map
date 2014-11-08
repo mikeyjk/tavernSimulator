@@ -1,0 +1,5 @@
+<map id="GameObject::getPos" name="GameObject::getPos">
+<area shape="rect" id="node2" href="$d0/d2a/class_n_p_c.html#af4378d6d0057872add55770c5d3fac95" title="NPC::getLocalAffordances" alt="" coords="205,5,379,32"/>
+<area shape="rect" id="node4" href="$df/d0c/class_pathfinder.html#aeee07a6a00fd29c7c5c0b6f4a4f8ee9b" title="Returns the next node to be travelled to from the best path. " alt="" coords="197,56,387,83"/>
+<area shape="rect" id="node3" href="$d0/d2a/class_n_p_c.html#a49d73fb1d0b5fc4dab086a15a9fca058" title="Update. " alt="" coords="435,5,533,32"/>
+</map>

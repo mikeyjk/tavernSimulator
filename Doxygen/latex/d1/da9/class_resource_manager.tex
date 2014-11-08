@@ -1,0 +1,534 @@
+\section{Resource\+Manager Class Reference}
+\label{class_resource_manager}\index{Resource\+Manager@{Resource\+Manager}}
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Resource\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{da/d50/class_resource_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf add\+Texture} (char $\ast$Path, {\bf string} Name)
+\begin{DoxyCompactList}\small\item\em Adds a texture to the texture manager by the file's path, which will become known to the texture manager by the passed name. \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Created\+Texture} ({\bf G\+Luint} tex, {\bf string} Name)
+\begin{DoxyCompactList}\small\item\em Adds a precreated texture to the texture manager, which will become known to the texture manager by the passed name. \end{DoxyCompactList}\item 
+{\bf G\+Luint} {\bf get\+Texture} ({\bf string} Name)
+\begin{DoxyCompactList}\small\item\em Gets the texture from the texture manager with the matching name. \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Model} ({\bf string} Path, {\bf string} Name, {\bf Vec3} $\ast$min, {\bf Vec3} $\ast$max)
+\begin{DoxyCompactList}\small\item\em Adds a model to the model manager by the file's path, which will become known to the model manager by the passed name. \end{DoxyCompactList}\item 
+{\bf void} {\bf draw\+Model} ({\bf string} Name, {\bf string} T\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation)
+\begin{DoxyCompactList}\small\item\em Draws a model to the screen. \end{DoxyCompactList}\item 
+{\bf void} {\bf draw\+Model} ({\bf string} Name, {\bf string} T\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation, {\bf Vec3} {\bf scale})
+\item 
+{\bf void} {\bf play\+Sound} (const {\bf string} \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Loads a sound from a file and plays it. \end{DoxyCompactList}\item 
+{\bf void} {\bf play\+Background\+Sound} (const {\bf string} \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Streams a background sound from a file and loops it. \end{DoxyCompactList}\item 
+{\bf void} {\bf stop\+Background\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Stops the playback of a background sound. \end{DoxyCompactList}\item 
+{\bf void} {\bf Generate\+Shader} (char $\ast$V\+S, char $\ast$P\+S, {\bf string} {\bf name})
+\item 
+{\bf G\+Luint} {\bf Get\+Shader\+Proram} ({\bf string} {\bf name})
+\item 
+{\bf void} {\bf add\+Cube\+Texture} (char $\ast$front, char $\ast$back, char $\ast${\bf top}, char $\ast${\bf bottom}, char $\ast${\bf left}, char $\ast${\bf right}, {\bf string} {\bf name})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Resource\+Manager} $\ast$ {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Resource\+Manager} ()
+\item 
+{\bf $\sim$\+Resource\+Manager} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Resource\+Manager@{Resource\+Manager}!Resource\+Manager@{Resource\+Manager}}
+\index{Resource\+Manager@{Resource\+Manager}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{Resource\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Resource\+Manager\+::\+Resource\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_resource_manager_a3b32babd2e81909bbd90d7f2d566fadb}
+
+\begin{DoxyCode}
+135 \{\}      \textcolor{comment}{// Creates a resource manager object.}
+\end{DoxyCode}
+\index{Resource\+Manager@{Resource\+Manager}!````~Resource\+Manager@{$\sim$\+Resource\+Manager}}
+\index{````~Resource\+Manager@{$\sim$\+Resource\+Manager}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{$\sim$\+Resource\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Resource\+Manager\+::$\sim$\+Resource\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_resource_manager_a671c186e4630599e7e36d000c53eaf80}
+
+\begin{DoxyCode}
+136 \{\}  \textcolor{comment}{// Deletes the resource manager.}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Resource\+Manager@{Resource\+Manager}!add\+Created\+Texture@{add\+Created\+Texture}}
+\index{add\+Created\+Texture@{add\+Created\+Texture}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{add\+Created\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::add\+Created\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Luint}}]{tex, }
+\item[{{\bf string}}]{Name}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_afebfaf749f9951996ab27c50e467ec85}
+
+
+Adds a precreated texture to the texture manager, which will become known to the texture manager by the passed name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+Luint} & tex, string Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The texture is added to the texture manager and is known by the manager by the name given. 
+\end{DoxyPostcond}
+\index{Resource\+Manager@{Resource\+Manager}!add\+Cube\+Texture@{add\+Cube\+Texture}}
+\index{add\+Cube\+Texture@{add\+Cube\+Texture}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{add\+Cube\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::add\+Cube\+Texture (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{front, }
+\item[{char $\ast$}]{back, }
+\item[{char $\ast$}]{top, }
+\item[{char $\ast$}]{bottom, }
+\item[{char $\ast$}]{left, }
+\item[{char $\ast$}]{right, }
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_a964b3b09b06de305cd289700a1cc200b}
+
+\begin{DoxyCode}
+74 \{
+75     TextureManager::Instance()->addCubeTexture(front, back, top, bottom, left, 
+      right, name);
+76 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a964b3b09b06de305cd289700a1cc200b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a964b3b09b06de305cd289700a1cc200b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!add\+Model@{add\+Model}}
+\index{add\+Model@{add\+Model}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{add\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::add\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Path, }
+\item[{{\bf string}}]{Name, }
+\item[{{\bf Vec3} $\ast$}]{min, }
+\item[{{\bf Vec3} $\ast$}]{max}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_a4d02fa64d47f63cc3613e8fcc922c168}
+
+
+Adds a model to the model manager by the file's path, which will become known to the model manager by the passed name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Path, string Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The model is added into the model manager and is known by the model manager by the name given. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+33 \{
+34     ModelManager::instance()->addModel(Path, Name, min, max);
+35 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a4d02fa64d47f63cc3613e8fcc922c168_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a4d02fa64d47f63cc3613e8fcc922c168_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!add\+Texture@{add\+Texture}}
+\index{add\+Texture@{add\+Texture}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{add\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::add\+Texture (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{Path, }
+\item[{{\bf string}}]{Name}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_a1f876316c2c9e1c0d363fce154c289dc}
+
+
+Adds a texture to the texture manager by the file's path, which will become known to the texture manager by the passed name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$ Path, string Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The texture is added to the texture manager and is known by the manager by the name given. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+18 \{
+19     TextureManager::Instance()->addTexture(Path, Name);
+20 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a1f876316c2c9e1c0d363fce154c289dc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a1f876316c2c9e1c0d363fce154c289dc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!draw\+Model@{draw\+Model}}
+\index{draw\+Model@{draw\+Model}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{draw\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::draw\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Name, }
+\item[{{\bf string}}]{T\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_ab9310e278d9a01869b3309b17d87e09b}
+
+
+Draws a model to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Name, string T\+Name, float transparency , \doxyref{Vec3}{p.}{df/d24/class_vec3} transition, float rotation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The model is drawn. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+38 \{
+39     ModelManager::instance()->draw(Name, TName, transparency, transition, rotation);
+40 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_ab9310e278d9a01869b3309b17d87e09b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_ab9310e278d9a01869b3309b17d87e09b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!draw\+Model@{draw\+Model}}
+\index{draw\+Model@{draw\+Model}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{draw\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::draw\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Name, }
+\item[{{\bf string}}]{T\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation, }
+\item[{{\bf Vec3}}]{scale}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_adb280897f0b1bc9e67a6d1c7a809d404}
+
+\begin{DoxyCode}
+43 \{
+44     ModelManager::instance()->draw(Name, TName, transparency, transition, rotation, scale);
+45 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_adb280897f0b1bc9e67a6d1c7a809d404_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!Generate\+Shader@{Generate\+Shader}}
+\index{Generate\+Shader@{Generate\+Shader}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{Generate\+Shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::\+Generate\+Shader (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{V\+S, }
+\item[{char $\ast$}]{P\+S, }
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_a9727d10473be5ab4ca15b278883069a4}
+void \doxyref{Resource\+Manager\+::play\+Sound(const string\& file\+Path)}{p.}{d1/da9/class_resource_manager_a9b268bb9333e53b85f434c9f3c97eaf2} \{ Sound\+Manager\+::instance()-\/$>$play\+Sound(file\+Path); \}
+
+void \doxyref{Resource\+Manager\+::play\+Background\+Sound(const string\& file\+Path)}{p.}{d1/da9/class_resource_manager_ac70d937075922d36d4a00713156d4542} \{ Sound\+Manager\+::instance()-\/$>$play\+Background\+Sound(file\+Path); \}
+
+void \doxyref{Resource\+Manager\+::stop\+Background\+Sound()}{p.}{d1/da9/class_resource_manager_ab7cca18934ebca10516ce4c34782e6f4} \{ Sound\+Manager\+::instance()-\/$>$\doxyref{stop\+Background\+Sound()}{p.}{d1/da9/class_resource_manager_ab7cca18934ebca10516ce4c34782e6f4}; \} 
+\begin{DoxyCode}
+64 \{
+65     ShaderManager::Instance()->GenerateShader(VS,PS,name);
+66 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a9727d10473be5ab4ca15b278883069a4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a9727d10473be5ab4ca15b278883069a4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!Get\+Shader\+Proram@{Get\+Shader\+Proram}}
+\index{Get\+Shader\+Proram@{Get\+Shader\+Proram}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{Get\+Shader\+Proram}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Resource\+Manager\+::\+Get\+Shader\+Proram (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_a0cb839b5b522faba79013f9c7fe1b1f0}
+
+\begin{DoxyCode}
+69 \{
+70     \textcolor{keywordflow}{return} ShaderManager::Instance()->GetShaderProram(name);
+71 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a0cb839b5b522faba79013f9c7fe1b1f0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Resource\+Manager\+::get\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Name}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_a4b3a3a80e03a26f75d3ce45e6297653d}
+
+
+Gets the texture from the texture manager with the matching name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A texture with a name matching the passed name must exist.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The texture with the matching name is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+28 \{
+29     \textcolor{keywordflow}{return} TextureManager::Instance()->getTexture(Name);
+30 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a4b3a3a80e03a26f75d3ce45e6297653d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!Instance@{Instance}}
+\index{Instance@{Instance}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\+Manager} $\ast$ Resource\+Manager\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_resource_manager_a63d542726087c4f2ae121a05060a15e9}
+
+\begin{DoxyCode}
+12 \{
+13     \textcolor{keyword}{static} ResourceManager Instance;
+14     \textcolor{keywordflow}{return} &Instance;
+15 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da9/class_resource_manager_a63d542726087c4f2ae121a05060a15e9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Resource\+Manager@{Resource\+Manager}!play\+Background\+Sound@{play\+Background\+Sound}}
+\index{play\+Background\+Sound@{play\+Background\+Sound}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{play\+Background\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::play\+Background\+Sound (
+\begin{DoxyParamCaption}
+\item[{const {\bf string} \&}]{file\+Path}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_ac70d937075922d36d4a00713156d4542}
+
+
+Streams a background sound from a file and loops it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & string\& file\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The background is played and looped. 
+\end{DoxyPostcond}
+\index{Resource\+Manager@{Resource\+Manager}!play\+Sound@{play\+Sound}}
+\index{play\+Sound@{play\+Sound}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{play\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::play\+Sound (
+\begin{DoxyParamCaption}
+\item[{const {\bf string} \&}]{file\+Path}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_a9b268bb9333e53b85f434c9f3c97eaf2}
+
+
+Loads a sound from a file and plays it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & string\& file\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The sound is played once. 
+\end{DoxyPostcond}
+\index{Resource\+Manager@{Resource\+Manager}!stop\+Background\+Sound@{stop\+Background\+Sound}}
+\index{stop\+Background\+Sound@{stop\+Background\+Sound}!Resource\+Manager@{Resource\+Manager}}
+\subsubsection[{stop\+Background\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Resource\+Manager\+::stop\+Background\+Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_resource_manager_ab7cca18934ebca10516ce4c34782e6f4}
+
+
+Stops the playback of a background sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & string\& file\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The background sound is stopped. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Resource\+Manager.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Resource\+Manager.\+cpp}\end{DoxyCompactItemize}

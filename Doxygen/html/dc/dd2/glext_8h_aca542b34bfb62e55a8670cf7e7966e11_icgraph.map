@@ -1,0 +1,5 @@
+<map id="glClientActiveTexture" name="glClientActiveTexture">
+<area shape="rect" id="node2" href="$d3/d3a/class_model_manager.html#a5da488f1d7e4038152d357496fd5282b" title="Draws a model to the screen with a specified texture and translates it by a specified amount..." alt="" coords="196,5,339,32"/>
+<area shape="rect" id="node3" href="$d1/da9/class_resource_manager.html#ab9310e278d9a01869b3309b17d87e09b" title="Draws a model to the screen. " alt="" coords="387,5,584,32"/>
+<area shape="rect" id="node4" href="$d8/d24/class_open_g_l.html#a84785ff8362f9fe8b2fafba5116f81e1" title="Draw Model. " alt="" coords="632,5,775,32"/>
+</map>

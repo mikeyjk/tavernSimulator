@@ -1,0 +1,8 @@
+<map id="GameObject::getObjecType" name="GameObject::getObjecType">
+<area shape="rect" id="node2" href="$d7/da7/class_character.html#a239afb275264116e8196291b7d2b3d94" title="Character::PickObject" alt="" coords="236,5,387,32"/>
+<area shape="rect" id="node4" href="$d3/d21/class_world.html#a270560c764575ba30c7f4e4cf6d8eef4" title="addEntity function " alt="" coords="251,56,372,83"/>
+<area shape="rect" id="node3" href="$d7/da7/class_character.html#a495652bce60ee4c5557cfb250b814d75" title="Update. " alt="" coords="457,5,583,32"/>
+<area shape="rect" id="node5" href="$da/da9/class_game_engine.html#a6ac03e07bd33b978dda30e0ad2a95c0e" title="GameEngine::loadAssets" alt="" coords="435,56,605,83"/>
+<area shape="rect" id="node6" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="653,56,784,83"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="832,56,883,83"/>
+</map>

@@ -1,0 +1,439 @@
+\section{Sky\+Box Class Reference}
+\label{class_sky_box}\index{Sky\+Box@{Sky\+Box}}
+
+
+{\ttfamily \#include $<$Sky\+Box.\+h$>$}
+
+
+
+Inheritance diagram for Sky\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{de/d28/class_sky_box__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sky\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/d31/class_sky_box__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Sky\+Box} ({\bf Rendering\+Engine} $\ast$Ref, {\bf Vec3} pos, {\bf string} \+\_\+texture)
+\item 
+{\bf $\sim$\+Sky\+Box} ({\bf void})
+\item 
+{\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em virtual i\+\_\+\+Drawable\+Object Draw \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Buffer\+Ref} ()
+\begin{DoxyCompactList}\small\item\em virtual i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref \end{DoxyCompactList}\item 
+{\bf void} {\bf Destory} ()
+\begin{DoxyCompactList}\small\item\em virtual i\+\_\+\+Drawable\+Object Destroy \end{DoxyCompactList}\item 
+{\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em virtual Update \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Attributes} (float {\bf width})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Generate\+Buffer} ()
+\item 
+{\bf void} {\bf Update\+Sky\+Box\+Pos} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf m\+\_\+width}
+\item 
+float {\bf m\+\_\+height}
+\item 
+{\bf G\+Luint} {\bf elementbuffer}
+\item 
+{\bf G\+Luint} {\bf vetexbuffer}
+\item 
+{\bf G\+Luint} {\bf Texture\+Coorbuffer}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sky\+Box@{Sky\+Box}!Sky\+Box@{Sky\+Box}}
+\index{Sky\+Box@{Sky\+Box}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Sky\+Box}]{\setlength{\rightskip}{0pt plus 5cm}Sky\+Box\+::\+Sky\+Box (
+\begin{DoxyParamCaption}
+\item[{{\bf Rendering\+Engine} $\ast$}]{Ref, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{{\bf string}}]{\+\_\+texture}
+\end{DoxyParamCaption}
+)}\label{class_sky_box_a37d5341c5ecd9b25aedec1f8f10f2682}
+
+\begin{DoxyCode}
+6                                                                : GameObject(Ref,pos,0,0,\textcolor{stringliteral}{""},\textcolor{stringliteral}{""}, \textcolor{keyword}{true}, 1,10)
+7 \{
+8     texture = \_texture;
+9 \}
+\end{DoxyCode}
+\index{Sky\+Box@{Sky\+Box}!````~Sky\+Box@{$\sim$\+Sky\+Box}}
+\index{````~Sky\+Box@{$\sim$\+Sky\+Box}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{$\sim$\+Sky\+Box}]{\setlength{\rightskip}{0pt plus 5cm}Sky\+Box\+::$\sim$\+Sky\+Box (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_sky_box_aab324ac14714321d560d7788239b1c7b}
+
+\begin{DoxyCode}
+12 \{
+13 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Sky\+Box@{Sky\+Box}!Destory@{Destory}}
+\index{Destory@{Destory}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Destory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sky\+Box\+::\+Destory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sky_box_a04a507e77b90d469d77fdae3271de731}
+
+
+virtual i\+\_\+\+Drawable\+Object Destroy 
+
+put here to make invisible Game\+Objects Possible
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a9f5e20361956b3181420f2f040ef496a}.
+
+
+\begin{DoxyCode}
+96 \{
+97     ((OpenGL *)RederingHandle->GetRenderHandle())->EraseRefFromBuffer(m_objectID);
+98 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_a04a507e77b90d469d77fdae3271de731_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sky\+Box@{Sky\+Box}!Draw@{Draw}}
+\index{Draw@{Draw}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sky\+Box\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sky_box_ab9db46f2e34683cae517ba97a44aee9e}
+
+
+virtual i\+\_\+\+Drawable\+Object Draw 
+
+put here to make invisible Game\+Objects Possible
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a54f25ff4076e03a40309085bcf826e53}.
+
+
+\begin{DoxyCode}
+85 \{
+86     UpdateSkyBoxPos();
+87     ((OpenGL *)RederingHandle->GetRenderHandle())->DrawSkyBox(m_position, 
+      vetexbuffer, elementbuffer, TextureCoorbuffer, texture);
+88 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_ab9db46f2e34683cae517ba97a44aee9e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sky\+Box@{Sky\+Box}!Generate\+Buffer@{Generate\+Buffer}}
+\index{Generate\+Buffer@{Generate\+Buffer}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Generate\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sky\+Box\+::\+Generate\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_sky_box_aef82bf3ef92ee3f8412bbc8aeda48448}
+
+\begin{DoxyCode}
+28 \{
+29     ResourceManager::Instance()->GenerateShader(\textcolor{stringliteral}{"Shaders/Skyvertex.sh"}, \textcolor{stringliteral}{"Shaders/Skyfragment.sh"}, \textcolor{stringliteral}{"SkyBox"})
+      ;
+30 
+31     GLfloat Cube\_vertices[] =
+32     \{
+33         -m_width,   m_width,  m_width,
+34         -m_width,  -m_width,  m_width,
+35          m_width,  -m_width,  m_width,
+36          m_width,   m_width,  m_width,
+37         -m_width,   m_width, -m_width,
+38         -m_width,  -m_width, -m_width,
+39          m_width,  -m_width, -m_width,
+40          m_width,   m_width, -m\_width
+41     \};
+42 
+43     GLfloat Cube\_Coordinate[] = 
+44     \{
+45         0.0, -1.0,
+46         0.0, 0.0,
+47         1.0, 0.0,
+48         1.0, 1.0,
+49         0.0, 1.0,
+50         0.0, 0.0,
+51         1.0, 0.0,
+52         1.0, 1.0
+53     \};
+54 
+55 
+56     GLushort Cube\_indices[] = \{
+57       0, 1, 2, 3,
+58       3, 2, 6, 7,
+59       7, 6, 5, 4,
+60       4, 5, 1, 0,
+61       0, 3, 7, 4,
+62       1, 2, 6, 5,
+63     \};
+64    
+65    \textcolor{comment}{//glGenBuffersARB(1, &TextureCoorbuffer);}
+66    \textcolor{comment}{//glBindBufferARB(GL\_ARRAY\_BUFFER,TextureCoorbuffer);}
+67    \textcolor{comment}{//glBufferDataARB(GL\_ARRAY\_BUFFER, sizeof(Cube\_Coordinate), Cube\_Coordinate, GL\_STATIC\_DRAW);}
+68 
+69    glGenBuffersARB(1, &vetexbuffer);
+70    glBindBufferARB(GL_ARRAY_BUFFER, vetexbuffer);
+71    glBufferDataARB(GL_ARRAY_BUFFER,\textcolor{keyword}{sizeof}(Cube\_vertices), Cube\_vertices, 
+      GL_STATIC_DRAW);
+72 
+73 
+74    glGenBuffersARB(1, &elementbuffer);
+75    glBindBufferARB(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+76    glBufferDataARB(GL_ELEMENT_ARRAY_BUFFER, \textcolor{keyword}{sizeof}(Cube\_indices),  Cube\_indices, 
+      GL_STATIC_DRAW);
+77 
+78 
+79    GLuint vertex = glGetAttribLocation(ResourceManager::Instance()->GetShaderProram(\textcolor{stringliteral}{"SkyBox"}), \textcolor{stringliteral}{"vertex"});
+80    \textcolor{comment}{//glEnableVertexAttribArray(vertex);}
+81    \textcolor{comment}{//glVertexAttribPointer(vertex, 3, GL\_FLOAT, GL\_FALSE, 0, 0);}
+82 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_aef82bf3ef92ee3f8412bbc8aeda48448_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_aef82bf3ef92ee3f8412bbc8aeda48448_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sky\+Box@{Sky\+Box}!Set\+Attributes@{Set\+Attributes}}
+\index{Set\+Attributes@{Set\+Attributes}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Set\+Attributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sky\+Box\+::\+Set\+Attributes (
+\begin{DoxyParamCaption}
+\item[{float}]{width}
+\end{DoxyParamCaption}
+)}\label{class_sky_box_a0b2e64a7ea57e32becba08a25e026bbc}
+
+\begin{DoxyCode}
+22 \{
+23     m_width = width/2;
+24     GenerateBuffer();
+25 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_a0b2e64a7ea57e32becba08a25e026bbc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_a0b2e64a7ea57e32becba08a25e026bbc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sky\+Box@{Sky\+Box}!Set\+Buffer\+Ref@{Set\+Buffer\+Ref}}
+\index{Set\+Buffer\+Ref@{Set\+Buffer\+Ref}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Set\+Buffer\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sky\+Box\+::\+Set\+Buffer\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sky_box_aeeb16ac3c6e20b83ea10a4658acba83d}
+
+
+virtual i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref 
+
+put here to make invisible Game\+Objects Possible
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a34436ba977aafaff056f3f5022f992b9}.
+
+
+\begin{DoxyCode}
+91 \{
+92     ((OpenGL *)RederingHandle->GetRenderHandle())->AddRefToBuffer(m_objectID, \textcolor{keyword}{this});
+93 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_aeeb16ac3c6e20b83ea10a4658acba83d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sky\+Box@{Sky\+Box}!Update@{Update}}
+\index{Update@{Update}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sky\+Box\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sky_box_ae0d46784e42bf0fc003c6943b5357846}
+
+
+virtual Update 
+
+Put here to be able to call Update for all child Game\+Objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a67476ffb30d41305f25be7b3fee11173}.
+
+
+\begin{DoxyCode}
+101 \{
+102 \}\end{DoxyCode}
+\index{Sky\+Box@{Sky\+Box}!Update\+Sky\+Box\+Pos@{Update\+Sky\+Box\+Pos}}
+\index{Update\+Sky\+Box\+Pos@{Update\+Sky\+Box\+Pos}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Update\+Sky\+Box\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sky\+Box\+::\+Update\+Sky\+Box\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_sky_box_a96695f89ed3843655b826467cf93b375}
+
+\begin{DoxyCode}
+16 \{
+17     Vec3 newpos = ((OpenGL*)RederingHandle->GetRenderHandle())->GetCamera()->GetPosition();
+18     this->m_position = newpos;
+19 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/dda/class_sky_box_a96695f89ed3843655b826467cf93b375_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{de/dda/class_sky_box_a96695f89ed3843655b826467cf93b375_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Sky\+Box@{Sky\+Box}!elementbuffer@{elementbuffer}}
+\index{elementbuffer@{elementbuffer}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{elementbuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Sky\+Box\+::elementbuffer\hspace{0.3cm}{\ttfamily [private]}}\label{class_sky_box_accead7799c14735f928f1a8a78552d1b}
+\index{Sky\+Box@{Sky\+Box}!m\+\_\+height@{m\+\_\+height}}
+\index{m\+\_\+height@{m\+\_\+height}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{m\+\_\+height}]{\setlength{\rightskip}{0pt plus 5cm}float Sky\+Box\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}\label{class_sky_box_a8f4f369c41ca4dd140d6b96f74cbffd0}
+\index{Sky\+Box@{Sky\+Box}!m\+\_\+width@{m\+\_\+width}}
+\index{m\+\_\+width@{m\+\_\+width}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{m\+\_\+width}]{\setlength{\rightskip}{0pt plus 5cm}float Sky\+Box\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}\label{class_sky_box_a727cea5841c755090bbc67ea08310821}
+\index{Sky\+Box@{Sky\+Box}!Texture\+Coorbuffer@{Texture\+Coorbuffer}}
+\index{Texture\+Coorbuffer@{Texture\+Coorbuffer}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Texture\+Coorbuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Sky\+Box\+::\+Texture\+Coorbuffer\hspace{0.3cm}{\ttfamily [private]}}\label{class_sky_box_a4d7070f21005fd7054cec906dbb04c9b}
+\index{Sky\+Box@{Sky\+Box}!vetexbuffer@{vetexbuffer}}
+\index{vetexbuffer@{vetexbuffer}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{vetexbuffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Sky\+Box\+::vetexbuffer\hspace{0.3cm}{\ttfamily [private]}}\label{class_sky_box_a2aea18670757c240930c217c6ab62a09}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Sky\+Box.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Sky\+Box.\+cpp}\end{DoxyCompactItemize}

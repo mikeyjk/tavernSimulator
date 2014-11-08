@@ -1,0 +1,240 @@
+\section{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+\doxyref{Graph}{p.}{da/d9a/class_graph} class consisting of nodes and connections.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+
+
+Collaboration diagram for Graph\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d1/dc2/class_graph__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Graph} ({\bf void})
+\item 
+{\bf $\sim$\+Graph} ({\bf void})
+\item 
+vector$<$ {\bf Graph\+Node} $>$ {\bf get\+Waypoints} ()
+\begin{DoxyCompactList}\small\item\em Returns the list of waypoints. \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Waypoint} ({\bf Vec3} {\bf p})
+\begin{DoxyCompactList}\small\item\em Adds a waypoint to the list of waypoints. \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Bi\+Directional\+Connection} (int waypoint, int other, int {\bf weight})
+\begin{DoxyCompactList}\small\item\em Adds a connection from waypoint to other, and from other to waypoint. \end{DoxyCompactList}\item 
+int {\bf get\+Next\+Waypoint} (int {\bf start})
+\begin{DoxyCompactList}\small\item\em Adds a connection from waypoint to other, and from other to waypoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Graph\+Node} $>$ {\bf waypoints}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Graph}{p.}{da/d9a/class_graph} class consisting of nodes and connections. 
+
+\begin{DoxyAuthor}{Author}
+Raymond Forster 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_graph_a36907af99cee68cf4b0b54a2c37ec7c8}
+
+\begin{DoxyCode}
+5 \{
+6     srand (time(NULL));
+7 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!````~Graph@{$\sim$\+Graph}}
+\index{````~Graph@{$\sim$\+Graph}!Graph@{Graph}}
+\subsubsection[{$\sim$\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}Graph\+::$\sim$\+Graph (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_graph_a07d045a86c6ce7cba6edbc95f6d83ded}
+
+\begin{DoxyCode}
+11 \{
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Graph@{Graph}!add\+Bi\+Directional\+Connection@{add\+Bi\+Directional\+Connection}}
+\index{add\+Bi\+Directional\+Connection@{add\+Bi\+Directional\+Connection}!Graph@{Graph}}
+\subsubsection[{add\+Bi\+Directional\+Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Graph\+::add\+Bi\+Directional\+Connection (
+\begin{DoxyParamCaption}
+\item[{int}]{waypoint, }
+\item[{int}]{other, }
+\item[{int}]{weight}
+\end{DoxyParamCaption}
+)}\label{class_graph_a77d333ced036510a005c01c9a550fc59}
+
+
+Adds a connection from waypoint to other, and from other to waypoint. 
+
+\begin{DoxyAuthor}{Author}
+Raymond Forster 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em int} & waypoint -\/ the current waypoint \\
+\hline
+{\em int} & other -\/ the waypoint to connect to \\
+\hline
+{\em int} & weight -\/ the weight of the connection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+35 \{
+36     Connection c1, c2;
+37 
+38     \textcolor{comment}{//connection from waypoint to other}
+39     c1.index = other;
+40     c1.weight = weight;
+41 
+42     \textcolor{comment}{//connection from other to waypoint}
+43     c2.index = other;
+44     c2.weight = weight;
+45 
+46     waypoints[waypoint].connections.push\_back(c1); \textcolor{comment}{//add parent->child connection to waypoint's connection
+       list}
+47     waypoints[other].connections.push\_back(c2); \textcolor{comment}{//add child->parent connection to other's connection list}
+48 \}
+\end{DoxyCode}
+\index{Graph@{Graph}!add\+Waypoint@{add\+Waypoint}}
+\index{add\+Waypoint@{add\+Waypoint}!Graph@{Graph}}
+\subsubsection[{add\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Graph\+::add\+Waypoint (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{p}
+\end{DoxyParamCaption}
+)}\label{class_graph_ae9a1ab84d7be4cc2e8624ea9901249cb}
+
+
+Adds a waypoint to the list of waypoints. 
+
+\begin{DoxyAuthor}{Author}
+Raymond Forster 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Vec3}{p.}{df/d24/class_vec3}} & p -\/ the coordinate of the waypoint \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+22 \{
+23     GraphNode gn; \textcolor{comment}{//create a new graph node}
+24 
+25     \textcolor{comment}{//set the node's x, y, z values}
+26     gn.point.setX(p.getX());
+27     gn.point.setY(p.getY());
+28     gn.point.setZ(p.getZ());
+29 
+30     waypoints.push\_back(gn); \textcolor{comment}{//add node to list of waypoints}
+31 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{da/d9a/class_graph_ae9a1ab84d7be4cc2e8624ea9901249cb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Graph@{Graph}!get\+Next\+Waypoint@{get\+Next\+Waypoint}}
+\index{get\+Next\+Waypoint@{get\+Next\+Waypoint}!Graph@{Graph}}
+\subsubsection[{get\+Next\+Waypoint}]{\setlength{\rightskip}{0pt plus 5cm}int Graph\+::get\+Next\+Waypoint (
+\begin{DoxyParamCaption}
+\item[{int}]{start}
+\end{DoxyParamCaption}
+)}\label{class_graph_aa05a634c955e48c6075ab492ca7e1a0a}
+
+
+Adds a connection from waypoint to other, and from other to waypoint. 
+
+\begin{DoxyAuthor}{Author}
+Raymond Forster 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em int} & start -\/ the search start node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+51 \{
+52     \textcolor{comment}{//get number of exit paths}
+53     \textcolor{keywordtype}{int} numExits  = waypoints[start].connections.size();
+54     \textcolor{comment}{//pick a random exit}
+55     \textcolor{keywordtype}{int} randExit = (rand()%(numExits-1)); 
+56     \textcolor{comment}{//return exit}
+57     \textcolor{keywordflow}{return} randExit;
+58 \}\end{DoxyCode}
+\index{Graph@{Graph}!get\+Waypoints@{get\+Waypoints}}
+\index{get\+Waypoints@{get\+Waypoints}!Graph@{Graph}}
+\subsubsection[{get\+Waypoints}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Graph\+Node} $>$ Graph\+::get\+Waypoints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_graph_aece2ecd964315c47dc307cca2a5fe311}
+
+
+Returns the list of waypoints. 
+
+\begin{DoxyAuthor}{Author}
+Raymond Forster 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Graph\+Node$>$ waypoints -\/ the list of waypoints 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordflow}{return} waypoints;
+18 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Graph@{Graph}!waypoints@{waypoints}}
+\index{waypoints@{waypoints}!Graph@{Graph}}
+\subsubsection[{waypoints}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Graph\+Node}$>$ Graph\+::waypoints\hspace{0.3cm}{\ttfamily [private]}}\label{class_graph_a55338a7d01c5b63d6c46c4697d329c72}
+list of waypoints 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Graph.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Graph.\+cpp}\end{DoxyCompactItemize}

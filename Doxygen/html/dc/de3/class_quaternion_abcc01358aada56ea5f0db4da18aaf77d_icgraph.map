@@ -1,0 +1,10 @@
+<map id="Quaternion::Quaternion" name="Quaternion::Quaternion">
+<area shape="rect" id="node2" href="$dc/de3/class_quaternion.html#ae14f10e9911d8b12f9070c651cb1ecdf" title="Quaternion::mult" alt="" coords="225,107,343,133"/>
+<area shape="rect" id="node8" href="$dc/de3/class_quaternion.html#ab674ea67691cea70557aa3a7b5f6950f" title="Quaternion::conjugate" alt="" coords="209,56,359,83"/>
+<area shape="rect" id="node9" href="$dc/de3/class_quaternion.html#a63bf1c28e1345067ddd2783cb7dc1d73" title="Quaternion::Inverted" alt="" coords="215,157,353,184"/>
+<area shape="rect" id="node3" href="$da/dbb/class_camera.html#ab14bf413828e51f5685b0001c4247f88" title="This function will rotate the Camera by Yaw. " alt="" coords="418,107,557,133"/>
+<area shape="rect" id="node5" href="$da/dbb/class_camera.html#a8491685022f64ab54b477a45026c40d3" title="This function will rotate the Camera by Pitch. " alt="" coords="416,157,559,184"/>
+<area shape="rect" id="node6" href="$da/dbb/class_camera.html#a873b77f84501fbdf055e6b70e42ffd9e" title="Camera::RotatePitch3rd" alt="" coords="407,5,568,32"/>
+<area shape="rect" id="node7" href="$da/dbb/class_camera.html#a1296c75191df3e155323844313844b58" title="Camera::RotateYaw3rd" alt="" coords="409,56,565,83"/>
+<area shape="rect" id="node4" href="$d7/da7/class_character.html#a495652bce60ee4c5557cfb250b814d75" title="Update. " alt="" coords="616,132,743,159"/>
+</map>

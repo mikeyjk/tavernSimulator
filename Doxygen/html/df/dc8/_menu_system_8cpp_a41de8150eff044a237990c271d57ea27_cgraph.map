@@ -1,0 +1,14 @@
+<map id="resume" name="resume">
+<area shape="rect" id="node2" href="$df/dcb/class_menu_system.html#a09f1f4a0afa29c4b700769ebdf52fabf" title="Instance function. " alt="" coords="357,55,513,81"/>
+<area shape="rect" id="node6" href="$df/dcb/class_menu_system.html#ac02b4d58d088becdce4646d2bfe50c60" title="switchMenu function " alt="" coords="126,80,302,107"/>
+<area shape="rect" id="node7" href="$d3/d7b/class_input_engine.html#a1f67c167338a95cfdffb01fabf28eb92" title="Instance. " alt="" coords="141,131,287,157"/>
+<area shape="rect" id="node8" href="$d3/d7b/class_input_engine.html#a7a44d8397064f560cdb8134e76beb3ba" title="InputEngine::switchFixed\lMouse" alt="" coords="131,182,297,223"/>
+<area shape="rect" id="node10" href="$da/df5/class_control_system.html#aa3b24cbd4e40b867422d9cd4443e63db" title="Instance. " alt="" coords="131,248,297,275"/>
+<area shape="rect" id="node11" href="$da/df5/class_control_system.html#a0b2812e51d4bb7ce9c652ddf9d2b8859" title="ControlSystem::setStatus" alt="" coords="128,299,300,325"/>
+<area shape="rect" id="node12" href="$df/dcb/class_menu_system.html#a705ea8480b5a89ca377a5e4ad1e4ba80" title="getComponent function " alt="" coords="119,349,309,376"/>
+<area shape="rect" id="node13" href="$d6/dee/class_menu_component.html#a727ba64650baab21b39e0eb2bcf5897a" title="set the texture of the component " alt="" coords="119,400,309,427"/>
+<area shape="rect" id="node3" href="$df/dcb/class_menu_system.html#ad3eaf9c3c98d39f1211aa2db8b7d3728" title="MenuSystem::MenuSystem" alt="" coords="561,55,745,81"/>
+<area shape="rect" id="node4" href="$d6/d57/class_id_generator.html#a0ae3ff56ccfa23f1471a07b02eb07804" title="IdGenerator::Instance" alt="" coords="793,29,940,56"/>
+<area shape="rect" id="node5" href="$d6/d57/class_id_generator.html#a22d48faaa3b7aa4ad76bce6db737f84a" title="IdGenerator::GetID" alt="" coords="801,80,932,107"/>
+<area shape="rect" id="node9" href="$d7/d1c/freeglut__std_8h.html#a95949b291c9c776c3462107d33c3cd95" title="glutSetCursor" alt="" coords="385,189,486,216"/>
+</map>

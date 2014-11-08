@@ -1,0 +1,613 @@
+\section{Game\+Engine Class Reference}
+\label{class_game_engine}\index{Game\+Engine@{Game\+Engine}}
+
+
+{\ttfamily \#include $<$Game\+Engine.\+h$>$}
+
+
+
+Collaboration diagram for Game\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dd6/class_game_engine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf start} (char $\ast$, int \&argc, char $\ast$$\ast$argv, int Windowswidth, int Windows\+Height, char $\ast${\bf name})
+\begin{DoxyCompactList}\small\item\em Get Redering engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Game\+Engine} $\ast$ {\bf instance} ()
+\item 
+static {\bf void} {\bf update} (double delta\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Game\+Engine} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Game\+Engine}{p.}{da/da9/class_game_engine} Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Game\+Engine} ({\bf void})
+\begin{DoxyCompactList}\small\item\em \doxyref{Game\+Engine}{p.}{da/da9/class_game_engine} Destructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf load\+Assets} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Rendering\+Engine} $\ast$ {\bf my\+Rendering\+Engine}
+\item 
+{\bf World} $\ast$ {\bf my\+World}
+\item 
+{\bf Input\+Engine} $\ast$ {\bf my\+Input\+Engine}
+\item 
+{\bf Control\+System} $\ast$ {\bf my\+Control\+System}
+\item 
+{\bf Sound\+Manager} $\ast$ {\bf m\+\_\+sound\+Manager}
+\item 
+{\bf Menu\+System} $\ast$ {\bf my\+Menu\+System}
+\item 
+{\bf std\+::string} {\bf m\+\_\+asset\+File}
+\item 
+{\bf Physic\+Engine} $\ast$ {\bf my\+Physic\+Engine}
+\item 
+{\bf Timer} $\ast$ {\bf Engine\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Game\+Engine}{p.}{da/da9/class_game_engine}  The entry of the entire Engine \+: Liu Yi \+: null  By\+: main;  3/12/2014
+
+\+: 29/08/14 -\/ Michael J. Kiernan
+\begin{DoxyItemize}
+\item Added support for transparency and rotation when loading asset from file.
+\end{DoxyItemize}
+
+\+: 27/08/14 -\/ Michael J. Kiernan
+\begin{DoxyItemize}
+\item Change from \#pragma once to ifndef guard.
+\item Removed includes from .cpp.
+\item Added primitive asset loading from file.
+\end{DoxyItemize}
+
+\+: 27/08/14 -\/ Karl Tysoe
+\begin{DoxyItemize}
+\item Added/testing \doxyref{Light\+Engine}{p.}{d8/dbf/class_light_engine}. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Game\+Engine@{Game\+Engine}!Game\+Engine@{Game\+Engine}}
+\index{Game\+Engine@{Game\+Engine}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{Game\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Engine\+::\+Game\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}\label{class_game_engine_a64c430f74d72e2745646fdbffbd97930}
+
+
+\doxyref{Game\+Engine}{p.}{da/da9/class_game_engine} Constructor. 
+
+This basic constructor of the game\+Engine instantiates all the singleton objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+6 \{
+7     myRenderingEngine = RenderingEngine::Instance();
+8     myWorld = World::Instance();
+9     myMenuSystem = MenuSystem::Instance();
+10     myControlSystem = ControlSystem::Instance(); 
+11     EngineInstance = \textcolor{keyword}{this};
+12     m_assetFile = \textcolor{stringliteral}{"ScriptData/AssetList.txt"};
+13     EngineTime = \textcolor{keyword}{new} Timer();
+14     RNG::Instance()->randomSeed();
+15 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da9/class_game_engine_a64c430f74d72e2745646fdbffbd97930_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Engine@{Game\+Engine}!````~Game\+Engine@{$\sim$\+Game\+Engine}}
+\index{````~Game\+Engine@{$\sim$\+Game\+Engine}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{$\sim$\+Game\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Engine\+::$\sim$\+Game\+Engine (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_aa8dbfe5aad6817586f17b7f5af9313e4}
+
+
+\doxyref{Game\+Engine}{p.}{da/da9/class_game_engine} Destructor. 
+
+The basic destructor of the \doxyref{Game\+Engine}{p.}{da/da9/class_game_engine}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Vec3}{p.}{df/d24/class_vec3}} & pos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+19 \{
+20 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Game\+Engine@{Game\+Engine}!instance@{instance}}
+\index{instance@{instance}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Engine} $\ast$ Game\+Engine\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_game_engine_a6b3f0a84cc780bfd8f6f4c314961c38d}
+
+\begin{DoxyCode}
+329 \{
+330     \textcolor{keyword}{static} GameEngine temp;
+331     \textcolor{keywordflow}{return}(&temp);
+332 \}\end{DoxyCode}
+\index{Game\+Engine@{Game\+Engine}!load\+Assets@{load\+Assets}}
+\index{load\+Assets@{load\+Assets}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{load\+Assets}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Engine\+::load\+Assets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a6ac03e07bd33b978dda30e0ad2a95c0e}
+\doxyref{load\+Assets()}{p.}{da/da9/class_game_engine_a6ac03e07bd33b978dda30e0ad2a95c0e}  loads models/object data from file.
+
+\doxyref{load\+Assets()}{p.}{da/da9/class_game_engine_a6ac03e07bd33b978dda30e0ad2a95c0e}  loads models/object data from file. I'm not sure if I should make these vectors there own classes? I'm just mimicking the way we currently load assets not 100\% if it is the best design choice though
+
+store vector data into actual game objects T\+O\+D\+O\+: Should I do this instead of storing in vectors? this seemed better at the time
+
+T\+O\+D\+O\+: filthy hard coded value, this should be set somewhere else 
+\begin{DoxyCode}
+74 \{
+75     std::string assetLine; \textcolor{comment}{// store each line of the asset file}
+76     std::ifstream fileData; \textcolor{comment}{// file stream to asset file}
+77 
+78     std::vector<std::string> musicVec; \textcolor{comment}{// vector of bg sounds}
+79     std::vector<std::string> cubeTexVec; \textcolor{comment}{// vector of cube textures (currently engine only supports 1)}
+80 
+81     std::vector<std::vector<std::string>> entityVec; \textcolor{comment}{// vector of game entities (vector of strings)}
+82     std::vector<std::vector<std::string>> affordVec; 
+83     std::vector<std::vector<std::string>> traitVec; 
+84     std::vector<std::vector<Affordance>> entityAffordances;
+85 
+86     \textcolor{keywordtype}{bool} skybox = \textcolor{keyword}{false}; \textcolor{comment}{// false by default, with no skybox}
+87 
+88     \textcolor{keywordflow}{try} \textcolor{comment}{// attempt file I/O}
+89     \{
+90         fileData.open(m_assetFile); \textcolor{comment}{// open the file stream}
+91     \}
+92     \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception &err) \textcolor{comment}{// catch all}
+93     \{
+94         std::cout << \textcolor{stringliteral}{"Error: "} << err.what() << std::endl;
+95     \}
+96 
+97     \textcolor{comment}{// verify file stream was opened}
+98     \textcolor{keywordflow}{if}(fileData.fail())
+99     \{
+100         std::cout << \textcolor{stringliteral}{"Error: Unable to open asset file! ("} << m_assetFile << \textcolor{stringliteral}{")."} << std::endl;
+101     \}
+102     \textcolor{keywordflow}{else} \textcolor{comment}{// file stream opened successfully}
+103     \{
+104         \textcolor{comment}{// store file data in temporary vectors}
+105 
+106         \textcolor{comment}{// while getline() is able to retrieve a value}
+107         \textcolor{keywordflow}{while}(std::getline(fileData, assetLine))
+108         \{
+109             trim(assetLine); \textcolor{comment}{// trim whitespace at beginning/end}
+110 
+111             \textcolor{comment}{// if not a comment / not empty}
+112             \textcolor{keywordflow}{if}(!assetLine.empty() && assetLine.at(0) != \textcolor{charliteral}{'#'})
+113             \{
+114                 \textcolor{comment}{// store skybox info}
+115                 \textcolor{keywordflow}{if}(find\_first(assetLine, \textcolor{stringliteral}{"Skybox:"}))
+116                 \{
+117                     vector<std::string> tokens;
+118 
+119                     split(tokens, assetLine, is\_any\_of(\textcolor{stringliteral}{", "}), token\_compress\_on);
+120                 
+121                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& token : tokens)
+122                     \{
+123                         \textcolor{keywordflow}{try}
+124                         \{
+125                             \textcolor{keywordflow}{if}(find\_first(token, \textcolor{stringliteral}{"true"}) ||  find\_first(token, \textcolor{stringliteral}{"True"}) || 
+126                                find\_first(token, \textcolor{stringliteral}{"TRUE"}))
+127                             \{
+128                                 skybox = \textcolor{keyword}{true};
+129                             \}
+130                         \} 
+131                         \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception &err) \textcolor{comment}{// catch all}
+132                         \{
+133                             std::cout << \textcolor{stringliteral}{"Error: "} << err.what() << std::endl;
+134                         \}
+135                     \}
+136                 \}   
+137 
+138                 \textcolor{comment}{// store cube texture info (for skybox)}
+139                 \textcolor{comment}{// don't check for skybox == true in case we put }
+140                 \textcolor{comment}{// the cube textures above in the document}
+141                 \textcolor{keywordflow}{if}(find\_first(assetLine, \textcolor{stringliteral}{"CubeTexture:"}))
+142                 \{
+143                     vector<std::string> tokens;
+144 
+145                     split(tokens, assetLine, is\_any\_of(\textcolor{stringliteral}{", "}), token\_compress\_on);
+146                 
+147                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& token : tokens)
+148                     \{
+149                         \textcolor{keywordflow}{try}
+150                         \{
+151                             \textcolor{keywordflow}{if}(!find\_first(token, \textcolor{stringliteral}{"CubeTexture:"}))
+152                             \{
+153                                 cubeTexVec.emplace(cubeTexVec.cend(), token);
+154                             \}
+155                         \} 
+156                         \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception &err) \textcolor{comment}{// catch all}
+157                         \{
+158                             std::cout << \textcolor{stringliteral}{"Error: "} << err.what() << std::endl;
+159                         \}
+160                     \}
+161                 \}
+162 
+163                 \textcolor{comment}{// attempt to store entities}
+164                 \textcolor{keywordflow}{if}(find\_first(assetLine, \textcolor{stringliteral}{"Entity:"}))
+165                 \{
+166                     std::vector<std::string> tokens;
+167                     std::vector<std::string> tempEntity;
+168                     std::vector<std::string> tempAffordance;
+169                     std::vector<std::string> tempTrait;
+170 
+171                     split(tokens, assetLine, is\_any\_of(\textcolor{stringliteral}{", "}), token\_compress\_on);
+172                 
+173                     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& token : tokens)
+174                     \{
+175                         \textcolor{keywordflow}{try}
+176                         \{
+177                             \textcolor{keywordflow}{if}(!find\_first(token, \textcolor{stringliteral}{"Entity:"}))
+178                             \{
+179                                 \textcolor{keywordflow}{if}(find\_first(token, \textcolor{stringliteral}{"("})) \textcolor{comment}{// denotes affordance}
+180                                 \{
+181                                     tempAffordance.push\_back(token);
+182                                 \}
+183                                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(token, \textcolor{stringliteral}{"::"})) \textcolor{comment}{// denotes trait}
+184                                 \{
+185                                     tempTrait.push\_back(token);
+186                                 \}
+187                                 \textcolor{keywordflow}{else}
+188                                 \{
+189                                     tempEntity.push\_back(token);
+190                                 \}
+191                             \}
+192                         \} 
+193                         \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception& ex) 
+194                         \{
+195                             std::cout << \textcolor{stringliteral}{"Error: "} << ex.what() << std::endl;
+196                         \}
+197                     \}
+198 
+199                     entityVec.emplace(entityVec.cend(), tempEntity); \textcolor{comment}{// store vector of strings for entity}
+200                     affordVec.emplace(affordVec.cend(), tempAffordance); \textcolor{comment}{// store vector of strings for
+       affordance}
+201                     traitVec.emplace(traitVec.cend(), tempTrait); \textcolor{comment}{// store vector of strings for traits}
+202                 \}       
+203             \}
+204         \}
+205     \}
+206 
+207     \textcolor{comment}{// if the cube textures have the right amount of textures}
+208     \textcolor{keywordflow}{if}(!cubeTexVec.empty() && cubeTexVec.size() == 7)
+209     \{
+210         ResourceManager::Instance()->addCubeTexture
+211         (
+212             const\_cast<char*>(cubeTexVec[0].c\_str()), 
+213             const\_cast<char*>(cubeTexVec[1].c\_str()), 
+214             const\_cast<char*>(cubeTexVec[2].c\_str()), 
+215             const\_cast<char*>(cubeTexVec[3].c\_str()), 
+216             const\_cast<char*>(cubeTexVec[4].c\_str()),
+217             const\_cast<char*>(cubeTexVec[5].c\_str()), 
+218             const\_cast<char*>(cubeTexVec[6].c\_str())
+219         );
+220     \}
+221     \textcolor{keywordflow}{else}
+222     \{
+223         std::cout << \textcolor{stringliteral}{"Error: Incorrect amount of skybox textures ("} 
+224             << cubeTexVec.size() << \textcolor{stringliteral}{")."} << std::endl;
+225     \}
+226 
+227     \textcolor{comment}{// now we want to populate the affordance and trait vectors for addEntity}
+228     \textcolor{comment}{// they should be the exact same size as the entity vector}
+229 
+230     \textcolor{keywordflow}{if}(entityVec.size() != affordVec.size() || entityVec.size() != traitVec.size())
+231     \{
+232         \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"error, entity vector should be of the same size as the affordance \(\backslash\)}
+233 \textcolor{stringliteral}{              and trait vector."};
+234         exit(-1);
+235     \}
+236 
+237     \textcolor{comment}{// populate vector of affordances}
+238     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& vec : affordVec)
+239     \{
+240         std::vector<Affordance> tempAffordance;
+241 
+242         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& affordance : vec)
+243         \{
+244             std::vector<std::string> descr;
+245             std::vector<std::string> val;
+246 
+247             \textcolor{comment}{// store tag description}
+248             split(descr, affordance, is\_any\_of(\textcolor{stringliteral}{"( "}), token\_compress\_on);
+249             Affordance temp;
+250             temp.setTag(descr[0]);
+251 
+252             \textcolor{comment}{// store tag value}
+253             split(val, descr[1], is\_any\_of(\textcolor{stringliteral}{") "}), token\_compress\_on);
+254             temp.setValue(lexical\_cast<float>(val[0]));
+255 
+256             tempAffordance.push\_back(temp);
+257         \}
+258 
+259         entityAffordances.push\_back(tempAffordance);
+260     \}
+261 
+262     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} itr = entityVec.cbegin(); itr != entityVec.cend(); ++itr)
+263     \{
+264         \textcolor{keywordflow}{try} \textcolor{comment}{// catch boost cast errors}
+265         \{
+266             \textcolor{comment}{// couldn't work out legit boost bool casting :(}
+267             \textcolor{keywordtype}{bool} boolVal = \textcolor{keyword}{false};
+268             \textcolor{keywordflow}{if}(find\_first((*itr)[8], \textcolor{stringliteral}{"true"})) \{ boolVal = \textcolor{keyword}{true}; \}
+269             \textcolor{keywordflow}{if}(find\_first((*itr)[8], \textcolor{stringliteral}{"TRUE"})) \{ boolVal = \textcolor{keyword}{true}; \}
+270             \textcolor{keywordflow}{if}(find\_first((*itr)[8], \textcolor{stringliteral}{"True"})) \{ boolVal = \textcolor{keyword}{true}; \}
+271 
+272             myWorld->AddEntity
+273             (
+274                 (*itr)[0].c\_str(), \textcolor{comment}{// string name}
+275                 Vec3(lexical\_cast<float>((*itr)[1]), \textcolor{comment}{// vec3 posx}
+276                 lexical\_cast<float>((*itr)[2]), \textcolor{comment}{// vec3 posy}
+277                 lexical\_cast<float>((*itr)[3])), \textcolor{comment}{// vec3 posz}
+278                 lexical\_cast<float>((*itr)[4]), \textcolor{comment}{// float rotX}
+279                 lexical\_cast<float>((*itr)[5]), \textcolor{comment}{// float rotY}
+280                 (*itr)[6].c\_str(), \textcolor{comment}{// string model}
+281                 (*itr)[7].c\_str(),  \textcolor{comment}{// string texture}
+282                 boolVal, \textcolor{comment}{// bool bound}
+283                 lexical\_cast<float>((*itr)[9]), \textcolor{comment}{// float transparency}
+284                 lexical\_cast<float>((*itr)[10]), \textcolor{comment}{// float weight}
+285                 entityAffordances.at(std::distance(entityVec.cbegin(), itr)),
+286                 traitVec.at(std::distance(entityVec.cbegin(), itr))
+287             );
+288         \}
+289         \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::exception &err) \textcolor{comment}{// catch all}
+290         \{
+291             std::cout << \textcolor{stringliteral}{"Error: "} << err.what() << std::endl;
+292         \}
+293     \}
+294 
+295     \textcolor{keywordflow}{if}(skybox)
+296     \{
+297         myWorld->AddSkybox();
+298     \}
+299 
+300     \textcolor{comment}{// fileData.close() // close file stream, automatic upon destruction}
+301 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da9/class_game_engine_a6ac03e07bd33b978dda30e0ad2a95c0e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da9/class_game_engine_a6ac03e07bd33b978dda30e0ad2a95c0e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Engine@{Game\+Engine}!start@{start}}
+\index{start@{start}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Engine\+::start (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{int \&}]{argc, }
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{int}]{Windowswidth, }
+\item[{int}]{Windows\+Height, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{class_game_engine_a15c742a04d8dc688d69a2106b58f99c6}
+
+
+Get Redering engine. 
+
+Get the Pointer which point to \doxyref{Rendering}{p.}{d3/d32/class_rendering} engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+return a \doxyref{I\+\_\+\+Graphic}{p.}{d4/dd3/class_i___graphic} Pointer to the \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+Pi 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+23 \{
+24     myRenderingEngine->CreateRenderAPI(name);
+25     \textcolor{comment}{// implementation independent}
+26     m_soundManager = \textcolor{keyword}{new} SoundManager();
+27     \textcolor{comment}{//m\_soundManager->playSound("Sounds/perth artists song 7 for soundcloud.mp3");}
+28 
+29     \textcolor{comment}{// opengl dependent implementation}
+30     \textcolor{comment}{// the sequence of calls in this function is important}
+31     \textcolor{keywordflow}{if}(find\_first(name, \textcolor{stringliteral}{"OpenGL"}))
+32     \{
+33         OpenGL * Open = \textcolor{keyword}{static\_cast<}OpenGL*\textcolor{keyword}{>}(myRenderingEngine->GetRenderHandle());
+34         Open->Init(argc,argv,Windowswidth,WindowsHeight,Gamename);
+35         Open->SetCallBackProcess(&update);
+36 
+37         myInputEngine = InputEngine::Instance();
+38         myInputEngine->initInputControl(\textcolor{stringliteral}{"OpenGL"});
+39         myInputEngine->setMouseFixed(\textcolor{keyword}{false});
+40 
+41         myControlSystem->init();
+42 
+43         LightEngine::Instance()->Initialise();
+44 
+45         loadAssets(); \textcolor{comment}{// load game resources}
+46         myMenuSystem->MenuInit();
+47         Open->loop();
+48 
+49     \} \textcolor{comment}{// direct x dependent implementation }
+50     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(name, \textcolor{stringliteral}{"DirectX"})) 
+51     \{
+52     \}
+53     \textcolor{keywordflow}{else} \textcolor{comment}{// unsupported}
+54     \{
+55         \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"Unsupported Graphics Interface!"});
+56     \}
+57     
+58 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{da/da9/class_game_engine_a15c742a04d8dc688d69a2106b58f99c6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{da/da9/class_game_engine_a15c742a04d8dc688d69a2106b58f99c6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Game\+Engine@{Game\+Engine}!update@{update}}
+\index{update@{update}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Game\+Engine\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_game_engine_abce5bdb89f4d0e521144873d1cb99cf8}
+
+\begin{DoxyCode}
+304 \{
+305     EngineInstance->EngineTime->updateTime();
+306     deltaTime = EngineInstance->EngineTime->getDeltaTime();
+307     \textcolor{comment}{//game system update is the user of the engines update function}
+308     \textcolor{keywordflow}{if}(EngineInstance->myControlSystem != NULL)
+309     \{
+310         EngineInstance->myControlSystem->Update(deltaTime);
+311         \textcolor{keywordflow}{if}(EngineInstance->myWorld && EngineInstance->myControlSystem->getStatus() == 
+      GAME_RUN)
+312         \{
+313             EngineInstance->myWorld->Update(deltaTime);
+314             \textcolor{keywordflow}{if}(PhysicEngine::Instance())
+315             \{
+316                 PhysicEngine::Instance()->Update(0);
+317             \}
+318         \}
+319     \}
+320 
+321     \textcolor{comment}{//resets the press down, and release key arrays.}
+322     \textcolor{keywordflow}{if}(EngineInstance->myInputEngine)
+323     \{
+324         EngineInstance->myInputEngine->resetAllKeys();
+325     \}
+326 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da9/class_game_engine_abce5bdb89f4d0e521144873d1cb99cf8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da9/class_game_engine_abce5bdb89f4d0e521144873d1cb99cf8_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Game\+Engine@{Game\+Engine}!Engine\+Time@{Engine\+Time}}
+\index{Engine\+Time@{Engine\+Time}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{Engine\+Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer}$\ast$ Game\+Engine\+::\+Engine\+Time\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_ae49eb12c7e7f9421e92ab18684e36c61}
+\index{Game\+Engine@{Game\+Engine}!m\+\_\+asset\+File@{m\+\_\+asset\+File}}
+\index{m\+\_\+asset\+File@{m\+\_\+asset\+File}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{m\+\_\+asset\+File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} Game\+Engine\+::m\+\_\+asset\+File\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a9cfd0291d81509f6fcf1219929620c4d}
+\index{Game\+Engine@{Game\+Engine}!m\+\_\+sound\+Manager@{m\+\_\+sound\+Manager}}
+\index{m\+\_\+sound\+Manager@{m\+\_\+sound\+Manager}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{m\+\_\+sound\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sound\+Manager}$\ast$ Game\+Engine\+::m\+\_\+sound\+Manager\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a2138fc79118bfe9c37cef52e99fa21e2}
+\index{Game\+Engine@{Game\+Engine}!my\+Control\+System@{my\+Control\+System}}
+\index{my\+Control\+System@{my\+Control\+System}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{my\+Control\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\+System}$\ast$ Game\+Engine\+::my\+Control\+System\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a240b534f98cd0b6d994ff5683e799abb}
+\index{Game\+Engine@{Game\+Engine}!my\+Input\+Engine@{my\+Input\+Engine}}
+\index{my\+Input\+Engine@{my\+Input\+Engine}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{my\+Input\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\+Engine}$\ast$ Game\+Engine\+::my\+Input\+Engine\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a3a276dc856a3568e1e3dcc5576088810}
+\index{Game\+Engine@{Game\+Engine}!my\+Menu\+System@{my\+Menu\+System}}
+\index{my\+Menu\+System@{my\+Menu\+System}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{my\+Menu\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+System}$\ast$ Game\+Engine\+::my\+Menu\+System\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a1ae329544fd98c36e8b3c535e89c85e2}
+\index{Game\+Engine@{Game\+Engine}!my\+Physic\+Engine@{my\+Physic\+Engine}}
+\index{my\+Physic\+Engine@{my\+Physic\+Engine}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{my\+Physic\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Physic\+Engine}$\ast$ Game\+Engine\+::my\+Physic\+Engine\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a951ab8214460b421987d8e923c664922}
+\index{Game\+Engine@{Game\+Engine}!my\+Rendering\+Engine@{my\+Rendering\+Engine}}
+\index{my\+Rendering\+Engine@{my\+Rendering\+Engine}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{my\+Rendering\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rendering\+Engine}$\ast$ Game\+Engine\+::my\+Rendering\+Engine\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_aa06c4dccea532f8e51f1ba2fb2e03785}
+\index{Game\+Engine@{Game\+Engine}!my\+World@{my\+World}}
+\index{my\+World@{my\+World}!Game\+Engine@{Game\+Engine}}
+\subsubsection[{my\+World}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World}$\ast$ Game\+Engine\+::my\+World\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_engine_a94e7a037bc19cf3695c79b18af7f19af}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Game\+Engine.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Game\+Engine.\+cpp}\end{DoxyCompactItemize}

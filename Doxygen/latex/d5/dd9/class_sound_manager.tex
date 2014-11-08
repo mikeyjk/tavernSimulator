@@ -1,0 +1,263 @@
+\section{Sound\+Manager Class Reference}
+\label{class_sound_manager}\index{Sound\+Manager@{Sound\+Manager}}
+
+
+{\ttfamily \#include $<$Sound\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Sound\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{d3/da9/class_sound_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Sound\+Manager} ()
+\item 
+{\bf $\sim$\+Sound\+Manager} ()
+\item 
+{\bf void} {\bf play\+Sound} (const {\bf string} \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Loads a sound from a file and plays it. \end{DoxyCompactList}\item 
+{\bf void} {\bf play\+Background\+Sound} (const {\bf string} \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Streams a background sound from a file and loops it. \end{DoxyCompactList}\item 
+{\bf void} {\bf stop\+Background\+Sound} ()
+\begin{DoxyCompactList}\small\item\em Stops the playback of a background sound. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf F\+M\+O\+D\+Error\+Check} (F\+M\+O\+D\+\_\+\+R\+E\+S\+U\+L\+T {\bf result})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+F\+M\+O\+D\+::\+System $\ast$ {\bf system}
+\item 
+F\+M\+O\+D\+\_\+\+R\+E\+S\+U\+L\+T {\bf result}
+\item 
+unsigned int {\bf version}
+\item 
+int {\bf num\+Drivers}
+\item 
+F\+M\+O\+D\+\_\+\+S\+P\+E\+A\+K\+E\+R\+M\+O\+D\+E {\bf speaker\+Mode}
+\item 
+F\+M\+O\+D\+\_\+\+C\+A\+P\+S {\bf caps}
+\item 
+char {\bf name} [256]
+\item 
+F\+M\+O\+D\+::\+Sound $\ast$ {\bf sound\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sound\+Manager@{Sound\+Manager}!Sound\+Manager@{Sound\+Manager}}
+\index{Sound\+Manager@{Sound\+Manager}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{Sound\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Sound\+Manager\+::\+Sound\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sound_manager_abcc1fbf3488be5788a42c9a4fe56df35}
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{comment}{// Create FMOD interface object}
+27     result = FMOD::System\_Create(&system);
+28 
+29     \textcolor{comment}{// Get number of sound cards result = system->getNumDrivers(&numDrivers);}
+30     FMODErrorCheck(result);
+31  
+32     \textcolor{comment}{// No sound cards (disable sound)}
+33     \textcolor{keywordflow}{if} (numDrivers == 0)
+34     \{
+35         result = system->setOutput(FMOD\_OUTPUTTYPE\_NOSOUND);
+36         FMODErrorCheck(result);
+37     \}
+38     \textcolor{keywordflow}{else}
+39     \{
+40         \textcolor{comment}{// Get the capabilities of the default (0) sound card}
+41         result = system->getDriverCaps(0, &caps, 0, &speakerMode);
+42         FMODErrorCheck(result);
+43  
+44         \textcolor{comment}{// Set the speaker mode to match that in Control Panel}
+45         result = system->setSpeakerMode(speakerMode);
+46         FMODErrorCheck(result);
+47     \}
+48 
+49     \textcolor{comment}{// Initialise FMOD}
+50     result = system->init(100, FMOD\_INIT\_NORMAL, 0);
+51 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd9/class_sound_manager_abcc1fbf3488be5788a42c9a4fe56df35_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sound\+Manager@{Sound\+Manager}!````~Sound\+Manager@{$\sim$\+Sound\+Manager}}
+\index{````~Sound\+Manager@{$\sim$\+Sound\+Manager}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{$\sim$\+Sound\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Sound\+Manager\+::$\sim$\+Sound\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_sound_manager_ad5dbf8eab22db48ff8f3db51b02f8938}
+
+\begin{DoxyCode}
+40 \{\};         \textcolor{comment}{// Sound Manager destructor.}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Sound\+Manager@{Sound\+Manager}!F\+M\+O\+D\+Error\+Check@{F\+M\+O\+D\+Error\+Check}}
+\index{F\+M\+O\+D\+Error\+Check@{F\+M\+O\+D\+Error\+Check}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{F\+M\+O\+D\+Error\+Check}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sound\+Manager\+::\+F\+M\+O\+D\+Error\+Check (
+\begin{DoxyParamCaption}
+\item[{F\+M\+O\+D\+\_\+\+R\+E\+S\+U\+L\+T}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_af9eb108090ed4c416b4eb1a2a986f51f}
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keywordflow}{if} (result != FMOD\_OK)
+18     \{
+19         std::cout << \textcolor{stringliteral}{"FMOD error! ("} << result << \textcolor{stringliteral}{") "} << FMOD\_ErrorString(
+      result) << std::endl;
+20         exit(-1);
+21     \}
+22 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd9/class_sound_manager_af9eb108090ed4c416b4eb1a2a986f51f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dd9/class_sound_manager_af9eb108090ed4c416b4eb1a2a986f51f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sound\+Manager@{Sound\+Manager}!play\+Background\+Sound@{play\+Background\+Sound}}
+\index{play\+Background\+Sound@{play\+Background\+Sound}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{play\+Background\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sound\+Manager\+::play\+Background\+Sound (
+\begin{DoxyParamCaption}
+\item[{const {\bf string} \&}]{file\+Path}
+\end{DoxyParamCaption}
+)}\label{class_sound_manager_a8b36bc1005e36d94789ad44f2737f3ee}
+
+
+Streams a background sound from a file and loops it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & string\& file\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The background is played and looped. 
+\end{DoxyPostcond}
+\index{Sound\+Manager@{Sound\+Manager}!play\+Sound@{play\+Sound}}
+\index{play\+Sound@{play\+Sound}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{play\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sound\+Manager\+::play\+Sound (
+\begin{DoxyParamCaption}
+\item[{const {\bf string} \&}]{file\+Path}
+\end{DoxyParamCaption}
+)}\label{class_sound_manager_acd3567858132c9eb9d6bbe2902d3bc98}
+
+
+Loads a sound from a file and plays it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & string\& file\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The sound is played once. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+54 \{
+55     system->createSound(filePath.c\_str(), FMOD\_DEFAULT, 0, &soundFile);
+56     system->playSound(FMOD\_CHANNEL\_FREE, soundFile, \textcolor{keyword}{false}, 0);
+57 \}
+\end{DoxyCode}
+\index{Sound\+Manager@{Sound\+Manager}!stop\+Background\+Sound@{stop\+Background\+Sound}}
+\index{stop\+Background\+Sound@{stop\+Background\+Sound}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{stop\+Background\+Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Sound\+Manager\+::stop\+Background\+Sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sound_manager_a67ac8c3cb9975ce7dc0b3eb7a8735b46}
+
+
+Stops the playback of a background sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & string\& file\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The background sound is stopped. 
+\end{DoxyPostcond}
+
+
+\subsection{Member Data Documentation}
+\index{Sound\+Manager@{Sound\+Manager}!caps@{caps}}
+\index{caps@{caps}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{caps}]{\setlength{\rightskip}{0pt plus 5cm}F\+M\+O\+D\+\_\+\+C\+A\+P\+S Sound\+Manager\+::caps\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_aa0a8177ae1c6201d9fe8f6d688b366c6}
+\index{Sound\+Manager@{Sound\+Manager}!name@{name}}
+\index{name@{name}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char Sound\+Manager\+::name[256]\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_a6fa0ec5a50b3fea87db4d1ae3b95b7b6}
+\index{Sound\+Manager@{Sound\+Manager}!num\+Drivers@{num\+Drivers}}
+\index{num\+Drivers@{num\+Drivers}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{num\+Drivers}]{\setlength{\rightskip}{0pt plus 5cm}int Sound\+Manager\+::num\+Drivers\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_a2dbe870e2646e43ea74f55b8cc0f4a34}
+\index{Sound\+Manager@{Sound\+Manager}!result@{result}}
+\index{result@{result}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{result}]{\setlength{\rightskip}{0pt plus 5cm}F\+M\+O\+D\+\_\+\+R\+E\+S\+U\+L\+T Sound\+Manager\+::result\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_ae22e3f81d7c7bf3b2e526913c486c4dc}
+\index{Sound\+Manager@{Sound\+Manager}!sound\+File@{sound\+File}}
+\index{sound\+File@{sound\+File}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{sound\+File}]{\setlength{\rightskip}{0pt plus 5cm}F\+M\+O\+D\+::\+Sound$\ast$ Sound\+Manager\+::sound\+File\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_ac48787c4e04fea27c89040c59913055f}
+\index{Sound\+Manager@{Sound\+Manager}!speaker\+Mode@{speaker\+Mode}}
+\index{speaker\+Mode@{speaker\+Mode}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{speaker\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}F\+M\+O\+D\+\_\+\+S\+P\+E\+A\+K\+E\+R\+M\+O\+D\+E Sound\+Manager\+::speaker\+Mode\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_a45a6856cf8e2f3934468fb0b096968c0}
+\index{Sound\+Manager@{Sound\+Manager}!system@{system}}
+\index{system@{system}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{system}]{\setlength{\rightskip}{0pt plus 5cm}F\+M\+O\+D\+::\+System$\ast$ Sound\+Manager\+::system\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_a1b42e8a68c11d4d6c4b7816181deca32}
+\index{Sound\+Manager@{Sound\+Manager}!version@{version}}
+\index{version@{version}!Sound\+Manager@{Sound\+Manager}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Sound\+Manager\+::version\hspace{0.3cm}{\ttfamily [private]}}\label{class_sound_manager_a3d5d3c7d308b7e0b6512613b3eb3a72f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Sound\+Manager.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Sound\+Manager.\+cpp}\end{DoxyCompactItemize}

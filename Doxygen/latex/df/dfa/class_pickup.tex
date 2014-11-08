@@ -1,0 +1,196 @@
+\section{Pickup Class Reference}
+\label{class_pickup}\index{Pickup@{Pickup}}
+
+
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} ships to \doxyref{Pickup}{p.}{df/dfa/class_pickup}.  
+
+
+
+
+{\ttfamily \#include $<$A\+I\+Owned\+States.\+h$>$}
+
+
+
+Inheritance diagram for Pickup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{d5/d5c/class_pickup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Pickup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{d1/d4c/class_pickup__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf void} {\bf Enter} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Enter function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Execute} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Execute function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Exit} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Exit function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Pickup} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pickup} ()
+\begin{DoxyCompactList}\small\item\em flee state consructor \end{DoxyCompactList}\item 
+{\bf Pickup} (const {\bf Pickup} \&)
+\item 
+{\bf Pickup} \& {\bf operator=} (const {\bf Pickup} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} ships to \doxyref{Pickup}{p.}{df/dfa/class_pickup}. 
+
+\begin{DoxyAuthor}{Author}
+Karl 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/10/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pickup@{Pickup}!Pickup@{Pickup}}
+\index{Pickup@{Pickup}!Pickup@{Pickup}}
+\subsubsection[{Pickup}]{\setlength{\rightskip}{0pt plus 5cm}Pickup\+::\+Pickup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_pickup_a96d607c3c6fbe14446c5cafc33163844}
+
+
+flee state consructor 
+
+
+\begin{DoxyCode}
+281 \{\}
+\end{DoxyCode}
+\index{Pickup@{Pickup}!Pickup@{Pickup}}
+\index{Pickup@{Pickup}!Pickup@{Pickup}}
+\subsubsection[{Pickup}]{\setlength{\rightskip}{0pt plus 5cm}Pickup\+::\+Pickup (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pickup} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pickup_a0dcc4c4e7e270a00293e61c01a34892b}
+
+
+\subsection{Member Function Documentation}
+\index{Pickup@{Pickup}!Enter@{Enter}}
+\index{Enter@{Enter}!Pickup@{Pickup}}
+\subsubsection[{Enter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Pickup\+::\+Enter (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pickup_aba2374e0eb26bb1199adf8e8111ef272}
+
+
+Enter function. 
+
+Runs any functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to enter the state
+
+\begin{DoxyPostcond}{Postcondition}
+enters the state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a88e14ab108f9e28a53630c4557b9743d}.
+
+\index{Pickup@{Pickup}!Execute@{Execute}}
+\index{Execute@{Execute}!Pickup@{Pickup}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Pickup\+::\+Execute (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pickup_a20cd89bcb4115a01962991be4678ea3b}
+
+
+Execute function. 
+
+makes the ship flee from the player
+
+\begin{DoxyPostcond}{Postcondition}
+runs the flee execution 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_af12fe8dcc213356992ae0ad9f8d315ff}.
+
+\index{Pickup@{Pickup}!Exit@{Exit}}
+\index{Exit@{Exit}!Pickup@{Pickup}}
+\subsubsection[{Exit}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Pickup\+::\+Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pickup_ac1e1e731c95b4b7c26713f692c6cc61f}
+
+
+Exit function. 
+
+runs and functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to exit the state
+
+\begin{DoxyPostcond}{Postcondition}
+exits flee state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a1dc07d3a42d904b7e954fcfa3d27f23f}.
+
+\index{Pickup@{Pickup}!Instance@{Instance}}
+\index{Instance@{Instance}!Pickup@{Pickup}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Pickup}$\ast$ Pickup\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_pickup_a1ba936342911e94daa44b05ea84cf724}
+
+
+Instance function. 
+
+this is a singleton creates an instance of the flee state and returns it to the state machine
+
+\begin{DoxyReturn}{Returns}
+flee state 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the flee state 
+\end{DoxyPostcond}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dfa/class_pickup_a1ba936342911e94daa44b05ea84cf724_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Pickup@{Pickup}!operator=@{operator=}}
+\index{operator=@{operator=}!Pickup@{Pickup}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pickup}\& Pickup\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pickup} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_pickup_ab291bf5b29430b91b05030f382f1cec7}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf A\+I\+Owned\+States.\+h}\end{DoxyCompactItemize}

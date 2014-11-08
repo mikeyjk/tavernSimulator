@@ -1,0 +1,553 @@
+\section{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+
+
+Collaboration diagram for World\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d16/class_world__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Delete\+Entity} (int entity\+Id)
+\begin{DoxyCompactList}\small\item\em Delete\+Entity. \end{DoxyCompactList}\item 
+{\bf Game\+Object} $\ast$ {\bf Add\+Entity} ({\bf string} {\bf name}, {\bf Vec3} pos, float rot\+X, float rot\+Y, {\bf string} model, {\bf string} {\bf texture}, bool bound, float transparency, float {\bf weight}, std\+::vector$<$ {\bf Affordance} $>$ affordances, std\+::vector$<$ {\bf std\+::string} $>$ traits)
+\begin{DoxyCompactList}\small\item\em add\+Entity function \end{DoxyCompactList}\item 
+{\bf Game\+Object} $\ast$ {\bf Get\+Collision\+Entity} (int entity\+Id)
+\item 
+{\bf Game\+Object} $\ast$ {\bf Get\+No\+Collision\+Entiy} (int entity\+Id)
+\item 
+{\bf Character} $\ast$ {\bf Get\+Main\+Character} ()
+\begin{DoxyCompactList}\small\item\em get\+Char function \end{DoxyCompactList}\item 
+{\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em update \end{DoxyCompactList}\item 
+{\bf void} {\bf Add\+Skybox} ()
+\item 
+std\+::map$<$ int, {\bf Game\+Object} $\ast$ $>$ {\bf get\+Collidable\+Entities} ()
+\item 
+std\+::map$<$ int, {\bf Game\+Object} $\ast$ $>$ {\bf get\+Non\+Collidable\+Entities} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf World} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf World} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{World}{p.}{d3/d21/class_world} Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Rendering\+Engine} $\ast$ {\bf m\+\_\+rendering\+Handle}
+\item 
+bool {\bf m\+\_\+main\+Character}
+\item 
+std\+::vector$<$ int $>$ {\bf m\+\_\+npc\+Short\+Cut}
+\item 
+{\bf Sky\+Box} $\ast$ {\bf m\+\_\+skybox}
+\item 
+{\bf World\+Factory} {\bf m\+\_\+world\+Factory}
+\item 
+map$<$ int, {\bf Game\+Object} $\ast$ $>$ {\bf m\+\_\+non\+Collision\+Entities}
+\item 
+map$<$ int, {\bf Game\+Object} $\ast$ $>$ {\bf m\+\_\+collision\+Entities}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{World@{World}!World@{World}}
+\index{World@{World}!World@{World}}
+\subsubsection[{World}]{\setlength{\rightskip}{0pt plus 5cm}World\+::\+World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}\label{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}
+
+
+\doxyref{World}{p.}{d3/d21/class_world} Constructor. 
+
+Private \doxyref{World}{p.}{d3/d21/class_world} constructor. Not able to be invoked directly. 
+\begin{DoxyCode}
+10 \{
+11     m_renderingHandle = RenderingEngine::Instance();
+12     m_npcShortCut.empty();
+13     m_mainCharacter = \textcolor{keyword}{nullptr};
+14     m_skybox = \textcolor{keyword}{nullptr};
+15 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{d3/d21/class_world_afa39d4e6f714a7a3691ac0c656f5e8a8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{World@{World}!Add\+Entity@{Add\+Entity}}
+\index{Add\+Entity@{Add\+Entity}!World@{World}}
+\subsubsection[{Add\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} $\ast$ World\+::\+Add\+Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{{\bf string}}]{model, }
+\item[{{\bf string}}]{texture, }
+\item[{bool}]{bound, }
+\item[{float}]{transparency, }
+\item[{float}]{weight, }
+\item[{std\+::vector$<$ {\bf Affordance} $>$}]{affordances, }
+\item[{std\+::vector$<$ {\bf std\+::string} $>$}]{traits}
+\end{DoxyParamCaption}
+)}\label{class_world_a270560c764575ba30c7f4e4cf6d8eef4}
+
+
+add\+Entity function 
+
+This function adds an entity to the game\+World class The string determines what entity you can add, the \textbackslash{} different types of entities are\+: \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c}, Terrain, \doxyref{Geometry}{p.}{db/d0b/class_geometry}, \textbackslash{} \doxyref{Character}{p.}{d7/da7/class_character}, Other\+Player. These entities are added to the Game\+World maps and are then \textbackslash{} have thier update called every frame. Also this function adds the models and textures to the \doxyref{Resource}{p.}{df/d00/class_resource} Manager, \textbackslash{} if they havent previously been added.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & name, \doxyref{Vec3}{p.}{df/d24/class_vec3} pos, float rot\+X, float rot\+Y, \textbackslash{} string model, string texture, bool bound, float transparency \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Game\+Object$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+34 \{
+35     GameObject * temp = m_worldFactory.CreateObject(name, pos, rotX, rotX, model, 
+      texture, 
+36         bound, transparency, weight, affordances, traits);
+37 
+38     temp->setAffordances(affordances);
+39     
+40     \textcolor{comment}{// Add Pointer reference to OpenGl render buffer}
+41     \textcolor{comment}{// Add Pointer reference to World local storage}
+42     m_renderingHandle->AddRefToBuffer(temp->getID(), temp);
+43     
+44     \textcolor{comment}{// only add a main character if we do not have one assigned}
+45     \textcolor{keywordflow}{if}(temp->getObjecType() == gameObjectType::character && !m_mainCharacter)
+46     \{
+47         m_mainCharacter = \textcolor{keyword}{true}; \textcolor{comment}{// flag we have a main char}
+48         this->m_collisionEntities.insert(pair<int, GameObject*>(temp->getID(), temp));
+49     \}
+50     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(temp->getObjecType() == gameObjectType::npc
+51         || temp->getObjecType() == gameObjectType::geometry)
+52     \{
+53         this->m_collisionEntities.insert(pair<int, GameObject*>(temp->getID(), temp));
+54         
+55         \textcolor{comment}{// check if NPC}
+56         \textcolor{keywordflow}{if}(temp->getObjecType() == gameObjectType::npc)
+57         \{
+58             \textcolor{comment}{// store NPC id in shortcut array}
+59             m_npcShortCut.push\_back(temp->getID());
+60 
+61             \textcolor{comment}{// iterate through NPC's}
+62             \textcolor{comment}{// and store the new NPC reference in each of them}
+63             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < m_npcShortCut.size(); ++i)
+64             \{
+65                 NPC* npcShort = ((NPC*)GetCollisionEntity(m_npcShortCut[i]));
+66             
+67                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < m_npcShortCut.size(); ++y)
+68                 \{
+69                     \textcolor{keyword}{auto}& itr = npcShort->m_getAllNPC.find(y);
+70 
+71                     \textcolor{keywordflow}{if}(itr == npcShort->m_getAllNPC.end())
+72                     \{
+73                         \textcolor{comment}{// don't store itself}
+74                         \textcolor{keywordflow}{if}(itr->second != npcShort)
+75                         \{
+76                             npcShort->m_getAllNPC.insert(std::pair<int, NPC*>(y, ((
+      NPC*)GetCollisionEntity(m_npcShortCut[y]))));
+77                         \}
+78                     \}
+79                 \}
+80             \}
+81         \}
+82         \textcolor{keywordflow}{else}
+83         \{
+84             \textcolor{comment}{// iterate through NPC's}
+85             \textcolor{comment}{// and store the new game object reference in each of them}
+86             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < m_npcShortCut.size(); ++i)
+87             \{
+88                 \textcolor{comment}{// store ref to individual npc}
+89                 NPC* npcShort = ((NPC*)GetCollisionEntity(m_npcShortCut[i]));
+90             
+91                 \textcolor{comment}{// iterate through all collidable entities}
+92                 \textcolor{keywordflow}{for}(std::pair<int, GameObject*> collidable : m_collisionEntities)
+93                 \{
+94                     \textcolor{comment}{// search this individual npc for the colidable entity}
+95                     \textcolor{keyword}{auto}& itr = npcShort->m_getAllCollidable.find(collidable.first);
+96 
+97                     \textcolor{comment}{// if it doesn't exist, insert it}
+98                     \textcolor{keywordflow}{if}(itr == npcShort->m_getAllCollidable.end())
+99                     \{
+100                         npcShort->m_getAllCollidable.insert(std::pair<int, GameObject*>(collidable.first, 
+      collidable.second));
+101                     \}
+102                 \}
+103             \}
+104         \}
+105     \}
+106     \textcolor{keywordflow}{else} \textcolor{comment}{// add non-collidable objects to data structure}
+107     \{
+108         this->m_nonCollisionEntities.insert(pair<int, GameObject*>(temp->getID(), temp));
+109     \}
+110 
+111     temp->setTransparency(transparency);
+112     
+113     \textcolor{keywordflow}{return} temp;
+114 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_a270560c764575ba30c7f4e4cf6d8eef4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_a270560c764575ba30c7f4e4cf6d8eef4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{World@{World}!Add\+Skybox@{Add\+Skybox}}
+\index{Add\+Skybox@{Add\+Skybox}!World@{World}}
+\subsubsection[{Add\+Skybox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} World\+::\+Add\+Skybox (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_world_ab0e20ce1067526abf54e934b9bf03497}
+
+\begin{DoxyCode}
+18 \{
+19     \textcolor{keywordflow}{if}(m_skybox == \textcolor{keyword}{nullptr})
+20     \{
+21         std::vector<Affordance> affordances;
+22         std::vector<std::string> traits;
+23         m_skybox = \textcolor{keyword}{static\_cast<}SkyBox*\textcolor{keyword}{>} (m_worldFactory.CreateObject(\textcolor{stringliteral}{"SkyBox"},
+      Vec3(0,0,0), 
+24             0, 0, \textcolor{stringliteral}{""}, \textcolor{stringliteral}{"CubeSky"}, \textcolor{keyword}{false}, 1, 0, affordances, traits));
+25 
+26         m_skybox->SetAttributes(4000);
+27         m_renderingHandle->AddRefToBuffer(m_skybox->getID(), m_skybox);
+28     \}
+29 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_ab0e20ce1067526abf54e934b9bf03497_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_ab0e20ce1067526abf54e934b9bf03497_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{World@{World}!Delete\+Entity@{Delete\+Entity}}
+\index{Delete\+Entity@{Delete\+Entity}!World@{World}}
+\subsubsection[{Delete\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} World\+::\+Delete\+Entity (
+\begin{DoxyParamCaption}
+\item[{int}]{entity\+Id}
+\end{DoxyParamCaption}
+)}\label{class_world_a650c856a03327310a0e28c8c5292d083}
+
+
+Delete\+Entity. 
+
+Deletes an entity in the world by its unique identifier.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & entity identifier \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+169 \{
+170     \textcolor{comment}{// check for removal of main character}
+171     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} entity : m_collisionEntities)
+172     \{
+173         \textcolor{keywordflow}{if}(entity.second->getObjecType() == gameObjectType::character)
+174         \{
+175             m_mainCharacter = \textcolor{keyword}{false};
+176         \}
+177     \}
+178 
+179     m_renderingHandle->EraseRefFromBuffer(entityId);
+180 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_a650c856a03327310a0e28c8c5292d083_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{World@{World}!get\+Collidable\+Entities@{get\+Collidable\+Entities}}
+\index{get\+Collidable\+Entities@{get\+Collidable\+Entities}!World@{World}}
+\subsubsection[{get\+Collidable\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, {\bf Game\+Object}$\ast$$>$ World\+::get\+Collidable\+Entities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_world_a48a929b74d1a307541c3c98b7a8a4910}
+
+\begin{DoxyCode}
+89         \{
+90             \textcolor{keywordflow}{return} m_collisionEntities;
+91         \}
+\end{DoxyCode}
+\index{World@{World}!Get\+Collision\+Entity@{Get\+Collision\+Entity}}
+\index{Get\+Collision\+Entity@{Get\+Collision\+Entity}!World@{World}}
+\subsubsection[{Get\+Collision\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} $\ast$ World\+::\+Get\+Collision\+Entity (
+\begin{DoxyParamCaption}
+\item[{int}]{entity\+Id}
+\end{DoxyParamCaption}
+)}\label{class_world_a98e4b4b5f0836e11dd6b3a78b9f7c3e5}
+
+\begin{DoxyCode}
+139 \{
+140     \textcolor{keywordflow}{return}(this->m_collisionEntities[ID]);
+141 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_a98e4b4b5f0836e11dd6b3a78b9f7c3e5_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{World@{World}!Get\+Main\+Character@{Get\+Main\+Character}}
+\index{Get\+Main\+Character@{Get\+Main\+Character}!World@{World}}
+\subsubsection[{Get\+Main\+Character}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Character} $\ast$ World\+::\+Get\+Main\+Character (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_world_a70750925cdd8568f1f0faf8fd418b36e}
+
+
+get\+Char function 
+
+This returns the \doxyref{Character}{p.}{d7/da7/class_character} pointer for the main\+Character
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Main\+Character -\/ Character$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+149 \{
+150     \textcolor{keywordflow}{if}(m_mainCharacter)
+151     \{
+152         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} entity : m_collisionEntities)
+153         \{
+154             \textcolor{keywordflow}{if}(entity.second->getObjecType() == gameObjectType::character)
+155             \{
+156                 \textcolor{keywordflow}{return}(static\_cast<Character*>(entity.second));
+157             \}
+158         \}
+159 
+160         \textcolor{keywordflow}{return}(\textcolor{keyword}{nullptr});
+161     \}
+162     \textcolor{keywordflow}{else}
+163     \{
+164         \textcolor{keywordflow}{return}(\textcolor{keyword}{nullptr});
+165     \}
+166 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_a70750925cdd8568f1f0faf8fd418b36e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{World@{World}!Get\+No\+Collision\+Entiy@{Get\+No\+Collision\+Entiy}}
+\index{Get\+No\+Collision\+Entiy@{Get\+No\+Collision\+Entiy}!World@{World}}
+\subsubsection[{Get\+No\+Collision\+Entiy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} $\ast$ World\+::\+Get\+No\+Collision\+Entiy (
+\begin{DoxyParamCaption}
+\item[{int}]{entity\+Id}
+\end{DoxyParamCaption}
+)}\label{class_world_a6ce326a669f965afc471a5373cf08140}
+
+\begin{DoxyCode}
+144 \{
+145     \textcolor{keywordflow}{return}(this->m_nonCollisionEntities[ID]);
+146 \}
+\end{DoxyCode}
+\index{World@{World}!get\+Non\+Collidable\+Entities@{get\+Non\+Collidable\+Entities}}
+\index{get\+Non\+Collidable\+Entities@{get\+Non\+Collidable\+Entities}!World@{World}}
+\subsubsection[{get\+Non\+Collidable\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, {\bf Game\+Object}$\ast$$>$ World\+::get\+Non\+Collidable\+Entities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_world_a897650afc2613e8db1c06969123719d1}
+
+\begin{DoxyCode}
+94         \{
+95             \textcolor{keywordflow}{return} m_nonCollisionEntities;
+96         \}
+\end{DoxyCode}
+\index{World@{World}!Instance@{Instance}}
+\index{Instance@{Instance}!World@{World}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World} $\ast$ World\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_world_a1881ce92c156c24c864a8fd079be20c2}
+
+
+Instance. 
+
+Returns a static pointer to the \doxyref{World}{p.}{d3/d21/class_world} object.
+
+\begin{DoxyReturn}{Returns}
+World$\ast$ object. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+4 \{
+5     \textcolor{keyword}{static} World staticWorld;
+6     \textcolor{keywordflow}{return} &staticWorld;
+7 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d3/d21/class_world_a1881ce92c156c24c864a8fd079be20c2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{World@{World}!Update@{Update}}
+\index{Update@{Update}!World@{World}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} World\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)}\label{class_world_ab60b1be08e8bf3c8b6303f9583e1bbb3}
+
+
+update 
+
+This function is called by the \doxyref{Game\+Engine}{p.}{da/da9/class_game_engine} at every frame Calls the update function for every entity. 
+\begin{DoxyCode}
+118 \{
+119     \textcolor{comment}{// collidable entities}
+120     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} entity : m_collisionEntities)
+121     \{
+122         \textcolor{keywordflow}{if}(entity.second != \textcolor{keyword}{nullptr})
+123         \{
+124             entity.second->Update(deltaTime);
+125         \}
+126     \}
+127 
+128     \textcolor{comment}{// non collidable entities}
+129     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} entity : m_nonCollisionEntities)
+130     \{
+131         \textcolor{keywordflow}{if}(entity.second != \textcolor{keyword}{nullptr})
+132         \{
+133             entity.second->Update(deltaTime);
+134         \}
+135     \}
+136 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d21/class_world_ab60b1be08e8bf3c8b6303f9583e1bbb3_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{World@{World}!m\+\_\+collision\+Entities@{m\+\_\+collision\+Entities}}
+\index{m\+\_\+collision\+Entities@{m\+\_\+collision\+Entities}!World@{World}}
+\subsubsection[{m\+\_\+collision\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, {\bf Game\+Object}$\ast$$>$ World\+::m\+\_\+collision\+Entities\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_a9119f4b8d3e0bccbe9689cafc48edf8a}
+\index{World@{World}!m\+\_\+main\+Character@{m\+\_\+main\+Character}}
+\index{m\+\_\+main\+Character@{m\+\_\+main\+Character}!World@{World}}
+\subsubsection[{m\+\_\+main\+Character}]{\setlength{\rightskip}{0pt plus 5cm}bool World\+::m\+\_\+main\+Character\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_aa9d5e116cea885f2d98eea9965aa2a45}
+\index{World@{World}!m\+\_\+non\+Collision\+Entities@{m\+\_\+non\+Collision\+Entities}}
+\index{m\+\_\+non\+Collision\+Entities@{m\+\_\+non\+Collision\+Entities}!World@{World}}
+\subsubsection[{m\+\_\+non\+Collision\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, {\bf Game\+Object}$\ast$$>$ World\+::m\+\_\+non\+Collision\+Entities\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_a3af750f1fb880eb75c19ad585ea74726}
+\index{World@{World}!m\+\_\+npc\+Short\+Cut@{m\+\_\+npc\+Short\+Cut}}
+\index{m\+\_\+npc\+Short\+Cut@{m\+\_\+npc\+Short\+Cut}!World@{World}}
+\subsubsection[{m\+\_\+npc\+Short\+Cut}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ World\+::m\+\_\+npc\+Short\+Cut\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_a90de63310acc1b46454d758ac16538b8}
+\index{World@{World}!m\+\_\+rendering\+Handle@{m\+\_\+rendering\+Handle}}
+\index{m\+\_\+rendering\+Handle@{m\+\_\+rendering\+Handle}!World@{World}}
+\subsubsection[{m\+\_\+rendering\+Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rendering\+Engine}$\ast$ World\+::m\+\_\+rendering\+Handle\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_a9a802e3c4c31dfa7097cd91428e60522}
+\index{World@{World}!m\+\_\+skybox@{m\+\_\+skybox}}
+\index{m\+\_\+skybox@{m\+\_\+skybox}!World@{World}}
+\subsubsection[{m\+\_\+skybox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sky\+Box}$\ast$ World\+::m\+\_\+skybox\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_a74be5fd93d6736704b7c9be38e04dfd7}
+\index{World@{World}!m\+\_\+world\+Factory@{m\+\_\+world\+Factory}}
+\index{m\+\_\+world\+Factory@{m\+\_\+world\+Factory}!World@{World}}
+\subsubsection[{m\+\_\+world\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\+Factory} World\+::m\+\_\+world\+Factory\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_a3c44067679daf80f7cf2f0339d57ca7f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf World.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf World.\+cpp}\end{DoxyCompactItemize}

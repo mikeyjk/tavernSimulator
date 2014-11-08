@@ -1,0 +1,125 @@
+#Sphere: 10, 0, 0, 0, 10.0, normal
+# size x, y, z, pos x, y, z, weight, type, rotx, roty, rotz
+
+#small part need courtyard door
+Box: 5, 100, 25, -288, -5, 120, 999999, static, 0, 0, 0
+#section above the doorway
+Box: 5, 30, 50, -288, 60, 50, 999999, static, 0, 0, 0
+#large section near courtyard and hallway
+Box: 124, 140, 5, -157, -5, 145, 999999, static, 0, 0, 0
+#large wall on courtyard side
+Box: 5, 80, 125, -290, -5, -120, 999999, static, 0, 0, 0
+
+#back door large wall
+Box: 65, 80, 5, 341, -5, 145, 999999, static, 0, 0, 0
+#back door small wall
+Box: 20, 80, 5, 515, -5, 145, 999999, static, 0, 0, 0
+#back door above
+Box: 50, 30, 5, 460, 60, 145, 999999, static, 0, 0, 0
+
+#front side large box
+Box: 70, 80, 29, 37, -5, 121, 999999, static, 0, 0, 0
+#small section near front large box
+Box: 25, 80, 7, 135, -5, 145, 999999, static, 0, 0, 0
+#above door near large box
+Box: 60, 30, 5, 220, 75, 145, 999999, static, 0, 0, 0
+
+#inner large wall near toilets
+Box: 115, 200, 9, 402, -5, -108, 999999, static, 0, 0, 0
+#inner small wall near Toilet(storage)
+Box: 50, 200, 9, 195, -5, -195, 999999, static, 0, 0, 0
+#inner small wall toilet Cubicle(storage)
+Box: 9, 200, 30, 312, -5, -200, 999999, static, 0, 0, 0
+
+
+
+#inner small center of curve
+Box: 30, 80, 9, 230, -5, -88, 999999, static, 0, 0, 0
+#inner small part of curve
+Box: 10, 80, 10, 270, -5, -98, 999999, static, 0, 0, 0
+#inner small part of curve
+Box: 15, 80, 10, 188, -5, -98, 999999, static, 0, 0, 0
+#inner wall connecting to front
+Box: 10, 80, 80, 315, -5, 55, 999999, static, 0, 0, 0
+#inside large box infront of couch
+Box: 55, 80, 60, 35, -5, -170, 999999, static, 0, 0, 0
+#small wall next to fridges
+Box: 7, 60, 28, -140, -5, -210, 999999, static, 0, 0, 0
+#box in corner near fridges
+Box: 17, 60, 28, -265, -5, -210, 999999, static, 0, 0, 0
+#large back wall
+Box: 400, 450, 5, 125, -5, -250, 999999, static, 0, 0, 0
+#far outer wall
+Box: 5, 80, 192, 530, -5, -54, 999999, static, 0, 0, 0
+
+#back End Fence
+Box: 5, 25, 182, 670, -35, 100, 999999, static, 0, 0, 0
+#back End Fence (left)
+Box: 60, 25, 5, 610, -35, -72, 999999, static, 0, 0, 0
+#back End Fence (right)
+Box: 170, 25, 5, 500, -35, 250, 999999, static, -0.4, 0, 0
+#side Right Angle Fence
+Box: 5, 25, 60, 300, -35, 270, 999999, static, -1, 0, 0
+#Side Fence Large(right)
+Box: 320, 25, 5, -50, -35, 260, 999999, static, -0.4, 0, 0
+
+#Top Of Pillars(right)
+Box: 600, 20, 5, -350, 100, 200, 999999, static, -0.4, 0, 0
+#Pillar1(murdochSign)
+Box: 40, 100, 5, 235, -5, 315, 999999, static, -0.4, 0, 0
+#Pillar2
+Box: 15, 100, 5, 35, -5, 275, 999999, static, -0.4, 0, 0
+#Pillar3
+Box: 15, 100, 5, -165, -5, 240, 999999, static, -0.4, 0, 0
+#Pillar4
+Box: 15, 100, 5, -355, -5, 200, 999999, static, -0.4, 0, 0
+#Pillar5
+Box: 15, 100, 5, -555, -5, 162, 999999, static, -0.4, 0, 0
+#Pillar6
+Box: 15, 100, 5, -745, -5, 125, 999999, static, -0.4, 0, 0
+#Pillar7
+Box: 15, 100, 5, -945, -5, 85, 999999, static, -0.4, 0, 0
+
+#Front Stone Wall
+Box: 10, 25, 182, -1015, -35, -50, 999999, static, 0, 0, 0
+#Stone Wall Loop 1
+Box: 10, 25, 70, -995, -35, 180, 999999, static, 0.6, 0, 0
+#Stone Wall Loop 2
+Box: 10, 25, 50, -935, -35, 285, 999999, static, 1.8, 0, 0
+#Stone Wall Loop 3
+Box: 10, 25, 70, -845, -35, 350, 999999, static, 2.5, 0, 0
+#Stone Wall Loop 4
+Box: 10, 25, 50, -720, -35, 400, 999999, static, 3.7, 0, 0
+#Stone Wall Loop 5
+Box: 10, 25, 35, -640, -35, 410, 999999, static, 5.5, 0, 0
+#Stone Wall Loop 6
+Box: 10, 20, 120, -580, -30, 300, 999999, static, -0.6, 0, 0
+
+#courtyard side walls
+Box: 120, 55, 5, -900, -5, -240, 999999, static, 0, 0, 0
+#courtyard side walls(closer to tav)
+Box: 180, 50, 5, -460, -5, -230, 999999, static, 0, 0, 0
+
+#roof
+Box: 550, 5, 300, 150, 87, 0, 999999, static, -0.05, -0.02, -0.25
+
+#Bar
+Box: 100, 10, 18, -175, -27, -102, 999999, static, 0, 0, 0
+Box: 100, 4, 6, -175, -13, -89, 999999, static, 0, 0, 0
+
+#MeshSupport1
+Box: 5, 80, 5, -526, -5, 66, 999999, static, 0, 0, 0
+#MeshSupport2
+Box: 5, 80, 5, -638, -5, 45, 999999, static, 0, 0, 0
+#MeshSupport3
+Box: 5, 80, 5, -726, -5, 25, 999999, static, 0, 0, 0
+#MeshSupport4
+Box: 5, 80, 5, -807, -5, 10, 999999, static, 0, 0, 0
+#MeshSupport5
+Box: 5, 80, 5, -920, -5, -10, 999999, static, 0, 0, 0
+#MeshSupport6
+Box: 5, 80, 5, -640, -5, -170, 999999, static, 0, 0, 0
+#MeshSupport7
+Box: 5, 80, 5, -491, -5, -170, 999999, static, 0, 0, 0
+
+

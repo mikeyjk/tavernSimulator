@@ -1,0 +1,139 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Menu\+System.cpp File Reference}
+\label{_menu_system_8cpp}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Menu\+System.\+cpp@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Menu\+System.\+cpp}}
+{\ttfamily \#include \char`\"{}Menu\+System.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Id\+Generator.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Rendering\+Engine.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Control\+System.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Texture\+Manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}freeglut.\+h\char`\"{}}\\*
+Include dependency graph for Menu\+System.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d3c/_menu_system_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf resume} ()
+\item 
+{\bf void} {\bf showexit} ()
+\item 
+{\bf void} {\bf exit} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Menu\+System.\+cpp@{Menu\+System.\+cpp}!exit@{exit}}
+\index{exit@{exit}!Menu\+System.\+cpp@{Menu\+System.\+cpp}}
+\subsubsection[{exit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_menu_system_8cpp_a358d2e2397ca11ccd17553e3c40e7901}
+
+\begin{DoxyCode}
+119 \{
+120     glutLeaveMainLoop();
+121     glutExit();
+122     exit(0);
+123 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{df/dc8/_menu_system_8cpp_a358d2e2397ca11ccd17553e3c40e7901_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc8/_menu_system_8cpp_a358d2e2397ca11ccd17553e3c40e7901_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System.\+cpp@{Menu\+System.\+cpp}!resume@{resume}}
+\index{resume@{resume}!Menu\+System.\+cpp@{Menu\+System.\+cpp}}
+\subsubsection[{resume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} resume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_menu_system_8cpp_a41de8150eff044a237990c271d57ea27}
+
+\begin{DoxyCode}
+104 \{
+105     MenuSystem::Instance()->switchMenu();
+106     InputEngine::Instance()->switchFixedMouse();
+107     ControlSystem::Instance()->setStatus(GAME_RUN);
+108     MenuSystem::Instance()->getComponent(\textcolor{stringliteral}{"btn1"})->setTexture(\textcolor{stringliteral}{"btn\_rsm"});
+109     ((MenuButton*)MenuSystem::Instance()->getComponent(\textcolor{stringliteral}{"btn1"}))->setDTexture(\textcolor{stringliteral}{"btn\_rsm\_d"});
+110 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc8/_menu_system_8cpp_a41de8150eff044a237990c271d57ea27_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc8/_menu_system_8cpp_a41de8150eff044a237990c271d57ea27_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System.\+cpp@{Menu\+System.\+cpp}!showexit@{showexit}}
+\index{showexit@{showexit}!Menu\+System.\+cpp@{Menu\+System.\+cpp}}
+\subsubsection[{showexit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} showexit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_menu_system_8cpp_aa1fd24f4f2561736e211d8bd8d22b6f2}
+
+\begin{DoxyCode}
+113 \{
+114     ControlSystem::Instance()->setStatus(GAME_EXIT);
+115     MenuSystem::Instance()->MenuDisplay(\textcolor{stringliteral}{"thx"});
+116 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc8/_menu_system_8cpp_aa1fd24f4f2561736e211d8bd8d22b6f2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dc8/_menu_system_8cpp_aa1fd24f4f2561736e211d8bd8d22b6f2_icgraph}
+\end{center}
+\end{figure}
+
+

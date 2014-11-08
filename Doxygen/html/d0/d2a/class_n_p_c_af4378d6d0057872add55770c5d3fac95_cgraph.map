@@ -1,0 +1,6 @@
+<map id="NPC::getLocalAffordances" name="NPC::getLocalAffordances">
+<area shape="rect" id="node2" href="$d3/dde/class_brain.html#a4fca4651b6a078930e2d864ed7429417" title="getNeeds function " alt="" coords="243,5,357,32"/>
+<area shape="rect" id="node3" href="$d0/dd1/class_game_object.html#a0c133927fa016892816a71c40d761681" title="getPosition " alt="" coords="228,56,372,83"/>
+<area shape="rect" id="node4" href="$d3/dde/class_brain.html#ab791115902a7282dbe10a6ef4be92f10" title="getSight function " alt="" coords="246,107,354,133"/>
+<area shape="rect" id="node5" href="$d1/da8/class_personality.html#a90e0410a59a76b1e1be56d7e62ff3975" title="getSight function " alt="" coords="420,107,563,133"/>
+</map>

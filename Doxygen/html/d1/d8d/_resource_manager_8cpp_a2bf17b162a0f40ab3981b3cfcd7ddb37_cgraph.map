@@ -1,0 +1,4 @@
+<map id="addCreatedTexture" name="addCreatedTexture">
+<area shape="rect" id="node2" href="$db/ddf/class_texture_manager.html#abab38cdb8503fde6288cb07330c10dc6" title="Gets the instance of the texture manager. " alt="" coords="193,5,365,32"/>
+<area shape="rect" id="node3" href="$db/ddf/class_texture_manager.html#a61e18b69d7b51941a9a3e9f60a874487" title="Adds a precreated texture to the texture manager, which will become known to the texture manager by t..." alt="" coords="184,57,373,98"/>
+</map>

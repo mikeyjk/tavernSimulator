@@ -1,0 +1,359 @@
+\section{Rendering\+Engine Class Reference}
+\label{class_rendering_engine}\index{Rendering\+Engine@{Rendering\+Engine}}
+
+
+{\ttfamily \#include $<$Rendering\+Engine.\+h$>$}
+
+
+
+Collaboration diagram for Rendering\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d4/d17/class_rendering_engine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Create\+Render\+A\+P\+I} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Create the Render A\+P\+I. \end{DoxyCompactList}\item 
+{\bf I\+\_\+\+Graphic} $\ast$ {\bf Get\+Render\+Handle} ()
+\begin{DoxyCompactList}\small\item\em Get the Handle of \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+P\+I. \end{DoxyCompactList}\item 
+{\bf Camera} $\ast$ {\bf Get\+Camera} ()
+\item 
+{\bf void} {\bf Add\+Ref\+To\+Buffer} (int Id, {\bf I\+\_\+\+Drawable\+Object} $\ast$Ref)
+\item 
+{\bf void} {\bf Erase\+Ref\+From\+Buffer} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Erase the reference of Object to \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Drawing list. \end{DoxyCompactList}\item 
+{\bf void} {\bf Render\+Overlay} (float start\+\_\+x, float start\+\_\+y, float {\bf w}, float {\bf h}, {\bf string} {\bf name})
+\item 
+{\bf void} {\bf Draw\+Model} ({\bf string} Model\+Name, {\bf string} Texture\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation)
+\item 
+{\bf void} {\bf Draw\+Model} ({\bf string} Model\+Name, {\bf string} Texture\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation, {\bf Vec3} {\bf scale})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Rendering\+Engine} $\ast$ {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Rendering\+Engine} ({\bf void})
+\item 
+{\bf $\sim$\+Rendering\+Engine} ({\bf void})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf I\+\_\+\+Graphic} $\ast$ {\bf Handle}
+\item 
+{\bf Redering\+Factory} {\bf A\+P\+I\+Factory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Rendering\+Engine@{Rendering\+Engine}!Rendering\+Engine@{Rendering\+Engine}}
+\index{Rendering\+Engine@{Rendering\+Engine}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Rendering\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Rendering\+Engine\+::\+Rendering\+Engine (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_rendering_engine_a759fadc1e5d0d29cdf9b1e22d5eea3a1}
+
+\begin{DoxyCode}
+12 \{
+13 \}
+\end{DoxyCode}
+\index{Rendering\+Engine@{Rendering\+Engine}!````~Rendering\+Engine@{$\sim$\+Rendering\+Engine}}
+\index{````~Rendering\+Engine@{$\sim$\+Rendering\+Engine}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{$\sim$\+Rendering\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}Rendering\+Engine\+::$\sim$\+Rendering\+Engine (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_rendering_engine_ae41c0aeaafa9956f151ba8cf3315908b}
+
+\begin{DoxyCode}
+17 \{
+18 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Rendering\+Engine@{Rendering\+Engine}!Add\+Ref\+To\+Buffer@{Add\+Ref\+To\+Buffer}}
+\index{Add\+Ref\+To\+Buffer@{Add\+Ref\+To\+Buffer}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Add\+Ref\+To\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Rendering\+Engine\+::\+Add\+Ref\+To\+Buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{Id, }
+\item[{{\bf I\+\_\+\+Drawable\+Object} $\ast$}]{Ref}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_ab971f4507a83b8d09979a251fe8b5d98}
+
+\begin{DoxyCode}
+39 \{
+40     ((OpenGL *)Handle)->AddRefToBuffer(Id, Ref);
+41 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3d/class_rendering_engine_ab971f4507a83b8d09979a251fe8b5d98_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Rendering\+Engine@{Rendering\+Engine}!Create\+Render\+A\+P\+I@{Create\+Render\+A\+P\+I}}
+\index{Create\+Render\+A\+P\+I@{Create\+Render\+A\+P\+I}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Create\+Render\+A\+P\+I}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Rendering\+Engine\+::\+Create\+Render\+A\+P\+I (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_a57d4630472d155ea5226681c6f0b041c}
+
+
+Create the Render A\+P\+I. 
+
+This function decide which A\+P\+I should be used, either \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} or Direct\+X11
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & (either \char`\"{}\+O\+P\char`\"{} or \char`\"{}\+D\+X\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+assign a Render object to Handle 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+27 \{
+28     Handle = APIFactory.CreateRender(name);
+29 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3d/class_rendering_engine_a57d4630472d155ea5226681c6f0b041c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3d/class_rendering_engine_a57d4630472d155ea5226681c6f0b041c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Rendering\+Engine@{Rendering\+Engine}!Draw\+Model@{Draw\+Model}}
+\index{Draw\+Model@{Draw\+Model}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Draw\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Rendering\+Engine\+::\+Draw\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Model\+Name, }
+\item[{{\bf string}}]{Texture\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_ab868d803747532825ec21581af57a3d2}
+
+\begin{DoxyCode}
+55 \{
+56     ((OpenGL *)Handle)->DrawModel(ModelName, TextureName,transparency, transition, rotation);
+57 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{da/d3d/class_rendering_engine_ab868d803747532825ec21581af57a3d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Rendering\+Engine@{Rendering\+Engine}!Draw\+Model@{Draw\+Model}}
+\index{Draw\+Model@{Draw\+Model}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Draw\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Rendering\+Engine\+::\+Draw\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Model\+Name, }
+\item[{{\bf string}}]{Texture\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation, }
+\item[{{\bf Vec3}}]{scale}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_afaf490e6f161ad542c118e6dfc3d5a6d}
+
+\begin{DoxyCode}
+60 \{
+61     ((OpenGL *)Handle)->DrawModel(ModelName, TextureName,transparency, transition, rotation, scale);
+62 \}\end{DoxyCode}
+\index{Rendering\+Engine@{Rendering\+Engine}!Erase\+Ref\+From\+Buffer@{Erase\+Ref\+From\+Buffer}}
+\index{Erase\+Ref\+From\+Buffer@{Erase\+Ref\+From\+Buffer}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Erase\+Ref\+From\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Rendering\+Engine\+::\+Erase\+Ref\+From\+Buffer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{Id}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_a749eda5beb9a109747e05d9ba2eb7e10}
+
+
+Erase the reference of Object to \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Drawing list. 
+
+Erase the pointer of object from internal \doxyref{Rendering}{p.}{d3/d32/class_rendering} buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Remove the pointer into \doxyref{Rendering}{p.}{d3/d32/class_rendering} buff 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+45 \{
+46     ((OpenGL *)Handle)->EraseRefFromBuffer(Id);
+47 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3d/class_rendering_engine_a749eda5beb9a109747e05d9ba2eb7e10_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Rendering\+Engine@{Rendering\+Engine}!Get\+Camera@{Get\+Camera}}
+\index{Get\+Camera@{Get\+Camera}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Get\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera} $\ast$ Rendering\+Engine\+::\+Get\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_a6407931c3d68972fe12b6f51cae28b3b}
+
+\begin{DoxyCode}
+21 \{
+22     \textcolor{keywordflow}{return} ((OpenGL *)Handle)->GetCamera();
+23 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3d/class_rendering_engine_a6407931c3d68972fe12b6f51cae28b3b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Rendering\+Engine@{Rendering\+Engine}!Get\+Render\+Handle@{Get\+Render\+Handle}}
+\index{Get\+Render\+Handle@{Get\+Render\+Handle}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Get\+Render\+Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+\_\+\+Graphic} $\ast$ Rendering\+Engine\+::\+Get\+Render\+Handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_a3541519b4525b18660e07869797c041d}
+
+
+Get the Handle of \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+P\+I. 
+
+This function return the Handle of \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+P\+I
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+return a \doxyref{I\+\_\+\+Graphic}{p.}{d4/dd3/class_i___graphic} Pointer to the \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+Pi 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{keywordflow}{return} Handle;
+35 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3d/class_rendering_engine_a3541519b4525b18660e07869797c041d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Rendering\+Engine@{Rendering\+Engine}!Instance@{Instance}}
+\index{Instance@{Instance}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rendering\+Engine} $\ast$ Rendering\+Engine\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_rendering_engine_a01527fd868d2d0cc73fa63b9ccf131e7}
+
+\begin{DoxyCode}
+6 \{
+7     \textcolor{keyword}{static} RenderingEngine Instance;
+8     \textcolor{keywordflow}{return} &Instance;
+9 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d3d/class_rendering_engine_a01527fd868d2d0cc73fa63b9ccf131e7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Rendering\+Engine@{Rendering\+Engine}!Render\+Overlay@{Render\+Overlay}}
+\index{Render\+Overlay@{Render\+Overlay}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Render\+Overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Rendering\+Engine\+::\+Render\+Overlay (
+\begin{DoxyParamCaption}
+\item[{float}]{start\+\_\+x, }
+\item[{float}]{start\+\_\+y, }
+\item[{float}]{w, }
+\item[{float}]{h, }
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_rendering_engine_ae273b3a5cddb4b49d377aa5c7f48f8e6}
+
+\begin{DoxyCode}
+50 \{
+51     ((OpenGL *)Handle)->RenderOverlay(start\_x, start\_y, w, h, name);
+52 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Rendering\+Engine@{Rendering\+Engine}!A\+P\+I\+Factory@{A\+P\+I\+Factory}}
+\index{A\+P\+I\+Factory@{A\+P\+I\+Factory}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{A\+P\+I\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Redering\+Factory} Rendering\+Engine\+::\+A\+P\+I\+Factory\hspace{0.3cm}{\ttfamily [private]}}\label{class_rendering_engine_a546c4badcb6bb70de6591e389836f350}
+\index{Rendering\+Engine@{Rendering\+Engine}!Handle@{Handle}}
+\index{Handle@{Handle}!Rendering\+Engine@{Rendering\+Engine}}
+\subsubsection[{Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+\_\+\+Graphic}$\ast$ Rendering\+Engine\+::\+Handle\hspace{0.3cm}{\ttfamily [private]}}\label{class_rendering_engine_a97396a897b8b1fe04da89b26dd043dae}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Rendering\+Engine.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Rendering\+Engine.\+cpp}\end{DoxyCompactItemize}

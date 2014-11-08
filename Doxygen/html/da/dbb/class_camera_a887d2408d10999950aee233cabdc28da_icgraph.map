@@ -1,0 +1,7 @@
+<map id="Camera::GetUp" name="Camera::GetUp">
+<area shape="rect" id="node2" href="$d8/d24/class_open_g_l.html#a6414a41910efb2e9942089dfb24b928d" title="Reset OpenGL look at function. " alt="" coords="165,29,320,56"/>
+<area shape="rect" id="node3" href="$d8/d24/class_open_g_l.html#a06c54c33292c0e23b3b8b4f876837cb4" title="Update every frame. " alt="" coords="368,29,487,56"/>
+<area shape="rect" id="node4" href="$d8/d24/class_open_g_l.html#a082a48312c8032be282b49a9d6d7b5cc" title="Initialization OpenGL. " alt="" coords="535,29,629,56"/>
+<area shape="rect" id="node5" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="677,29,808,56"/>
+<area shape="rect" id="node6" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="856,29,907,56"/>
+</map>

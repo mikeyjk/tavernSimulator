@@ -1,0 +1,9 @@
+<map id="GameObject::setAffordances" name="GameObject::setAffordances">
+<area shape="rect" id="node2" href="$d7/da7/class_character.html#a7870aec530f1d006e0f9c1335e9e4495" title="Chracter Constructor. " alt="" coords="243,5,386,32"/>
+<area shape="rect" id="node3" href="$db/d0b/class_geometry.html#aacd2a3c7cfae8a5328ab0469910478f8" title="Geometry Constructor. " alt="" coords="243,56,387,83"/>
+<area shape="rect" id="node4" href="$d0/d2a/class_n_p_c.html#a60bec493b743680f16ea7152cf6d2ddd" title="NPC ctor. " alt="" coords="273,107,357,133"/>
+<area shape="rect" id="node5" href="$d3/d21/class_world.html#a270560c764575ba30c7f4e4cf6d8eef4" title="addEntity function " alt="" coords="254,157,375,184"/>
+<area shape="rect" id="node6" href="$da/da9/class_game_engine.html#a6ac03e07bd33b978dda30e0ad2a95c0e" title="GameEngine::loadAssets" alt="" coords="435,157,605,184"/>
+<area shape="rect" id="node7" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="653,157,784,184"/>
+<area shape="rect" id="node8" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="832,157,883,184"/>
+</map>

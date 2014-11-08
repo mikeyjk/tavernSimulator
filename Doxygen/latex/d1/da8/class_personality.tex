@@ -1,0 +1,1830 @@
+\section{Personality Class Reference}
+\label{class_personality}\index{Personality@{Personality}}
+
+
+This class is the N\+P\+Cs personality, it controlls the N\+P\+Cs attributes, and derives its needs \doxyref{Physical}{p.}{de/d7c/struct_physical} members of the Human Value struct are its attributes (strength, agility, sight, stomach and health)  
+
+
+
+
+{\ttfamily \#include $<$Personality.\+h$>$}
+
+
+
+Collaboration diagram for Personality\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dd/deb/class_personality__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Personality} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Personality}{p.}{d1/da8/class_personality} Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Personality} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Personality}{p.}{d1/da8/class_personality} Destructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update Function. \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Fear} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em add\+Fear function \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Boredom} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em add\+Boredom function \end{DoxyCompactList}\item 
+bool {\bf External\+Stimuli} ({\bf Tag} {\bf name}, float {\bf f}, float tox=0)
+\item 
+{\bf void} {\bf reduce\+Hunger} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Hunger function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Thirst} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Thirst function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Tired} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Tired function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Bladder} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Bladder function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Toxication} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Toxication function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Talk} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Talk function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Boredom} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Boredom function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Curiosity} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Curiosity function \end{DoxyCompactList}\item 
+{\bf void} {\bf reduce\+Fear} (float {\bf f})
+\begin{DoxyCompactList}\small\item\em reduce\+Fear function \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Trait} ({\bf std\+::string} key)
+\begin{DoxyCompactList}\small\item\em add\+Trait function \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf Tag} $>$ {\bf get\+Needs} ()
+\begin{DoxyCompactList}\small\item\em just a vector of tag like items probably change it to Tag \end{DoxyCompactList}\item 
+{\bf void} {\bf give\+Hud\+Data} ()
+\begin{DoxyCompactList}\small\item\em give\+Hud\+Data function \end{DoxyCompactList}\item 
+{\bf void} {\bf give\+Hud\+More\+Data} (int npcid, {\bf std\+::string} state, std\+::vector$<$ {\bf std\+::string} $>$ needs, std\+::vector$<$ int $>$ affordable)
+\begin{DoxyCompactList}\small\item\em give\+Hud\+More\+Data function \end{DoxyCompactList}\item 
+float {\bf get\+Sight} ()
+\begin{DoxyCompactList}\small\item\em get\+Sight function \end{DoxyCompactList}\item 
+float {\bf get\+Speed} ()
+\begin{DoxyCompactList}\small\item\em get\+Speed function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf add\+Trait} ({\bf st\+Trait} Tr)
+\begin{DoxyCompactList}\small\item\em add\+Trait function \end{DoxyCompactList}\item 
+bool {\bf check\+Hunger} ()
+\begin{DoxyCompactList}\small\item\em check functions \end{DoxyCompactList}\item 
+bool {\bf check\+Thirst} ()
+\item 
+bool {\bf check\+Tired} ()
+\item 
+bool {\bf check\+Bladder} ()
+\item 
+bool {\bf check\+Toxication} ()
+\item 
+bool {\bf check\+Fear} ()
+\item 
+bool {\bf check\+Boredom} ()
+\item 
+bool {\bf check\+Talk} ()
+\item 
+{\bf void} {\bf calculate\+Strength} ()
+\begin{DoxyCompactList}\small\item\em calculate\+Strength function \end{DoxyCompactList}\item 
+{\bf void} {\bf calculate\+Agility} ()
+\begin{DoxyCompactList}\small\item\em calculate\+Agility function \end{DoxyCompactList}\item 
+{\bf void} {\bf calculate\+Sight} ()
+\begin{DoxyCompactList}\small\item\em calculate\+Sight function \end{DoxyCompactList}\item 
+float {\bf determine\+Emotion} ()
+\begin{DoxyCompactList}\small\item\em determine\+Emotion function \end{DoxyCompactList}\item 
+{\bf en\+Emotion} {\bf calc\+En\+Emotion} ()
+\begin{DoxyCompactList}\small\item\em calc\+En\+Emotion function \end{DoxyCompactList}\item 
+{\bf void} {\bf print\+Values} ()
+\begin{DoxyCompactList}\small\item\em Cosmetic function for debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Human\+Values} {\bf H\+V\+Threshold}
+\begin{DoxyCompactList}\small\item\em This is what will be compared against for determining when a character needs something. \end{DoxyCompactList}\item 
+{\bf Human\+Values} {\bf H\+V\+Dynamics}
+\begin{DoxyCompactList}\small\item\em Personalities Live values. \end{DoxyCompactList}\item 
+{\bf en\+Emotion} {\bf Emotion}
+\begin{DoxyCompactList}\small\item\em Personalities current emotional level. \end{DoxyCompactList}\item 
+double {\bf d\+Time}
+\begin{DoxyCompactList}\small\item\em timer for incrementing live values \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf st\+Trait} $>$ {\bf my\+Traits}
+\item 
+float {\bf Bladder\+Mod}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is the N\+P\+Cs personality, it controlls the N\+P\+Cs attributes, and derives its needs \doxyref{Physical}{p.}{de/d7c/struct_physical} members of the Human Value struct are its attributes (strength, agility, sight, stomach and health) 
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]\+: Stomach and Health are currently un-\/used, as are Fear and Memory \begin{DoxyAuthor}{Author}
+Karl 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/10/2014 
+\end{DoxyDate}
+\end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Personality@{Personality}!Personality@{Personality}}
+\index{Personality@{Personality}!Personality@{Personality}}
+\subsubsection[{Personality}]{\setlength{\rightskip}{0pt plus 5cm}Personality\+::\+Personality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_personality_a5b8be96c7e8779e31c08395e2392cdd9}
+
+
+\doxyref{Personality}{p.}{d1/da8/class_personality} Constructor. 
+
+This is the basic Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+6 \{
+7     \textcolor{comment}{//Init of thresholds}
+8     HVThreshold.initHumanValues(&HVThreshold, 40);
+9     HVDynamics.initHumanValues(&HVDynamics, 25);
+10     HVDynamics.Phys.Agile = HVThreshold.Phys.Agile;
+11     HVDynamics.Phys.Sight = HVThreshold.Phys.Sight;
+12     HVDynamics.Phys.Stomach = HVThreshold.Phys.Stomach;
+13     HVDynamics.Phys.Strength = HVThreshold.Phys.Strength;
+14     HVDynamics.Phys.Health = HVThreshold.Phys.Health;
+15     BladderMod = 1;
+16 
+17     calculateStrength();
+18     calculateAgility();
+19     calculateSight();
+20     determineEmotion();
+21     Emotion = calcEnEmotion();
+22 
+23     dTime = 0;
+24 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a5b8be96c7e8779e31c08395e2392cdd9_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!````~Personality@{$\sim$\+Personality}}
+\index{````~Personality@{$\sim$\+Personality}!Personality@{Personality}}
+\subsubsection[{$\sim$\+Personality}]{\setlength{\rightskip}{0pt plus 5cm}Personality\+::$\sim$\+Personality (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_personality_affcaa4bf17a7cbe2f9507b2ad1705d8f}
+
+
+\doxyref{Personality}{p.}{d1/da8/class_personality} Destructor. 
+
+This is the basic Destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+40 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Personality@{Personality}!add\+Boredom@{add\+Boredom}}
+\index{add\+Boredom@{add\+Boredom}!Personality@{Personality}}
+\subsubsection[{add\+Boredom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::add\+Boredom (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_acc711863d73e8a01a693c24758660e99}
+
+
+add\+Boredom function 
+
+boredom is sent in from the brain
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+boredom is increased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+257 \{
+258     HVDynamics.Ment.Boredom += f;
+259 \}
+\end{DoxyCode}
+\index{Personality@{Personality}!add\+Fear@{add\+Fear}}
+\index{add\+Fear@{add\+Fear}!Personality@{Personality}}
+\subsubsection[{add\+Fear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::add\+Fear (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_a279d11e993a3bd8da84c5bd5858ec99b}
+
+
+add\+Fear function 
+
+fear is sent in from the brain
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+fear is increased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+253 \{
+254     HVDynamics.Ment.Fear += f;
+255 \}
+\end{DoxyCode}
+\index{Personality@{Personality}!add\+Trait@{add\+Trait}}
+\index{add\+Trait@{add\+Trait}!Personality@{Personality}}
+\subsubsection[{add\+Trait}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::add\+Trait (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{key}
+\end{DoxyParamCaption}
+)}\label{class_personality_af8a1a0fe59cc045db86828acd6ec69fc}
+
+
+add\+Trait function 
+
+\doxyref{Traits}{p.}{d5/de9/class_traits} are searched for in the trait map If there A\+R\+E correct traits, it adds it to the H\+V\+Threshold
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+calls the add\+Trait function W\+I\+T\+H the correct trait 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+28 \{
+29     stTrait tr = Traits::Instance()->getTrait(key);
+30     \textcolor{keywordflow}{if}(tr.name != \textcolor{stringliteral}{"empty"})
+31     \{
+32         addTrait(tr);
+33     \}
+34 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{d1/da8/class_personality_af8a1a0fe59cc045db86828acd6ec69fc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_af8a1a0fe59cc045db86828acd6ec69fc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!add\+Trait@{add\+Trait}}
+\index{add\+Trait@{add\+Trait}!Personality@{Personality}}
+\subsubsection[{add\+Trait}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::add\+Trait (
+\begin{DoxyParamCaption}
+\item[{{\bf st\+Trait}}]{Tr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a50981fc3e9b20778bdc080b27753a542}
+
+
+add\+Trait function 
+
+internal add\+Trait, called by add\+Trait(key) to actually add the values
+
+
+\begin{DoxyParams}{Parameters}
+{\em Tr} & \doxyref{st\+Trait}{p.}{d1/d8e/structst_trait} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+adds the trait values to H\+V\+Threshold 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+38 \{
+39     HVThreshold.Ment.Boredom += Tr.HV.Ment.Boredom;
+40     HVThreshold.Ment.Curiosity += Tr.HV.Ment.Curiosity;
+41     HVThreshold.Ment.Fear += Tr.HV.Ment.Fear;
+42     HVThreshold.Ment.Memory += Tr.HV.Ment.Memory;
+43     HVThreshold.Ment.Talk += Tr.HV.Ment.Talk;
+44 
+45     HVThreshold.Phys.Agile += Tr.HV.Phys.Agile;
+46     HVThreshold.Phys.Sight += Tr.HV.Phys.Sight;
+47     HVThreshold.Phys.Stomach += Tr.HV.Phys.Stomach;
+48     HVThreshold.Phys.Strength += Tr.HV.Phys.Strength;
+49     HVThreshold.Phys.Health += Tr.HV.Phys.Health;
+50 
+51     HVThreshold.Vit.Bladder += Tr.HV.Vit.Bladder;
+52     HVThreshold.Vit.Hunger += Tr.HV.Vit.Hunger;
+53     HVThreshold.Vit.Thirst += Tr.HV.Vit.Thirst;
+54     HVThreshold.Vit.Tiredness += Tr.HV.Vit.Tiredness;
+55     HVThreshold.Vit.Toxication += Tr.HV.Vit.Toxication;
+56     myTraits.push\_back(Tr);
+57 
+58     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+59 \}
+\end{DoxyCode}
+\index{Personality@{Personality}!calc\+En\+Emotion@{calc\+En\+Emotion}}
+\index{calc\+En\+Emotion@{calc\+En\+Emotion}!Personality@{Personality}}
+\subsubsection[{calc\+En\+Emotion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf en\+Emotion} Personality\+::calc\+En\+Emotion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_aba00045715f9e7f59cd43966524cf8af}
+
+
+calc\+En\+Emotion function 
+
+This calculates out the en\+Emotion for the brain to use.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float -\/ emotion\+Value 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+calculates the emotion level 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+374 \{
+375     \textcolor{keywordtype}{float} posRange = HVThreshold.Ment.Emotion / 4;
+376     \textcolor{keywordtype}{float} negRange = (80 - HVThreshold.Ment.Emotion) / 4;
+377 
+378     \textcolor{keywordtype}{float} currEmotion = HVDynamics.Ment.Emotion;
+379     \textcolor{keywordtype}{float} midPoint = HVThreshold.Ment.Emotion;
+380 
+381     \textcolor{comment}{//positive range}
+382     \textcolor{keywordflow}{if}(currEmotion >= 0 && currEmotion < posRange)
+383     \{
+384         \textcolor{keywordflow}{return} Esctatic;
+385     \}
+386     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion >= posRange && currEmotion < 2 * posRange)
+387     \{
+388         \textcolor{keywordflow}{return} Joy;
+389     \}
+390     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion >= 2*posRange && currEmotion < 3 * posRange)
+391     \{
+392         \textcolor{keywordflow}{return} Happy;
+393     \}
+394     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion >= 3*posRange && currEmotion < 4 * posRange)
+395     \{
+396         \textcolor{keywordflow}{return} Fine;
+397     \}
+398 
+399     \textcolor{comment}{//SMACK BANG IN THE MIDDLE}
+400     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion = midPoint)
+401     \{
+402         \textcolor{keywordflow}{return} Complacent;
+403     \}
+404 
+405     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion >= midPoint && currEmotion < midPoint + negRange)
+406     \{
+407         \textcolor{keywordflow}{return} Sad;
+408     \}
+409     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion >= midPoint + negRange && currEmotion < midPoint + (2*negRange))
+410     \{
+411         \textcolor{keywordflow}{return} Desolate;
+412     \}
+413     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion >= midPoint + (2*negRange) && currEmotion < midPoint + (3*negRange))
+414     \{
+415         \textcolor{keywordflow}{return} Angry;
+416     \}
+417     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(currEmotion >= midPoint + (3*negRange) && currEmotion < midPoint + (4*negRange))
+418     \{
+419         \textcolor{keywordflow}{return} Rage;
+420     \}
+421     \textcolor{keywordflow}{else}
+422         \textcolor{keywordflow}{return} noEmotion;
+423 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_aba00045715f9e7f59cd43966524cf8af_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!calculate\+Agility@{calculate\+Agility}}
+\index{calculate\+Agility@{calculate\+Agility}!Personality@{Personality}}
+\subsubsection[{calculate\+Agility}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::calculate\+Agility (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_ae65f8e016dc409d5b393507ed748fc19}
+
+
+calculate\+Agility function 
+
+Agility is calculated by adding a combination of values calculated out to provide a \% value
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+calculates the dynamic agility value 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+319 \{
+320     \textcolor{comment}{//Agility is determined by hunger and Tiredness. The hungrier and Tireder the NPC is, the slower they
+       will be.}
+321     HVDynamics.Phys.Agile = HVThreshold.Phys.Agile - (HVThreshold.Phys.Agile * (((
+      HVDynamics.Vit.Hunger + HVDynamics.Vit.Tiredness) /2) / 100));
+322 
+323     \textcolor{comment}{//if intoxicated then update agility again}
+324     \textcolor{keywordflow}{if}(HVDynamics.Vit.Toxication > 20)
+325     \{\textcolor{comment}{//if the AI is beginning to get intoxicated they will lose agility more rapidly (speed and dodging) }
+326         HVDynamics.Phys.Agile = HVThreshold.Phys.Agile - (HVThreshold.Phys.Agile * (((
+      HVDynamics.Vit.Hunger + HVDynamics.Vit.Toxication + HVDynamics.Vit.Tiredness)/3)/100));
+327     \}
+328 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_ae65f8e016dc409d5b393507ed748fc19_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!calculate\+Sight@{calculate\+Sight}}
+\index{calculate\+Sight@{calculate\+Sight}!Personality@{Personality}}
+\subsubsection[{calculate\+Sight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::calculate\+Sight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a2cece681a197bba683f3defe5f326cc3}
+
+
+calculate\+Sight function 
+
+Sight is calculated by adding a combination of values calculated out to provide a \% value
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+calculates the dynamic sight value 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+330 \{
+331     \textcolor{comment}{//Sight is determined by toxication and tiredness. The drunker and sleepier the NPC is, the less sight
+       range they will have.}
+332     HVDynamics.Phys.Sight = HVThreshold.Phys.Sight - (HVThreshold.Phys.Sight * ( (
+      HVDynamics.Vit.Tiredness + HVDynamics.Vit.Toxication)/2 ) /100 );
+333 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a2cece681a197bba683f3defe5f326cc3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!calculate\+Strength@{calculate\+Strength}}
+\index{calculate\+Strength@{calculate\+Strength}!Personality@{Personality}}
+\subsubsection[{calculate\+Strength}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::calculate\+Strength (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_ad0083bfdeffeb24d2296fdce6f61b780}
+
+
+calculate\+Strength function 
+
+Strength is calculated by adding a combination of values calculated out to provide a \% value
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+calculates the dynamic strength value 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+314 \{
+315     \textcolor{comment}{//Strength is determined by hunger and thirst. The hungrier and thirstier the NPC is, the weaker they
+       will be.}
+316     HVDynamics.Phys.Strength = HVThreshold.Phys.Strength - (HVThreshold.Phys.
+      Strength * (((HVDynamics.Vit.Hunger + HVDynamics.Vit.Thirst)/2)/100));
+317 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_ad0083bfdeffeb24d2296fdce6f61b780_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Bladder@{check\+Bladder}}
+\index{check\+Bladder@{check\+Bladder}!Personality@{Personality}}
+\subsubsection[{check\+Bladder}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Bladder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_aaecd6894f726659adfe177eebd604a46}
+
+\begin{DoxyCode}
+157 \{
+158     \textcolor{keywordflow}{if}(HVDynamics.Vit.Bladder > HVThreshold.Vit.Bladder)
+159     \{
+160         std::cout << \textcolor{stringliteral}{"WHERE IS A TOILET!!"} << std::endl;
+161         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+162     \}
+163     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+164 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_aaecd6894f726659adfe177eebd604a46_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Boredom@{check\+Boredom}}
+\index{check\+Boredom@{check\+Boredom}!Personality@{Personality}}
+\subsubsection[{check\+Boredom}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Boredom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a24a63bbff300be0896df66011117a7ba}
+
+\begin{DoxyCode}
+184 \{
+185     \textcolor{keywordflow}{if}(HVDynamics.Ment.Boredom > HVThreshold.Ment.Boredom)
+186     \{
+187         std::cout << \textcolor{stringliteral}{"IM BORED!!!!"} << std::endl;
+188         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+189     \}
+190     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+191 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a24a63bbff300be0896df66011117a7ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Fear@{check\+Fear}}
+\index{check\+Fear@{check\+Fear}!Personality@{Personality}}
+\subsubsection[{check\+Fear}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Fear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_acd787ed90f8024310acf91c7e35b1e7f}
+
+\begin{DoxyCode}
+175 \{
+176     \textcolor{keywordflow}{if}(HVDynamics.Ment.Fear > HVThreshold.Ment.Fear)
+177     \{
+178         std::cout << \textcolor{stringliteral}{"IM SCARED!!!!"} << std::endl;
+179         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+180     \}
+181     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+182 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_acd787ed90f8024310acf91c7e35b1e7f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Hunger@{check\+Hunger}}
+\index{check\+Hunger@{check\+Hunger}!Personality@{Personality}}
+\subsubsection[{check\+Hunger}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Hunger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a42cfac76ab7aee99f26d0c3e4bf99584}
+
+
+check functions 
+
+all functions just check thier name sake if thier dynamic has passed the threshold it returns true, else it returns false
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+nil 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+130 \{
+131     \textcolor{keywordflow}{if}(HVDynamics.Vit.Hunger > HVThreshold.Vit.Hunger)
+132     \{
+133         std::cout << \textcolor{stringliteral}{"IM HUNGRY!!!"} << std::endl;
+134         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+135     \}
+136     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+137 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a42cfac76ab7aee99f26d0c3e4bf99584_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Talk@{check\+Talk}}
+\index{check\+Talk@{check\+Talk}!Personality@{Personality}}
+\subsubsection[{check\+Talk}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Talk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a9535e2492ee5edca76f5e80f9f3dfd2b}
+
+\begin{DoxyCode}
+193 \{
+194     \textcolor{keywordflow}{if}(HVDynamics.Ment.Talk > HVThreshold.Ment.Talk)
+195     \{
+196         std::cout << \textcolor{stringliteral}{"IM NEED TO TALK!!!!"} << std::endl;
+197         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+198     \}
+199     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+200 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a9535e2492ee5edca76f5e80f9f3dfd2b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Thirst@{check\+Thirst}}
+\index{check\+Thirst@{check\+Thirst}!Personality@{Personality}}
+\subsubsection[{check\+Thirst}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Thirst (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a83429669148e7abbfd45b07a41e0ed39}
+
+\begin{DoxyCode}
+139 \{
+140     \textcolor{keywordflow}{if}(HVDynamics.Vit.Thirst > HVThreshold.Vit.Thirst)
+141     \{
+142         std::cout << \textcolor{stringliteral}{"IM THIRSTY!!!"} << std::endl;
+143         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+144     \}
+145     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+146 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a83429669148e7abbfd45b07a41e0ed39_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Tired@{check\+Tired}}
+\index{check\+Tired@{check\+Tired}!Personality@{Personality}}
+\subsubsection[{check\+Tired}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Tired (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a66916a6c7c6278d270ca1f192aa05bc3}
+
+\begin{DoxyCode}
+148 \{
+149     \textcolor{keywordflow}{if}(HVDynamics.Vit.Tiredness > HVThreshold.Vit.Tiredness)
+150     \{
+151         std::cout << \textcolor{stringliteral}{"IM SLEEPY!!!"} << std::endl;
+152         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+153     \}
+154     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+155 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a66916a6c7c6278d270ca1f192aa05bc3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!check\+Toxication@{check\+Toxication}}
+\index{check\+Toxication@{check\+Toxication}!Personality@{Personality}}
+\subsubsection[{check\+Toxication}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::check\+Toxication (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_ae8504ac35b9f9931fa30073a664cde45}
+
+\begin{DoxyCode}
+166 \{
+167     \textcolor{keywordflow}{if}(HVDynamics.Vit.Toxication > HVThreshold.Vit.Toxication)
+168     \{
+169         std::cout << \textcolor{stringliteral}{"IM DRUNK!!!!"} << std::endl;
+170         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+171     \}
+172     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+173 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_ae8504ac35b9f9931fa30073a664cde45_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!determine\+Emotion@{determine\+Emotion}}
+\index{determine\+Emotion@{determine\+Emotion}!Personality@{Personality}}
+\subsubsection[{determine\+Emotion}]{\setlength{\rightskip}{0pt plus 5cm}float Personality\+::determine\+Emotion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a3960477359992c51ac70f5389fccfd5b}
+
+
+determine\+Emotion function 
+
+T\+His function returns a numberical value that represents the current anger level it is purely derived from the amount of thresholds that have been passed $\ast$ 10
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float -\/ emotion\+Value 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+calculates the emotion level 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+335 \{
+336     \textcolor{keywordtype}{int} count = 0;
+337     \textcolor{keywordflow}{if}(checkHunger())
+338     \{
+339         count++;
+340     \}
+341     \textcolor{keywordflow}{if}(checkThirst())
+342     \{
+343         count++;
+344     \}
+345     \textcolor{keywordflow}{if}(checkBladder())
+346     \{
+347         count++;
+348     \}
+349     \textcolor{keywordflow}{if}(checkTired())
+350     \{
+351         count++;
+352     \}
+353     \textcolor{keywordflow}{if}(checkFear())
+354     \{
+355         count++;
+356     \}
+357     \textcolor{keywordflow}{if}(checkBoredom())
+358     \{
+359         count++;
+360     \}
+361     \textcolor{keywordflow}{if}(checkTalk())
+362     \{
+363         count++;
+364     \}
+365     \textcolor{keywordflow}{if}(checkToxication())
+366     \{
+367         count++;
+368     \}
+369 
+370     HVDynamics.Ment.Emotion = count * 10;
+371     \textcolor{keywordflow}{return} HVDynamics.Ment.Emotion;
+372 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a3960477359992c51ac70f5389fccfd5b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a3960477359992c51ac70f5389fccfd5b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!External\+Stimuli@{External\+Stimuli}}
+\index{External\+Stimuli@{External\+Stimuli}!Personality@{Personality}}
+\subsubsection[{External\+Stimuli}]{\setlength{\rightskip}{0pt plus 5cm}bool Personality\+::\+External\+Stimuli (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag}}]{name, }
+\item[{float}]{f, }
+\item[{float}]{tox = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_personality_aa4f4f3cc5e7e3cd3c6a099ffef50baab}
+
+\begin{DoxyCode}
+207 \{
+208     \textcolor{keywordflow}{if}(f < 1.0 && f > 0.0)
+209     \{
+210         f = f * 100;
+211     \}
+212 
+213     \textcolor{keywordflow}{if}(tox < 1.0 && tox > 0.0)
+214     \{
+215         tox = tox * 100;
+216     \}
+217 
+218     \textcolor{keywordflow}{switch}(name)
+219     \{
+220     \textcolor{keywordflow}{case} eat:
+221         reduceHunger(f);
+222         reduceBoredom(10);
+223         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+224         \textcolor{keywordflow}{break};
+225     \textcolor{keywordflow}{case} drink:
+226         reduceThirst(f);
+227         reduceBoredom(10);
+228         reduceToxication(-tox);
+229         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+230         \textcolor{keywordflow}{break};
+231     \textcolor{keywordflow}{case} toilet:
+232         reduceBladder(f);
+233         reduceBoredom(5);
+234         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+235         \textcolor{keywordflow}{break};
+236     \textcolor{keywordflow}{case} sleep:
+237         reduceTired(f);
+238         reduceBoredom(5);
+239         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+240         \textcolor{keywordflow}{break};
+241     \textcolor{keywordflow}{case} talk:
+242         reduceTalk(f);
+243         reduceBoredom(15);
+244         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+245         \textcolor{keywordflow}{break};
+246     \textcolor{keywordflow}{default}:
+247         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+248         \textcolor{keywordflow}{break};
+249     \}
+250 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_aa4f4f3cc5e7e3cd3c6a099ffef50baab_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_aa4f4f3cc5e7e3cd3c6a099ffef50baab_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!get\+Needs@{get\+Needs}}
+\index{get\+Needs@{get\+Needs}!Personality@{Personality}}
+\subsubsection[{get\+Needs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Tag} $>$ Personality\+::get\+Needs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_personality_a25fde6b3143753a04d53e9c97dde6401}
+
+
+just a vector of tag like items probably change it to Tag 
+
+get\+Needs function
+
+returns all the needs that the \doxyref{Personality}{p.}{d1/da8/class_personality} has from the dynamics/threshold
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Tag$>$ 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns all the \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} needs 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+429 \{
+430     std::vector<Tag> needs;
+431 
+432     \textcolor{comment}{// DEBUG: TEST AFFORDANCE}
+433     \textcolor{comment}{//needs.push\_back(Tag::push);}
+434 
+435     \textcolor{keywordflow}{if}(HVDynamics.Vit.Hunger > HVThreshold.Vit.Hunger)
+436     \{
+437         needs.push\_back(Tag::eat);
+438     \}
+439 
+440     \textcolor{keywordflow}{if}(HVDynamics.Vit.Thirst > HVThreshold.Vit.Thirst)
+441     \{
+442         needs.push\_back(Tag::drink);
+443     \}
+444 
+445     \textcolor{keywordflow}{if}(HVDynamics.Vit.Tiredness > HVThreshold.Vit.Tiredness)
+446     \{
+447         needs.push\_back(Tag::sleep);
+448     \}
+449 
+450     \textcolor{keywordflow}{if}(HVDynamics.Vit.Bladder > HVThreshold.Vit.Bladder)
+451     \{
+452         needs.push\_back(Tag::toilet);
+453     \}
+454 
+455     \textcolor{keywordflow}{if}(HVDynamics.Vit.Toxication > HVThreshold.Vit.Toxication)
+456     \{
+457         needs.push\_back(Tag::toilet);
+458     \}
+459 
+460     \textcolor{keywordflow}{if}(HVDynamics.Ment.Boredom > HVThreshold.Ment.Boredom )
+461     \{
+462         needs.push\_back(Tag::wander);
+463     \}
+464 
+465     \textcolor{keywordflow}{if}(HVDynamics.Ment.Talk > HVThreshold.Ment.Talk )
+466     \{
+467         needs.push\_back(Tag::talk);
+468     \}
+469 
+470     \textcolor{keywordflow}{if}(HVDynamics.Ment.Curiosity > HVThreshold.Ment.Curiosity )
+471     \{
+472     \}
+473 
+474     \textcolor{keywordflow}{return} needs;
+475 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a25fde6b3143753a04d53e9c97dde6401_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!get\+Sight@{get\+Sight}}
+\index{get\+Sight@{get\+Sight}!Personality@{Personality}}
+\subsubsection[{get\+Sight}]{\setlength{\rightskip}{0pt plus 5cm}float Personality\+::get\+Sight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_personality_a90e0410a59a76b1e1be56d7e62ff3975}
+
+
+get\+Sight function 
+
+This returns the H\+V\+Dynamics sight value
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+V\+Dynamics.\+phys.\+sight -\/ float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns sight value 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+478 \{
+479     \textcolor{keywordflow}{return}(HVDynamics.Phys.Sight);
+480 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a90e0410a59a76b1e1be56d7e62ff3975_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!Personality@{Personality}}
+\subsubsection[{get\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Personality\+::get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_personality_a3006ef7e684309c118ea3013eee38249}
+
+
+get\+Speed function 
+
+This returns the H\+V\+Dynamics speed value
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\+V\+Dynamics.\+phys.\+agility -\/ float 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns speed value 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+483 \{
+484     \textcolor{keywordflow}{return} HVDynamics.Phys.Agile;
+485 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a3006ef7e684309c118ea3013eee38249_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!give\+Hud\+Data@{give\+Hud\+Data}}
+\index{give\+Hud\+Data@{give\+Hud\+Data}!Personality@{Personality}}
+\subsubsection[{give\+Hud\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::give\+Hud\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_personality_afee72a4d6c673003bcc450cb13545bef}
+
+
+give\+Hud\+Data function 
+
+This functions just calls the control\+System\+::\+Instance() and gives the hud the required data for the overlay
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+gives hud data 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+488 \{
+489     ControlSystem::Instance()->hud.giveHudHVData(&HVDynamics, &HVThreshold, 
+      myTraits, &Emotion);
+490 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_afee72a4d6c673003bcc450cb13545bef_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_afee72a4d6c673003bcc450cb13545bef_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!give\+Hud\+More\+Data@{give\+Hud\+More\+Data}}
+\index{give\+Hud\+More\+Data@{give\+Hud\+More\+Data}!Personality@{Personality}}
+\subsubsection[{give\+Hud\+More\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::give\+Hud\+More\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{npcid, }
+\item[{{\bf std\+::string}}]{state, }
+\item[{std\+::vector$<$ {\bf std\+::string} $>$}]{needs, }
+\item[{std\+::vector$<$ int $>$}]{affordable}
+\end{DoxyParamCaption}
+)}\label{class_personality_adaf5627e1a67b5d93c3281fdf957bd0b}
+
+
+give\+Hud\+More\+Data function 
+
+This functions just calls the control\+System\+::\+Instance() and gives the hud the required data for the overlay Gives debug data because \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} navigation isnt working
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & npcid, std\+::string state, std\+::vector$<$std\+::string$>$ needs, std\+::vector$<$int$>$ affordable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+gives hud data 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+493 \{
+494     ControlSystem::Instance()->hud.giveHudNPCData(npcid, state, needs, affordable);
+495 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_adaf5627e1a67b5d93c3281fdf957bd0b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_adaf5627e1a67b5d93c3281fdf957bd0b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!print\+Values@{print\+Values}}
+\index{print\+Values@{print\+Values}!Personality@{Personality}}
+\subsubsection[{print\+Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::print\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_af5d0d18b9e14eb01b300cde616512060}
+
+
+Cosmetic function for debugging. 
+
+
+\begin{DoxyCode}
+120 \{
+121     std::cout   << \textcolor{stringliteral}{"Hunger: "} << HVDynamics.Vit.Hunger << \textcolor{stringliteral}{"/"} << HVThreshold.Vit.
+      Hunger 
+122                 <<\textcolor{stringliteral}{" --  Thirst: "}<< HVDynamics.Vit.Thirst << \textcolor{stringliteral}{"/"} << HVThreshold.
+      Vit.Thirst 
+123                 <<\textcolor{stringliteral}{" --  Tired: "}<< HVDynamics.Vit.Tiredness << \textcolor{stringliteral}{"/"} << 
+      HVThreshold.Vit.Tiredness 
+124                 <<\textcolor{stringliteral}{" --  Strength: "}<< HVDynamics.Phys.Strength << \textcolor{stringliteral}{"/"} << 
+      HVThreshold.Phys.Strength
+125                 <<\textcolor{stringliteral}{" --  Agility: "}<< HVDynamics.Phys.Agile << \textcolor{stringliteral}{"/"} << HVThreshold.
+      Phys.Agile<< std::endl;
+126 \}
+\end{DoxyCode}
+\index{Personality@{Personality}!reduce\+Bladder@{reduce\+Bladder}}
+\index{reduce\+Bladder@{reduce\+Bladder}!Personality@{Personality}}
+\subsubsection[{reduce\+Bladder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Bladder (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_a01839201ef383ef16b13357196da47e4}
+
+
+reduce\+Bladder function 
+
+bladder value is sent in from the brain, bladder is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+bladder is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+276                                       \{
+277     HVDynamics.Vit.Bladder -= f;
+278     \textcolor{keywordflow}{if}(HVDynamics.Vit.Bladder < 0)
+279         HVDynamics.Vit.Bladder = 0;
+280 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a01839201ef383ef16b13357196da47e4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!reduce\+Boredom@{reduce\+Boredom}}
+\index{reduce\+Boredom@{reduce\+Boredom}!Personality@{Personality}}
+\subsubsection[{reduce\+Boredom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Boredom (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_a910fb89b90c548572e3dae0fa1696101}
+
+
+reduce\+Boredom function 
+
+Boredom value is sent in from the brain, Boredom is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+boredom is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+292 \{
+293     HVDynamics.Ment.Boredom -= f;
+294     \textcolor{keywordflow}{if}(HVDynamics.Ment.Boredom < 0)
+295         HVDynamics.Ment.Boredom = 0;
+296 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a910fb89b90c548572e3dae0fa1696101_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!reduce\+Curiosity@{reduce\+Curiosity}}
+\index{reduce\+Curiosity@{reduce\+Curiosity}!Personality@{Personality}}
+\subsubsection[{reduce\+Curiosity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Curiosity (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_a50cc25be2c29508279868232951dd1d7}
+
+
+reduce\+Curiosity function 
+
+curiosity value is sent in from the brain, curiosity is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+toxication is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+298 \{
+299     HVDynamics.Ment.Curiosity -= f;
+300     \textcolor{keywordflow}{if}(HVDynamics.Ment.Curiosity < 0)
+301         HVDynamics.Ment.Curiosity = 0;
+302 \}
+\end{DoxyCode}
+\index{Personality@{Personality}!reduce\+Fear@{reduce\+Fear}}
+\index{reduce\+Fear@{reduce\+Fear}!Personality@{Personality}}
+\subsubsection[{reduce\+Fear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Fear (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_a2d863aee58b5cd3607fa9dc4c694255b}
+
+
+reduce\+Fear function 
+
+fear value is sent in from the brain, fear is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+fear is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+304 \{
+305     HVDynamics.Ment.Fear -= f;
+306     \textcolor{keywordflow}{if}(HVDynamics.Ment.Fear < 0)
+307         HVDynamics.Ment.Fear = 0;
+308 \}
+\end{DoxyCode}
+\index{Personality@{Personality}!reduce\+Hunger@{reduce\+Hunger}}
+\index{reduce\+Hunger@{reduce\+Hunger}!Personality@{Personality}}
+\subsubsection[{reduce\+Hunger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Hunger (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_acd685cf0225441e1fe62ac197831fcf1}
+
+
+reduce\+Hunger function 
+
+food value is sent in from the brain, hunger is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+hunger is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+260                                      \{
+261     HVDynamics.Vit.Hunger -= f;
+262     \textcolor{keywordflow}{if}(HVDynamics.Vit.Hunger < 0)
+263         HVDynamics.Vit.Hunger = 0;
+264 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_acd685cf0225441e1fe62ac197831fcf1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!reduce\+Talk@{reduce\+Talk}}
+\index{reduce\+Talk@{reduce\+Talk}!Personality@{Personality}}
+\subsubsection[{reduce\+Talk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Talk (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_a57d1529b3540e14ccca823f64c8a9624}
+
+
+reduce\+Talk function 
+
+\doxyref{Talk}{p.}{d2/d6c/class_talk} value is sent in from the brain, \doxyref{Talk}{p.}{d2/d6c/class_talk} is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+\doxyref{Talk}{p.}{d2/d6c/class_talk} is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+286                                    \{
+287     HVDynamics.Ment.Talk -= f;
+288     \textcolor{keywordflow}{if}(HVDynamics.Ment.Talk < 0)
+289         HVDynamics.Ment.Talk = 0;
+290 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a57d1529b3540e14ccca823f64c8a9624_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!reduce\+Thirst@{reduce\+Thirst}}
+\index{reduce\+Thirst@{reduce\+Thirst}!Personality@{Personality}}
+\subsubsection[{reduce\+Thirst}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Thirst (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_adcda1384680c22d73cb51de99d4423b9}
+
+
+reduce\+Thirst function 
+
+drink value is sent in from the brain, thirst is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+thirst is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+265                                      \{
+266     HVDynamics.Vit.Thirst -= f;
+267     \textcolor{keywordflow}{if}(HVDynamics.Vit.Thirst < 0)
+268         HVDynamics.Vit.Hunger = 0;
+269     BladderMod = f / 10;
+270 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_adcda1384680c22d73cb51de99d4423b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!reduce\+Tired@{reduce\+Tired}}
+\index{reduce\+Tired@{reduce\+Tired}!Personality@{Personality}}
+\subsubsection[{reduce\+Tired}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Tired (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_a19149c857979e7bbb9d2d2e6ab574570}
+
+
+reduce\+Tired function 
+
+sleep value is sent in from the brain, sleep is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sleep is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+271                                     \{
+272     HVDynamics.Vit.Tiredness -= f;
+273     \textcolor{keywordflow}{if}(HVDynamics.Vit.Tiredness < 0)
+274         HVDynamics.Vit.Tiredness = 0;
+275 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a19149c857979e7bbb9d2d2e6ab574570_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!reduce\+Toxication@{reduce\+Toxication}}
+\index{reduce\+Toxication@{reduce\+Toxication}!Personality@{Personality}}
+\subsubsection[{reduce\+Toxication}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::reduce\+Toxication (
+\begin{DoxyParamCaption}
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)}\label{class_personality_ae86babf6d1625638728344013b279079}
+
+
+reduce\+Toxication function 
+
+toxication value is sent in from the brain, toxication is reduced by that value
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+toxication is decreased 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+281                                          \{
+282     HVDynamics.Vit.Toxication -= f;
+283     \textcolor{keywordflow}{if}(HVDynamics.Vit.Toxication < 0)
+284         HVDynamics.Vit.Toxication = 0;
+285 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_ae86babf6d1625638728344013b279079_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Personality@{Personality}!update@{update}}
+\index{update@{update}!Personality@{Personality}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Personality\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)}\label{class_personality_a2d5bfde36cb0edba9353ffe50b7c6290}
+
+
+Update Function. 
+
+Update function All values in the H\+V struct will be updated dynamically inside the update function. They will update at thier own independent times, depending on only itself. traits will affect how things are interpereted and how things get updated The Threshold value is used to determine H\+O\+W fast something will update. All \doxyref{Physical}{p.}{de/d7c/struct_physical} values are calculated out from a combination of \doxyref{Vital}{p.}{d7/d40/struct_vital} or \doxyref{Mental}{p.}{d8/d7a/struct_mental} values
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & -\/ double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+65 \{
+66     dTime += deltaTime;
+67     \textcolor{comment}{//every 5 seconds there is an update to the vital dynamic values}
+68     \textcolor{keywordflow}{if}(dTime >= 5)
+69     \{
+70         HVDynamics.Vit.Hunger ++;
+71         \textcolor{keywordflow}{if}(HVDynamics.Vit.Hunger > 100)
+72             HVDynamics.Vit.Hunger = 100;
+73 
+74         HVDynamics.Vit.Thirst += 0.5f;
+75         \textcolor{keywordflow}{if}(HVDynamics.Vit.Thirst > 100)
+76             HVDynamics.Vit.Thirst = 100;
+77 
+78         HVDynamics.Vit.Tiredness += 0.2;
+79         \textcolor{keywordflow}{if}(HVDynamics.Vit.Tiredness > 100)
+80             HVDynamics.Vit.Tiredness = 100;
+81 
+82         \textcolor{comment}{//bladder will slowly increase regardless of how often they drink}
+83         \textcolor{keywordflow}{if}(BladderMod > 1)
+84         \{
+85             BladderMod -= -.5;
+86             \textcolor{keywordflow}{if}(BladderMod < 1)
+87                 BladderMod = 1;
+88         \}
+89         HVDynamics.Vit.Bladder += (0.05 * BladderMod);
+90         \textcolor{keywordflow}{if}(HVDynamics.Vit.Bladder > 100)
+91             HVDynamics.Vit.Bladder = 100;
+92         \textcolor{comment}{//if the AI is scared then thier fear will slowly fall}
+93         \textcolor{keywordflow}{if}(checkFear())
+94         \{
+95             HVDynamics.Ment.Fear --;
+96         \}
+97 
+98         HVDynamics.Ment.Talk += 0.6;
+99         \textcolor{keywordflow}{if}(HVDynamics.Ment.Talk > 100)
+100             HVDynamics.Ment.Talk = 100;
+101 
+102         HVDynamics.Ment.Boredom += 0.1;
+103         \textcolor{keywordflow}{if}(HVDynamics.Ment.Boredom > 100)
+104             HVDynamics.Ment.Boredom = 100;
+105 
+106 
+107 
+108         calculateStrength();
+109         calculateAgility();
+110         calculateSight();
+111         determineEmotion();
+112         Emotion = calcEnEmotion();
+113         dTime = 0;
+114     \}
+115 
+116     
+117 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a2d5bfde36cb0edba9353ffe50b7c6290_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da8/class_personality_a2d5bfde36cb0edba9353ffe50b7c6290_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Personality@{Personality}!Bladder\+Mod@{Bladder\+Mod}}
+\index{Bladder\+Mod@{Bladder\+Mod}!Personality@{Personality}}
+\subsubsection[{Bladder\+Mod}]{\setlength{\rightskip}{0pt plus 5cm}float Personality\+::\+Bladder\+Mod\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a4bea829c491b478b379160b03f36118f}
+modifier for the bladder value If the \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} has just drunk thier modifier will be higher so they will need to go to the toilet more often when they drink \index{Personality@{Personality}!d\+Time@{d\+Time}}
+\index{d\+Time@{d\+Time}!Personality@{Personality}}
+\subsubsection[{d\+Time}]{\setlength{\rightskip}{0pt plus 5cm}double Personality\+::d\+Time\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a151500c7e5963d8ad9f382c16a962067}
+
+
+timer for incrementing live values 
+
+\index{Personality@{Personality}!Emotion@{Emotion}}
+\index{Emotion@{Emotion}!Personality@{Personality}}
+\subsubsection[{Emotion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf en\+Emotion} Personality\+::\+Emotion\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a54f9bbf0e8a7ff545f48893329bd44eb}
+
+
+Personalities current emotional level. 
+
+\index{Personality@{Personality}!H\+V\+Dynamics@{H\+V\+Dynamics}}
+\index{H\+V\+Dynamics@{H\+V\+Dynamics}!Personality@{Personality}}
+\subsubsection[{H\+V\+Dynamics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Human\+Values} Personality\+::\+H\+V\+Dynamics\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_add528a1b09b1919bd6a71b91ae9ab49b}
+
+
+Personalities Live values. 
+
+\index{Personality@{Personality}!H\+V\+Threshold@{H\+V\+Threshold}}
+\index{H\+V\+Threshold@{H\+V\+Threshold}!Personality@{Personality}}
+\subsubsection[{H\+V\+Threshold}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Human\+Values} Personality\+::\+H\+V\+Threshold\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_abead60f8764d6eab4de072f53d8539ad}
+
+
+This is what will be compared against for determining when a character needs something. 
+
+\index{Personality@{Personality}!my\+Traits@{my\+Traits}}
+\index{my\+Traits@{my\+Traits}!Personality@{Personality}}
+\subsubsection[{my\+Traits}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf st\+Trait}$>$ Personality\+::my\+Traits\hspace{0.3cm}{\ttfamily [private]}}\label{class_personality_a50df2fa3a29e975819e238fab81e8be6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Personality.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Personality.\+cpp}\end{DoxyCompactItemize}

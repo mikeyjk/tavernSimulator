@@ -1,0 +1,865 @@
+\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+contain the \doxyref{Camera}{p.}{da/dbb/class_camera} position, lookat point , Up vector and Side Vector  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+
+
+Collaboration diagram for Camera\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d0/dcb/class_camera__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vec3} {\bf Get\+Position} ()
+\begin{DoxyCompactList}\small\item\em This function will Get the position of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf Get\+Up} ()
+\begin{DoxyCompactList}\small\item\em This function will Get the Up vector of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf Get\+Direction} ()
+\begin{DoxyCompactList}\small\item\em This function will Get the Direction of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf Get\+Side} ()
+\begin{DoxyCompactList}\small\item\em This function will Get the side vector of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf Vec3} {\bf Get\+Target} ()
+\begin{DoxyCompactList}\small\item\em This function will Get the Target of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Position} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em This function will Set the Position of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Up} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em This function will Set the Position of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Target} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em This function will Set the Target of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Direction} ({\bf Vec3} {\bf v})
+\begin{DoxyCompactList}\small\item\em This function will Set the Direction of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+float {\bf Get\+Speed} ()
+\begin{DoxyCompactList}\small\item\em This function will get the Speed of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Speed} (float {\bf num})
+\begin{DoxyCompactList}\small\item\em This function will get the Speed of \doxyref{Camera}{p.}{da/dbb/class_camera}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Rotate\+Pitch} (float {\bf num})
+\begin{DoxyCompactList}\small\item\em This function will rotate the \doxyref{Camera}{p.}{da/dbb/class_camera} by Pitch. \end{DoxyCompactList}\item 
+{\bf void} {\bf Rotate\+Yaw} (float {\bf num})
+\begin{DoxyCompactList}\small\item\em This function will rotate the \doxyref{Camera}{p.}{da/dbb/class_camera} by Yaw. \end{DoxyCompactList}\item 
+{\bf void} {\bf Rotate\+Pitch3rd} (float {\bf num})
+\item 
+{\bf void} {\bf Rotate\+Yaw3rd} (float {\bf num})
+\item 
+float {\bf Get\+Rotate\+X} ()
+\item 
+float {\bf Get\+Rotate\+Y} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Camera} $\ast$ {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Update\+Rotation} ()
+\item 
+{\bf Camera} ({\bf void})
+\item 
+{\bf $\sim$\+Camera} ({\bf void})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vec3} {\bf Position}
+\item 
+{\bf Vec3} {\bf Up}
+\item 
+{\bf Vec3} {\bf Target}
+\item 
+{\bf Vec3} {\bf Direction}
+\item 
+float {\bf Speed}
+\item 
+float {\bf X\+\_\+degree\+\_\+difference}
+\item 
+float {\bf Y\+\_\+degree\+\_\+difference}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+contain the \doxyref{Camera}{p.}{da/dbb/class_camera} position, lookat point , Up vector and Side Vector 
+
+\begin{DoxyAuthor}{Author}
+\+: Liu Yi \+: null  By\+: 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/12/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a5c68f1ee8348320a6c47419ae2d724fb}
+
+\begin{DoxyCode}
+17 \{
+18     Position =  Vec3(0,0,-5);
+19     Up = Vec3(0.0,1.0,0.0);
+20     Target = Vec3(0.0,0.0,0.0);
+21     Speed = 6;
+22 
+23     Direction = (Target - Position).normalize();
+24     X_degree_difference = 0;
+25     Y_degree_difference = 0;
+26 \}
+\end{DoxyCode}
+\index{Camera@{Camera}!````~Camera@{$\sim$\+Camera}}
+\index{````~Camera@{$\sim$\+Camera}!Camera@{Camera}}
+\subsubsection[{$\sim$\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::$\sim$\+Camera (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a06211f202c145b3ec8253f96e1e654a6}
+
+\begin{DoxyCode}
+30 \{
+31 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Camera@{Camera}!Get\+Direction@{Get\+Direction}}
+\index{Get\+Direction@{Get\+Direction}!Camera@{Camera}}
+\subsubsection[{Get\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Get\+Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_aa6fbfe702376f8f398f6b2bf93360bcc}
+
+
+This function will Get the Direction of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Return a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Up 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+43 \{
+44     \textcolor{keywordflow}{return} Direction;
+45 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_aa6fbfe702376f8f398f6b2bf93360bcc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!Camera@{Camera}}
+\subsubsection[{Get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a224453a311a853f33cf96622355f0ded}
+
+
+This function will Get the position of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Return a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Position 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+35 \{
+36     \textcolor{keywordflow}{return} Position;
+37 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a224453a311a853f33cf96622355f0ded_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Get\+Rotate\+X@{Get\+Rotate\+X}}
+\index{Get\+Rotate\+X@{Get\+Rotate\+X}!Camera@{Camera}}
+\subsubsection[{Get\+Rotate\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::\+Get\+Rotate\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a3b5278580cbc321e1ab8e8dacc1c3aff}
+
+\begin{DoxyCode}
+205 \{
+206     \textcolor{keywordflow}{return} X_degree_difference;
+207 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{da/dbb/class_camera_a3b5278580cbc321e1ab8e8dacc1c3aff_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Get\+Rotate\+Y@{Get\+Rotate\+Y}}
+\index{Get\+Rotate\+Y@{Get\+Rotate\+Y}!Camera@{Camera}}
+\subsubsection[{Get\+Rotate\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::\+Get\+Rotate\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a8711c63acb17af561d83f37c325e44fd}
+
+\begin{DoxyCode}
+210 \{
+211     \textcolor{keywordflow}{return} Y_degree_difference;
+212 \}\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{da/dbb/class_camera_a8711c63acb17af561d83f37c325e44fd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Get\+Side@{Get\+Side}}
+\index{Get\+Side@{Get\+Side}!Camera@{Camera}}
+\subsubsection[{Get\+Side}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Get\+Side (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a2b84f2cf9643be746323e37cfd900909}
+
+
+This function will Get the side vector of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Return a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Side 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+48 \{
+49     \textcolor{keywordflow}{return} (Up.xProd(GetDirection())).normalize();
+50 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a2b84f2cf9643be746323e37cfd900909_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a2b84f2cf9643be746323e37cfd900909_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Get\+Speed@{Get\+Speed}}
+\index{Get\+Speed@{Get\+Speed}!Camera@{Camera}}
+\subsubsection[{Get\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::\+Get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_aae3398cf8d0afb737f6c07a08e5f8462}
+
+
+This function will get the Speed of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+return a float value of Speed 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+76 \{
+77     \textcolor{keywordflow}{return} Speed;
+78 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{da/dbb/class_camera_aae3398cf8d0afb737f6c07a08e5f8462_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Get\+Target@{Get\+Target}}
+\index{Get\+Target@{Get\+Target}!Camera@{Camera}}
+\subsubsection[{Get\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Get\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a0ddea0272922461413eb6ace46a9fc9c}
+
+
+This function will Get the Target of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Return a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Target 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keywordflow}{return} Target;
+55 \}
+\end{DoxyCode}
+\index{Camera@{Camera}!Get\+Up@{Get\+Up}}
+\index{Get\+Up@{Get\+Up}!Camera@{Camera}}
+\subsubsection[{Get\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Get\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a887d2408d10999950aee233cabdc28da}
+
+
+This function will Get the Up vector of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Return a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Up 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+39 \{
+40     \textcolor{keywordflow}{return} Up;
+41 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a887d2408d10999950aee233cabdc28da_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Instance@{Instance}}
+\index{Instance@{Instance}!Camera@{Camera}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera} $\ast$ Camera\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_camera_aa2d36bca89d3d3c7f46fab68a04a02ab}
+
+\begin{DoxyCode}
+9 \{
+10     \textcolor{keyword}{static} Camera Instance;
+11     \textcolor{keywordflow}{return} &Instance;
+12 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_aa2d36bca89d3d3c7f46fab68a04a02ab_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Rotate\+Pitch@{Rotate\+Pitch}}
+\index{Rotate\+Pitch@{Rotate\+Pitch}!Camera@{Camera}}
+\subsubsection[{Rotate\+Pitch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Rotate\+Pitch (
+\begin{DoxyParamCaption}
+\item[{float}]{num}
+\end{DoxyParamCaption}
+)}\label{class_camera_a8491685022f64ab54b477a45026c40d3}
+
+
+This function will rotate the \doxyref{Camera}{p.}{da/dbb/class_camera} by Pitch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Rate the camera 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+139 \{
+140     Quaternion rotation(GetSide(), num/30);
+141     Quaternion Conjugate = rotation.conjugate();
+142     Quaternion result =  (rotation.mult(Direction)).mult(Conjugate);
+143     Quaternion result\_2 = (rotation.mult(Up)).mult(Conjugate);
+144 
+145     SetDirection(Vec3(result.getX(), result.getY(), result.getZ()));
+146     UpdateRotation();
+147 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a8491685022f64ab54b477a45026c40d3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{da/dbb/class_camera_a8491685022f64ab54b477a45026c40d3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Rotate\+Pitch3rd@{Rotate\+Pitch3rd}}
+\index{Rotate\+Pitch3rd@{Rotate\+Pitch3rd}!Camera@{Camera}}
+\subsubsection[{Rotate\+Pitch3rd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Rotate\+Pitch3rd (
+\begin{DoxyParamCaption}
+\item[{float}]{num}
+\end{DoxyParamCaption}
+)}\label{class_camera_a873b77f84501fbdf055e6b70e42ffd9e}
+
+\begin{DoxyCode}
+150 \{
+151     
+152     Quaternion rotation(GetSide(), num/30);
+153     Quaternion Conjugate = rotation.conjugate();
+154     Quaternion result =  (rotation.mult(Direction)).mult(Conjugate);
+155     Quaternion result\_2 = (rotation.mult(Up)).mult(Conjugate);
+156 
+157 
+158     SetDirection(Vec3(result.getX(), result.getY(), result.getZ()));
+159     UpdateRotation();
+160     
+161 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a873b77f84501fbdf055e6b70e42ffd9e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Rotate\+Yaw@{Rotate\+Yaw}}
+\index{Rotate\+Yaw@{Rotate\+Yaw}!Camera@{Camera}}
+\subsubsection[{Rotate\+Yaw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Rotate\+Yaw (
+\begin{DoxyParamCaption}
+\item[{float}]{num}
+\end{DoxyParamCaption}
+)}\label{class_camera_ab14bf413828e51f5685b0001c4247f88}
+
+
+This function will rotate the \doxyref{Camera}{p.}{da/dbb/class_camera} by Yaw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Rate the camera 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+128 \{
+129     Quaternion rotation(Up, num/30);
+130     Quaternion Conjugate = rotation.conjugate();
+131     Quaternion result =  (rotation.mult(Direction)).mult(Conjugate);
+132 
+133     SetDirection(Vec3(result.getX(), result.getY(), result.getZ()));
+134     UpdateRotation();
+135 
+136 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_ab14bf413828e51f5685b0001c4247f88_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{da/dbb/class_camera_ab14bf413828e51f5685b0001c4247f88_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Rotate\+Yaw3rd@{Rotate\+Yaw3rd}}
+\index{Rotate\+Yaw3rd@{Rotate\+Yaw3rd}!Camera@{Camera}}
+\subsubsection[{Rotate\+Yaw3rd}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Rotate\+Yaw3rd (
+\begin{DoxyParamCaption}
+\item[{float}]{num}
+\end{DoxyParamCaption}
+)}\label{class_camera_a1296c75191df3e155323844313844b58}
+
+\begin{DoxyCode}
+164 \{
+165 
+166 
+167     Vec3 tempCenter(World::Instance()->GetMainCharacter()->getPos().getX(),
+168                     World::Instance()->GetMainCharacter()->getPos().getY(),
+169                     World::Instance()->GetMainCharacter()->getPos().getZ());
+170 
+171     Vec3 tempCamer(Position.getX(),
+172                    Position.getY(),
+173                    Position.getZ());
+174 
+175     tempCamer.rotateByPoint(tempCenter, -num/30);
+176     SetPosition(tempCamer);
+177 
+178 
+179     \textcolor{keyword}{static} \textcolor{keywordtype}{float} Rotation = 0;
+180     Rotation += num/30;
+181 
+182     \textcolor{keywordflow}{if}(Rotation < 0)
+183     \{
+184         Rotation += 360;
+185     \}
+186     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(Rotation > 360)
+187     \{
+188         Rotation -= 360; 
+189     \}
+190 
+191     \textcolor{comment}{//just for rotate the Character}
+192     World::Instance()->GetMainCharacter()->setRotation(0,Rotation, 0);
+193     
+194     Quaternion rotation(Up, num/30);
+195     Quaternion Conjugate = rotation.conjugate();
+196     Quaternion result =  (rotation.mult(Direction)).mult(Conjugate);
+197     SetDirection(Vec3(result.getX(), result.getY(), result.getZ()));
+198 
+199     UpdateRotation();
+200 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a1296c75191df3e155323844313844b58_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Set\+Direction@{Set\+Direction}}
+\index{Set\+Direction@{Set\+Direction}!Camera@{Camera}}
+\subsubsection[{Set\+Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Set\+Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_camera_acdbd1c32c94c552a514244b250a08c03}
+
+
+This function will Set the Direction of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Pass a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Direction 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+87 \{
+88     Direction = v;
+89 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_acdbd1c32c94c552a514244b250a08c03_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Set\+Position@{Set\+Position}}
+\index{Set\+Position@{Set\+Position}!Camera@{Camera}}
+\subsubsection[{Set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Set\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_camera_abdbad053cc5411b4fd2b42775f0626dd}
+
+
+This function will Set the Position of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Pass a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Position 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+60 \{
+61     Position = v;
+62 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{da/dbb/class_camera_abdbad053cc5411b4fd2b42775f0626dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Camera@{Camera}!Set\+Speed@{Set\+Speed}}
+\index{Set\+Speed@{Set\+Speed}!Camera@{Camera}}
+\subsubsection[{Set\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Set\+Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{num}
+\end{DoxyParamCaption}
+)}\label{class_camera_a00ed8f65ee4d758c1a8f8979623d3fcf}
+
+
+This function will get the Speed of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Set the value of Speed 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+82 \{
+83     Speed = num;
+84 \}
+\end{DoxyCode}
+\index{Camera@{Camera}!Set\+Target@{Set\+Target}}
+\index{Set\+Target@{Set\+Target}!Camera@{Camera}}
+\subsubsection[{Set\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Set\+Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_camera_a942e7cb80d653981a261b8ebeb38a040}
+
+
+This function will Set the Target of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Pass a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Target 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+70 \{
+71     Target = v;
+72 \}
+\end{DoxyCode}
+\index{Camera@{Camera}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Camera@{Camera}}
+\subsubsection[{Set\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{v}
+\end{DoxyParamCaption}
+)}\label{class_camera_a0e2e126a7cc25e2bbea725a506375d7c}
+
+
+This function will Set the Position of \doxyref{Camera}{p.}{da/dbb/class_camera}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Pass a \doxyref{Vec3}{p.}{df/d24/class_vec3} of Position 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+65 \{
+66     Up = v;
+67 \}
+\end{DoxyCode}
+\index{Camera@{Camera}!Update\+Rotation@{Update\+Rotation}}
+\index{Update\+Rotation@{Update\+Rotation}!Camera@{Camera}}
+\subsubsection[{Update\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Camera\+::\+Update\+Rotation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a20b5fe8c98508c6e251604497400622e}
+
+\begin{DoxyCode}
+92 \{
+93     \textcolor{keyword}{const} \textcolor{keywordtype}{float} PI = 3.14159265;
+94    
+95     
+96     Vec3 tempZ  = Vec3(Direction.getX(), 0 , Direction.getZ()).normalize();
+97     Vec3 valueZ = tempZ.xProd(Vec3(0.0, 0.0, 1.0));
+98          
+99 
+100     Vec3 tempY  = Vec3(0,  Direction.getY(), 1.0).normalize();
+101     Vec3 valueY = tempY.xProd(Vec3(0.0,0.0,1.0));
+102 
+103     \textcolor{keywordflow}{if}(valueZ.getY() >= 0)
+104     \{
+105         X_degree_difference = acos(tempZ.dotProd(Vec3(0.0, 0.0, 1.0))) * 180.0/PI;
+106     \}
+107     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(valueZ.getY() < 0)
+108     \{
+109         X_degree_difference = 360.0 - acos(tempZ.dotProd(Vec3(0.0, 0.0, 1.0))) * 180.0/PI;
+110     \}
+111     
+112     \textcolor{comment}{//std::cout << " valueY.getX " <<   valueY.getX() << std::endl;}
+113     \textcolor{keywordflow}{if}(valueY.getX() >= 0)
+114     \{
+115        Y_degree_difference = acos(tempY.dotProd(Vec3(0.0,0.0,1.0))) * 180.0/PI;
+116        \textcolor{comment}{//std::cout << " difference " <<   Y\_degree\_difference << std::endl;}
+117     \}
+118     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(valueY.getX() < 0)
+119     \{
+120        Y_degree_difference = 360.0 - acos(tempY.dotProd(Vec3(0.0, 0.0, 1.0))) * 180.0/PI;
+121        \textcolor{comment}{//std::cout << " difference " <<   Y\_degree\_difference << std::endl;}
+122     \}
+123     
+124 
+125 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a20b5fe8c98508c6e251604497400622e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbb/class_camera_a20b5fe8c98508c6e251604497400622e_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Camera@{Camera}!Direction@{Direction}}
+\index{Direction@{Direction}!Camera@{Camera}}
+\subsubsection[{Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Direction\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a675a1869ad1ff380cef657dcd296967b}
+\index{Camera@{Camera}!Position@{Position}}
+\index{Position@{Position}!Camera@{Camera}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Position\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a36bc26c07ff04cde585fe5fb7632e66f}
+\index{Camera@{Camera}!Speed@{Speed}}
+\index{Speed@{Speed}!Camera@{Camera}}
+\subsubsection[{Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::\+Speed\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_ad459f8217aeef404ff049465365bef96}
+\index{Camera@{Camera}!Target@{Target}}
+\index{Target@{Target}!Camera@{Camera}}
+\subsubsection[{Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Target\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_adaff26ccb8edd8bb4cc67fae866c4782}
+\index{Camera@{Camera}!Up@{Up}}
+\index{Up@{Up}!Camera@{Camera}}
+\subsubsection[{Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vec3} Camera\+::\+Up\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a29677634805e268348e24f92e5fd2d59}
+\index{Camera@{Camera}!X\+\_\+degree\+\_\+difference@{X\+\_\+degree\+\_\+difference}}
+\index{X\+\_\+degree\+\_\+difference@{X\+\_\+degree\+\_\+difference}!Camera@{Camera}}
+\subsubsection[{X\+\_\+degree\+\_\+difference}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::\+X\+\_\+degree\+\_\+difference\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a1a038309712c5135b7877e8ea4f118c6}
+\index{Camera@{Camera}!Y\+\_\+degree\+\_\+difference@{Y\+\_\+degree\+\_\+difference}}
+\index{Y\+\_\+degree\+\_\+difference@{Y\+\_\+degree\+\_\+difference}!Camera@{Camera}}
+\subsubsection[{Y\+\_\+degree\+\_\+difference}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::\+Y\+\_\+degree\+\_\+difference\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_aa87161531eedfbcf5c553ba7af433728}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Camera.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Camera.\+cpp}\end{DoxyCompactItemize}

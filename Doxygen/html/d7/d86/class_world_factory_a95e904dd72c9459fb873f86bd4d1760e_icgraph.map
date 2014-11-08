@@ -1,0 +1,7 @@
+<map id="WorldFactory::CreateObject" name="WorldFactory::CreateObject">
+<area shape="rect" id="node2" href="$d3/d21/class_world.html#ab0e20ce1067526abf54e934b9bf03497" title="World::AddSkybox" alt="" coords="237,5,368,32"/>
+<area shape="rect" id="node6" href="$d3/d21/class_world.html#a270560c764575ba30c7f4e4cf6d8eef4" title="addEntity function " alt="" coords="242,56,363,83"/>
+<area shape="rect" id="node3" href="$da/da9/class_game_engine.html#a6ac03e07bd33b978dda30e0ad2a95c0e" title="GameEngine::loadAssets" alt="" coords="416,31,587,57"/>
+<area shape="rect" id="node4" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="635,31,765,57"/>
+<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="813,31,864,57"/>
+</map>

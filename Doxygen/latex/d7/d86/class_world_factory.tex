@@ -1,0 +1,202 @@
+\section{World\+Factory Class Reference}
+\label{class_world_factory}\index{World\+Factory@{World\+Factory}}
+
+
+The Factory class that creates all Game\+Objects.  
+
+
+
+
+{\ttfamily \#include $<$World\+Factory.\+h$>$}
+
+
+
+Collaboration diagram for World\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d2/d94/class_world_factory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf World\+Factory} ({\bf void})
+\begin{DoxyCompactList}\small\item\em \doxyref{World\+Factory}{p.}{d7/d86/class_world_factory} Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+World\+Factory} ({\bf void})
+\begin{DoxyCompactList}\small\item\em \doxyref{World\+Factory}{p.}{d7/d86/class_world_factory} Destructor. \end{DoxyCompactList}\item 
+{\bf Game\+Object} $\ast$ {\bf Create\+Object} ({\bf string} {\bf name}, {\bf Vec3} Pos, float rot\+X, float rot\+Y, {\bf string} model, {\bf string} {\bf texture}, bool bound, float transparency, float {\bf weight}, std\+::vector$<$ {\bf Affordance} $>$ affordances, std\+::vector$<$ {\bf std\+::string} $>$ traits)
+\begin{DoxyCompactList}\small\item\em Create\+Object function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Rendering\+Engine} $\ast$ {\bf redering\+Engine}
+\begin{DoxyCompactList}\small\item\em a pointer to the rendering engine \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Factory class that creates all Game\+Objects. 
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe, Liu Yi \+: nil 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/03/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{World\+Factory@{World\+Factory}!World\+Factory@{World\+Factory}}
+\index{World\+Factory@{World\+Factory}!World\+Factory@{World\+Factory}}
+\subsubsection[{World\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}World\+Factory\+::\+World\+Factory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_world_factory_a5cae4bb65b1c14c75ed91d2f1f6712eb}
+
+
+\doxyref{World\+Factory}{p.}{d7/d86/class_world_factory} Constructor. 
+
+This is the basic Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+5 \{
+6 
+7     rederingEngine = RenderingEngine::Instance();
+8 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d86/class_world_factory_a5cae4bb65b1c14c75ed91d2f1f6712eb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{World\+Factory@{World\+Factory}!````~World\+Factory@{$\sim$\+World\+Factory}}
+\index{````~World\+Factory@{$\sim$\+World\+Factory}!World\+Factory@{World\+Factory}}
+\subsubsection[{$\sim$\+World\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}World\+Factory\+::$\sim$\+World\+Factory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_world_factory_a4d6eafac9581ffe82aaae5d403fbd117}
+
+
+\doxyref{World\+Factory}{p.}{d7/d86/class_world_factory} Destructor. 
+
+This is the basic Destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+11 \{
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{World\+Factory@{World\+Factory}!Create\+Object@{Create\+Object}}
+\index{Create\+Object@{Create\+Object}!World\+Factory@{World\+Factory}}
+\subsubsection[{Create\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} $\ast$ World\+Factory\+::\+Create\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{{\bf string}}]{model, }
+\item[{{\bf string}}]{texture, }
+\item[{bool}]{bound, }
+\item[{float}]{transparency, }
+\item[{float}]{weight, }
+\item[{std\+::vector$<$ {\bf Affordance} $>$}]{affordances, }
+\item[{std\+::vector$<$ {\bf std\+::string} $>$}]{traits}
+\end{DoxyParamCaption}
+)}\label{class_world_factory_a95e904dd72c9459fb873f86bd4d1760e}
+
+
+Create\+Object function. 
+
+This creates an object of the name specified at the position specified, and sets the model and texture to the object \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} Types are\+: \doxyref{Character}{p.}{d7/da7/class_character}, \doxyref{Geometry}{p.}{db/d0b/class_geometry}, \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c}, Other\+Player, Terrain
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & name, \doxyref{Vec3}{p.}{df/d24/class_vec3} Pos, string model, string texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Game\+Object$\ast$
+\end{DoxyReturn}
+Create an object in the game world. Objects are of 3 types. \doxyref{Character}{p.}{d7/da7/class_character}, \doxyref{Geometry}{p.}{db/d0b/class_geometry} and \doxyref{Sky\+Box}{p.}{de/dda/class_sky_box}. 
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keywordflow}{if}(name == \textcolor{stringliteral}{"Character"})
+22     \{
+23         \textcolor{keywordflow}{return} \textcolor{keyword}{new} Character(rederingEngine, pos, rotX, rotY, model, texture, bound, affordances);
+24     \}
+25     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(name == \textcolor{stringliteral}{"Geometry"})
+26     \{
+27         \textcolor{keywordflow}{return} \textcolor{keyword}{new} Geometry(rederingEngine, pos, rotX, rotY, model, texture, bound, transparency, 
+      affordances, weight);
+28     \}
+29     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(name == \textcolor{stringliteral}{"NPC"})
+30     \{
+31         \textcolor{keywordflow}{return} \textcolor{keyword}{new} NPC(rederingEngine, pos, rotX, rotY, model, texture, bound, affordances, traits, 
+      weight);
+32     \}
+33     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(name == \textcolor{stringliteral}{"SkyBox"})
+34     \{
+35         \textcolor{keywordflow}{return} \textcolor{keyword}{new} SkyBox(rederingEngine, pos, texture);
+36     \}
+37     \textcolor{keywordflow}{else}
+38     \{
+39         std::cout << \textcolor{stringliteral}{"Error, unexpected input: "} << name << std::endl;
+40         \textcolor{keywordflow}{return}(\textcolor{keyword}{nullptr});
+41     \}
+42 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d86/class_world_factory_a95e904dd72c9459fb873f86bd4d1760e_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{World\+Factory@{World\+Factory}!redering\+Engine@{redering\+Engine}}
+\index{redering\+Engine@{redering\+Engine}!World\+Factory@{World\+Factory}}
+\subsubsection[{redering\+Engine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rendering\+Engine}$\ast$ World\+Factory\+::redering\+Engine\hspace{0.3cm}{\ttfamily [private]}}\label{class_world_factory_a7206103eaaa6bdf7b229fa47d0cf62a1}
+
+
+a pointer to the rendering engine 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf World\+Factory.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf World\+Factory.\+cpp}\end{DoxyCompactItemize}

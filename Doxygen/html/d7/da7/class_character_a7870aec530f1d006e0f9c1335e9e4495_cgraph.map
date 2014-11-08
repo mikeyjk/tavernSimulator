@@ -1,0 +1,9 @@
+<map id="Character::Character" name="Character::Character">
+<area shape="rect" id="node2" href="$d3/d7b/class_input_engine.html#a1f67c167338a95cfdffb01fabf28eb92" title="Instance. " alt="" coords="220,5,367,32"/>
+<area shape="rect" id="node3" href="$da/d3d/class_rendering_engine.html#a6407931c3d68972fe12b6f51cae28b3b" title="RenderingEngine::GetCamera" alt="" coords="196,56,391,83"/>
+<area shape="rect" id="node4" href="$da/dbb/class_camera.html#abdbad053cc5411b4fd2b42775f0626dd" title="This function will Set the Position of Camera. " alt="" coords="222,107,365,133"/>
+<area shape="rect" id="node5" href="$d7/da7/class_character.html#af0b9eefe47647ce706a7d2bda31a515b" title="i_DrawableObject SetBufferRef " alt="" coords="214,157,373,184"/>
+<area shape="rect" id="node7" href="$d0/dd1/class_game_object.html#a8b415958b6b1a8bccf290273f2fa8dcf" title="GameObject::setAffordances" alt="" coords="199,208,388,235"/>
+<area shape="rect" id="node8" href="$da/df5/class_control_system.html#aa3b24cbd4e40b867422d9cd4443e63db" title="Instance. " alt="" coords="211,259,376,285"/>
+<area shape="rect" id="node6" href="$da/d3d/class_rendering_engine.html#a3541519b4525b18660e07869797c041d" title="Get the Handle of Rendering API. " alt="" coords="439,150,629,191"/>
+</map>

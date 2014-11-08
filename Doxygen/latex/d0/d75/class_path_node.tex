@@ -1,0 +1,623 @@
+\section{Path\+Node Class Reference}
+\label{class_path_node}\index{Path\+Node@{Path\+Node}}
+
+
+\doxyref{Path\+Node}{p.}{d0/d75/class_path_node} class represents a position on the world map.  
+
+
+
+
+{\ttfamily \#include $<$Path\+Node.\+h$>$}
+
+
+
+Collaboration diagram for Path\+Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{d0/db9/class_path_node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Path\+Node} ({\bf void})
+\begin{DoxyCompactList}\small\item\em Constructor initialises \doxyref{Pathfinder}{p.}{df/d0c/class_pathfinder} object. \end{DoxyCompactList}\item 
+{\bf Path\+Node} (int {\bf x}, int {\bf z}, {\bf Path\+Node} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Constructor initialises \doxyref{Pathfinder}{p.}{df/d0c/class_pathfinder} object. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Path\+Node} ({\bf void})
+\begin{DoxyCompactList}\small\item\em Destructor clears all memory. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Xcoord} (int {\bf x})
+\begin{DoxyCompactList}\small\item\em Sets the x coordinate. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Zcoord} (int {\bf z})
+\begin{DoxyCompactList}\small\item\em Sets the z coordinate. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Id} (int {\bf id})
+\begin{DoxyCompactList}\small\item\em Sets this node's id. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Parent} ({\bf Path\+Node} $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Sets the parent node. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Gval} (float {\bf g})
+\begin{DoxyCompactList}\small\item\em Sets this node's cost. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Hval} (float {\bf h})
+\begin{DoxyCompactList}\small\item\em Sets this node's estimated distance to target. \end{DoxyCompactList}\item 
+int {\bf Get\+Xcoord} ()
+\begin{DoxyCompactList}\small\item\em Gets the x coordinate. \end{DoxyCompactList}\item 
+int {\bf Get\+Zcoord} ()
+\begin{DoxyCompactList}\small\item\em Gets the z coordinate. \end{DoxyCompactList}\item 
+int {\bf Get\+Id} ()
+\begin{DoxyCompactList}\small\item\em Gets the node's id. \end{DoxyCompactList}\item 
+{\bf Path\+Node} $\ast$ {\bf Get\+Parent} ()
+\begin{DoxyCompactList}\small\item\em Gets the node's parent node. \end{DoxyCompactList}\item 
+float {\bf Get\+Gval} ()
+\begin{DoxyCompactList}\small\item\em Gets the node's cost. \end{DoxyCompactList}\item 
+float {\bf Get\+Hval} ()
+\begin{DoxyCompactList}\small\item\em Gets the nodes estimated distance to target. \end{DoxyCompactList}\item 
+float {\bf Get\+F} ()
+\begin{DoxyCompactList}\small\item\em Gets the total cost so far to this node. \end{DoxyCompactList}\item 
+float {\bf Get\+Manhattan\+Distance} ({\bf Path\+Node} $\ast$node\+End)
+\begin{DoxyCompactList}\small\item\em Calculates the estimated distance to target using Manhattan Distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf m\+X\+\_\+coord}
+\item 
+int {\bf m\+Z\+\_\+coord}
+\item 
+int {\bf m\+Id}
+\item 
+{\bf Path\+Node} $\ast$ {\bf m\+Parent}
+\item 
+float {\bf m\+G\+\_\+val}
+\item 
+float {\bf m\+H\+\_\+val}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Path\+Node}{p.}{d0/d75/class_path_node} class represents a position on the world map. 
+
+\doxyref{Path\+Node}{p.}{d0/d75/class_path_node} class represents a position on the world map represented by an x, y, and z coordinate. Also stores cost to travel to the node and heuristic distance to target.
+
+\begin{DoxyAuthor}{Author}
+Raymond Forster 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15/10/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Path\+Node@{Path\+Node}!Path\+Node@{Path\+Node}}
+\index{Path\+Node@{Path\+Node}!Path\+Node@{Path\+Node}}
+\subsubsection[{Path\+Node}]{\setlength{\rightskip}{0pt plus 5cm}Path\+Node\+::\+Path\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a10fb915a438c4529b3715278810486d4}
+
+
+Constructor initialises \doxyref{Pathfinder}{p.}{df/d0c/class_pathfinder} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+5 \{
+6     mParent = NULL;
+7 \}
+\end{DoxyCode}
+\index{Path\+Node@{Path\+Node}!Path\+Node@{Path\+Node}}
+\index{Path\+Node@{Path\+Node}!Path\+Node@{Path\+Node}}
+\subsubsection[{Path\+Node}]{\setlength{\rightskip}{0pt plus 5cm}Path\+Node\+::\+Path\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{z, }
+\item[{{\bf Path\+Node} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a30e639b51ae2cbd3c1652d2b581d7332}
+
+
+Constructor initialises \doxyref{Pathfinder}{p.}{df/d0c/class_pathfinder} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & x -\/ the x position \\
+\hline
+{\em int} & z -\/ the z position \\
+\hline
+{\em \doxyref{Path\+Node}{p.}{d0/d75/class_path_node}} & $\ast$parent -\/ the parent node \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+11 \{
+12      mX_coord = x;
+13      mZ_coord = z;
+14      mParent = parent;
+15      mId = (z * WORLD_SIZE) + z;
+16      mG_val = 0;
+17      mH_val = 0;
+18 \}
+\end{DoxyCode}
+\index{Path\+Node@{Path\+Node}!````~Path\+Node@{$\sim$\+Path\+Node}}
+\index{````~Path\+Node@{$\sim$\+Path\+Node}!Path\+Node@{Path\+Node}}
+\subsubsection[{$\sim$\+Path\+Node}]{\setlength{\rightskip}{0pt plus 5cm}Path\+Node\+::$\sim$\+Path\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_af50979b320d621e21feff308738d0845}
+
+
+Destructor clears all memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+22 \{
+23 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Path\+Node@{Path\+Node}!Get\+F@{Get\+F}}
+\index{Get\+F@{Get\+F}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+F}]{\setlength{\rightskip}{0pt plus 5cm}float Path\+Node\+::\+Get\+F (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_aa05bf98f01ebe37a825d779f0eb71b0c}
+
+
+Gets the total cost so far to this node. 
+
+Gets the total cost so far to this node. F(total cost) = G(cost) + H(heuristic)
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+99 \{ 
+100     \textcolor{keywordflow}{return} mG_val + mH_val; 
+101 \}
+\end{DoxyCode}
+\index{Path\+Node@{Path\+Node}!Get\+Gval@{Get\+Gval}}
+\index{Get\+Gval@{Get\+Gval}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+Gval}]{\setlength{\rightskip}{0pt plus 5cm}float Path\+Node\+::\+Get\+Gval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a58dd9e43db9be9ea29cf99c70436fe85}
+
+
+Gets the node's cost. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+87 \{
+88     \textcolor{keywordflow}{return} mG_val;
+89 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_a58dd9e43db9be9ea29cf99c70436fe85_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Get\+Hval@{Get\+Hval}}
+\index{Get\+Hval@{Get\+Hval}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+Hval}]{\setlength{\rightskip}{0pt plus 5cm}float Path\+Node\+::\+Get\+Hval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a45c28ba0d030c8ff865f6093bfa52319}
+
+
+Gets the nodes estimated distance to target. 
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+93 \{
+94     \textcolor{keywordflow}{return} mH_val;
+95 \}
+\end{DoxyCode}
+\index{Path\+Node@{Path\+Node}!Get\+Id@{Get\+Id}}
+\index{Get\+Id@{Get\+Id}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Node\+::\+Get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_ad55afead30c184f0a8f3170e0ec9acce}
+
+
+Gets the node's id. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+75 \{
+76     \textcolor{keywordflow}{return} mId;
+77 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_ad55afead30c184f0a8f3170e0ec9acce_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Get\+Manhattan\+Distance@{Get\+Manhattan\+Distance}}
+\index{Get\+Manhattan\+Distance@{Get\+Manhattan\+Distance}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+Manhattan\+Distance}]{\setlength{\rightskip}{0pt plus 5cm}float Path\+Node\+::\+Get\+Manhattan\+Distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Path\+Node} $\ast$}]{node\+End}
+\end{DoxyParamCaption}
+)}\label{class_path_node_ab404e77d3dc61335c06b8600cbebe72e}
+
+
+Calculates the estimated distance to target using Manhattan Distance. 
+
+Calculates the estimated distance to target using Manhattan Distance. Manhattan\+Distance = total vertical distance + total horizontal distance
+
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+105 \{
+106     \textcolor{keywordtype}{float} x = (float)(fabs((\textcolor{keywordtype}{float})this->mX_coord - (\textcolor{keywordtype}{float})nodeEnd->mX_coord));
+107     \textcolor{keywordtype}{float} z = (float)(fabs((\textcolor{keywordtype}{float})this->mZ_coord - (float)nodeEnd->mZ_coord));
+108 
+109     \textcolor{keywordflow}{return} x + z;
+110 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_ab404e77d3dc61335c06b8600cbebe72e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Get\+Parent@{Get\+Parent}}
+\index{Get\+Parent@{Get\+Parent}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path\+Node} $\ast$ Path\+Node\+::\+Get\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_ab359e844cb8588eb29cd207bffe01bf6}
+
+
+Gets the node's parent node. 
+
+\begin{DoxyReturn}{Returns}
+Path\+Node$\ast$ 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+81 \{
+82     \textcolor{keywordflow}{return} mParent;
+83 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_ab359e844cb8588eb29cd207bffe01bf6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Get\+Xcoord@{Get\+Xcoord}}
+\index{Get\+Xcoord@{Get\+Xcoord}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+Xcoord}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Node\+::\+Get\+Xcoord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a480bd277f58ef007cb5ca8209d5ca408}
+
+
+Gets the x coordinate. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+63 \{
+64     \textcolor{keywordflow}{return} mX_coord;
+65 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_a480bd277f58ef007cb5ca8209d5ca408_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Get\+Zcoord@{Get\+Zcoord}}
+\index{Get\+Zcoord@{Get\+Zcoord}!Path\+Node@{Path\+Node}}
+\subsubsection[{Get\+Zcoord}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Node\+::\+Get\+Zcoord (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a1c50bd346ef44e0d0f1f86fd81bf3299}
+
+
+Gets the z coordinate. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+69 \{
+70     \textcolor{keywordflow}{return} mZ_coord;
+71 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_a1c50bd346ef44e0d0f1f86fd81bf3299_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Set\+Gval@{Set\+Gval}}
+\index{Set\+Gval@{Set\+Gval}!Path\+Node@{Path\+Node}}
+\subsubsection[{Set\+Gval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Path\+Node\+::\+Set\+Gval (
+\begin{DoxyParamCaption}
+\item[{float}]{g}
+\end{DoxyParamCaption}
+)}\label{class_path_node_acc57baaef1000e0f71e87506e7d66fe0}
+
+
+Sets this node's cost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & g -\/ the g value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+51 \{
+52     mG_val = g;
+53 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_acc57baaef1000e0f71e87506e7d66fe0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Set\+Hval@{Set\+Hval}}
+\index{Set\+Hval@{Set\+Hval}!Path\+Node@{Path\+Node}}
+\subsubsection[{Set\+Hval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Path\+Node\+::\+Set\+Hval (
+\begin{DoxyParamCaption}
+\item[{float}]{h}
+\end{DoxyParamCaption}
+)}\label{class_path_node_acbb94c9b29226a4ac29df626363a4e02}
+
+
+Sets this node's estimated distance to target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & h -\/ the heuristic value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+57 \{
+58     mH_val = h;
+59 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_acbb94c9b29226a4ac29df626363a4e02_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Set\+Id@{Set\+Id}}
+\index{Set\+Id@{Set\+Id}!Path\+Node@{Path\+Node}}
+\subsubsection[{Set\+Id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Path\+Node\+::\+Set\+Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a8becd50ba2454aa1bbb12093bc93f19e}
+
+
+Sets this node's id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & id -\/ the node id \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+39 \{
+40     mId = id;
+41 \}
+\end{DoxyCode}
+\index{Path\+Node@{Path\+Node}!Set\+Parent@{Set\+Parent}}
+\index{Set\+Parent@{Set\+Parent}!Path\+Node@{Path\+Node}}
+\subsubsection[{Set\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Path\+Node\+::\+Set\+Parent (
+\begin{DoxyParamCaption}
+\item[{{\bf Path\+Node} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a5d593540c7a20422acff5a8b08d7d63b}
+
+
+Sets the parent node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Path\+Node}{p.}{d0/d75/class_path_node}} & $\ast$parent -\/ the parent node \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+45 \{
+46     mParent = parent;
+47 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d75/class_path_node_a5d593540c7a20422acff5a8b08d7d63b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Set\+Xcoord@{Set\+Xcoord}}
+\index{Set\+Xcoord@{Set\+Xcoord}!Path\+Node@{Path\+Node}}
+\subsubsection[{Set\+Xcoord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Path\+Node\+::\+Set\+Xcoord (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\label{class_path_node_ae5b90a7753d7b72729f43312cc79efc7}
+
+
+Sets the x coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & x -\/ the x coordinate \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+27 \{
+28     mX_coord = x;
+29 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{d0/d75/class_path_node_ae5b90a7753d7b72729f43312cc79efc7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Path\+Node@{Path\+Node}!Set\+Zcoord@{Set\+Zcoord}}
+\index{Set\+Zcoord@{Set\+Zcoord}!Path\+Node@{Path\+Node}}
+\subsubsection[{Set\+Zcoord}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Path\+Node\+::\+Set\+Zcoord (
+\begin{DoxyParamCaption}
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\label{class_path_node_a0a42ab899ef6b3fd684381a8550e3107}
+
+
+Sets the z coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & z -\/ the z coordinate \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+33 \{
+34     mZ_coord = z;
+35 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{d0/d75/class_path_node_a0a42ab899ef6b3fd684381a8550e3107_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Path\+Node@{Path\+Node}!m\+G\+\_\+val@{m\+G\+\_\+val}}
+\index{m\+G\+\_\+val@{m\+G\+\_\+val}!Path\+Node@{Path\+Node}}
+\subsubsection[{m\+G\+\_\+val}]{\setlength{\rightskip}{0pt plus 5cm}float Path\+Node\+::m\+G\+\_\+val\hspace{0.3cm}{\ttfamily [private]}}\label{class_path_node_adceaf19301d94e14a7391acd8fdb1435}
+\index{Path\+Node@{Path\+Node}!m\+H\+\_\+val@{m\+H\+\_\+val}}
+\index{m\+H\+\_\+val@{m\+H\+\_\+val}!Path\+Node@{Path\+Node}}
+\subsubsection[{m\+H\+\_\+val}]{\setlength{\rightskip}{0pt plus 5cm}float Path\+Node\+::m\+H\+\_\+val\hspace{0.3cm}{\ttfamily [private]}}\label{class_path_node_a71ed08b4e2af316a112300bd32ca12ef}
+\index{Path\+Node@{Path\+Node}!m\+Id@{m\+Id}}
+\index{m\+Id@{m\+Id}!Path\+Node@{Path\+Node}}
+\subsubsection[{m\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Node\+::m\+Id\hspace{0.3cm}{\ttfamily [private]}}\label{class_path_node_a8bb3299a7b27e5b8e105f9aba4eb652f}
+\index{Path\+Node@{Path\+Node}!m\+Parent@{m\+Parent}}
+\index{m\+Parent@{m\+Parent}!Path\+Node@{Path\+Node}}
+\subsubsection[{m\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Path\+Node}$\ast$ Path\+Node\+::m\+Parent\hspace{0.3cm}{\ttfamily [private]}}\label{class_path_node_aff9da5762e92db59d3cdc75d79546b6c}
+\index{Path\+Node@{Path\+Node}!m\+X\+\_\+coord@{m\+X\+\_\+coord}}
+\index{m\+X\+\_\+coord@{m\+X\+\_\+coord}!Path\+Node@{Path\+Node}}
+\subsubsection[{m\+X\+\_\+coord}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Node\+::m\+X\+\_\+coord\hspace{0.3cm}{\ttfamily [private]}}\label{class_path_node_aeac81f211c23d32c36bd3bc365fcd6e3}
+\index{Path\+Node@{Path\+Node}!m\+Z\+\_\+coord@{m\+Z\+\_\+coord}}
+\index{m\+Z\+\_\+coord@{m\+Z\+\_\+coord}!Path\+Node@{Path\+Node}}
+\subsubsection[{m\+Z\+\_\+coord}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Node\+::m\+Z\+\_\+coord\hspace{0.3cm}{\ttfamily [private]}}\label{class_path_node_a9a6cd3a190b056e2daa8fdd64f505dc4}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Path\+Node.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Path\+Node.\+cpp}\end{DoxyCompactItemize}

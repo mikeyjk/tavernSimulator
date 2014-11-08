@@ -1,0 +1,11 @@
+<map id="Camera::GetDirection" name="Camera::GetDirection">
+<area shape="rect" id="node2" href="$da/dbb/class_camera.html#a2b84f2cf9643be746323e37cfd900909" title="This function will Get the side vector of Camera. " alt="" coords="216,81,339,108"/>
+<area shape="rect" id="node4" href="$d7/da7/class_character.html#a495652bce60ee4c5557cfb250b814d75" title="Update. " alt="" coords="612,56,739,83"/>
+<area shape="rect" id="node6" href="$d8/d24/class_open_g_l.html#a6414a41910efb2e9942089dfb24b928d" title="Reset OpenGL look at function. " alt="" coords="200,220,355,247"/>
+<area shape="rect" id="node3" href="$da/dbb/class_camera.html#a8491685022f64ab54b477a45026c40d3" title="This function will rotate the Camera by Pitch. " alt="" coords="412,5,555,32"/>
+<area shape="rect" id="node5" href="$da/dbb/class_camera.html#a873b77f84501fbdf055e6b70e42ffd9e" title="Camera::RotatePitch3rd" alt="" coords="403,107,564,133"/>
+<area shape="rect" id="node7" href="$d8/d24/class_open_g_l.html#a06c54c33292c0e23b3b8b4f876837cb4" title="Update every frame. " alt="" coords="424,232,543,259"/>
+<area shape="rect" id="node8" href="$d8/d24/class_open_g_l.html#a082a48312c8032be282b49a9d6d7b5cc" title="Initialization OpenGL. " alt="" coords="628,232,723,259"/>
+<area shape="rect" id="node9" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="787,232,917,259"/>
+<area shape="rect" id="node10" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="965,232,1016,259"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Personality::giveHudMoreData" name="Personality::giveHudMoreData">
+<area shape="rect" id="node2" href="$d3/dde/class_brain.html#a6d9f401d3f51b3636b04d3a4c128357b" title="giveHudModeData function " alt="" coords="249,5,411,32"/>
+<area shape="rect" id="node3" href="$d0/d2a/class_n_p_c.html#a972a07e56116037b2325de72ecc20e45" title="NPC::giveHudMoreData" alt="" coords="459,5,617,32"/>
+<area shape="rect" id="node4" href="$d0/d2a/class_n_p_c.html#a49d73fb1d0b5fc4dab086a15a9fca058" title="Update. " alt="" coords="665,5,764,32"/>
+</map>

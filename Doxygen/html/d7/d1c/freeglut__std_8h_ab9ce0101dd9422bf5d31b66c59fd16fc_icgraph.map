@@ -1,0 +1,8 @@
+<map id="glutSolidSphere" name="glutSolidSphere">
+<area shape="rect" id="node2" href="$d7/da7/class_character.html#a681d67b227b0f7abb8508958841c6976" title="i_DrawableObject Draw " alt="" coords="189,5,304,32"/>
+<area shape="rect" id="node3" href="$d8/dbf/class_light_engine.html#a1e11a1824f51238de862531bf5069862" title="drawLights " alt="" coords="167,56,327,83"/>
+<area shape="rect" id="node4" href="$d8/d24/class_open_g_l.html#a697c5b98567a0e56c5ca1e28baad1dba" title="This function will be called when OpenGl draw frame. " alt="" coords="375,56,481,83"/>
+<area shape="rect" id="node5" href="$d8/d24/class_open_g_l.html#a082a48312c8032be282b49a9d6d7b5cc" title="Initialization OpenGL. " alt="" coords="529,56,624,83"/>
+<area shape="rect" id="node6" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="672,56,803,83"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="851,56,901,83"/>
+</map>

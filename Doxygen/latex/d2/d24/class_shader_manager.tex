@@ -1,0 +1,265 @@
+\section{Shader\+Manager Class Reference}
+\label{class_shader_manager}\index{Shader\+Manager@{Shader\+Manager}}
+
+
+{\ttfamily \#include $<$Shader\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Shader\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{dd/d46/class_shader_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Generate\+Shader} (char $\ast$V\+S, char $\ast$P\+S, {\bf string} {\bf name})
+\item 
+{\bf G\+Luint} {\bf Get\+Shader\+Proram} ({\bf string} {\bf name})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Shader\+Manager} $\ast$ {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf Loadfile} (char $\ast${\bf path})
+\item 
+{\bf Shader\+Manager} ({\bf void})
+\item 
+{\bf $\sim$\+Shader\+Manager} ({\bf void})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ {\bf string}, {\bf G\+Luint} $>$ {\bf Programs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Shader\+Manager@{Shader\+Manager}!Shader\+Manager@{Shader\+Manager}}
+\index{Shader\+Manager@{Shader\+Manager}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{Shader\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Manager\+::\+Shader\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_shader_manager_a96d7af4842a98c3d3fcf5e4dacc457d6}
+
+\begin{DoxyCode}
+18 \{
+19 \}
+\end{DoxyCode}
+\index{Shader\+Manager@{Shader\+Manager}!````~Shader\+Manager@{$\sim$\+Shader\+Manager}}
+\index{````~Shader\+Manager@{$\sim$\+Shader\+Manager}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{$\sim$\+Shader\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Manager\+::$\sim$\+Shader\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_shader_manager_a0f94136096f44dde587af5491fc51b2a}
+
+\begin{DoxyCode}
+23 \{
+24 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Shader\+Manager@{Shader\+Manager}!Generate\+Shader@{Generate\+Shader}}
+\index{Generate\+Shader@{Generate\+Shader}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{Generate\+Shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Shader\+Manager\+::\+Generate\+Shader (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{V\+S, }
+\item[{char $\ast$}]{P\+S, }
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_shader_manager_a1e96c2429cbd7d39aab608b4063d7ee3}
+
+\begin{DoxyCode}
+27 \{
+28 
+29     map<string, GLuint>::iterator iterator;
+30     iterator = Programs.find(name);
+31 
+32     \textcolor{keywordflow}{if}(iterator == Programs.end())
+33     \{
+34         GLuint glShaderV = glCreateShader(GL_VERTEX_SHADER);
+35         GLuint glShaderF = glCreateShader(GL_FRAGMENT_SHADER);
+36 
+37         \textcolor{keyword}{const} GLchar* vShaderSource = Loadfile(VS);
+38         \textcolor{keyword}{const} GLchar* fShaderSource = Loadfile(Frag);
+39 
+40         glShaderSource(glShaderV, 1, &vShaderSource, NULL);
+41         glShaderSource(glShaderF, 1, &fShaderSource, NULL);
+42 
+43         \textcolor{keyword}{delete} [] vShaderSource;
+44         \textcolor{keyword}{delete} [] fShaderSource;
+45 
+46        glCompileShader(glShaderV);
+47        glCompileShader(glShaderF);
+48 
+49        GLint result;
+50        glGetShaderiv( glShaderV, GL_COMPILE_STATUS, &result );
+51        \textcolor{keywordflow}{if}( GL\_FALSE == result )
+52        \{
+53           fprintf( stderr, \textcolor{stringliteral}{"Vertex shader compilation failed!\(\backslash\)n"} );
+54           GLint logLen;
+55           glGetShaderiv( glShaderV, GL_INFO_LOG_LENGTH, &logLen );
+56           \textcolor{keywordflow}{if}( logLen > 0 )
+57           \{
+58                 \textcolor{keywordtype}{char} * log = (\textcolor{keywordtype}{char} *)malloc(logLen);
+59                 GLsizei written;
+60                 glGetShaderInfoLog(glShaderV, logLen, &written, log);
+61                 fprintf(stderr, \textcolor{stringliteral}{"Shader log:\(\backslash\)n%s"}, log);
+62                  free(log);
+63             \}
+64          \}
+65 
+66        glGetShaderiv( glShaderF, GL_COMPILE_STATUS, &result );
+67        \textcolor{keywordflow}{if}( GL\_FALSE == result )
+68        \{
+69           fprintf( stderr, \textcolor{stringliteral}{"Fragment shader compilation failed!\(\backslash\)n"} );
+70           GLint logLen;
+71           glGetShaderiv( glShaderF, GL_INFO_LOG_LENGTH, &logLen );
+72           \textcolor{keywordflow}{if}( logLen > 0 )
+73           \{
+74                 \textcolor{keywordtype}{char} * log = (\textcolor{keywordtype}{char} *)malloc(logLen);
+75                 GLsizei written;
+76                 glGetShaderInfoLog(glShaderF, logLen, &written, log);
+77                 fprintf(stderr, \textcolor{stringliteral}{"Shader log:\(\backslash\)n%s"}, log);
+78                  free(log);
+79             \}
+80          \}
+81 
+82        GLuint glProgram = glCreateProgram();
+83 
+84        glAttachShader(glProgram, glShaderV);
+85        glAttachShader(glProgram, glShaderF);
+86 
+87        glLinkProgram(glProgram);
+88      
+89        Programs.insert(std::pair<string,GLuint>(name,glProgram));
+90     \}
+91 
+92 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d24/class_shader_manager_a1e96c2429cbd7d39aab608b4063d7ee3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d24/class_shader_manager_a1e96c2429cbd7d39aab608b4063d7ee3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Shader\+Manager@{Shader\+Manager}!Get\+Shader\+Proram@{Get\+Shader\+Proram}}
+\index{Get\+Shader\+Proram@{Get\+Shader\+Proram}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{Get\+Shader\+Proram}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Shader\+Manager\+::\+Get\+Shader\+Proram (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_shader_manager_a8439099a9ffa76728af5f2f80c82efb4}
+
+\begin{DoxyCode}
+95 \{
+96     map<string, GLuint>::iterator iterator;
+97     iterator = Programs.find(name);
+98 
+99     \textcolor{keywordflow}{if}(iterator != Programs.end())
+100     \{
+101         \textcolor{keywordflow}{return}(iterator->second);
+102     \}
+103     \textcolor{keywordflow}{else}
+104     \{
+105         \textcolor{keywordflow}{return}(-1);
+106     \}
+107 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d24/class_shader_manager_a8439099a9ffa76728af5f2f80c82efb4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Shader\+Manager@{Shader\+Manager}!Instance@{Instance}}
+\index{Instance@{Instance}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shader\+Manager} $\ast$ Shader\+Manager\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shader_manager_aa44be88ba01b54aeb5e914563010bbfc}
+
+\begin{DoxyCode}
+9 \{
+10     \textcolor{keyword}{static} ShaderManager Instance;
+11     \textcolor{keywordflow}{return} &Instance;
+12 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d24/class_shader_manager_aa44be88ba01b54aeb5e914563010bbfc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Shader\+Manager@{Shader\+Manager}!Loadfile@{Loadfile}}
+\index{Loadfile@{Loadfile}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{Loadfile}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Shader\+Manager\+::\+Loadfile (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_shader_manager_a04098fc4f900f478bd8b8573cdff2f7a}
+
+\begin{DoxyCode}
+110 \{
+111     \textcolor{keywordtype}{char} * data;
+112     \textcolor{keywordtype}{int} len;
+113     std::ifstream ifs(path, std::ios::in);
+114     ifs.seekg(0, std::ios::end);
+115     len = ifs.tellg();
+116     ifs.seekg(0, std::ios::beg);
+117     data = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[len + 1];
+118     ifs.read(data, len);
+119     data[len] = 0;
+120 
+121     ifs.close();
+122     \textcolor{keywordflow}{return} data;
+123 \}\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Shader\+Manager@{Shader\+Manager}!Programs@{Programs}}
+\index{Programs@{Programs}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{Programs}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, {\bf G\+Luint}$>$ Shader\+Manager\+::\+Programs\hspace{0.3cm}{\ttfamily [private]}}\label{class_shader_manager_a178815327d92160f8108f000f12322e4}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Shader\+Manager.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Shader\+Manager.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,914 @@
+\section{Menu\+System Class Reference}
+\label{class_menu_system}\index{Menu\+System@{Menu\+System}}
+
+
+The \doxyref{Menu\+System}{p.}{df/dcb/class_menu_system} class provide menu generation and managing methods.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+System.\+h$>$}
+
+
+
+Inheritance diagram for Menu\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{db/d43/class_menu_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Menu\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d2b/class_menu_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em the draw function of the menu \end{DoxyCompactList}\item 
+{\bf void} {\bf check\+Pressed\+Button} ({\bf Vec2} pos)
+\begin{DoxyCompactList}\small\item\em check\+Pressed\+Button function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Pressed\+Button} ({\bf Menu\+Button} $\ast$button)
+\begin{DoxyCompactList}\small\item\em set\+Pressed\+Button function \end{DoxyCompactList}\item 
+{\bf void} {\bf unpress\+Button} ({\bf Vec2} pos)
+\begin{DoxyCompactList}\small\item\em unpress\+Button function \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Set\+Buffer\+Ref} ()
+\begin{DoxyCompactList}\small\item\em Set\+Buffer\+Ref function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Destory} ()
+\begin{DoxyCompactList}\small\item\em Destory function. \end{DoxyCompactList}\item 
+{\bf void} {\bf Menu\+Init} ()
+\begin{DoxyCompactList}\small\item\em Menu\+Init function. \end{DoxyCompactList}\item 
+{\bf void} {\bf Menu\+Display} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Menu\+Display function. \end{DoxyCompactList}\item 
+{\bf Menu\+Container} $\ast$ {\bf new\+Container} ({\bf string} {\bf name}, float {\bf x}, float {\bf y}, float {\bf w}, float {\bf h}, {\bf string} {\bf t})
+\begin{DoxyCompactList}\small\item\em new\+Container function \end{DoxyCompactList}\item 
+{\bf Menu\+Button} $\ast$ {\bf new\+Button} ({\bf string} {\bf name}, float {\bf x}, float {\bf y}, float {\bf w}, float {\bf h}, {\bf string} {\bf t}, {\bf string} dt)
+\begin{DoxyCompactList}\small\item\em new\+Button function \end{DoxyCompactList}\item 
+{\bf Menu\+Component} $\ast$ {\bf get\+Component} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em get\+Component function \end{DoxyCompactList}\item 
+{\bf $\sim$\+Menu\+System} ()
+\begin{DoxyCompactList}\small\item\em desturcture funtion \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Menu\+System} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance function. \end{DoxyCompactList}\item 
+static {\bf void} {\bf switch\+Menu} ()
+\begin{DoxyCompactList}\small\item\em switch\+Menu function \end{DoxyCompactList}\item 
+static {\bf void} {\bf open\+Menu} ()
+\begin{DoxyCompactList}\small\item\em open\+Menu function \end{DoxyCompactList}\item 
+static {\bf void} {\bf close\+Menu} ()
+\begin{DoxyCompactList}\small\item\em close\+Menu function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Menu\+System} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Menu\+Component} $\ast$ {\bf displayer}
+\begin{DoxyCompactList}\small\item\em component for viewing \end{DoxyCompactList}\item 
+{\bf Menu\+Button} $\ast$ {\bf pressed\+Button}
+\begin{DoxyCompactList}\small\item\em buffer for storing which button is pressed \end{DoxyCompactList}\item 
+bool {\bf show\+Menu}
+\begin{DoxyCompactList}\small\item\em bool value for viewing the menu \end{DoxyCompactList}\item 
+map$<$ {\bf string}, {\bf Menu\+Component} $\ast$ $>$ {\bf components}
+\begin{DoxyCompactList}\small\item\em map for storing references of all menu components registed to the system \end{DoxyCompactList}\item 
+unsigned char {\bf m\+\_\+object\+I\+D}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \doxyref{Menu\+System}{p.}{df/dcb/class_menu_system} class provide menu generation and managing methods. 
+
+\begin{DoxyAuthor}{Author}
+Fang Xiang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+026/05/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Menu\+System@{Menu\+System}!````~Menu\+System@{$\sim$\+Menu\+System}}
+\index{````~Menu\+System@{$\sim$\+Menu\+System}!Menu\+System@{Menu\+System}}
+\subsubsection[{$\sim$\+Menu\+System}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+System\+::$\sim$\+Menu\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_a701cb36634fa78dfea3d1761454b3666}
+
+
+desturcture funtion 
+
+
+\begin{DoxyCode}
+158 \{
+159     map<string,MenuComponent*>::iterator i;
+160     \textcolor{keywordflow}{for}(i=components.begin();i!=components.end();i++)
+161     \{
+162         \textcolor{keyword}{delete} i->second;
+163     \}
+164     components.clear();
+165 \}
+\end{DoxyCode}
+\index{Menu\+System@{Menu\+System}!Menu\+System@{Menu\+System}}
+\index{Menu\+System@{Menu\+System}!Menu\+System@{Menu\+System}}
+\subsubsection[{Menu\+System}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+System\+::\+Menu\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_system_ad3eaf9c3c98d39f1211aa2db8b7d3728}
+
+\begin{DoxyCode}
+15 \{
+16     showMenu = \textcolor{keyword}{true};
+17     pressedButton = NULL;
+18     m_objectID = IdGenerator::Instance()->GetID();
+19 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ad3eaf9c3c98d39f1211aa2db8b7d3728_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ad3eaf9c3c98d39f1211aa2db8b7d3728_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Menu\+System@{Menu\+System}!check\+Pressed\+Button@{check\+Pressed\+Button}}
+\index{check\+Pressed\+Button@{check\+Pressed\+Button}!Menu\+System@{Menu\+System}}
+\subsubsection[{check\+Pressed\+Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::check\+Pressed\+Button (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec2}}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_a00f6c94cdc0b2c4a1755570a0473638e}
+
+
+check\+Pressed\+Button function 
+
+This function for checking is there a button be pressed, if do, regist the button to the system, and show the button's pressed texture
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Vec2}{p.}{db/db1/struct_vec2}} & -\/ mouse position \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+64 \{
+65     \textcolor{keywordflow}{if}(MenuSystem::Instance()->showMenu) \{
+66         \textcolor{keywordtype}{int} window\_W = glutGet(GLUT_WINDOW_WIDTH);
+67         \textcolor{keywordtype}{int} window\_H = glutGet(GLUT_WINDOW_HEIGHT);
+68         \textcolor{keywordtype}{int} fixed\_W = 1200;
+69         \textcolor{keywordtype}{int} fixed\_H = 800;
+70         \textcolor{keywordtype}{float} x,y;
+71         x=(pos.x/ window\_W) * fixed\_W;
+72         y=((window\_H - pos.y)/window\_H) * fixed\_H;
+73         MenuSystem::Instance()->displayer->checkPressedButton(x,y);
+74     \}
+75 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a00f6c94cdc0b2c4a1755570a0473638e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a00f6c94cdc0b2c4a1755570a0473638e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!close\+Menu@{close\+Menu}}
+\index{close\+Menu@{close\+Menu}!Menu\+System@{Menu\+System}}
+\subsubsection[{close\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::close\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_menu_system_aa2800a309e2988ae5aaa11682369e838}
+
+
+close\+Menu function 
+
+This function for turning off the menu
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+32 \{
+33     MenuSystem::Instance()->showMenu = \textcolor{keyword}{false};
+34 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_aa2800a309e2988ae5aaa11682369e838_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!Destory@{Destory}}
+\index{Destory@{Destory}!Menu\+System@{Menu\+System}}
+\subsubsection[{Destory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::\+Destory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_menu_system_a89cf703dadae35504f3f2a3a37bdd74c}
+
+
+Destory function. 
+
+rebuild function inherit from \doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_aa4f2b2580134165b3d1aad0b6a9d1a4f}.
+
+
+\begin{DoxyCode}
+173 \{
+174     ((OpenGL *)RenderingEngine::Instance()->GetRenderHandle())->EraseRefFromBuffer(
+      m_objectID);
+175 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a89cf703dadae35504f3f2a3a37bdd74c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!Draw@{Draw}}
+\index{Draw@{Draw}!Menu\+System@{Menu\+System}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_menu_system_a13e4a4a2bddcbf2bde067f3c7c728d3b}
+
+
+the draw function of the menu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_a3ac7ece844fc14e2b179fb2cdb55ccf6}.
+
+
+\begin{DoxyCode}
+37 \{
+38     \textcolor{keywordflow}{if}(MenuSystem::Instance()->showMenu)
+39         MenuSystem::Instance()->displayer->Draw();
+40 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a13e4a4a2bddcbf2bde067f3c7c728d3b_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!Menu\+System@{Menu\+System}}
+\subsubsection[{get\+Component}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+Component} $\ast$ Menu\+System\+::get\+Component (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_a705ea8480b5a89ca377a5e4ad1e4ba80}
+
+
+get\+Component function 
+
+get the reference of a menu component
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ name of the component \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Menu\+Component$\ast$ -\/ the reference 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+99 \{
+100     \textcolor{keywordflow}{return} components[name];
+101 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a705ea8480b5a89ca377a5e4ad1e4ba80_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!Instance@{Instance}}
+\index{Instance@{Instance}!Menu\+System@{Menu\+System}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+System} $\ast$ Menu\+System\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_menu_system_a09f1f4a0afa29c4b700769ebdf52fabf}
+
+
+Instance function. 
+
+This function returns the singleton instance of the menu system
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Menu\+System$\ast$ -\/ this 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+9 \{
+10     \textcolor{keyword}{static} MenuSystem* instance = \textcolor{keyword}{new} MenuSystem();
+11     \textcolor{keywordflow}{return} instance;
+12 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a09f1f4a0afa29c4b700769ebdf52fabf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a09f1f4a0afa29c4b700769ebdf52fabf_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!Menu\+Display@{Menu\+Display}}
+\index{Menu\+Display@{Menu\+Display}!Menu\+System@{Menu\+System}}
+\subsubsection[{Menu\+Display}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::\+Menu\+Display (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_a30270e90b287383f421c04e45b324718}
+
+
+Menu\+Display function. 
+
+active the menu component that will be viewed on the screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & -\/ name of the component \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+78 \{
+79     displayer = components[name];
+80 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a30270e90b287383f421c04e45b324718_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!Menu\+Init@{Menu\+Init}}
+\index{Menu\+Init@{Menu\+Init}!Menu\+System@{Menu\+System}}
+\subsubsection[{Menu\+Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::\+Menu\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_ab249368d82b06724047d8b7951588f8a}
+
+
+Menu\+Init function. 
+
+Initialization of the menu
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+126 \{
+127     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/MurdochInside.png"},\textcolor{stringliteral}{"cover"});
+128     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/menu.png"},\textcolor{stringliteral}{"menu"});
+129     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/btn\_ng.png"},\textcolor{stringliteral}{"btn\_ng"});
+130     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/btn\_ng\_d.png"},\textcolor{stringliteral}{"btn\_ng\_d"});
+131     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/btn\_eg.png"},\textcolor{stringliteral}{"btn\_eg"});
+132     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/btn\_eg\_d.png"},\textcolor{stringliteral}{"btn\_eg\_d"});
+133     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/btn\_rsm.png"},\textcolor{stringliteral}{"btn\_rsm"});
+134     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/btn\_rsm\_d.png"},\textcolor{stringliteral}{"btn\_rsm\_d"});
+135     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/BeerTek.png"},\textcolor{stringliteral}{"BeerTek"});
+136     TextureManager::Instance()->addTexture(\textcolor{stringliteral}{"Textures/HUD/TavernSimLogo.png"},\textcolor{stringliteral}{"TavernSimLogo"});
+137 
+138     \textcolor{keywordtype}{int} window\_W = glutGet(GLUT_WINDOW_WIDTH);
+139     \textcolor{keywordtype}{int} window\_H = glutGet(GLUT_WINDOW_HEIGHT);
+140     SetBufferRef();
+141     MenuContainer* bg = newContainer(\textcolor{stringliteral}{"bg"},0,0,1300,1000,\textcolor{stringliteral}{"cover"});
+142     MenuButton* thx = newButton(\textcolor{stringliteral}{"thx"},350, 25, 512, 768,\textcolor{stringliteral}{"thanks"},\textcolor{stringliteral}{"thanks"});
+143     MenuContainer* cont1 = newContainer(\textcolor{stringliteral}{"cont1"},745,260,310,200,\textcolor{stringliteral}{"menu"});
+144     MenuContainer* cont2 = newContainer(\textcolor{stringliteral}{"cont2"},345,530,512,256,\textcolor{stringliteral}{"TavernSimLogo"});
+145     MenuButton* btn1 = newButton(\textcolor{stringliteral}{"btn1"},750,375,300,50,\textcolor{stringliteral}{"btn\_ng"},\textcolor{stringliteral}{"btn\_ng\_d"});
+146     MenuButton* btn2 = newButton(\textcolor{stringliteral}{"btn2"},750,300,300,50,\textcolor{stringliteral}{"btn\_eg"},\textcolor{stringliteral}{"btn\_eg\_d"});
+147     btn1->addListener(resume);
+148     btn2->addListener(showexit);
+149     thx->addListener(exit);
+150     cont1->addChild(btn1);
+151     cont1->addChild(btn2);
+152     cont1->addChild(cont2);
+153     bg->addChild(cont1);
+154     MenuDisplay(\textcolor{stringliteral}{"bg"});
+155 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ab249368d82b06724047d8b7951588f8a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ab249368d82b06724047d8b7951588f8a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!new\+Button@{new\+Button}}
+\index{new\+Button@{new\+Button}!Menu\+System@{Menu\+System}}
+\subsubsection[{new\+Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+Button} $\ast$ Menu\+System\+::new\+Button (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name, }
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{w, }
+\item[{float}]{h, }
+\item[{{\bf string}}]{t, }
+\item[{{\bf string}}]{dt}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_ac71d272d6891d6af71aff9b6975975f6}
+
+
+new\+Button function 
+
+implement and regist menu button to the system
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of the component \\
+\hline
+{\em x} & -\/ position x \\
+\hline
+{\em y} & -\/ position y \\
+\hline
+{\em w} & -\/ width \\
+\hline
+{\em y} & -\/ height \\
+\hline
+{\em t} & -\/ texture name \\
+\hline
+{\em dt} & -\/ name of pressed button texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Menu\+Button$\ast$ -\/ reference of the button 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+91 \{
+92     MenuButton* component;
+93     component = \textcolor{keyword}{new} MenuButton(x,y,w,h,t,dt);
+94     components.insert(pair<string,MenuComponent*>(name,component));
+95     \textcolor{keywordflow}{return} component;
+96 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ac71d272d6891d6af71aff9b6975975f6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!new\+Container@{new\+Container}}
+\index{new\+Container@{new\+Container}!Menu\+System@{Menu\+System}}
+\subsubsection[{new\+Container}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+Container} $\ast$ Menu\+System\+::new\+Container (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name, }
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{w, }
+\item[{float}]{h, }
+\item[{{\bf string}}]{t}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_adad02377044e9e34a8241173a9f3ff1f}
+
+
+new\+Container function 
+
+implement and regist menu container to the system
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of the component \\
+\hline
+{\em x} & -\/ position x \\
+\hline
+{\em y} & -\/ position y \\
+\hline
+{\em w} & -\/ width \\
+\hline
+{\em y} & -\/ height \\
+\hline
+{\em t} & -\/ texture name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Menu\+Container$\ast$ -\/ reference of the container 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+83 \{
+84     MenuContainer* component;
+85     component = \textcolor{keyword}{new} MenuContainer(x,y,w,h,t);
+86     components.insert(pair<string,MenuComponent*>(name,component));
+87     \textcolor{keywordflow}{return} component;
+88 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_adad02377044e9e34a8241173a9f3ff1f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!open\+Menu@{open\+Menu}}
+\index{open\+Menu@{open\+Menu}!Menu\+System@{Menu\+System}}
+\subsubsection[{open\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::open\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_menu_system_a5bfa8050e2a7d8c4a992ebc3c5c57472}
+
+
+open\+Menu function 
+
+This function for turning on the menu
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+27 \{
+28     MenuSystem::Instance()->showMenu = \textcolor{keyword}{true};
+29 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a5bfa8050e2a7d8c4a992ebc3c5c57472_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a5bfa8050e2a7d8c4a992ebc3c5c57472_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!Set\+Buffer\+Ref@{Set\+Buffer\+Ref}}
+\index{Set\+Buffer\+Ref@{Set\+Buffer\+Ref}!Menu\+System@{Menu\+System}}
+\subsubsection[{Set\+Buffer\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::\+Set\+Buffer\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_menu_system_a005626d2bbb489e6c8e30363c4c9ca42}
+
+
+Set\+Buffer\+Ref function. 
+
+rebuild function inherit from \doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_a5d623d75130432ad07cddf78e165f8fc}.
+
+
+\begin{DoxyCode}
+168 \{
+169     ((OpenGL *)RenderingEngine::Instance()->GetRenderHandle())->AddRefToBuffer(
+      m_objectID, \textcolor{keyword}{this});
+170 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a005626d2bbb489e6c8e30363c4c9ca42_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a005626d2bbb489e6c8e30363c4c9ca42_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!set\+Pressed\+Button@{set\+Pressed\+Button}}
+\index{set\+Pressed\+Button@{set\+Pressed\+Button}!Menu\+System@{Menu\+System}}
+\subsubsection[{set\+Pressed\+Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::set\+Pressed\+Button (
+\begin{DoxyParamCaption}
+\item[{{\bf Menu\+Button} $\ast$}]{button}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_a769d3ec77428f403cf65aed39736136a}
+
+
+set\+Pressed\+Button function 
+
+This function for registry of pressed button
+
+
+\begin{DoxyParams}{Parameters}
+{\em Menu\+Button$\ast$} & -\/ reference of the pressed button \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+43 \{
+44     pressedButton = button;
+45 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_a769d3ec77428f403cf65aed39736136a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!switch\+Menu@{switch\+Menu}}
+\index{switch\+Menu@{switch\+Menu}!Menu\+System@{Menu\+System}}
+\subsubsection[{switch\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::switch\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_menu_system_ac02b4d58d088becdce4646d2bfe50c60}
+
+
+switch\+Menu function 
+
+This function for turning on of turning off the menu
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+22 \{
+23     MenuSystem::Instance()->showMenu = !MenuSystem::Instance()->showMenu;
+24 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ac02b4d58d088becdce4646d2bfe50c60_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ac02b4d58d088becdce4646d2bfe50c60_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+System@{Menu\+System}!unpress\+Button@{unpress\+Button}}
+\index{unpress\+Button@{unpress\+Button}!Menu\+System@{Menu\+System}}
+\subsubsection[{unpress\+Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+System\+::unpress\+Button (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec2}}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_menu_system_ae898363ac4d57515581d42c132fc3bdd}
+
+
+unpress\+Button function 
+
+This function for release the pressed function by change it's texture to the normal one, whielst call the function bounded to this button
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Vec2}{p.}{db/db1/struct_vec2}} & -\/ mouse position \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+48 \{
+49     \textcolor{keywordflow}{if}(pressedButton != NULL)
+50     \{
+51         pressedButton->popUp();
+52         \textcolor{keywordtype}{int} window\_W = glutGet(GLUT_WINDOW_WIDTH);
+53         \textcolor{keywordtype}{int} window\_H = glutGet(GLUT_WINDOW_HEIGHT);
+54         \textcolor{keywordtype}{int} fixed\_W = 1200;
+55         \textcolor{keywordtype}{int} fixed\_H = 800;
+56         \textcolor{keywordtype}{float} x,y;
+57         x=(pos.x/ window\_W) * fixed\_W;
+58         y=((window\_H - pos.y)/window\_H) * fixed\_H;
+59         pressedButton->Active(x,y);
+60     \}
+61 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ae898363ac4d57515581d42c132fc3bdd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/dcb/class_menu_system_ae898363ac4d57515581d42c132fc3bdd_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Menu\+System@{Menu\+System}!components@{components}}
+\index{components@{components}!Menu\+System@{Menu\+System}}
+\subsubsection[{components}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string},{\bf Menu\+Component}$\ast$$>$ Menu\+System\+::components\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_system_a19b40aa500a7e1d6c648d511fbed9eff}
+
+
+map for storing references of all menu components registed to the system 
+
+\index{Menu\+System@{Menu\+System}!displayer@{displayer}}
+\index{displayer@{displayer}!Menu\+System@{Menu\+System}}
+\subsubsection[{displayer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+Component}$\ast$ Menu\+System\+::displayer\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_system_a97888e62f04f4a8f6f983246c1871e51}
+
+
+component for viewing 
+
+\index{Menu\+System@{Menu\+System}!m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}}
+\index{m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}!Menu\+System@{Menu\+System}}
+\subsubsection[{m\+\_\+object\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Menu\+System\+::m\+\_\+object\+I\+D\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_system_ab7f7b9fd0c8b693915de5c751c61a4d4}
+\index{Menu\+System@{Menu\+System}!pressed\+Button@{pressed\+Button}}
+\index{pressed\+Button@{pressed\+Button}!Menu\+System@{Menu\+System}}
+\subsubsection[{pressed\+Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Menu\+Button}$\ast$ Menu\+System\+::pressed\+Button\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_system_a177d7bef80b0772b6f6a6da238db1fdf}
+
+
+buffer for storing which button is pressed 
+
+\index{Menu\+System@{Menu\+System}!show\+Menu@{show\+Menu}}
+\index{show\+Menu@{show\+Menu}!Menu\+System@{Menu\+System}}
+\subsubsection[{show\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}bool Menu\+System\+::show\+Menu\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_system_a25ce4976cd5e45d95a2e64884708340a}
+
+
+bool value for viewing the menu 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+System.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+System.\+cpp}\end{DoxyCompactItemize}

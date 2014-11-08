@@ -1,0 +1,768 @@
+\section{Brain Class Reference}
+\label{class_brain}\index{Brain@{Brain}}
+
+
+This class contains the personality and connection to the affordance system The purpose of it is to abstract the game\+Objects from decision making Has encapsulated functions of personality simply to give access.  
+
+
+
+
+{\ttfamily \#include $<$Brain.\+h$>$}
+
+
+
+Collaboration diagram for Brain\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d6/d9d/class_brain__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Brain} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Brain}{p.}{d3/dde/class_brain} constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Brain} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Brain}{p.}{d3/dde/class_brain} destructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf init\+Personality} ({\bf std\+::string} tr1, {\bf std\+::string} tr2, {\bf std\+::string} tr3, {\bf std\+::string} tr4)
+\begin{DoxyCompactList}\small\item\em init\+Personality function \end{DoxyCompactList}\item 
+{\bf void} {\bf update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em update function \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Trait} ({\bf std\+::string} tr)
+\begin{DoxyCompactList}\small\item\em add\+Trait function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+State} ()
+\begin{DoxyCompactList}\small\item\em set\+State function \end{DoxyCompactList}\item 
+float {\bf get\+Sight} ()
+\begin{DoxyCompactList}\small\item\em get\+Sight function \end{DoxyCompactList}\item 
+{\bf void} {\bf give\+Hud\+Data} ()
+\begin{DoxyCompactList}\small\item\em give\+Hud\+Data function \end{DoxyCompactList}\item 
+{\bf void} {\bf give\+Hud\+More\+Data} (int npcid, {\bf std\+::string} state\+Name)
+\begin{DoxyCompactList}\small\item\em give\+Hud\+Mode\+Data function \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf Tag} $>$ {\bf get\+Needs} ()
+\begin{DoxyCompactList}\small\item\em get\+Needs function \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf std\+::string} $>$ {\bf get\+Needs\+Str} ()
+\begin{DoxyCompactList}\small\item\em get\+Needs\+Str function \end{DoxyCompactList}\item 
+{\bf void} {\bf give\+Affordances\+That\+Meet\+Needs} (vector$<$ {\bf Game\+Object} $\ast$ $>$ aff)
+\begin{DoxyCompactList}\small\item\em give\+Affordances\+That\+Meet\+Needs function \end{DoxyCompactList}\item 
+bool {\bf External\+Stimuli} ({\bf Tag} {\bf name}, float {\bf f}, float tox=0)
+\item 
+float {\bf get\+Speed} ()
+\begin{DoxyCompactList}\small\item\em get\+Spede function \end{DoxyCompactList}\item 
+{\bf Game\+Object} $\ast$ {\bf calculate\+Target} ({\bf Tag} \&find\+State)
+\begin{DoxyCompactList}\small\item\em calculate\+Target function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Personality} $\ast$ {\bf P\+S}
+\begin{DoxyCompactList}\small\item\em personality member object \end{DoxyCompactList}\item 
+double {\bf query\+Timer}
+\begin{DoxyCompactList}\small\item\em simple timer double \end{DoxyCompactList}\item 
+std\+::vector$<$ {\bf Tag} $>$ {\bf m\+\_\+needs}
+\begin{DoxyCompactList}\small\item\em vector of needs that the personality returns and the brain can compare with \end{DoxyCompactList}\item 
+vector$<$ {\bf Game\+Object} $\ast$ $>$ {\bf affordance\+Objects}
+\begin{DoxyCompactList}\small\item\em vector of affordance game\+Obejcts that the brain can use to compare with to find a target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains the personality and connection to the affordance system The purpose of it is to abstract the game\+Objects from decision making Has encapsulated functions of personality simply to give access. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]\+: Fully break off affordance System from \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} (Eyes class?) \begin{DoxyAuthor}{Author}
+Karl, Michael 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/10/2014 
+\end{DoxyDate}
+\end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Brain@{Brain}!Brain@{Brain}}
+\index{Brain@{Brain}!Brain@{Brain}}
+\subsubsection[{Brain}]{\setlength{\rightskip}{0pt plus 5cm}Brain\+::\+Brain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_brain_a92daf9737361454abbb5988a89b7ff40}
+
+
+\doxyref{Brain}{p.}{d3/dde/class_brain} constructor. 
+
+This constructor just sets the timer to 0, and the neeeds to 0 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+5 \{
+6     queryTimer = 0;
+7     m_needs.clear();
+8 \}
+\end{DoxyCode}
+\index{Brain@{Brain}!````~Brain@{$\sim$\+Brain}}
+\index{````~Brain@{$\sim$\+Brain}!Brain@{Brain}}
+\subsubsection[{$\sim$\+Brain}]{\setlength{\rightskip}{0pt plus 5cm}Brain\+::$\sim$\+Brain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_brain_af41db0fbf20565d17d36bad299ae0cac}
+
+
+\doxyref{Brain}{p.}{d3/dde/class_brain} destructor. 
+
+This destructor of the brain 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+11 \{
+12 
+13 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Brain@{Brain}!add\+Trait@{add\+Trait}}
+\index{add\+Trait@{add\+Trait}!Brain@{Brain}}
+\subsubsection[{add\+Trait}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Brain\+::add\+Trait (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{tr}
+\end{DoxyParamCaption}
+)}\label{class_brain_af8a90b79ed2320689c9b135664368a57}
+
+
+add\+Trait function 
+
+Wrapper for \doxyref{Personality}{p.}{d1/da8/class_personality} add\+Trait 
+\begin{DoxyParams}{Parameters}
+{\em tr} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+45 \{
+46     PS->addTrait(tr);
+47 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_af8a90b79ed2320689c9b135664368a57_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{d3/dde/class_brain_af8a90b79ed2320689c9b135664368a57_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!calculate\+Target@{calculate\+Target}}
+\index{calculate\+Target@{calculate\+Target}!Brain@{Brain}}
+\subsubsection[{calculate\+Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Object} $\ast$ Brain\+::calculate\+Target (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag} \&}]{find\+State}
+\end{DoxyParamCaption}
+)}\label{class_brain_aebc01e86f9f5584f7907f099548dff2b}
+
+
+calculate\+Target function 
+
+This functon does some simple comparisons and figues out what target is the best choice to go after it also sets a tag for the \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} to transition into the correct state. 
+\begin{DoxyParams}{Parameters}
+{\em Tag} & \&find\+State \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+G\+Game\+Object$\ast$ target 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+sets the find\+State Tag to the need (so the state machine can transition) 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+65 \{
+66     GameObject* target;
+67     \textcolor{keywordtype}{float} value = 0;
+68     findState = wander;
+69     \textcolor{comment}{//This is a quick calculation.. quick as in it hasnt had much though. Just finds the highest value
+       affordance that meets a need and goes for it.}
+70     \textcolor{comment}{//doesnt care about what need is the biggest need.. IE Thirst should be most important.. Then Food..
+       Then sleep etc.. }
+71     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} need: m_needs)
+72     \{
+73         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} obj : affordanceObjects)
+74         \{
+75             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} aff : obj->getAffordances())
+76             \{
+77                 \textcolor{keywordflow}{if}(aff.getTag() == need)
+78                 \{
+79                     \textcolor{keywordflow}{if}(aff.getValue() > value)
+80                     \{
+81                         target = obj;
+82                         findState = need;
+83                     \}
+84                 \}
+85             \}
+86         \}
+87     \}
+88 
+89     \textcolor{keywordflow}{return} target;
+90 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{d3/dde/class_brain_aebc01e86f9f5584f7907f099548dff2b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!External\+Stimuli@{External\+Stimuli}}
+\index{External\+Stimuli@{External\+Stimuli}!Brain@{Brain}}
+\subsubsection[{External\+Stimuli}]{\setlength{\rightskip}{0pt plus 5cm}bool Brain\+::\+External\+Stimuli (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag}}]{name, }
+\item[{float}]{f, }
+\item[{float}]{tox = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_brain_a797fb88c717f849ba7c62bb13f92a662}
+
+\begin{DoxyCode}
+55 \{
+56     \textcolor{keywordflow}{return} PS->ExternalStimuli(name, f*100, tox*100);
+57 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_a797fb88c717f849ba7c62bb13f92a662_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!get\+Needs@{get\+Needs}}
+\index{get\+Needs@{get\+Needs}!Brain@{Brain}}
+\subsubsection[{get\+Needs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Tag}$>$ Brain\+::get\+Needs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_brain_a4fca4651b6a078930e2d864ed7429417}
+
+
+get\+Needs function 
+
+returns the needs that the brain has identified 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Tag$>$ m\+\_\+needs 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+129 \{ \textcolor{keywordflow}{return}(m_needs); \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_a4fca4651b6a078930e2d864ed7429417_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!get\+Needs\+Str@{get\+Needs\+Str}}
+\index{get\+Needs\+Str@{get\+Needs\+Str}!Brain@{Brain}}
+\subsubsection[{get\+Needs\+Str}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf std\+::string} $>$ Brain\+::get\+Needs\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_brain_ae65c2384880e3bb239caa7d1a2e756e2}
+
+
+get\+Needs\+Str function 
+
+returns the needs that the brain has identified in vector string form 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$string$>$ m\+\_\+needs 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+93 \{
+94     std::vector<std::string> needs;
+95 
+96     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& need : m_needs)
+97     \{
+98         needs.push\_back(Affordance::tagToString(need));
+99     \}
+100 
+101     \textcolor{keywordflow}{return}(needs);
+102 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{d3/dde/class_brain_ae65c2384880e3bb239caa7d1a2e756e2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_ae65c2384880e3bb239caa7d1a2e756e2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!get\+Sight@{get\+Sight}}
+\index{get\+Sight@{get\+Sight}!Brain@{Brain}}
+\subsubsection[{get\+Sight}]{\setlength{\rightskip}{0pt plus 5cm}float Brain\+::get\+Sight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_brain_ab791115902a7282dbe10a6ef4be92f10}
+
+
+get\+Sight function 
+
+wrapper for personality get\+Sight 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sight float 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+88 \{ \textcolor{keywordflow}{return}(PS->getSight());\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{d3/dde/class_brain_ab791115902a7282dbe10a6ef4be92f10_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_ab791115902a7282dbe10a6ef4be92f10_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!Brain@{Brain}}
+\subsubsection[{get\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Brain\+::get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_brain_a65ff0256fdf01d45dcc3daab71cd9c3f}
+
+
+get\+Spede function 
+
+wrapper for personality get\+Speed function 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+158 \{\textcolor{keywordflow}{return} PS->getSpeed();\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{d3/dde/class_brain_a65ff0256fdf01d45dcc3daab71cd9c3f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d3/dde/class_brain_a65ff0256fdf01d45dcc3daab71cd9c3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!give\+Affordances\+That\+Meet\+Needs@{give\+Affordances\+That\+Meet\+Needs}}
+\index{give\+Affordances\+That\+Meet\+Needs@{give\+Affordances\+That\+Meet\+Needs}!Brain@{Brain}}
+\subsubsection[{give\+Affordances\+That\+Meet\+Needs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Brain\+::give\+Affordances\+That\+Meet\+Needs (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Game\+Object} $\ast$ $>$}]{aff}
+\end{DoxyParamCaption}
+)}\label{class_brain_a218e06a4f53d3d7bef486f5eabab7554}
+
+
+give\+Affordances\+That\+Meet\+Needs function 
+
+function that gives the brain the affordance objects that it can compare to its needs. 
+\begin{DoxyParams}{Parameters}
+{\em vector$<$\+Game\+Object$\ast$$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+60 \{
+61     affordanceObjects = aff;
+62 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{d3/dde/class_brain_a218e06a4f53d3d7bef486f5eabab7554_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!give\+Hud\+Data@{give\+Hud\+Data}}
+\index{give\+Hud\+Data@{give\+Hud\+Data}!Brain@{Brain}}
+\subsubsection[{give\+Hud\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Brain\+::give\+Hud\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_brain_a32b4574600c3e13f8501c6e64caa5c00}
+
+
+give\+Hud\+Data function 
+
+wrapper for personality give\+Hud\+Data function 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+98     \{
+99         PS->giveHudData();
+100     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_a32b4574600c3e13f8501c6e64caa5c00_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{d3/dde/class_brain_a32b4574600c3e13f8501c6e64caa5c00_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!give\+Hud\+More\+Data@{give\+Hud\+More\+Data}}
+\index{give\+Hud\+More\+Data@{give\+Hud\+More\+Data}!Brain@{Brain}}
+\subsubsection[{give\+Hud\+More\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Brain\+::give\+Hud\+More\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{npcid, }
+\item[{{\bf std\+::string}}]{state\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_brain_a6d9f401d3f51b3636b04d3a4c128357b}
+
+
+give\+Hud\+Mode\+Data function 
+
+wrapper for personality give\+Hud\+Data function passes in some data from \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} class 
+\begin{DoxyParams}{Parameters}
+{\em int} & npcid, std\+::string state\+Name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+111     \{
+112         std::vector<int> ids;
+113 
+114         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}& aff : affordanceObjects)
+115         \{
+116             ids.push\_back(aff->getID());
+117         \}
+118 
+119         PS->giveHudMoreData(npcid, stateName, getNeedsStr(), ids);
+120     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_a6d9f401d3f51b3636b04d3a4c128357b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_a6d9f401d3f51b3636b04d3a4c128357b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!init\+Personality@{init\+Personality}}
+\index{init\+Personality@{init\+Personality}!Brain@{Brain}}
+\subsubsection[{init\+Personality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Brain\+::init\+Personality (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{tr1, }
+\item[{{\bf std\+::string}}]{tr2, }
+\item[{{\bf std\+::string}}]{tr3, }
+\item[{{\bf std\+::string}}]{tr4}
+\end{DoxyParamCaption}
+)}\label{class_brain_aca519ba404feeaa989d8314cb7b894b8}
+
+
+init\+Personality function 
+
+This takes in 4 string values (traits) and calls the add\+Trait on personality 
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & tr1, std\+::string tr2, std\+::string tr3, std\+::string tr4 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+16 \{
+17     PS = \textcolor{keyword}{new} Personality();
+18 
+19     \textcolor{keywordflow}{if}(tr1 != \textcolor{stringliteral}{"null"})
+20         PS->addTrait(tr1);
+21 
+22     \textcolor{keywordflow}{if}(tr2 != \textcolor{stringliteral}{"null"})
+23         PS->addTrait(tr2);
+24 
+25     \textcolor{keywordflow}{if}(tr3 != \textcolor{stringliteral}{"null"})
+26         PS->addTrait(tr3);
+27 
+28     \textcolor{keywordflow}{if}(tr4 != \textcolor{stringliteral}{"null"})
+29         PS->addTrait(tr4);
+30 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_aca519ba404feeaa989d8314cb7b894b8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d3/dde/class_brain_aca519ba404feeaa989d8314cb7b894b8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Brain@{Brain}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!Brain@{Brain}}
+\subsubsection[{set\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Brain\+::set\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_brain_a510416a9ea6b812a3074d937fccddeba}
+
+
+set\+State function 
+
+This function will be called by brain to set the state Dont think its needed because affordance isnt abstracted from \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} 
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+50 \{
+51 
+52 \}
+\end{DoxyCode}
+\index{Brain@{Brain}!update@{update}}
+\index{update@{update}!Brain@{Brain}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Brain\+::update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)}\label{class_brain_a51bdc223e64b3c7a339e2e7809941bcf}
+
+
+update function 
+
+Every 5 seconds the update function checks if there are any needs 
+\begin{DoxyParams}{Parameters}
+{\em double} & -\/ delta\+Time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+33 \{
+34     queryTimer += deltaTime;
+35     PS->update(deltaTime);
+36 
+37     \textcolor{keywordflow}{if}(queryTimer >= 5)
+38     \{
+39         m_needs = PS->getNeeds();
+40         \textcolor{comment}{//query affordance system}
+41     \}
+42 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/dde/class_brain_a51bdc223e64b3c7a339e2e7809941bcf_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{d3/dde/class_brain_a51bdc223e64b3c7a339e2e7809941bcf_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Brain@{Brain}!affordance\+Objects@{affordance\+Objects}}
+\index{affordance\+Objects@{affordance\+Objects}!Brain@{Brain}}
+\subsubsection[{affordance\+Objects}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Game\+Object}$\ast$$>$ Brain\+::affordance\+Objects\hspace{0.3cm}{\ttfamily [private]}}\label{class_brain_ade881c918b9528eb5e1163320f9a5cf7}
+
+
+vector of affordance game\+Obejcts that the brain can use to compare with to find a target. 
+
+\index{Brain@{Brain}!m\+\_\+needs@{m\+\_\+needs}}
+\index{m\+\_\+needs@{m\+\_\+needs}!Brain@{Brain}}
+\subsubsection[{m\+\_\+needs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Tag}$>$ Brain\+::m\+\_\+needs\hspace{0.3cm}{\ttfamily [private]}}\label{class_brain_a419387f3d8a7311bb69347ccee58a2c4}
+
+
+vector of needs that the personality returns and the brain can compare with 
+
+\index{Brain@{Brain}!P\+S@{P\+S}}
+\index{P\+S@{P\+S}!Brain@{Brain}}
+\subsubsection[{P\+S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Personality}$\ast$ Brain\+::\+P\+S\hspace{0.3cm}{\ttfamily [private]}}\label{class_brain_a863f6f9530d2b38757dca258b9497424}
+
+
+personality member object 
+
+\index{Brain@{Brain}!query\+Timer@{query\+Timer}}
+\index{query\+Timer@{query\+Timer}!Brain@{Brain}}
+\subsubsection[{query\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}double Brain\+::query\+Timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_brain_a47a3123f2b6bcd64877e8ce15a17acd1}
+
+
+simple timer double 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Brain.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Brain.\+cpp}\end{DoxyCompactItemize}

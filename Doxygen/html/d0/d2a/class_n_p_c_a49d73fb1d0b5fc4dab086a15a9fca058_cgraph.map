@@ -1,0 +1,51 @@
+<map id="NPC::Update" name="NPC::Update">
+<area shape="rect" id="node2" href="$d3/dde/class_brain.html#a51bdc223e64b3c7a339e2e7809941bcf" title="update function " alt="" coords="195,284,294,311"/>
+<area shape="rect" id="node18" href="$d0/d2a/class_n_p_c.html#a972a07e56116037b2325de72ecc20e45" title="NPC::giveHudMoreData" alt="" coords="165,473,324,500"/>
+<area shape="rect" id="node26" href="$d4/dd0/class_state_machine.html#a2c325429612440a61338e237b845809d" title="StateMachine::GetNameOfCurrent\lState" alt="" coords="385,525,605,566"/>
+<area shape="rect" id="node27" href="$d3/dde/class_brain.html#a4fca4651b6a078930e2d864ed7429417" title="getNeeds function " alt="" coords="438,591,553,617"/>
+<area shape="rect" id="node28" href="$d3/dde/class_brain.html#a218e06a4f53d3d7bef486f5eabab7554" title="giveAffordancesThatMeetNeeds function " alt="" coords="157,626,332,667"/>
+<area shape="rect" id="node29" href="$d0/d2a/class_n_p_c.html#af4378d6d0057872add55770c5d3fac95" title="NPC::getLocalAffordances" alt="" coords="157,692,332,719"/>
+<area shape="rect" id="node33" href="$d3/dde/class_brain.html#aebc01e86f9f5584f7907f099548dff2b" title="calculateTarget function " alt="" coords="171,743,319,769"/>
+<area shape="rect" id="node34" href="$d4/dd0/class_state_machine.html#a3b24092cc2cd2b8bc5fb04b974b97d30" title="StateMachine::ChangeState" alt="" coords="152,793,337,820"/>
+<area shape="rect" id="node35" href="$d8/dfe/class_affordance.html#af89fa2594e55b5f890240aa24517b5a0" title="Affordance::tagToState" alt="" coords="167,1021,322,1048"/>
+<area shape="rect" id="node50" href="$d4/dd0/class_state_machine.html#a24b1f38171537058ab8040b3b42adb6c" title="StateMachine::Update" alt="" coords="169,1072,320,1099"/>
+<area shape="rect" id="node3" href="$d1/da8/class_personality.html#a2d5bfde36cb0edba9353ffe50b7c6290" title="Update Function. " alt="" coords="428,157,563,184"/>
+<area shape="rect" id="node17" href="$d1/da8/class_personality.html#a25fde6b3143753a04d53e9c97dde6401" title="just a vector of tag like items probably change it to Tag " alt="" coords="420,284,571,311"/>
+<area shape="rect" id="node4" href="$d1/da8/class_personality.html#acd787ed90f8024310acf91c7e35b1e7f" title="Personality::checkFear" alt="" coords="918,5,1074,32"/>
+<area shape="rect" id="node5" href="$d1/da8/class_personality.html#ad0083bfdeffeb24d2296fdce6f61b780" title="calculateStrength function " alt="" coords="655,56,851,83"/>
+<area shape="rect" id="node6" href="$d1/da8/class_personality.html#ae65f8e016dc409d5b393507ed748fc19" title="calculateAgility function " alt="" coords="662,107,845,133"/>
+<area shape="rect" id="node7" href="$d1/da8/class_personality.html#a2cece681a197bba683f3defe5f326cc3" title="calculateSight function " alt="" coords="665,157,842,184"/>
+<area shape="rect" id="node8" href="$d1/da8/class_personality.html#a3960477359992c51ac70f5389fccfd5b" title="determineEmotion function " alt="" coords="653,208,853,235"/>
+<area shape="rect" id="node16" href="$d1/da8/class_personality.html#aba00045715f9e7f59cd43966524cf8af" title="calcEnEmotion function " alt="" coords="662,259,845,285"/>
+<area shape="rect" id="node9" href="$d1/da8/class_personality.html#a42cfac76ab7aee99f26d0c3e4bf99584" title="check functions " alt="" coords="911,56,1081,83"/>
+<area shape="rect" id="node10" href="$d1/da8/class_personality.html#a83429669148e7abbfd45b07a41e0ed39" title="Personality::checkThirst" alt="" coords="915,107,1077,133"/>
+<area shape="rect" id="node11" href="$d1/da8/class_personality.html#aaecd6894f726659adfe177eebd604a46" title="Personality::checkBladder" alt="" coords="909,157,1083,184"/>
+<area shape="rect" id="node12" href="$d1/da8/class_personality.html#a66916a6c7c6278d270ca1f192aa05bc3" title="Personality::checkTired" alt="" coords="917,208,1075,235"/>
+<area shape="rect" id="node13" href="$d1/da8/class_personality.html#a24a63bbff300be0896df66011117a7ba" title="Personality::checkBoredom" alt="" coords="905,259,1087,285"/>
+<area shape="rect" id="node14" href="$d1/da8/class_personality.html#a9535e2492ee5edca76f5e80f9f3dfd2b" title="Personality::checkTalk" alt="" coords="919,309,1073,336"/>
+<area shape="rect" id="node15" href="$d1/da8/class_personality.html#ae8504ac35b9f9931fa30073a664cde45" title="Personality::checkToxication" alt="" coords="901,360,1091,387"/>
+<area shape="rect" id="node19" href="$d3/dde/class_brain.html#a6d9f401d3f51b3636b04d3a4c128357b" title="giveHudModeData function " alt="" coords="415,423,576,449"/>
+<area shape="rect" id="node25" href="$d0/dd1/class_game_object.html#add964e473761c04f3406efb37d23b37a" title="getID function " alt="" coords="429,473,562,500"/>
+<area shape="rect" id="node20" href="$d1/da8/class_personality.html#adaf5627e1a67b5d93c3281fdf957bd0b" title="giveHudMoreData function " alt="" coords="655,423,851,449"/>
+<area shape="rect" id="node23" href="$d3/dde/class_brain.html#ae65c2384880e3bb239caa7d1a2e756e2" title="getNeedsStr function " alt="" coords="687,499,819,525"/>
+<area shape="rect" id="node21" href="$da/df5/class_control_system.html#aa3b24cbd4e40b867422d9cd4443e63db" title="Instance. " alt="" coords="913,411,1079,437"/>
+<area shape="rect" id="node22" href="$d7/d05/class_h_u_d.html#a17d80fb1334f544a7198d9ae4289fb09" title="HUD::giveHudNPCData" alt="" coords="918,461,1074,488"/>
+<area shape="rect" id="node24" href="$d8/dfe/class_affordance.html#af6a45d7dc33a939b4820ff2c4e97b87d" title="Affordance::tagToString" alt="" coords="917,512,1075,539"/>
+<area shape="rect" id="node30" href="$d0/dd1/class_game_object.html#a0c133927fa016892816a71c40d761681" title="getPosition " alt="" coords="423,641,567,668"/>
+<area shape="rect" id="node31" href="$d3/dde/class_brain.html#ab791115902a7282dbe10a6ef4be92f10" title="getSight function " alt="" coords="441,692,549,719"/>
+<area shape="rect" id="node32" href="$d1/da8/class_personality.html#a90e0410a59a76b1e1be56d7e62ff3975" title="getSight function " alt="" coords="682,692,825,719"/>
+<area shape="rect" id="node36" href="$d1/d5d/class_eat.html#a2f0f4411c3d1fd45465c3a2aab6c95f1" title="Instance function. " alt="" coords="446,743,545,769"/>
+<area shape="rect" id="node37" href="$db/da9/class_drink.html#aa29a2ef6ce66ef0d419debd80e615943" title="Instance function. " alt="" coords="441,793,550,820"/>
+<area shape="rect" id="node38" href="$d2/dcd/class_sit.html#a9732e194bba101958a9664507005371e" title="Instance function. " alt="" coords="448,844,543,871"/>
+<area shape="rect" id="node39" href="$df/dfa/class_pickup.html#a1ba936342911e94daa44b05ea84cf724" title="Instance function. " alt="" coords="436,895,555,921"/>
+<area shape="rect" id="node40" href="$d2/d6c/class_talk.html#ae7c56ab90cd3f599afd4eaeba4b25220" title="Instance function. " alt="" coords="444,945,547,972"/>
+<area shape="rect" id="node41" href="$d9/d29/class_toilet.html#a2d4839c720ac28ccb61b81bfb15e3040" title="Instance function. " alt="" coords="440,996,551,1023"/>
+<area shape="rect" id="node42" href="$da/dbc/class_sleep_state.html#a040b7eab2439a94d2d04c51efa3db814" title="Instance function. " alt="" coords="424,1047,567,1073"/>
+<area shape="rect" id="node43" href="$d5/de4/class_throw.html#af90954d9ed826bf5eeb40c6ed6b7c652" title="Instance function. " alt="" coords="439,1097,552,1124"/>
+<area shape="rect" id="node44" href="$d1/dff/class_touch.html#a26cfa64f795ee141d3bd168ce49f5e3c" title="Instance function. " alt="" coords="438,1148,553,1175"/>
+<area shape="rect" id="node45" href="$de/db8/class_climb.html#a4a2514cabf5590e29bd34f632e29afd2" title="Instance function. " alt="" coords="439,1199,551,1225"/>
+<area shape="rect" id="node46" href="$d5/d33/class_push.html#a243f5b75dd42e69a28981ca332ec9ae4" title="Instance function. " alt="" coords="441,1249,550,1276"/>
+<area shape="rect" id="node47" href="$de/de1/class_pull.html#a10819c4314462cc41b143b13bd1c9773" title="Instance function. " alt="" coords="445,1300,546,1327"/>
+<area shape="rect" id="node48" href="$d3/d29/class_vendor.html#a304fc67a8e6261f7603987813fdb531c" title="Instance function. " alt="" coords="435,1351,555,1377"/>
+<area shape="rect" id="node49" href="$dd/dbb/class_wander.html#a7e5c6acd56a4e1b5efd4d7108fdb44ed" title="Instance function. " alt="" coords="433,1401,557,1428"/>
+</map>

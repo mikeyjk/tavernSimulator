@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine", "GameEngine\GameEngine.vcxproj", "{CABB4A26-7288-4287-8086-3003ADEAC7AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{999DE5B7-6BCD-462C-ADD3-01980F0E4B12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		MinSizeRel|Win32 = MinSizeRel|Win32
+		Release|Win32 = Release|Win32
+		RelWithDebInfo|Win32 = RelWithDebInfo|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.Debug|Win32.Build.0 = Debug|Win32
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.Release|Win32.ActiveCfg = Release|Win32
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.Release|Win32.Build.0 = Release|Win32
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{CABB4A26-7288-4287-8086-3003ADEAC7AF}.RelWithDebInfo|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

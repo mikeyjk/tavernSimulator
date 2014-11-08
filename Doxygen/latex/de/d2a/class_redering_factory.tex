@@ -1,0 +1,128 @@
+\section{Redering\+Factory Class Reference}
+\label{class_redering_factory}\index{Redering\+Factory@{Redering\+Factory}}
+
+
+Create the \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+Pi.  
+
+
+
+
+{\ttfamily \#include $<$Redering\+Factory.\+h$>$}
+
+
+
+Collaboration diagram for Redering\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{d0/d80/class_redering_factory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Redering\+Factory} ({\bf void})
+\item 
+{\bf $\sim$\+Redering\+Factory} ({\bf void})
+\item 
+{\bf I\+\_\+\+Graphic} $\ast$ {\bf Create\+Render} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Create the Render A\+P\+I. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Create the \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+Pi. 
+
+\begin{DoxyAuthor}{Author}
+\+: Liu Yi \+: null  By\+: \doxyref{Rendering\+Engine}{p.}{da/d3d/class_rendering_engine} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/12/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Redering\+Factory@{Redering\+Factory}!Redering\+Factory@{Redering\+Factory}}
+\index{Redering\+Factory@{Redering\+Factory}!Redering\+Factory@{Redering\+Factory}}
+\subsubsection[{Redering\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}Redering\+Factory\+::\+Redering\+Factory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_redering_factory_adbef010ee537357205625126fbb88cfe}
+
+\begin{DoxyCode}
+5 \{
+6 \}
+\end{DoxyCode}
+\index{Redering\+Factory@{Redering\+Factory}!````~Redering\+Factory@{$\sim$\+Redering\+Factory}}
+\index{````~Redering\+Factory@{$\sim$\+Redering\+Factory}!Redering\+Factory@{Redering\+Factory}}
+\subsubsection[{$\sim$\+Redering\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}Redering\+Factory\+::$\sim$\+Redering\+Factory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_redering_factory_ad518d13879d339cccdfe92332f3f4c33}
+
+\begin{DoxyCode}
+10 \{
+11 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Redering\+Factory@{Redering\+Factory}!Create\+Render@{Create\+Render}}
+\index{Create\+Render@{Create\+Render}!Redering\+Factory@{Redering\+Factory}}
+\subsubsection[{Create\+Render}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+\_\+\+Graphic} $\ast$ Redering\+Factory\+::\+Create\+Render (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_redering_factory_a91a6408a1a1faea5a96b1fd53d23ce87}
+
+
+Create the Render A\+P\+I. 
+
+This function decide which A\+P\+I should be used, either \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} or Direct\+X11
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & (either \char`\"{}\+O\+P\char`\"{} or \char`\"{}\+D\+X\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+return a \doxyref{I\+\_\+\+Graphic}{p.}{d4/dd3/class_i___graphic} Pointer to the \doxyref{Rendering}{p.}{d3/d32/class_rendering} A\+Pi 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+14 \{
+15     assert( (name == \textcolor{stringliteral}{"OpenGL"}) || (name == \textcolor{stringliteral}{"DirectX"}) || \textcolor{stringliteral}{"RederingFactory::CreateRender"});
+16 
+17 
+18     \textcolor{keywordflow}{if}(name == \textcolor{stringliteral}{"OpenGL"})
+19     \{
+20         \textcolor{keywordflow}{return} \textcolor{keyword}{new} OpenGL();
+21     \}
+22     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(name == \textcolor{stringliteral}{"DirectX"})
+23     \{
+24         \textcolor{keywordflow}{return} \textcolor{keyword}{new} DirectX();
+25     \}
+26     \textcolor{keywordflow}{else}
+27     \{
+28         \textcolor{keywordflow}{throw} std::exception(\textcolor{stringliteral}{"Unsupported Graphics Interface!"});
+29     \}
+30 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d2a/class_redering_factory_a91a6408a1a1faea5a96b1fd53d23ce87_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Redering\+Factory.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Redering\+Factory.\+cpp}\end{DoxyCompactItemize}

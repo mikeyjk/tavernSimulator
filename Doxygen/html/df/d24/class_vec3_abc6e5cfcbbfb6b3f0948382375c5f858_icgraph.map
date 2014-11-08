@@ -1,0 +1,9 @@
+<map id="Vec3::xProd" name="Vec3::xProd">
+<area shape="rect" id="node2" href="$da/dbb/class_camera.html#a2b84f2cf9643be746323e37cfd900909" title="This function will Get the side vector of Camera. " alt="" coords="169,23,291,50"/>
+<area shape="rect" id="node6" href="$da/dbb/class_camera.html#a20b5fe8c98508c6e251604497400622e" title="Camera::UpdateRotation" alt="" coords="148,74,312,100"/>
+<area shape="rect" id="node3" href="$da/dbb/class_camera.html#a8491685022f64ab54b477a45026c40d3" title="This function will rotate the Camera by Pitch. " alt="" coords="369,23,512,50"/>
+<area shape="rect" id="node4" href="$d7/da7/class_character.html#a495652bce60ee4c5557cfb250b814d75" title="Update. " alt="" coords="569,23,696,50"/>
+<area shape="rect" id="node5" href="$da/dbb/class_camera.html#a873b77f84501fbdf055e6b70e42ffd9e" title="Camera::RotatePitch3rd" alt="" coords="360,74,521,100"/>
+<area shape="rect" id="node7" href="$da/dbb/class_camera.html#ab14bf413828e51f5685b0001c4247f88" title="This function will rotate the Camera by Yaw. " alt="" coords="371,124,510,151"/>
+<area shape="rect" id="node8" href="$da/dbb/class_camera.html#a1296c75191df3e155323844313844b58" title="Camera::RotateYaw3rd" alt="" coords="363,175,519,202"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="Camera::RotatePitch3rd" name="Camera::RotatePitch3rd">
+<area shape="rect" id="node2" href="$da/dbb/class_camera.html#a2b84f2cf9643be746323e37cfd900909" title="This function will Get the side vector of Camera. " alt="" coords="235,566,358,592"/>
+<area shape="rect" id="node11" href="$dc/de3/class_quaternion.html#ab674ea67691cea70557aa3a7b5f6950f" title="Quaternion::conjugate" alt="" coords="222,616,371,643"/>
+<area shape="rect" id="node13" href="$dc/de3/class_quaternion.html#ae14f10e9911d8b12f9070c651cb1ecdf" title="Quaternion::mult" alt="" coords="237,667,356,694"/>
+<area shape="rect" id="node14" href="$da/dbb/class_camera.html#acdbd1c32c94c552a514244b250a08c03" title="This function will Set the Direction of Camera. " alt="" coords="223,718,370,744"/>
+<area shape="rect" id="node15" href="$dc/de3/class_quaternion.html#a94c3251e8a4f95f1b1ce038ac6182921" title="Quaternion::getX" alt="" coords="237,768,356,795"/>
+<area shape="rect" id="node16" href="$dc/de3/class_quaternion.html#a20a8361e5067f32fef29d335b36c6545" title="Quaternion::getY" alt="" coords="237,819,357,846"/>
+<area shape="rect" id="node17" href="$dc/de3/class_quaternion.html#aa1be936f634eb6b947b55f2bb8e59ca3" title="Quaternion::getZ" alt="" coords="237,870,356,896"/>
+<area shape="rect" id="node18" href="$da/dbb/class_camera.html#a20b5fe8c98508c6e251604497400622e" title="Camera::UpdateRotation" alt="" coords="215,211,379,238"/>
+<area shape="rect" id="node3" href="$df/d24/class_vec3.html#abc6e5cfcbbfb6b3f0948382375c5f858" title="cross product function " alt="" coords="457,388,552,415"/>
+<area shape="rect" id="node10" href="$da/dbb/class_camera.html#aa6fbfe702376f8f398f6b2bf93360bcc" title="This function will Get the Direction of Camera. " alt="" coords="431,616,578,643"/>
+<area shape="rect" id="node4" href="$df/d24/class_vec3.html#ab951f3320ac854125cd9adecea8d5331" title="setX function " alt="" coords="641,312,726,339"/>
+<area shape="rect" id="node5" href="$df/d24/class_vec3.html#ab2b7ff578872d185d35479c8a9b77c29" title="getY function " alt="" coords="784,110,871,136"/>
+<area shape="rect" id="node6" href="$df/d24/class_vec3.html#a89e72080b8746be3e25ac992849a4e9d" title="getZ function " alt="" coords="785,59,870,86"/>
+<area shape="rect" id="node7" href="$df/d24/class_vec3.html#a1fcc44395e5ad47d864fd0f7591d7615" title="setY function " alt="" coords="640,363,727,390"/>
+<area shape="rect" id="node8" href="$df/d24/class_vec3.html#adf8fef45a6920dae9962e7f73c2694e1" title="getX function " alt="" coords="785,211,870,238"/>
+<area shape="rect" id="node9" href="$df/d24/class_vec3.html#a899f6301df50d9a4851a1e64ce384fca" title="setZ function " alt="" coords="641,262,726,288"/>
+<area shape="rect" id="node12" href="$dc/de3/class_quaternion.html#abcc01358aada56ea5f0db4da18aaf77d" title="Quaternion::Quaternion" alt="" coords="427,667,583,694"/>
+<area shape="rect" id="node19" href="$df/d24/class_vec3.html#addb4fc8b8f3a27a0b95d0a07fbb98a7a" title="Normalize function. " alt="" coords="447,211,563,238"/>
+<area shape="rect" id="node21" href="$df/d24/class_vec3.html#a8f1919faffa42fa73ee72d8f321402d2" title="dot Product function " alt="" coords="631,59,736,86"/>
+<area shape="rect" id="node20" href="$df/d24/class_vec3.html#a83f735a0f3fb84e34b3225801cfc1df8" title="Length function. " alt="" coords="636,160,731,187"/>
+</map>

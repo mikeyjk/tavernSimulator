@@ -1,0 +1,219 @@
+\section{Menu\+Container Class Reference}
+\label{class_menu_container}\index{Menu\+Container@{Menu\+Container}}
+
+
+The \doxyref{Menu\+Container}{p.}{d8/d38/class_menu_container} class is menu component for contain components and showing background.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+Container.\+h$>$}
+
+
+
+Inheritance diagram for Menu\+Container\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{d2/d12/class_menu_container__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Menu\+Container\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d24/class_menu_container__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Menu\+Container} (float {\bf x}, float {\bf y}, float {\bf w}, float {\bf h}, {\bf string} {\bf t})
+\begin{DoxyCompactList}\small\item\em structure function \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em draw function inherit from menu component \end{DoxyCompactList}\item 
+{\bf void} {\bf check\+Pressed\+Button} (float {\bf x}, float {\bf y})
+\begin{DoxyCompactList}\small\item\em check\+Pressed\+Button function \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Child} ({\bf Menu\+Component} $\ast$child)
+\begin{DoxyCompactList}\small\item\em add\+Child function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Menu\+Component} $\ast$ $>$ {\bf childs}
+\begin{DoxyCompactList}\small\item\em vector for storing references of components in this container \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \doxyref{Menu\+Container}{p.}{d8/d38/class_menu_container} class is menu component for contain components and showing background. 
+
+\begin{DoxyAuthor}{Author}
+Fang Xiang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+026/05/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Menu\+Container@{Menu\+Container}!Menu\+Container@{Menu\+Container}}
+\index{Menu\+Container@{Menu\+Container}!Menu\+Container@{Menu\+Container}}
+\subsubsection[{Menu\+Container}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+Container\+::\+Menu\+Container (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{w, }
+\item[{float}]{h, }
+\item[{{\bf string}}]{t}
+\end{DoxyParamCaption}
+)}\label{class_menu_container_adb79777fb10df19fafc4557dc08cef8d}
+
+
+structure function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ position x \\
+\hline
+{\em y} & -\/ position y \\
+\hline
+{\em w} & -\/ width \\
+\hline
+{\em y} & -\/ height \\
+\hline
+{\em t} & -\/ texture name \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+7     :MenuComponent(x,y,w,h,t)
+8 \{
+9 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Menu\+Container@{Menu\+Container}!add\+Child@{add\+Child}}
+\index{add\+Child@{add\+Child}!Menu\+Container@{Menu\+Container}}
+\subsubsection[{add\+Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Container\+::add\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf Menu\+Component} $\ast$}]{child}
+\end{DoxyParamCaption}
+)}\label{class_menu_container_a5d49d9595a6b056f9bddf929afdd24c9}
+
+
+add\+Child function 
+
+put components under this container
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & -\/ the component \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+32 \{
+33     childs.push\_back(child);
+34 \}\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d38/class_menu_container_a5d49d9595a6b056f9bddf929afdd24c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Container@{Menu\+Container}!check\+Pressed\+Button@{check\+Pressed\+Button}}
+\index{check\+Pressed\+Button@{check\+Pressed\+Button}!Menu\+Container@{Menu\+Container}}
+\subsubsection[{check\+Pressed\+Button}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Container\+::check\+Pressed\+Button (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_menu_container_ad4e3c4ccf44c2a7f6674cc30787fcda4}
+
+
+check\+Pressed\+Button function 
+
+inherit from menu component for check if buttons are pressed
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & -\/ mouse position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from {\bf Menu\+Component} \doxyref{}{p.}{d6/dee/class_menu_component_a1abca66a179b539e69fcb1e78418fc63}.
+
+
+\begin{DoxyCode}
+12 \{
+13     \textcolor{keywordflow}{if}( posX < x && x <(posX+sizeW) && posY < y && y< (posY+sizeH))
+14     \{
+15         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i < childs.size();i++)
+16         \{
+17             childs[i]->checkPressedButton(x,y);
+18         \}
+19     \}
+20 \}
+\end{DoxyCode}
+\index{Menu\+Container@{Menu\+Container}!Draw@{Draw}}
+\index{Draw@{Draw}!Menu\+Container@{Menu\+Container}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Container\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_menu_container_a547bf602682b16ef0d0d92e8f45cd2df}
+
+
+draw function inherit from menu component 
+
+
+
+Reimplemented from {\bf Menu\+Component} \doxyref{}{p.}{d6/dee/class_menu_component_ad572f0e556e76f1ce068ab8118f322bd}.
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i < childs.size();i++)
+25     \{
+26         childs[i]->Draw();
+27     \}
+28     ((OpenGL *)RenderingEngine::Instance()->GetRenderHandle())->RenderOverlay(
+      posX,posY,sizeW,sizeH,texture);
+29 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d38/class_menu_container_a547bf602682b16ef0d0d92e8f45cd2df_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Menu\+Container@{Menu\+Container}!childs@{childs}}
+\index{childs@{childs}!Menu\+Container@{Menu\+Container}}
+\subsubsection[{childs}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Menu\+Component}$\ast$$>$ Menu\+Container\+::childs\hspace{0.3cm}{\ttfamily [private]}}\label{class_menu_container_a2ae400dc83a041798c33a58278a719ac}
+
+
+vector for storing references of components in this container 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+Container.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+Container.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,612 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+S\+O\+I\+L/\+S\+O\+I\+L.h File Reference}
+\label{_s_o_i_l_8h}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+S\+O\+I\+L/\+S\+O\+I\+L.\+h@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+S\+O\+I\+L/\+S\+O\+I\+L.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d70/_s_o_i_l_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf S\+O\+I\+L\+\_\+\+D\+D\+S\+\_\+\+C\+U\+B\+E\+M\+A\+P\+\_\+\+F\+A\+C\+E\+\_\+\+O\+R\+D\+E\+R}~\char`\"{}E\+W\+U\+D\+N\+S\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O} = 0, 
+{\bf S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L} = 1, 
+{\bf S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A} = 2, 
+{\bf S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B} = 3, 
+\\*
+{\bf S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\+A} = 4
+ \}
+\item 
+enum \{ {\bf S\+O\+I\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+I\+D} = 0
+ \}
+\item 
+enum \{ \\*
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O} = 1, 
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S} = 2, 
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S} = 4, 
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A} = 8, 
+\\*
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y} = 16, 
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T} = 32, 
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T} = 64, 
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+N\+T\+S\+C\+\_\+\+S\+A\+F\+E\+\_\+\+R\+G\+B} = 128, 
+\\*
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+Co\+Cg\+\_\+\+Y} = 256, 
+{\bf S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E} = 512
+ \}
+\item 
+enum \{ {\bf S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+G\+A} = 0, 
+{\bf S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+M\+P} = 1, 
+{\bf S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+D\+S} = 2
+ \}
+\item 
+enum \{ {\bf S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E} = 0, 
+{\bf S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A} = 1, 
+{\bf S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture} (const char $\ast$filename, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap} (const char $\ast$x\+\_\+pos\+\_\+file, const char $\ast$x\+\_\+neg\+\_\+file, const char $\ast$y\+\_\+pos\+\_\+file, const char $\ast$y\+\_\+neg\+\_\+file, const char $\ast$z\+\_\+pos\+\_\+file, const char $\ast$z\+\_\+neg\+\_\+file, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap} (const char $\ast$filename, const char face\+\_\+order[6], int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture} (const char $\ast$filename, int fake\+\_\+\+H\+D\+R\+\_\+format, int rescale\+\_\+to\+\_\+max, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory} (const unsigned char $\ast$const {\bf buffer}, int buffer\+\_\+length, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory} (const unsigned char $\ast$const x\+\_\+pos\+\_\+buffer, int x\+\_\+pos\+\_\+buffer\+\_\+length, const unsigned char $\ast$const x\+\_\+neg\+\_\+buffer, int x\+\_\+neg\+\_\+buffer\+\_\+length, const unsigned char $\ast$const y\+\_\+pos\+\_\+buffer, int y\+\_\+pos\+\_\+buffer\+\_\+length, const unsigned char $\ast$const y\+\_\+neg\+\_\+buffer, int y\+\_\+neg\+\_\+buffer\+\_\+length, const unsigned char $\ast$const z\+\_\+pos\+\_\+buffer, int z\+\_\+pos\+\_\+buffer\+\_\+length, const unsigned char $\ast$const z\+\_\+neg\+\_\+buffer, int z\+\_\+neg\+\_\+buffer\+\_\+length, int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory} (const unsigned char $\ast$const {\bf buffer}, int buffer\+\_\+length, const char face\+\_\+order[6], int force\+\_\+channels, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture} (const unsigned char $\ast$const {\bf data}, int {\bf width}, int {\bf height}, int channels, unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+unsigned int {\bf S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap} (const unsigned char $\ast$const {\bf data}, int {\bf width}, int {\bf height}, int channels, const char face\+\_\+order[6], unsigned int reuse\+\_\+texture\+\_\+\+I\+D, unsigned int {\bf flags})
+\item 
+int {\bf S\+O\+I\+L\+\_\+save\+\_\+screenshot} (const char $\ast$filename, int image\+\_\+type, int {\bf x}, int {\bf y}, int {\bf width}, int {\bf height})
+\item 
+unsigned char $\ast$ {\bf S\+O\+I\+L\+\_\+load\+\_\+image} (const char $\ast$filename, int $\ast${\bf width}, int $\ast${\bf height}, int $\ast$channels, int force\+\_\+channels)
+\item 
+unsigned char $\ast$ {\bf S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory} (const unsigned char $\ast$const {\bf buffer}, int buffer\+\_\+length, int $\ast${\bf width}, int $\ast${\bf height}, int $\ast$channels, int force\+\_\+channels)
+\item 
+int {\bf S\+O\+I\+L\+\_\+save\+\_\+image} (const char $\ast$filename, int image\+\_\+type, int {\bf width}, int {\bf height}, int channels, const unsigned char $\ast$const {\bf data})
+\item 
+{\bf void} {\bf S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data} (unsigned char $\ast$img\+\_\+data)
+\item 
+const char $\ast$ {\bf S\+O\+I\+L\+\_\+last\+\_\+result} ({\bf void})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+D\+D\+S\+\_\+\+C\+U\+B\+E\+M\+A\+P\+\_\+\+F\+A\+C\+E\+\_\+\+O\+R\+D\+E\+R@{S\+O\+I\+L\+\_\+\+D\+D\+S\+\_\+\+C\+U\+B\+E\+M\+A\+P\+\_\+\+F\+A\+C\+E\+\_\+\+O\+R\+D\+E\+R}}
+\index{S\+O\+I\+L\+\_\+\+D\+D\+S\+\_\+\+C\+U\+B\+E\+M\+A\+P\+\_\+\+F\+A\+C\+E\+\_\+\+O\+R\+D\+E\+R@{S\+O\+I\+L\+\_\+\+D\+D\+S\+\_\+\+C\+U\+B\+E\+M\+A\+P\+\_\+\+F\+A\+C\+E\+\_\+\+O\+R\+D\+E\+R}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+\+D\+D\+S\+\_\+\+C\+U\+B\+E\+M\+A\+P\+\_\+\+F\+A\+C\+E\+\_\+\+O\+R\+D\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+I\+L\+\_\+\+D\+D\+S\+\_\+\+C\+U\+B\+E\+M\+A\+P\+\_\+\+F\+A\+C\+E\+\_\+\+O\+R\+D\+E\+R~\char`\"{}E\+W\+U\+D\+N\+S\char`\"{}}\label{_s_o_i_l_8h_ac74195d876b7252e9303582f0d0f84de}
+Defines the order of faces in a D\+D\+S cubemap. I recommend that you use the same order in single image cubemap files, so they will be interchangeable with D\+D\+S cubemaps when using S\+O\+I\+L. 
+
+\subsection{Enumeration Type Documentation}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_o_i_l_8h_a06fc87d81c62e9abb8790b6e5713c55b}
+The format of images that may be loaded (force\+\_\+channels). S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O leaves the image in whatever format it was found. S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L forces the image to load as Luminous (greyscale) S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A forces the image to load as Luminous with Alpha S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B forces the image to load as Red Green Blue S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\+A forces the image to load as Red Green Blue Alpha \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O}}\item[{\em 
+S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O\label{_s_o_i_l_8h_a06fc87d81c62e9abb8790b6e5713c55bafe6257f50808b248f33beaa04c93c390}
+}]\index{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L}}\item[{\em 
+S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\label{_s_o_i_l_8h_a06fc87d81c62e9abb8790b6e5713c55ba237888ce980f5dbcff11da40ac3a82e8}
+}]\index{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A}}\item[{\em 
+S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+L\+A\label{_s_o_i_l_8h_a06fc87d81c62e9abb8790b6e5713c55ba6a2f5c5bf81cd551e2b70f0c865275b6}
+}]\index{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B}}\item[{\em 
+S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\label{_s_o_i_l_8h_a06fc87d81c62e9abb8790b6e5713c55bae3b112adfea8f3f20c916c98cd9ab617}
+}]\index{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\+A@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\+A}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\+A@{S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\+A}}\item[{\em 
+S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+R\+G\+B\+A\label{_s_o_i_l_8h_a06fc87d81c62e9abb8790b6e5713c55ba3d9435690603a97a36e769828111ac19}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+56 \{
+57     SOIL_LOAD_AUTO = 0,
+58     SOIL_LOAD_L = 1,
+59     SOIL_LOAD_LA = 2,
+60     SOIL_LOAD_RGB = 3,
+61     SOIL_LOAD_RGBA = 4
+62 \};
+\end{DoxyCode}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_o_i_l_8h_adf764cbdea00d65edcd07bb9953ad2b7}
+Passed in as reuse\+\_\+texture\+\_\+\+I\+D, will cause S\+O\+I\+L to register a new texture I\+D using gl\+Gen\+Textures(). If the value passed into reuse\+\_\+texture\+\_\+\+I\+D $>$ 0 then S\+O\+I\+L will just re-\/use that texture I\+D (great for reloading image assets in-\/game!) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+O\+I\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+I\+D@{S\+O\+I\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+I\+D}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+I\+D@{S\+O\+I\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+I\+D}}\item[{\em 
+S\+O\+I\+L\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+N\+E\+W\+\_\+\+I\+D\label{_s_o_i_l_8h_adf764cbdea00d65edcd07bb9953ad2b7a8ae8078c60ebbc285cb566972f489984}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+72 \{
+73     SOIL_CREATE_NEW_ID = 0
+74 \};
+\end{DoxyCode}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5}
+flags you can pass into \doxyref{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture()}{p.}{d2/d93/_s_o_i_l_8h_a67332563e7bbbabb1fc194ffadbb9a46} and \doxyref{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture()}{p.}{d2/d93/_s_o_i_l_8h_aaf6cbce2068dd298d25899ae0f2f23ad}. (note that if S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T is used the rest of the flags with the exception of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S will be ignored while loading already-\/compressed D\+D\+S files.)
+
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O\+: force the image to be P\+O\+T S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S\+: generate mipmaps for the texture S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S\+: otherwise will clamp S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A\+: for using (G\+L\+\_\+\+O\+N\+E,G\+L\+\_\+\+O\+N\+E\+\_\+\+M\+I\+N\+U\+S\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+H\+A) blending S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y\+: flip the image vertically S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T\+: if the card can display them, will convert R\+G\+B to D\+X\+T1, R\+G\+B\+A to D\+X\+T5 S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T\+: will load D\+D\+S files directly without {\itshape A\+N\+Y} additional processing S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+N\+T\+S\+C\+\_\+\+S\+A\+F\+E\+\_\+\+R\+G\+B\+: clamps R\+G\+B components to the range [16,235] S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+Co\+Cg\+\_\+\+Y\+: Google Y\+Co\+Cg; R\+G\+B=$>$Co\+Y\+Cg, R\+G\+B\+A=$>$Co\+Cg\+A\+Y S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+E\+: uses A\+R\+B\+\_\+texture\+\_\+rectangle ; pixel indexed \& no repeat or M\+I\+Pmaps or cubemaps \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5ad59ade6f44dfd5e14fb1d5c633632be1}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5abff8a150d443bb1a501ab673f3a9f884}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5a6f94ed08474c101cb84175af8aaf19e3}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5aa40474f55b63c7a1059649a1a6d48fc7}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5a5f2e5610804695419de4326f73acdc38}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5a3448ab1c9197d92258b6207be556dc11}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5a61e6602d6630f47fac26f03fe4640004}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+N\+T\+S\+C\+\_\+\+S\+A\+F\+E\+\_\+\+R\+G\+B@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+N\+T\+S\+C\+\_\+\+S\+A\+F\+E\+\_\+\+R\+G\+B}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+N\+T\+S\+C\+\_\+\+S\+A\+F\+E\+\_\+\+R\+G\+B@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+N\+T\+S\+C\+\_\+\+S\+A\+F\+E\+\_\+\+R\+G\+B}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+N\+T\+S\+C\+\_\+\+S\+A\+F\+E\+\_\+\+R\+G\+B\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5af31ec5d1ca2d66e44d264837f54d28ff}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+Co\+Cg\+\_\+\+Y@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+Co\+Cg\+\_\+\+Y}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+Co\+Cg\+\_\+\+Y@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+Co\+Cg\+\_\+\+Y}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+Co\+Cg\+\_\+\+Y\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5ad11ebd5a53267a5a3fabae72c381353a}
+}]\index{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E@{S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E}}\item[{\em 
+S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+C\+T\+A\+N\+G\+L\+E\label{_s_o_i_l_8h_a99fb83031ce9923c84392b4e92f956b5a54c9668c7e0e5720f7bb71dd7df3985a}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+96 \{
+97     SOIL_FLAG_POWER_OF_TWO = 1,
+98     SOIL_FLAG_MIPMAPS = 2,
+99     SOIL_FLAG_TEXTURE_REPEATS = 4,
+100     SOIL_FLAG_MULTIPLY_ALPHA = 8,
+101     SOIL_FLAG_INVERT_Y = 16,
+102     SOIL_FLAG_COMPRESS_TO_DXT = 32,
+103     SOIL_FLAG_DDS_LOAD_DIRECT = 64,
+104     SOIL_FLAG_NTSC_SAFE_RGB = 128,
+105     SOIL_FLAG_CoCg_Y = 256,
+106     SOIL_FLAG_TEXTURE_RECTANGLE = 512
+107 \};
+\end{DoxyCode}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_o_i_l_8h_abc6126af1d45847bc59afa0aa3216b04}
+The types of images that may be saved. (T\+G\+A supports uncompressed R\+G\+B / R\+G\+B\+A) (B\+M\+P supports uncompressed R\+G\+B) (D\+D\+S supports D\+X\+T1 and D\+X\+T5) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+G\+A@{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+G\+A}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+G\+A@{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+G\+A}}\item[{\em 
+S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+G\+A\label{_s_o_i_l_8h_abc6126af1d45847bc59afa0aa3216b04ab2bc5c3a693d359b4c8ffbc3a44fb8bd}
+}]\index{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+M\+P@{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+M\+P}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+M\+P@{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+M\+P}}\item[{\em 
+S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+M\+P\label{_s_o_i_l_8h_abc6126af1d45847bc59afa0aa3216b04a6763f349b67a51dbe8f41a4d3273972a}
+}]\index{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+D\+S@{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+D\+S}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+D\+S@{S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+D\+S}}\item[{\em 
+S\+O\+I\+L\+\_\+\+S\+A\+V\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+D\+S\label{_s_o_i_l_8h_abc6126af1d45847bc59afa0aa3216b04a430109e8be857c9d24641e2392f8e1cd}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+116 \{
+117     SOIL_SAVE_TYPE_TGA = 0,
+118     SOIL_SAVE_TYPE_BMP = 1,
+119     SOIL_SAVE_TYPE_DDS = 2
+120 \};
+\end{DoxyCode}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_s_o_i_l_8h_adc29c2ff13d900c2f185ee95427fb06c}
+The types of internal fake H\+D\+R representations
+
+S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E\+: R\+G\+B $\ast$ pow( 2.\+0, A -\/ 128.\+0 ) S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A\+: R\+G\+B / A S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2\+: R\+G\+B / (A$\ast$\+A) \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E@{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E@{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E}}\item[{\em 
+S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E\label{_s_o_i_l_8h_adc29c2ff13d900c2f185ee95427fb06cadd5943d5b83df286fb1f8724c2d9b018}
+}]\index{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A@{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A@{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A}}\item[{\em 
+S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A\label{_s_o_i_l_8h_adc29c2ff13d900c2f185ee95427fb06ca93cbed3c123308e882bcbcc614eff434}
+}]\index{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2@{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2@{S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2}}\item[{\em 
+S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2\label{_s_o_i_l_8h_adc29c2ff13d900c2f185ee95427fb06ca5e0bce1801dcf8a18ada49f50aee5d9b}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+138 \{
+139     SOIL_HDR_RGBE = 0,
+140     SOIL_HDR_RGBdivA = 1,
+141     SOIL_HDR_RGBdivA2 = 2
+142 \};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap@{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}}
+\index{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap@{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$const}]{data, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{channels, }
+\item[{const char}]{face\+\_\+order[6], }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_afddd2bf49325dbc6651a91a711c21e2b}
+Creates an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} cubemap texture by splitting up 1 image into 6 parts. 
+\begin{DoxyParams}{Parameters}
+{\em data} & the raw data to be uploaded as an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture \\
+\hline
+{\em width} & the width of the image in pixels \\
+\hline
+{\em height} & the height of the image in pixels \\
+\hline
+{\em channels} & the number of channels\+: 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em face\+\_\+order} & the order of the faces in the file, and combination of N\+S\+W\+E\+U\+D, for North, South, Up, etc. \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture@{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture}}
+\index{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture@{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+create\+\_\+\+O\+G\+L\+\_\+texture (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$const}]{data, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{channels, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_aaf6cbce2068dd298d25899ae0f2f23ad}
+Creates a 2\+D \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture from raw image data. Note that the raw data is {\itshape N\+O\+T} freed after the upload (so the user can load various versions). 
+\begin{DoxyParams}{Parameters}
+{\em data} & the raw data to be uploaded as an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture \\
+\hline
+{\em width} & the width of the image in pixels \\
+\hline
+{\em height} & the height of the image in pixels \\
+\hline
+{\em channels} & the number of channels\+: 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data@{S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data}}
+\index{S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data@{S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+O\+I\+L\+\_\+free\+\_\+image\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{img\+\_\+data}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_acd82ef0d8148f5b18f413a59440dafdd}
+Frees the image data (note, this is just C's \char`\"{}free()\char`\"{}...this function is present mostly so C++ programmers don't forget to use \char`\"{}free()\char`\"{} and call \char`\"{}delete [$\,$]\char`\"{} instead [8$^\wedge$) \index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+last\+\_\+result@{S\+O\+I\+L\+\_\+last\+\_\+result}}
+\index{S\+O\+I\+L\+\_\+last\+\_\+result@{S\+O\+I\+L\+\_\+last\+\_\+result}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+last\+\_\+result}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ S\+O\+I\+L\+\_\+last\+\_\+result (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a06e69e28c11a5bb21d8ea5e9590c729a}
+This function resturn a pointer to a string describing the last thing that happened inside S\+O\+I\+L. It can be used to determine why an image failed to load. \index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+image@{S\+O\+I\+L\+\_\+load\+\_\+image}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+image@{S\+O\+I\+L\+\_\+load\+\_\+image}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+image}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ S\+O\+I\+L\+\_\+load\+\_\+image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int $\ast$}]{width, }
+\item[{int $\ast$}]{height, }
+\item[{int $\ast$}]{channels, }
+\item[{int}]{force\+\_\+channels}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a4d4896f10fbd9792b01209f44bf630d3}
+Loads an image from disk into an array of unsigned chars. Note that $\ast$channels return the original channel count of the image. If force\+\_\+channels was other than S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O, the resulting image has force\+\_\+channels, but $\ast$channels may be different (if the original image had a different channel count). \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ S\+O\+I\+L\+\_\+load\+\_\+image\+\_\+from\+\_\+memory (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$const}]{buffer, }
+\item[{int}]{buffer\+\_\+length, }
+\item[{int $\ast$}]{width, }
+\item[{int $\ast$}]{height, }
+\item[{int $\ast$}]{channels, }
+\item[{int}]{force\+\_\+channels}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a328dc188f3318a0b7732909e48e037f8}
+Loads an image from memory into an array of unsigned chars. Note that $\ast$channels return the original channel count of the image. If force\+\_\+channels was other than S\+O\+I\+L\+\_\+\+L\+O\+A\+D\+\_\+\+A\+U\+T\+O, the resulting image has force\+\_\+channels, but $\ast$channels may be different (if the original image had a different channel count). \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{x\+\_\+pos\+\_\+file, }
+\item[{const char $\ast$}]{x\+\_\+neg\+\_\+file, }
+\item[{const char $\ast$}]{y\+\_\+pos\+\_\+file, }
+\item[{const char $\ast$}]{y\+\_\+neg\+\_\+file, }
+\item[{const char $\ast$}]{z\+\_\+pos\+\_\+file, }
+\item[{const char $\ast$}]{z\+\_\+neg\+\_\+file, }
+\item[{int}]{force\+\_\+channels, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_af7696abc4c7a08046d134b9298f56912}
+Loads 6 images from disk into an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos\+\_\+file} & the name of the file to upload as the +x cube face \\
+\hline
+{\em x\+\_\+neg\+\_\+file} & the name of the file to upload as the -\/x cube face \\
+\hline
+{\em y\+\_\+pos\+\_\+file} & the name of the file to upload as the +y cube face \\
+\hline
+{\em y\+\_\+neg\+\_\+file} & the name of the file to upload as the -\/y cube face \\
+\hline
+{\em z\+\_\+pos\+\_\+file} & the name of the file to upload as the +z cube face \\
+\hline
+{\em z\+\_\+neg\+\_\+file} & the name of the file to upload as the -\/z cube face \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d93/_s_o_i_l_8h_af7696abc4c7a08046d134b9298f56912_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+cubemap\+\_\+from\+\_\+memory (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$const}]{x\+\_\+pos\+\_\+buffer, }
+\item[{int}]{x\+\_\+pos\+\_\+buffer\+\_\+length, }
+\item[{const unsigned char $\ast$const}]{x\+\_\+neg\+\_\+buffer, }
+\item[{int}]{x\+\_\+neg\+\_\+buffer\+\_\+length, }
+\item[{const unsigned char $\ast$const}]{y\+\_\+pos\+\_\+buffer, }
+\item[{int}]{y\+\_\+pos\+\_\+buffer\+\_\+length, }
+\item[{const unsigned char $\ast$const}]{y\+\_\+neg\+\_\+buffer, }
+\item[{int}]{y\+\_\+neg\+\_\+buffer\+\_\+length, }
+\item[{const unsigned char $\ast$const}]{z\+\_\+pos\+\_\+buffer, }
+\item[{int}]{z\+\_\+pos\+\_\+buffer\+\_\+length, }
+\item[{const unsigned char $\ast$const}]{z\+\_\+neg\+\_\+buffer, }
+\item[{int}]{z\+\_\+neg\+\_\+buffer\+\_\+length, }
+\item[{int}]{force\+\_\+channels, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a78b856b61ebe281e04f0ef7e31eba62f}
+Loads 6 images from memory into an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos\+\_\+buffer} & the image data in R\+A\+M to upload as the +x cube face \\
+\hline
+{\em x\+\_\+pos\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em x\+\_\+neg\+\_\+buffer} & the image data in R\+A\+M to upload as the +x cube face \\
+\hline
+{\em x\+\_\+neg\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em y\+\_\+pos\+\_\+buffer} & the image data in R\+A\+M to upload as the +x cube face \\
+\hline
+{\em y\+\_\+pos\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em y\+\_\+neg\+\_\+buffer} & the image data in R\+A\+M to upload as the +x cube face \\
+\hline
+{\em y\+\_\+neg\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em z\+\_\+pos\+\_\+buffer} & the image data in R\+A\+M to upload as the +x cube face \\
+\hline
+{\em z\+\_\+pos\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em z\+\_\+neg\+\_\+buffer} & the image data in R\+A\+M to upload as the +x cube face \\
+\hline
+{\em z\+\_\+neg\+\_\+buffer\+\_\+length} & the size of the above buffer \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+\+H\+D\+R\+\_\+texture (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{fake\+\_\+\+H\+D\+R\+\_\+format, }
+\item[{int}]{rescale\+\_\+to\+\_\+max, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a4220f2dc1a1dcffb9628165626854231}
+Loads an H\+D\+R image from disk into an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to upload as a texture \\
+\hline
+{\em fake\+\_\+\+H\+D\+R\+\_\+format} & S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+B\+E, S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A, S\+O\+I\+L\+\_\+\+H\+D\+R\+\_\+\+R\+G\+Bdiv\+A2 \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const char}]{face\+\_\+order[6], }
+\item[{int}]{force\+\_\+channels, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a4d0d9be497a367f8f5a7220810070a5b}
+Loads 1 image from disk and splits it into an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to upload as a texture \\
+\hline
+{\em face\+\_\+order} & the order of the faces in the file, any combination of N\+S\+W\+E\+U\+D, for North, South, Up, etc. \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+single\+\_\+cubemap\+\_\+from\+\_\+memory (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$const}]{buffer, }
+\item[{int}]{buffer\+\_\+length, }
+\item[{const char}]{face\+\_\+order[6], }
+\item[{int}]{force\+\_\+channels, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_ab5ac6a8205b2f028e8446ab324299a4c}
+Loads 1 image from R\+A\+M and splits it into an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} cubemap texture. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the image data in R\+A\+M just as if it were still in a file \\
+\hline
+{\em buffer\+\_\+length} & the size of the buffer in bytes \\
+\hline
+{\em face\+\_\+order} & the order of the faces in the file, any combination of N\+S\+W\+E\+U\+D, for North, South, Up, etc. \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{force\+\_\+channels, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a67332563e7bbbabb1fc194ffadbb9a46}
+Loads an image from disk into an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file to upload as a texture \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d93/_s_o_i_l_8h_a67332563e7bbbabb1fc194ffadbb9a46_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory}}
+\index{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory@{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int S\+O\+I\+L\+\_\+load\+\_\+\+O\+G\+L\+\_\+texture\+\_\+from\+\_\+memory (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$const}]{buffer, }
+\item[{int}]{buffer\+\_\+length, }
+\item[{int}]{force\+\_\+channels, }
+\item[{unsigned int}]{reuse\+\_\+texture\+\_\+\+I\+D, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_aa5bce2b445500ec50658258c5149e7b3}
+Loads an image from R\+A\+M into an \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & the image data in R\+A\+M just as if it were still in a file \\
+\hline
+{\em buffer\+\_\+length} & the size of the buffer in bytes \\
+\hline
+{\em force\+\_\+channels} & 0-\/image format, 1-\/luminous, 2-\/luminous/alpha, 3-\/\+R\+G\+B, 4-\/\+R\+G\+B\+A \\
+\hline
+{\em reuse\+\_\+texture\+\_\+\+I\+D} & 0-\/generate a new texture I\+D, otherwise reuse the texture I\+D (overwriting the old texture) \\
+\hline
+{\em flags} & can be any of S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+P\+O\+W\+E\+R\+\_\+\+O\+F\+\_\+\+T\+W\+O $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+I\+P\+M\+A\+P\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+R\+E\+P\+E\+A\+T\+S $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+M\+U\+L\+T\+I\+P\+L\+Y\+\_\+\+A\+L\+P\+H\+A $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+I\+N\+V\+E\+R\+T\+\_\+\+Y $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+C\+O\+M\+P\+R\+E\+S\+S\+\_\+\+T\+O\+\_\+\+D\+X\+T $\vert$ S\+O\+I\+L\+\_\+\+F\+L\+A\+G\+\_\+\+D\+D\+S\+\_\+\+L\+O\+A\+D\+\_\+\+D\+I\+R\+E\+C\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0-\/failed, otherwise returns the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} texture handle 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+save\+\_\+image@{S\+O\+I\+L\+\_\+save\+\_\+image}}
+\index{S\+O\+I\+L\+\_\+save\+\_\+image@{S\+O\+I\+L\+\_\+save\+\_\+image}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+save\+\_\+image}]{\setlength{\rightskip}{0pt plus 5cm}int S\+O\+I\+L\+\_\+save\+\_\+image (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{image\+\_\+type, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{channels, }
+\item[{const unsigned char $\ast$const}]{data}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a6a90a5aa17ca3ef1de1d87e1ed365d11}
+Saves an image from an array of unsigned chars (R\+G\+B\+A) to disk \begin{DoxyReturn}{Returns}
+0 if failed, otherwise returns 1 
+\end{DoxyReturn}
+\index{S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}!S\+O\+I\+L\+\_\+save\+\_\+screenshot@{S\+O\+I\+L\+\_\+save\+\_\+screenshot}}
+\index{S\+O\+I\+L\+\_\+save\+\_\+screenshot@{S\+O\+I\+L\+\_\+save\+\_\+screenshot}!S\+O\+I\+L.\+h@{S\+O\+I\+L.\+h}}
+\subsubsection[{S\+O\+I\+L\+\_\+save\+\_\+screenshot}]{\setlength{\rightskip}{0pt plus 5cm}int S\+O\+I\+L\+\_\+save\+\_\+screenshot (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{int}]{image\+\_\+type, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{_s_o_i_l_8h_a7a6f690a1ecde64938acd89d568f10f7}
+Captures the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} window (R\+G\+B) and saves it to disk \begin{DoxyReturn}{Returns}
+0 if it failed, otherwise returns 1 
+\end{DoxyReturn}

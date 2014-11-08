@@ -1,0 +1,6 @@
+<map id="Camera::Instance" name="Camera::Instance">
+<area shape="rect" id="node2" href="$d7/da7/class_character.html#a239afb275264116e8196291b7d2b3d94" title="Character::PickObject" alt="" coords="177,5,328,32"/>
+<area shape="rect" id="node4" href="$d7/da7/class_character.html#a681d67b227b0f7abb8508958841c6976" title="i_DrawableObject Draw " alt="" coords="195,56,310,83"/>
+<area shape="rect" id="node5" href="$d8/d24/class_open_g_l.html#af5a59472e49278dc51dd427d567791e0" title="OpenGL::OpenGL" alt="" coords="189,107,316,133"/>
+<area shape="rect" id="node3" href="$d7/da7/class_character.html#a495652bce60ee4c5557cfb250b814d75" title="Update. " alt="" coords="376,5,503,32"/>
+</map>

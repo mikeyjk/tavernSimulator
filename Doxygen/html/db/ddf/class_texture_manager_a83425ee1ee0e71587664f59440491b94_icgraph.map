@@ -1,0 +1,7 @@
+<map id="TextureManager::addTexture" name="TextureManager::addTexture">
+<area shape="rect" id="node2" href="$df/dcb/class_menu_system.html#ab249368d82b06724047d8b7951588f8a" title="MenuInit function. " alt="" coords="261,5,417,32"/>
+<area shape="rect" id="node5" href="$d1/da9/class_resource_manager.html#a1f876316c2c9e1c0d363fce154c289dc" title="Adds a texture to the texture manager by the file&#39;s path, which will become known to the texture mana..." alt="" coords="240,56,439,83"/>
+<area shape="rect" id="node3" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="509,5,640,32"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="711,5,761,32"/>
+<area shape="rect" id="node6" href="$d0/dd1/class_game_object.html#a77b518b7c9e56349111fac5b01087efc" title="GameObject Constructor. " alt="" coords="487,56,663,83"/>
+</map>

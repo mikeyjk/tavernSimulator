@@ -1,0 +1,5 @@
+<map id="Brain::giveHudData" name="Brain::giveHudData">
+<area shape="rect" id="node2" href="$d1/da8/class_personality.html#afee72a4d6c673003bcc450cb13545bef" title="giveHudData function " alt="" coords="185,31,352,57"/>
+<area shape="rect" id="node3" href="$da/df5/class_control_system.html#aa3b24cbd4e40b867422d9cd4443e63db" title="Instance. " alt="" coords="400,5,565,32"/>
+<area shape="rect" id="node4" href="$d7/d05/class_h_u_d.html#a7999acb384a496c32e7fab7fbfdd7ed0" title="HUD::giveHudHVData" alt="" coords="409,56,556,83"/>
+</map>

@@ -1,0 +1,459 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Input\+Engine.h File Reference}
+\label{_input_engine_8h}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Input\+Engine.\+h@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Input\+Engine.\+h}}
+{\ttfamily \#include \char`\"{}G\+L\textbackslash{}freeglut.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for Input\+Engine.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d86/_input_engine_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d3d/_input_engine_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Vec2}
+\item 
+class {\bf Input\+Engine}
+\begin{DoxyCompactList}\small\item\em The Control of all input for the system, created as a singleton so that users will only ever use one instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Key\+Code} \{ \\*
+{\bf A} =0, 
+{\bf B}, 
+{\bf C}, 
+{\bf D}, 
+\\*
+{\bf E}, 
+{\bf F}, 
+{\bf G}, 
+{\bf H}, 
+\\*
+{\bf I}, 
+{\bf J}, 
+{\bf K}, 
+{\bf L}, 
+\\*
+{\bf M}, 
+{\bf N}, 
+{\bf O}, 
+{\bf P}, 
+\\*
+{\bf Q}, 
+{\bf R}, 
+{\bf S}, 
+{\bf T}, 
+\\*
+{\bf U}, 
+{\bf V}, 
+{\bf W}, 
+{\bf X}, 
+\\*
+{\bf Y}, 
+{\bf Z}, 
+{\bf Alpha1}, 
+{\bf Alpha2}, 
+\\*
+{\bf Alpha3}, 
+{\bf Alpha4}, 
+{\bf Alpha5}, 
+{\bf Alpha6}, 
+\\*
+{\bf Alpha7}, 
+{\bf Alpha8}, 
+{\bf Alpha9}, 
+{\bf Alpha0}, 
+\\*
+{\bf Num\+Pad0}, 
+{\bf Num\+Pad1}, 
+{\bf Num\+Pad2}, 
+{\bf Num\+Pad3}, 
+\\*
+{\bf Num\+Pad4}, 
+{\bf Num\+Pad5}, 
+{\bf Num\+Pad6}, 
+{\bf Num\+Pad7}, 
+\\*
+{\bf Num\+Pad8}, 
+{\bf Num\+Pad9}, 
+{\bf Num\+Pad\+Del}, 
+{\bf Num\+Pad\+Plus}, 
+\\*
+{\bf Num\+Pad\+Minus}, 
+{\bf Num\+Pad\+Star}, 
+{\bf Num\+Pad\+Slash}, 
+{\bf Num\+Lock}, 
+\\*
+{\bf Print\+Screen}, 
+{\bf Scr\+Lock}, 
+{\bf Pause\+Break}, 
+{\bf Space}, 
+\\*
+{\bf Tilde}, 
+{\bf Dash}, 
+{\bf Equals}, 
+{\bf Backspace}, 
+\\*
+{\bf Tab}, 
+{\bf Caps\+Lock}, 
+{\bf Back\+Slash}, 
+{\bf Enter}, 
+\\*
+{\bf Open\+Bracket}, 
+{\bf Closed\+Bracket}, 
+{\bf Colon}, 
+{\bf Apostrophe}, 
+\\*
+{\bf Comma}, 
+{\bf Period}, 
+{\bf Forward\+Slash}, 
+{\bf Delete}, 
+\\*
+{\bf Esc}, 
+{\bf Ins}, 
+{\bf Home}, 
+{\bf End}, 
+\\*
+{\bf Page\+Up}, 
+{\bf Page\+Down}, 
+{\bf F1}, 
+{\bf F2}, 
+\\*
+{\bf F3}, 
+{\bf F4}, 
+{\bf F5}, 
+{\bf F6}, 
+\\*
+{\bf F7}, 
+{\bf F8}, 
+{\bf F9}, 
+{\bf F10}, 
+\\*
+{\bf F11}, 
+{\bf F12}, 
+{\bf Left\+Key}, 
+{\bf Up\+Key}, 
+\\*
+{\bf Right\+Key}, 
+{\bf Down\+Key}, 
+{\bf Left\+Shift}, 
+{\bf Left\+Ctrl}, 
+\\*
+{\bf Left\+Alt}, 
+{\bf Right\+Shift}, 
+{\bf Right\+Ctrl}, 
+{\bf Right\+Alt}
+ \}
+\begin{DoxyCompactList}\small\item\em enum Key\+Code \end{DoxyCompactList}\item 
+enum {\bf Mouse\+Code} \{ \\*
+{\bf Left\+Click} = 0, 
+{\bf Middle\+Click} = 1, 
+{\bf Right\+Click} = 2, 
+{\bf Scroll\+Up} = 3, 
+\\*
+{\bf Scroll\+Down} = 4, 
+{\bf Pressed\+Scroll\+Up} = 35, 
+{\bf Pressed\+Scroll\+Down} = 36
+ \}
+\begin{DoxyCompactList}\small\item\em enum Mouse\+Code \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Key\+Code@{Key\+Code}}
+\index{Key\+Code@{Key\+Code}!Input\+Engine.\+h@{Input\+Engine.\+h}}
+\subsubsection[{Key\+Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Key\+Code}}\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2}
+
+
+enum Key\+Code 
+
+Key\+Code is the enumerator that determines what keyboard input the user wants to find out if it has been pressed \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A@{A}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!A@{A}}\item[{\em 
+A\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a42a4ade1acd55a49164099104990e09f}
+}]\index{B@{B}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!B@{B}}\item[{\em 
+B\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a3f2a77ecd272aa6d6b5902faa5e5fc68}
+}]\index{C@{C}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!C@{C}}\item[{\em 
+C\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a739ce3f516592d245d16fd8a3893472c}
+}]\index{D@{D}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!D@{D}}\item[{\em 
+D\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a77a6b11f9898c052926f1d49765861e8}
+}]\index{E@{E}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!E@{E}}\item[{\em 
+E\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ab199e021998d49b1f09338d8b9b18ecb}
+}]\index{F@{F}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F@{F}}\item[{\em 
+F\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2af382a63cc3d6491bf26b59e66f46826d}
+}]\index{G@{G}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!G@{G}}\item[{\em 
+G\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a2fe993340f6abb2234e543cd427df70b}
+}]\index{H@{H}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!H@{H}}\item[{\em 
+H\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a5008b1179f399a2273fd3f6a7fc3b292}
+}]\index{I@{I}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!I@{I}}\item[{\em 
+I\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ad091b8e376f7cf432dc367e1eda65e85}
+}]\index{J@{J}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!J@{J}}\item[{\em 
+J\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a03605500b0c55f3d95874e8edfcf4e30}
+}]\index{K@{K}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!K@{K}}\item[{\em 
+K\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a660a38111995acbeb2820648e82f0d8c}
+}]\index{L@{L}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!L@{L}}\item[{\em 
+L\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aef31cc6fe9479955961311ee18ac205f}
+}]\index{M@{M}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!M@{M}}\item[{\em 
+M\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a51ca6c63d97347ee58cc7da59ab6994b}
+}]\index{N@{N}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!N@{N}}\item[{\em 
+N\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a2c63acbe79d9f41ba6bb7766e9c37702}
+}]\index{O@{O}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!O@{O}}\item[{\em 
+O\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2af4b8b7698dfedf5562a7db2bdb07010a}
+}]\index{P@{P}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!P@{P}}\item[{\em 
+P\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a82f05f38f6a17b117cdd2b83227912c6}
+}]\index{Q@{Q}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Q@{Q}}\item[{\em 
+Q\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aa53ab217f1572250a530c8c2b3c820cf}
+}]\index{R@{R}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!R@{R}}\item[{\em 
+R\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a1784b1a3d7cbd43c45ff82c72d05e4ae}
+}]\index{S@{S}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!S@{S}}\item[{\em 
+S\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2af1ce01387d2348f8b858721a7db81670}
+}]\index{T@{T}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!T@{T}}\item[{\em 
+T\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a21f40778b7db9343a6ca75ec2c41ccce}
+}]\index{U@{U}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!U@{U}}\item[{\em 
+U\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ac461e84f27bbb236874e1011cd66031f}
+}]\index{V@{V}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!V@{V}}\item[{\em 
+V\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a28f41f1144eee94834387e9a6a088bc1}
+}]\index{W@{W}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!W@{W}}\item[{\em 
+W\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ab722ceeb601c72cd78fbd35f3581fdf7}
+}]\index{X@{X}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!X@{X}}\item[{\em 
+X\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a58833a3110c570fb05130d40c365d1e4}
+}]\index{Y@{Y}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Y@{Y}}\item[{\em 
+Y\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a5596231eabd6cf29050967d5ac83ad84}
+}]\index{Z@{Z}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Z@{Z}}\item[{\em 
+Z\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aa70478ce277ffc322f8e1e3418e07355}
+}]\index{Alpha1@{Alpha1}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha1@{Alpha1}}\item[{\em 
+Alpha1\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a133bd4cb3c0cd8427aa853d8bc72a439}
+}]\index{Alpha2@{Alpha2}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha2@{Alpha2}}\item[{\em 
+Alpha2\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2adeb298311a580b2810e017644be80ee3}
+}]\index{Alpha3@{Alpha3}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha3@{Alpha3}}\item[{\em 
+Alpha3\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aec901f0100964f1da1af7cd7ec6ac1b6}
+}]\index{Alpha4@{Alpha4}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha4@{Alpha4}}\item[{\em 
+Alpha4\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a784dac71f6fc4b45274b54c415993fd0}
+}]\index{Alpha5@{Alpha5}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha5@{Alpha5}}\item[{\em 
+Alpha5\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a8cd4334a0ea0ed3b9356dae8815335ec}
+}]\index{Alpha6@{Alpha6}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha6@{Alpha6}}\item[{\em 
+Alpha6\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ae85b8d6f3efe109b60b5835f4b21ba90}
+}]\index{Alpha7@{Alpha7}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha7@{Alpha7}}\item[{\em 
+Alpha7\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a1e7e92acabf256dd61118266101c8333}
+}]\index{Alpha8@{Alpha8}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha8@{Alpha8}}\item[{\em 
+Alpha8\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a3c6892956b6aa6b832b93db20d119d33}
+}]\index{Alpha9@{Alpha9}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha9@{Alpha9}}\item[{\em 
+Alpha9\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ac8ac0043908553e79e20ea2062d366a2}
+}]\index{Alpha0@{Alpha0}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Alpha0@{Alpha0}}\item[{\em 
+Alpha0\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a6d1b8f1f5d413a98144dab8ce0d3f290}
+}]\index{Num\+Pad0@{Num\+Pad0}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad0@{Num\+Pad0}}\item[{\em 
+Num\+Pad0\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a5552f87b916f0538476f714b00059c45}
+}]\index{Num\+Pad1@{Num\+Pad1}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad1@{Num\+Pad1}}\item[{\em 
+Num\+Pad1\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a9603dea8e4489c3aa9bd6c5623280d8f}
+}]\index{Num\+Pad2@{Num\+Pad2}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad2@{Num\+Pad2}}\item[{\em 
+Num\+Pad2\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2af836207ad23c16ac05529279af34ed46}
+}]\index{Num\+Pad3@{Num\+Pad3}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad3@{Num\+Pad3}}\item[{\em 
+Num\+Pad3\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a3bbab01f05802e93478e43748ac16a1e}
+}]\index{Num\+Pad4@{Num\+Pad4}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad4@{Num\+Pad4}}\item[{\em 
+Num\+Pad4\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2adf01f8ba519ffc94bbda89ed0809809b}
+}]\index{Num\+Pad5@{Num\+Pad5}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad5@{Num\+Pad5}}\item[{\em 
+Num\+Pad5\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a72560ef875d12a5116371a1f06a2be48}
+}]\index{Num\+Pad6@{Num\+Pad6}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad6@{Num\+Pad6}}\item[{\em 
+Num\+Pad6\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a4b4ff83c0f5db6cecbd0580dc1bb8caf}
+}]\index{Num\+Pad7@{Num\+Pad7}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad7@{Num\+Pad7}}\item[{\em 
+Num\+Pad7\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ad0d4a90190047f01e1b187e9cd0e681a}
+}]\index{Num\+Pad8@{Num\+Pad8}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad8@{Num\+Pad8}}\item[{\em 
+Num\+Pad8\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a5a1c81deb75200609455114461908b5f}
+}]\index{Num\+Pad9@{Num\+Pad9}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad9@{Num\+Pad9}}\item[{\em 
+Num\+Pad9\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2afc0109091c0c6addce8686bfde8b954c}
+}]\index{Num\+Pad\+Del@{Num\+Pad\+Del}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad\+Del@{Num\+Pad\+Del}}\item[{\em 
+Num\+Pad\+Del\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a5d94c7f299c5b5ab67fafc6062f19ed1}
+}]\index{Num\+Pad\+Plus@{Num\+Pad\+Plus}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad\+Plus@{Num\+Pad\+Plus}}\item[{\em 
+Num\+Pad\+Plus\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aa90f616345ac8b3eddd5800b7b8fdc73}
+}]\index{Num\+Pad\+Minus@{Num\+Pad\+Minus}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad\+Minus@{Num\+Pad\+Minus}}\item[{\em 
+Num\+Pad\+Minus\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a308e70845db3e05518b4cee0681aee3b}
+}]\index{Num\+Pad\+Star@{Num\+Pad\+Star}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad\+Star@{Num\+Pad\+Star}}\item[{\em 
+Num\+Pad\+Star\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ac79eaf3acd25acf269fd60000a54026b}
+}]\index{Num\+Pad\+Slash@{Num\+Pad\+Slash}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Pad\+Slash@{Num\+Pad\+Slash}}\item[{\em 
+Num\+Pad\+Slash\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ab25d8b20b6a7763f1ec7c1adbb04dda8}
+}]\index{Num\+Lock@{Num\+Lock}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Num\+Lock@{Num\+Lock}}\item[{\em 
+Num\+Lock\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2adea7226713bafd5b934373a1a289388d}
+}]\index{Print\+Screen@{Print\+Screen}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Print\+Screen@{Print\+Screen}}\item[{\em 
+Print\+Screen\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a31e12186890400009b9168c09fbf31f7}
+}]\index{Scr\+Lock@{Scr\+Lock}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Scr\+Lock@{Scr\+Lock}}\item[{\em 
+Scr\+Lock\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a12f34e771a588ccc7b5379b253685c30}
+}]\index{Pause\+Break@{Pause\+Break}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Pause\+Break@{Pause\+Break}}\item[{\em 
+Pause\+Break\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a4bdd1c5d711a1e10426c045adbd40a0c}
+}]\index{Space@{Space}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Space@{Space}}\item[{\em 
+Space\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a0382a67585728ea620079642f363466a}
+}]\index{Tilde@{Tilde}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Tilde@{Tilde}}\item[{\em 
+Tilde\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a52cd58989f8f9515945f77dadaf9dbc8}
+}]\index{Dash@{Dash}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Dash@{Dash}}\item[{\em 
+Dash\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a42d11e7a7dcdd3e6a0ccf924c06b8ed0}
+}]\index{Equals@{Equals}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Equals@{Equals}}\item[{\em 
+Equals\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2afa6a5ecec423d5155e4bebb7a23442f6}
+}]\index{Backspace@{Backspace}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Backspace@{Backspace}}\item[{\em 
+Backspace\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2abb48aa6a5c9a660db9a3ba92de9d8d18}
+}]\index{Tab@{Tab}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Tab@{Tab}}\item[{\em 
+Tab\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a02c3b925fc688db12200d8e22af30276}
+}]\index{Caps\+Lock@{Caps\+Lock}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Caps\+Lock@{Caps\+Lock}}\item[{\em 
+Caps\+Lock\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aa506a5597a9730178a8fbf5563fa1ac8}
+}]\index{Back\+Slash@{Back\+Slash}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Back\+Slash@{Back\+Slash}}\item[{\em 
+Back\+Slash\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aee11d296a13e5c686e170bd08dc6485b}
+}]\index{Enter@{Enter}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Enter@{Enter}}\item[{\em 
+Enter\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a77368fe980a402bd1d1fcc84429e4cad}
+}]\index{Open\+Bracket@{Open\+Bracket}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Open\+Bracket@{Open\+Bracket}}\item[{\em 
+Open\+Bracket\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2abd0b898766621e7a90704b6716be798e}
+}]\index{Closed\+Bracket@{Closed\+Bracket}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Closed\+Bracket@{Closed\+Bracket}}\item[{\em 
+Closed\+Bracket\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a45a8944e2ef057c2fb1ecfa93dc9b73c}
+}]\index{Colon@{Colon}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Colon@{Colon}}\item[{\em 
+Colon\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a64424b5277894112c20e1cb4bdeb7a9f}
+}]\index{Apostrophe@{Apostrophe}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Apostrophe@{Apostrophe}}\item[{\em 
+Apostrophe\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a4ecf6485514fb2383f61491887daadbb}
+}]\index{Comma@{Comma}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Comma@{Comma}}\item[{\em 
+Comma\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2ad60e0e9009b997af1dee11b213ab69e9}
+}]\index{Period@{Period}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Period@{Period}}\item[{\em 
+Period\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a79aa7162ee6359a93162548a3fcf8049}
+}]\index{Forward\+Slash@{Forward\+Slash}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Forward\+Slash@{Forward\+Slash}}\item[{\em 
+Forward\+Slash\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aebe08181f5882aa4e60bc305ae0ce5a3}
+}]\index{Delete@{Delete}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Delete@{Delete}}\item[{\em 
+Delete\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2af89e673477625e3afc8d736d14cd268a}
+}]\index{Esc@{Esc}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Esc@{Esc}}\item[{\em 
+Esc\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a4998b7aefdfe6dd923359868666afc63}
+}]\index{Ins@{Ins}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Ins@{Ins}}\item[{\em 
+Ins\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2adb99cd1ec21350f0083b728ed6bfb83f}
+}]\index{Home@{Home}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Home@{Home}}\item[{\em 
+Home\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a8feb334f9ed9ddb8dbc69cfa4fd6b614}
+}]\index{End@{End}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!End@{End}}\item[{\em 
+End\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a667876a6f108081ad524d7d29d23d506}
+}]\index{Page\+Up@{Page\+Up}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Page\+Up@{Page\+Up}}\item[{\em 
+Page\+Up\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a41837a730bea8ead0890899ee2e07cfa}
+}]\index{Page\+Down@{Page\+Down}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Page\+Down@{Page\+Down}}\item[{\em 
+Page\+Down\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a290609c9a0bb0d17380cf7d9f845ec3e}
+}]\index{F1@{F1}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F1@{F1}}\item[{\em 
+F1\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a5afea46882b06768ac8563d462999735}
+}]\index{F2@{F2}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F2@{F2}}\item[{\em 
+F2\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aa3c13a70de6599f4470373ec46d4f6bf}
+}]\index{F3@{F3}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F3@{F3}}\item[{\em 
+F3\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a10a5417c8e696606af65ec28c5fb2495}
+}]\index{F4@{F4}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F4@{F4}}\item[{\em 
+F4\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a8d311dd8454951b86e27873c49ff1ec5}
+}]\index{F5@{F5}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F5@{F5}}\item[{\em 
+F5\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a265fb264db0c419e6cb73bce564cd517}
+}]\index{F6@{F6}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F6@{F6}}\item[{\em 
+F6\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aa1e9d714a0238434a819235d4832f7d2}
+}]\index{F7@{F7}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F7@{F7}}\item[{\em 
+F7\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a6f111feaebfe5971b1243256d6417dc7}
+}]\index{F8@{F8}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F8@{F8}}\item[{\em 
+F8\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2acb02fa2cede46dab94694927da16433d}
+}]\index{F9@{F9}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F9@{F9}}\item[{\em 
+F9\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a9e27ab13e156f0125c6d8417dbe70946}
+}]\index{F10@{F10}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F10@{F10}}\item[{\em 
+F10\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2adf84767d83f4a35ab9dfa119cdbc7b3b}
+}]\index{F11@{F11}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F11@{F11}}\item[{\em 
+F11\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a511133ad89a0a17845508efb4d47b5e2}
+}]\index{F12@{F12}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!F12@{F12}}\item[{\em 
+F12\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a897dc84a58812cda1dbc2de4e74e4729}
+}]\index{Left\+Key@{Left\+Key}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Left\+Key@{Left\+Key}}\item[{\em 
+Left\+Key\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a307f471987fae1945e18fb5725299f0f}
+}]\index{Up\+Key@{Up\+Key}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Up\+Key@{Up\+Key}}\item[{\em 
+Up\+Key\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a741008af3de4f1ef33735c0536023939}
+}]\index{Right\+Key@{Right\+Key}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Right\+Key@{Right\+Key}}\item[{\em 
+Right\+Key\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a1b6c56f97e73b5d587069eea5d8b09a0}
+}]\index{Down\+Key@{Down\+Key}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Down\+Key@{Down\+Key}}\item[{\em 
+Down\+Key\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a35a2a09a85369f72dde312cc56164a1e}
+}]\index{Left\+Shift@{Left\+Shift}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Left\+Shift@{Left\+Shift}}\item[{\em 
+Left\+Shift\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2adab95d3553ca856e73300cc235d04760}
+}]\index{Left\+Ctrl@{Left\+Ctrl}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Left\+Ctrl@{Left\+Ctrl}}\item[{\em 
+Left\+Ctrl\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a34d15d223a2ab03db15e5434420bd004}
+}]\index{Left\+Alt@{Left\+Alt}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Left\+Alt@{Left\+Alt}}\item[{\em 
+Left\+Alt\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2aaf9bcf1ecc2bf8d5608f04feed774b2c}
+}]\index{Right\+Shift@{Right\+Shift}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Right\+Shift@{Right\+Shift}}\item[{\em 
+Right\+Shift\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a313634ce234828dbab4831f3f9785c29}
+}]\index{Right\+Ctrl@{Right\+Ctrl}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Right\+Ctrl@{Right\+Ctrl}}\item[{\em 
+Right\+Ctrl\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a2547c705cfe3746586780d5b83be1b87}
+}]\index{Right\+Alt@{Right\+Alt}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Right\+Alt@{Right\+Alt}}\item[{\em 
+Right\+Alt\label{_input_engine_8h_a7885f47644a0388f981f416fa20389b2a921b0aeb42b5d50d18c28d65842ca613}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+23 \{
+24     A=0,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,
+25     Alpha1,Alpha2,Alpha3,Alpha4,Alpha5,Alpha6,Alpha7,Alpha8,Alpha9,Alpha0,
+26 
+27     \textcolor{comment}{//not sure if I want to include at this point in time.}
+28     NumPad0, NumPad1, NumPad2, NumPad3, NumPad4, NumPad5, NumPad6, NumPad7, 
+      NumPad8, NumPad9,
+29     NumPadDel, NumPadPlus, NumPadMinus, NumPadStar, NumPadSlash, NumLock, 
+      PrintScreen, ScrLock, PauseBreak,
+30 
+31     Space,
+32     Tilde,
+33     Dash,
+34     Equals,
+35     Backspace,
+36     Tab,
+37     CapsLock,
+38     BackSlash,
+39     Enter,
+40     OpenBracket,
+41     ClosedBracket,
+42     Colon,
+43     Apostrophe,
+44     Comma,
+45     Period,
+46     ForwardSlash,
+47     Delete,
+48     Esc,
+49 
+50     \textcolor{comment}{//All these keys are the "special" keys}
+51     Ins, Home, End, PageUp, PageDown,
+52     F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12,
+53     LeftKey, UpKey, RightKey, DownKey,
+54     LeftShift, LeftCtrl, LeftAlt, RightShift, RightCtrl, RightAlt
+55 
+56 \};
+\end{DoxyCode}
+\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Mouse\+Code@{Mouse\+Code}}
+\index{Mouse\+Code@{Mouse\+Code}!Input\+Engine.\+h@{Input\+Engine.\+h}}
+\subsubsection[{Mouse\+Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Mouse\+Code}}\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394}
+
+
+enum Mouse\+Code 
+
+Mouse\+Code is the enumerator that determines what Mouse input the user wants to find out if it has been pressed \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Left\+Click@{Left\+Click}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Left\+Click@{Left\+Click}}\item[{\em 
+Left\+Click\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394a8d7588cf870d0d1e2aae65cf8e9f61a6}
+}]\index{Middle\+Click@{Middle\+Click}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Middle\+Click@{Middle\+Click}}\item[{\em 
+Middle\+Click\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394aac45db621ac0a9a9a0031905be47d664}
+}]\index{Right\+Click@{Right\+Click}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Right\+Click@{Right\+Click}}\item[{\em 
+Right\+Click\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394a374dd2eb14b28075318887f16b601ac1}
+}]\index{Scroll\+Up@{Scroll\+Up}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Scroll\+Up@{Scroll\+Up}}\item[{\em 
+Scroll\+Up\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394abc79df2ff49a3fdff04fadb0618a0975}
+}]\index{Scroll\+Down@{Scroll\+Down}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Scroll\+Down@{Scroll\+Down}}\item[{\em 
+Scroll\+Down\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394a9611bba75d16ef95438cb8c00457ebbe}
+}]\index{Pressed\+Scroll\+Up@{Pressed\+Scroll\+Up}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Pressed\+Scroll\+Up@{Pressed\+Scroll\+Up}}\item[{\em 
+Pressed\+Scroll\+Up\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394a883c0212c2eb7077bbde5869df5fcca8}
+}]\index{Pressed\+Scroll\+Down@{Pressed\+Scroll\+Down}!Input\+Engine.\+h@{Input\+Engine.\+h}}\index{Input\+Engine.\+h@{Input\+Engine.\+h}!Pressed\+Scroll\+Down@{Pressed\+Scroll\+Down}}\item[{\em 
+Pressed\+Scroll\+Down\label{_input_engine_8h_a6efe7ee2439e057808289ba4b6b1d394a9d992fd338c878c45a1202ba93e57501}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+65 \{
+66     LeftClick = 0,
+67     MiddleClick = 1,
+68     RightClick = 2,
+69     ScrollUp = 3,
+70     ScrollDown = 4,
+71     PressedScrollUp = 35,
+72     PressedScrollDown = 36
+73 \};
+\end{DoxyCode}

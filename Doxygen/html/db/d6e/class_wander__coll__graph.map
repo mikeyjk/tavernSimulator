@@ -1,0 +1,4 @@
+<map id="Wander" name="Wander">
+<area shape="rect" id="node2" href="$d0/d8b/class_state.html" title="{State\&lt; NPC \&gt;\n||+ ~State()\l+ Enter()\l+ Execute()\l+ Exit()\l}" alt="" coords="5,71,109,193"/>
+<area shape="rect" id="node3" href="$df/d24/class_vec3.html" title="this class is the basic vector/point class. It can handle vector type operations like dot and cross p..." alt="" coords="133,5,240,259"/>
+</map>

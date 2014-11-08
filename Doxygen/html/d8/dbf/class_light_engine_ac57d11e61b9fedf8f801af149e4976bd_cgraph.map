@@ -1,0 +1,7 @@
+<map id="LightEngine::createLight" name="LightEngine::createLight">
+<area shape="rect" id="node2" href="$dc/dd2/glext_8h.html#a508b2dec21679e2e346cad3e0d1969bf" title="GLenum" alt="" coords="275,5,346,32"/>
+<area shape="rect" id="node3" href="$d8/dbf/class_light_engine.html#aef64c36501cf3ca8621a8ad65f27b5d9" title="getLightGlenum " alt="" coords="216,56,405,83"/>
+<area shape="rect" id="node4" href="$df/d24/class_vec3.html#adf8fef45a6920dae9962e7f73c2694e1" title="getX function " alt="" coords="268,107,353,133"/>
+<area shape="rect" id="node5" href="$df/d24/class_vec3.html#ab2b7ff578872d185d35479c8a9b77c29" title="getY function " alt="" coords="267,157,354,184"/>
+<area shape="rect" id="node6" href="$df/d24/class_vec3.html#a89e72080b8746be3e25ac992849a4e9d" title="getZ function " alt="" coords="268,208,353,235"/>
+</map>

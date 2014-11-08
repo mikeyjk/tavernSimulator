@@ -1,0 +1,29 @@
+<map id="E:/workdesk/Uni/ICT312/trunk/GameEngine/GameObject.h" name="E:/workdesk/Uni/ICT312/trunk/GameEngine/GameObject.h">
+<area shape="rect" id="node3" href="$d3/d42/_vec3_8h.html" title="Vec3.h" alt="" coords="2072,408,2135,435"/>
+<area shape="rect" id="node5" href="$dd/dad/_i___drawable_object_8h.html" title="I_DrawableObject.h" alt="" coords="1763,326,1898,353"/>
+<area shape="rect" id="node6" href="$d1/db1/_id_generator_8h.html" title="IdGenerator.h" alt="" coords="2947,95,3047,121"/>
+<area shape="rect" id="node8" href="$d1/d46/_resource_manager_8h.html" title="ResourceManager.h" alt="" coords="586,169,725,196"/>
+<area shape="rect" id="node33" href="$da/dc0/_rendering_engine_8h.html" title="RenderingEngine.h" alt="" coords="1612,95,1742,121"/>
+<area shape="rect" id="node41" href="$d6/da5/_global___structs_8h.html" title="Global_Structs.h" alt="" coords="1922,326,2040,353"/>
+<area shape="rect" id="node42" href="$d4/db6/_affordance_8h.html" title="Affordance.h" alt="" coords="1976,244,2071,271"/>
+<area shape="rect" id="node48" href="$d8/df1/_traits_8h.html" title="Traits.h" alt="" coords="1078,244,1143,271"/>
+<area shape="rect" id="node49" href="$dd/db5/_physic_engine_8h.html" title="Physic\\PhysicEngine.h" alt="" coords="2413,244,2570,271"/>
+<area shape="rect" id="node9" href="$d2/d8d/_model_manager_8h.html" title="ModelManager.h" alt="" coords="596,244,715,271"/>
+<area shape="rect" id="node23" href="$d5/d67/_texture_manager_8h.html" title="TextureManager.h" alt="" coords="454,326,580,353"/>
+<area shape="rect" id="node29" href="$dc/d38/_shader_manager_8h.html" title="ShaderManager.h" alt="" coords="306,326,430,353"/>
+<area shape="rect" id="node30" href="$d3/d1d/_sound_manager_8h.html" title="SoundManager.h" alt="" coords="882,326,1002,353"/>
+<area shape="rect" id="node10" href="$d7/d27/freeglut_8h.html" title="GL\\freeglut.h" alt="" coords="580,408,676,435"/>
+<area shape="rect" id="node18" href="$d4/d6c/_obj_loader_8h.html" title="ObjLoader.h" alt="" coords="1331,326,1423,353"/>
+<area shape="rect" id="node11" href="$d7/d1c/freeglut__std_8h.html" title="freeglut_std.h" alt="" coords="671,483,771,509"/>
+<area shape="rect" id="node15" href="$d5/d8a/freeglut__ext_8h.html" title="freeglut_ext.h" alt="" coords="531,483,631,509"/>
+<area shape="rect" id="node24" href="$d2/d93/_s_o_i_l_8h.html" title="SOIL\\SOIL.h" alt="" coords="460,408,555,435"/>
+<area shape="rect" id="node25" href="$dc/dd2/glext_8h.html" title="GL\\glext.h" alt="" coords="336,408,418,435"/>
+<area shape="rect" id="node34" href="$da/d35/_redering_factory_8h.html" title="RederingFactory.h" alt="" coords="1613,169,1741,196"/>
+<area shape="rect" id="node36" href="$d7/d72/_open_g_l_8h.html" title="OpenGL.h" alt="" coords="1535,244,1616,271"/>
+<area shape="rect" id="node40" href="$df/db6/_direct_x_8h.html" title="DirectX.h" alt="" coords="1641,244,1716,271"/>
+<area shape="rect" id="node37" href="$d3/dd4/_i___graphic_8h.html" title="I_Graphic.h" alt="" coords="1650,326,1738,353"/>
+<area shape="rect" id="node38" href="$d5/d91/_camera_8h.html" title="Camera.h" alt="" coords="2064,326,2143,353"/>
+<area shape="rect" id="node39" href="$d1/d83/_input_engine_8h.html" title="InputEngine.h" alt="" coords="757,326,858,353"/>
+<area shape="rect" id="node45" href="$dd/dae/_a_i_owned_states_8h.html" title="AIOwnedStates.h" alt="" coords="2946,326,3069,353"/>
+<area shape="rect" id="node46" href="$da/dea/_state_8h.html" title="State.h" alt="" coords="2932,408,2996,435"/>
+</map>

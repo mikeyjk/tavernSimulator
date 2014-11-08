@@ -1,0 +1,29 @@
+Jonathan Dummer 2007-\/07-\/26-\/10.\+36
+
+Simple \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Image Library
+
+A tiny c library for uploading images as textures into \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l}. Also saving and loading of images is supported.
+
+I'm using Sean's Tool Box image loader as a base\+: {\tt http\+://www.\+nothings.\+org/}
+
+I'm upgrading it to load T\+G\+A and D\+D\+S files, and a direct path for loading D\+D\+S files straight into \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} textures, when applicable.
+
+Image Formats\+:
+\begin{DoxyItemize}
+\item B\+M\+P load \& save
+\item T\+G\+A load \& save
+\item D\+D\+S load \& save
+\item P\+N\+G load
+\item J\+P\+G load
+\end{DoxyItemize}
+
+\doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} \doxyref{Texture}{p.}{d2/d7f/class_texture} Features\+:
+\begin{DoxyItemize}
+\item resample to power-\/of-\/two sizes
+\item M\+I\+Pmap generation
+\item compressed texture S3\+T\+C formats (if supported)
+\item can pre-\/multiply alpha for you, for better compositing
+\item can flip image about the y-\/axis (except pre-\/compressed D\+D\+S files)
+\end{DoxyItemize}
+
+Thanks to\+: Sean Barret -\/ for the awesome stb\+\_\+image Dan Venkitachalam -\/ for finding some non-\/compliant D\+D\+S files, and patching some explicit casts everybody at gamedev.\+net 

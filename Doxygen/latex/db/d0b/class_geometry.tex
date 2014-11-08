@@ -1,0 +1,387 @@
+\section{Geometry Class Reference}
+\label{class_geometry}\index{Geometry@{Geometry}}
+
+
+The \doxyref{Geometry}{p.}{db/d0b/class_geometry} Class, Basically static renderable objects The class doesnt need to update at the moment, so its just a static object.  
+
+
+
+
+{\ttfamily \#include $<$Geometry.\+h$>$}
+
+
+
+Inheritance diagram for Geometry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{de/d32/class_geometry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Geometry\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d68/class_geometry__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Geometry} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Geometry}{p.}{db/d0b/class_geometry} Constructor. \end{DoxyCompactList}\item 
+{\bf Geometry} ({\bf Rendering\+Engine} $\ast$Ref, {\bf Vec3} pos, float rot\+X, float rot\+Y, {\bf string} {\bf model}, {\bf string} {\bf texture}, bool bound, float transparency, std\+::vector$<$ {\bf Affordance} $>$ affordances, float {\bf weight})
+\begin{DoxyCompactList}\small\item\em \doxyref{Geometry}{p.}{db/d0b/class_geometry} Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Geometry} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Geometry}{p.}{db/d0b/class_geometry} Destructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Draw \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Buffer\+Ref} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref \end{DoxyCompactList}\item 
+{\bf void} {\bf Destory} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Destroy \end{DoxyCompactList}\item 
+{\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em virtual Update \end{DoxyCompactList}\item 
+{\bf void} {\bf add\+Sub\+Model} ({\bf Rendering\+Engine} $\ast$Ref, {\bf Vec3} pos, float rot\+X, float rot\+Y, {\bf string} {\bf model}, {\bf string} {\bf texture}, bool bound, float transparency)
+\item 
+{\bf void} {\bf add\+Sub\+Model} ({\bf Geometry} $\ast$sub)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Geometry} $\ast$ {\bf sub\+Model}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \doxyref{Geometry}{p.}{db/d0b/class_geometry} Class, Basically static renderable objects The class doesnt need to update at the moment, so its just a static object. 
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe \+: \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/04/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\subsubsection[{Geometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry\+::\+Geometry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_geometry_a4c301c163c63d21ed08c17b0f4e131d3}
+
+
+\doxyref{Geometry}{p.}{db/d0b/class_geometry} Constructor. 
+
+This is the basic Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+28 \{type = gameObjectType::gameObject;\}
+\end{DoxyCode}
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\index{Geometry@{Geometry}!Geometry@{Geometry}}
+\subsubsection[{Geometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry\+::\+Geometry (
+\begin{DoxyParamCaption}
+\item[{{\bf Rendering\+Engine} $\ast$}]{Ref, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{{\bf string}}]{model, }
+\item[{{\bf string}}]{texture, }
+\item[{bool}]{bound, }
+\item[{float}]{transparency, }
+\item[{std\+::vector$<$ {\bf Affordance} $>$}]{affordances, }
+\item[{float}]{weight}
+\end{DoxyParamCaption}
+)}\label{class_geometry_aacd2a3c7cfae8a5328ab0469910478f8}
+
+
+\doxyref{Geometry}{p.}{db/d0b/class_geometry} Constructor. 
+
+This is the basic parameter constructor Contructor chains with \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} gets a poitner to the input engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Rendering\+Engine}{p.}{da/d3d/class_rendering_engine}} & $\ast$ Ref, \doxyref{Vec3}{p.}{df/d24/class_vec3} pos, float rot\+X, float rot\+Y, string model, string texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+9     :GameObject(Ref, pos, rotX, rotY, model, texture, bound, trans,weight)
+10 \{
+11     type = gameObjectType::geometry;
+12 
+13     setAffordances(affordances);
+14     \textcolor{comment}{//Add affordances here...}
+15 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d0b/class_geometry_aacd2a3c7cfae8a5328ab0469910478f8_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Geometry@{Geometry}!````~Geometry@{$\sim$\+Geometry}}
+\index{````~Geometry@{$\sim$\+Geometry}!Geometry@{Geometry}}
+\subsubsection[{$\sim$\+Geometry}]{\setlength{\rightskip}{0pt plus 5cm}Geometry\+::$\sim$\+Geometry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_geometry_ad55e832122ab3a2833dcaa6507867678}
+
+
+\doxyref{Geometry}{p.}{db/d0b/class_geometry} Destructor. 
+
+this is the basic destructor of the \doxyref{Geometry}{p.}{db/d0b/class_geometry} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+50 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Geometry@{Geometry}!add\+Sub\+Model@{add\+Sub\+Model}}
+\index{add\+Sub\+Model@{add\+Sub\+Model}!Geometry@{Geometry}}
+\subsubsection[{add\+Sub\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Geometry\+::add\+Sub\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Rendering\+Engine} $\ast$}]{Ref, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{{\bf string}}]{model, }
+\item[{{\bf string}}]{texture, }
+\item[{bool}]{bound, }
+\item[{float}]{transparency}
+\end{DoxyParamCaption}
+)}\label{class_geometry_a8cef64c09592aac91229f7058e0adf0b}
+\index{Geometry@{Geometry}!add\+Sub\+Model@{add\+Sub\+Model}}
+\index{add\+Sub\+Model@{add\+Sub\+Model}!Geometry@{Geometry}}
+\subsubsection[{add\+Sub\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Geometry\+::add\+Sub\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Geometry} $\ast$}]{sub}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_geometry_af39b9d924d92bf2b00b620e930fad360}
+
+\begin{DoxyCode}
+87     \{
+88         subModel = sub;
+89     \}
+\end{DoxyCode}
+\index{Geometry@{Geometry}!Destory@{Destory}}
+\index{Destory@{Destory}!Geometry@{Geometry}}
+\subsubsection[{Destory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Geometry\+::\+Destory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_geometry_a3efb7bdf562dcef8d2766c7b12ab5fc1}
+
+
+i\+\_\+\+Drawable\+Object Destroy 
+
+This deletes the object from the render\+Engine buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a9f5e20361956b3181420f2f040ef496a}.
+
+
+\begin{DoxyCode}
+18 \{
+19     ((OpenGL *)RederingHandle->GetRenderHandle())->EraseRefFromBuffer(m_objectID);
+20 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d0b/class_geometry_a3efb7bdf562dcef8d2766c7b12ab5fc1_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Geometry@{Geometry}!Draw@{Draw}}
+\index{Draw@{Draw}!Geometry@{Geometry}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Geometry\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_geometry_a164925c8b8713b573e3a50e54bff287a}
+
+
+i\+\_\+\+Drawable\+Object Draw 
+
+This calls the render engine funciton to draw a box
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a54f25ff4076e03a40309085bcf826e53}.
+
+
+\begin{DoxyCode}
+23 \{
+24     
+25     \textcolor{keywordflow}{if}(isBounding)
+26     \{
+27         GLfloat mat[16];
+28         Bounding->body->getGLTransform(mat);
+29         m_position.X = Bounding->body->getPosition().x;
+30         m_position.Y = Bounding->body->getPosition().y;
+31         m_position.Z = Bounding->body->getPosition().z;
+32         glPushMatrix();
+33         glMultMatrixf(mat);
+34         RederingHandle->DrawModel(model, texture, trans, Vec3(0,0,0), Vec3(0,0,0), 
+      Vec3(1, 1, 1));
+35         glPopMatrix();
+36     \}
+37     \textcolor{keywordflow}{else}
+38     \{
+39         RederingHandle->DrawModel(model, texture, trans, m_position, m_rotation, 
+      Vec3(1, 1, 1));
+40     \}
+41 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{db/d0b/class_geometry_a164925c8b8713b573e3a50e54bff287a_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Geometry@{Geometry}!Set\+Buffer\+Ref@{Set\+Buffer\+Ref}}
+\index{Set\+Buffer\+Ref@{Set\+Buffer\+Ref}!Geometry@{Geometry}}
+\subsubsection[{Set\+Buffer\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Geometry\+::\+Set\+Buffer\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_geometry_a6d04090067816eb17bc4076e3b361237}
+
+
+i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref 
+
+This sends the object to the render\+Engine render buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a34436ba977aafaff056f3f5022f992b9}.
+
+
+\begin{DoxyCode}
+49 \{
+50     ((OpenGL *)RederingHandle->GetRenderHandle())->AddRefToBuffer(m_objectID, \textcolor{keyword}{this});
+51 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d0b/class_geometry_a6d04090067816eb17bc4076e3b361237_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Geometry@{Geometry}!Update@{Update}}
+\index{Update@{Update}!Geometry@{Geometry}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Geometry\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_geometry_a5022b6cc33e9772ffaf14d1b753bc761}
+
+
+virtual Update 
+
+Put here to be able to call Update for all child Game\+Objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a67476ffb30d41305f25be7b3fee11173}.
+
+
+\begin{DoxyCode}
+44 \{
+45     \textcolor{comment}{//std::cout << position.getX() << ", " << position.getY() << ", " << position.getZ() << std::endl;}
+46 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Geometry@{Geometry}!sub\+Model@{sub\+Model}}
+\index{sub\+Model@{sub\+Model}!Geometry@{Geometry}}
+\subsubsection[{sub\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geometry}$\ast$ Geometry\+::sub\+Model\hspace{0.3cm}{\ttfamily [private]}}\label{class_geometry_a2ccc0a20d92162487add7725f84c2870}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Geometry.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Geometry.\+cpp}\end{DoxyCompactItemize}

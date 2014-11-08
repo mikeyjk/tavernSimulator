@@ -1,0 +1,103 @@
+\section{Human\+Values Struct Reference}
+\label{struct_human_values}\index{Human\+Values@{Human\+Values}}
+
+
+Human Values struct, used in the \doxyref{Personality}{p.}{d1/da8/class_personality} class as the main structure for the needs system.  
+
+
+
+
+{\ttfamily \#include $<$Global\+\_\+\+Structs.\+h$>$}
+
+
+
+Collaboration diagram for Human\+Values\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{d8/d62/struct_human_values__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf init\+Human\+Values} ({\bf Human\+Values} $\ast$H\+V, float {\bf f})
+\begin{DoxyCompactList}\small\item\em basic function that initialises the human values structure to all one value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Physical} {\bf Phys}
+\item 
+{\bf Vital} {\bf Vit}
+\item 
+{\bf Mental} {\bf Ment}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Human Values struct, used in the \doxyref{Personality}{p.}{d1/da8/class_personality} class as the main structure for the needs system. 
+
+\subsection{Member Function Documentation}
+\index{Human\+Values@{Human\+Values}!init\+Human\+Values@{init\+Human\+Values}}
+\index{init\+Human\+Values@{init\+Human\+Values}!Human\+Values@{Human\+Values}}
+\subsubsection[{init\+Human\+Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Human\+Values\+::init\+Human\+Values (
+\begin{DoxyParamCaption}
+\item[{{\bf Human\+Values} $\ast$}]{H\+V, }
+\item[{float}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_human_values_a7628a0ef148c12f4c744d92c83580745}
+
+
+basic function that initialises the human values structure to all one value 
+
+
+\begin{DoxyCode}
+45     \{
+46         HV->Ment.Boredom = f;
+47         HV->Ment.Curiosity = f;
+48         HV->Ment.Fear = f;
+49         HV->Ment.Memory = f;
+50         HV->Ment.Talk = f;
+51         HV->Ment.Emotion = f;
+52 
+53         HV->Phys.Agile = f;
+54         HV->Phys.Sight = f;
+55         HV->Phys.Stomach = f;
+56         HV->Phys.Strength = f;
+57         HV->Phys.Health = f;
+58 
+59         HV->Vit.Bladder = f;
+60         HV->Vit.Hunger = f;
+61         HV->Vit.Thirst = f;
+62         HV->Vit.Tiredness = f;
+63         HV->Vit.Toxication = f;
+64     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d9e/struct_human_values_a7628a0ef148c12f4c744d92c83580745_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Human\+Values@{Human\+Values}!Ment@{Ment}}
+\index{Ment@{Ment}!Human\+Values@{Human\+Values}}
+\subsubsection[{Ment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mental} Human\+Values\+::\+Ment}\label{struct_human_values_ae055f9a2082add412dd34218ae709b40}
+\index{Human\+Values@{Human\+Values}!Phys@{Phys}}
+\index{Phys@{Phys}!Human\+Values@{Human\+Values}}
+\subsubsection[{Phys}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Physical} Human\+Values\+::\+Phys}\label{struct_human_values_a04d17a852cece1ecba647d52b3364dea}
+\index{Human\+Values@{Human\+Values}!Vit@{Vit}}
+\index{Vit@{Vit}!Human\+Values@{Human\+Values}}
+\subsubsection[{Vit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vital} Human\+Values\+::\+Vit}\label{struct_human_values_a3fef7a05c8ff613577c847e6ba41c11c}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Global\+\_\+\+Structs.\+h}\end{DoxyCompactItemize}

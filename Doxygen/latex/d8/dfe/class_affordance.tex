@@ -1,0 +1,411 @@
+\section{Affordance Class Reference}
+\label{class_affordance}\index{Affordance@{Affordance}}
+
+
+{\ttfamily \#include $<$Affordance.\+h$>$}
+
+
+
+Collaboration diagram for Affordance\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{db/d6a/class_affordance__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Affordance} ()
+\item 
+{\bf void} {\bf set\+Tag} ({\bf Tag} description)
+\item 
+{\bf void} {\bf set\+Tag} ({\bf std\+::string} description)
+\item 
+{\bf Tag} {\bf get\+Tag} () const 
+\item 
+{\bf void} {\bf set\+Value} (float {\bf value})
+\item 
+float {\bf get\+Value} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Tag} {\bf string\+To\+Tag} ({\bf std\+::string} {\bf t})
+\item 
+static {\bf std\+::string} {\bf tag\+To\+String} ({\bf Tag} {\bf t})
+\item 
+static {\bf State}$<$ {\bf N\+P\+C} $>$ $\ast$ {\bf tag\+To\+State} ({\bf Tag} {\bf t})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Tag} {\bf m\+\_\+description}
+\item 
+float {\bf m\+\_\+value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Affordance}{p.}{d8/dfe/class_affordance}  Represents a single affordance value for an entity. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Affordance@{Affordance}!Affordance@{Affordance}}
+\index{Affordance@{Affordance}!Affordance@{Affordance}}
+\subsubsection[{Affordance}]{\setlength{\rightskip}{0pt plus 5cm}Affordance\+::\+Affordance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_affordance_a545bae562c049efc5864d467aa7e266a}
+
+\begin{DoxyCode}
+4 \{
+5     m_value = 0;
+6     m_description = Tag::wander;
+7 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Affordance@{Affordance}!get\+Tag@{get\+Tag}}
+\index{get\+Tag@{get\+Tag}!Affordance@{Affordance}}
+\subsubsection[{get\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tag} Affordance\+::get\+Tag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_affordance_a5ac3633d31009a1ac345d5b7934082fb}
+
+\begin{DoxyCode}
+79 \{
+80     \textcolor{keywordflow}{return}(m_description);
+81 \}
+\end{DoxyCode}
+\index{Affordance@{Affordance}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Affordance@{Affordance}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}float Affordance\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_affordance_aeb69c5e5b8015ac40aa8149d714161b2}
+
+\begin{DoxyCode}
+102 \{
+103     \textcolor{keywordflow}{return}(m_value);
+104 \}
+\end{DoxyCode}
+\index{Affordance@{Affordance}!set\+Tag@{set\+Tag}}
+\index{set\+Tag@{set\+Tag}!Affordance@{Affordance}}
+\subsubsection[{set\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Affordance\+::set\+Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag}}]{description}
+\end{DoxyParamCaption}
+)}\label{class_affordance_af5654077b77cbc9bcb695619961eb940}
+
+\begin{DoxyCode}
+10 \{
+11     m_description = description;
+12 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dfe/class_affordance_af5654077b77cbc9bcb695619961eb940_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Affordance@{Affordance}!set\+Tag@{set\+Tag}}
+\index{set\+Tag@{set\+Tag}!Affordance@{Affordance}}
+\subsubsection[{set\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Affordance\+::set\+Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{description}
+\end{DoxyParamCaption}
+)}\label{class_affordance_ab10caecef8298b35671c1963c9b3340f}
+
+\begin{DoxyCode}
+15 \{\textcolor{comment}{// iterate through all tags}
+16     \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"eat"}))
+17     \{
+18         m_description = Tag::eat;
+19     \}
+20     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"drink"}))
+21     \{
+22         m_description = Tag::drink;
+23     \}
+24     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"sit"}))
+25     \{
+26         m_description = Tag::sit;
+27     \}
+28     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"pickup"}))
+29     \{
+30         m_description = Tag::pickup;
+31     \}
+32     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"talk"}))
+33     \{
+34         m_description = Tag::talk;
+35     \}
+36     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"toilet"}))
+37     \{
+38         m_description = Tag::toilet;
+39     \}
+40     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"sleep"}))
+41     \{
+42         m_description = Tag::sleep;
+43     \}
+44     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"throwable"}))
+45     \{
+46         m_description = Tag::throwable;
+47     \}
+48     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"touch"}))
+49     \{
+50         m_description = Tag::touch;
+51     \}
+52     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"climb"}))
+53     \{
+54         m_description = Tag::climb;
+55     \}
+56     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"push"}))
+57     \{
+58         m_description = Tag::push;
+59     \}
+60     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"pull"}))
+61     \{
+62         m_description = Tag::pull;
+63     \}
+64     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"vendor"}))
+65     \{
+66         m_description = Tag::vendor;
+67     \}
+68     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"toxic"}))
+69     \{
+70         m_description = Tag::toxic;
+71     \}
+72     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(find\_first(description, \textcolor{stringliteral}{"wander"}))
+73     \{
+74         m_description = Tag::wander;
+75     \}
+76 \}
+\end{DoxyCode}
+\index{Affordance@{Affordance}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Affordance@{Affordance}}
+\subsubsection[{set\+Value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Affordance\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}\label{class_affordance_a2e6b672b639bce99629019fcdf4dda3c}
+
+\begin{DoxyCode}
+86 \{
+87     m_value = value;
+88     \textcolor{comment}{// clamp to 0 if <}
+89     \textcolor{keywordflow}{if}(m_value < 0)
+90     \{
+91         m_value = 0;
+92     \}
+93     
+94     \textcolor{comment}{// clamp to 1 if >}
+95     \textcolor{keywordflow}{if}(m_value > 1)
+96     \{
+97         m_value = 1;
+98     \}
+99 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dfe/class_affordance_a2e6b672b639bce99629019fcdf4dda3c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Affordance@{Affordance}!string\+To\+Tag@{string\+To\+Tag}}
+\index{string\+To\+Tag@{string\+To\+Tag}!Affordance@{Affordance}}
+\subsubsection[{string\+To\+Tag}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Tag} Affordance\+::string\+To\+Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_affordance_a25bbf97dd4817739b9b0ca271f9775c0}
+\index{Affordance@{Affordance}!tag\+To\+State@{tag\+To\+State}}
+\index{tag\+To\+State@{tag\+To\+State}!Affordance@{Affordance}}
+\subsubsection[{tag\+To\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State}$<$ {\bf N\+P\+C} $>$ $\ast$ Affordance\+::tag\+To\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_affordance_af89fa2594e55b5f890240aa24517b5a0}
+
+\begin{DoxyCode}
+174 \{
+175     \textcolor{keywordflow}{switch}(t)
+176     \{
+177     \textcolor{keywordflow}{case} eat:
+178         \textcolor{keywordflow}{return} Eat::Instance();
+179         \textcolor{keywordflow}{break};
+180     \textcolor{keywordflow}{case} drink:
+181         \textcolor{keywordflow}{return} Drink::Instance();
+182         \textcolor{keywordflow}{break};
+183     \textcolor{keywordflow}{case} sit:
+184         \textcolor{keywordflow}{return} Sit::Instance();
+185     \textcolor{keywordflow}{break};
+186     \textcolor{keywordflow}{case} pickup:
+187         \textcolor{keywordflow}{return} Pickup::Instance();
+188         \textcolor{keywordflow}{break};
+189     \textcolor{keywordflow}{case} talk:
+190         \textcolor{keywordflow}{return} Talk::Instance();
+191         \textcolor{keywordflow}{break};
+192     \textcolor{keywordflow}{case} toilet:
+193         \textcolor{keywordflow}{return} Toilet::Instance();
+194         \textcolor{keywordflow}{break};
+195     \textcolor{keywordflow}{case} sleep:
+196         \textcolor{keywordflow}{return} SleepState::Instance();
+197         \textcolor{keywordflow}{break};
+198     \textcolor{keywordflow}{case} throwable:
+199         \textcolor{keywordflow}{return} Throw::Instance();
+200         \textcolor{keywordflow}{break};
+201     \textcolor{keywordflow}{case} touch:
+202         \textcolor{keywordflow}{return} Touch::Instance();
+203         \textcolor{keywordflow}{break};
+204     \textcolor{keywordflow}{case} climb:
+205         \textcolor{keywordflow}{return} Climb::Instance();
+206         \textcolor{keywordflow}{break};
+207     \textcolor{keywordflow}{case} push:
+208         \textcolor{keywordflow}{return} Push::Instance();
+209         \textcolor{keywordflow}{break};
+210     \textcolor{keywordflow}{case} pull:
+211         \textcolor{keywordflow}{return} Pull::Instance();
+212         \textcolor{keywordflow}{break};
+213     \textcolor{keywordflow}{case} vendor:
+214         \textcolor{keywordflow}{return} Vendor::Instance();
+215         \textcolor{keywordflow}{break};
+216     \textcolor{keywordflow}{default}:
+217         \textcolor{keywordflow}{return} Wander::Instance();
+218         \textcolor{keywordflow}{break};
+219     \}
+220 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d8/dfe/class_affordance_af89fa2594e55b5f890240aa24517b5a0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{d8/dfe/class_affordance_af89fa2594e55b5f890240aa24517b5a0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Affordance@{Affordance}!tag\+To\+String@{tag\+To\+String}}
+\index{tag\+To\+String@{tag\+To\+String}!Affordance@{Affordance}}
+\subsubsection[{tag\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} Affordance\+::tag\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Tag}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_affordance_af6a45d7dc33a939b4820ff2c4e97b87d}
+
+\begin{DoxyCode}
+107 \{
+108     \textcolor{keywordflow}{if}(t == Tag::eat)
+109     \{
+110         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"eat"};
+111     \}
+112     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::drink)
+113     \{
+114         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"drink"};
+115     \}
+116     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::sit)
+117     \{
+118         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"sit"};
+119     \}
+120     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::pickup)
+121     \{
+122         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"pickup"};
+123     \}
+124     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::talk)
+125     \{
+126         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"talk"};
+127     \}
+128     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::toilet)
+129     \{
+130         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"toilet"};
+131     \}
+132     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::sleep)
+133     \{
+134         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"sleep"};
+135     \}
+136     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::throwable)
+137     \{
+138         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"throwable"};
+139     \}
+140     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::touch)
+141     \{
+142         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"touch"};
+143     \}
+144     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::climb)
+145     \{
+146         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"climb"};
+147     \}
+148     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::push)
+149     \{
+150         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"push"};
+151     \}
+152     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::pull)
+153     \{
+154         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"pull"};
+155     \}
+156     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::vendor)
+157     \{
+158         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"vendor"};
+159     \}
+160     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::toxic)
+161     \{
+162         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"toxic"};
+163     \}
+164     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(t == Tag::wander)
+165     \{
+166         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"wander"};
+167     \}
+168 
+169     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"none"};
+170 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dfe/class_affordance_af6a45d7dc33a939b4820ff2c4e97b87d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Affordance@{Affordance}!m\+\_\+description@{m\+\_\+description}}
+\index{m\+\_\+description@{m\+\_\+description}!Affordance@{Affordance}}
+\subsubsection[{m\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tag} Affordance\+::m\+\_\+description\hspace{0.3cm}{\ttfamily [private]}}\label{class_affordance_aa70af0a3e12e5b6ff455aa9ab9af7b9c}
+\index{Affordance@{Affordance}!m\+\_\+value@{m\+\_\+value}}
+\index{m\+\_\+value@{m\+\_\+value}!Affordance@{Affordance}}
+\subsubsection[{m\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}float Affordance\+::m\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}\label{class_affordance_aa28201cebc57a5e68f1c3d926a27c165}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Affordance.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Affordance.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="GameObject::getID" name="GameObject::getID">
+<area shape="rect" id="node2" href="$d0/d2a/class_n_p_c.html#a972a07e56116037b2325de72ecc20e45" title="NPC::giveHudMoreData" alt="" coords="187,5,345,32"/>
+<area shape="rect" id="node4" href="$d3/d21/class_world.html#ab0e20ce1067526abf54e934b9bf03497" title="World::AddSkybox" alt="" coords="201,56,331,83"/>
+<area shape="rect" id="node8" href="$d3/d21/class_world.html#a270560c764575ba30c7f4e4cf6d8eef4" title="addEntity function " alt="" coords="205,107,327,133"/>
+<area shape="rect" id="node3" href="$d0/d2a/class_n_p_c.html#a49d73fb1d0b5fc4dab086a15a9fca058" title="Update. " alt="" coords="429,5,528,32"/>
+<area shape="rect" id="node5" href="$da/da9/class_game_engine.html#a6ac03e07bd33b978dda30e0ad2a95c0e" title="GameEngine::loadAssets" alt="" coords="393,81,564,108"/>
+<area shape="rect" id="node6" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="612,81,743,108"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="791,81,841,108"/>
+</map>

@@ -1,0 +1,733 @@
+\section{Model\+Manager Class Reference}
+\label{class_model_manager}\index{Model\+Manager@{Model\+Manager}}
+
+
+{\ttfamily \#include $<$Model\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Model\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d4e/class_model_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf add\+Model} ({\bf string} Path, {\bf string} Name, {\bf Vec3} $\ast$min, {\bf Vec3} $\ast$max)
+\begin{DoxyCompactList}\small\item\em Adds a model to the model manager by the file's path, which will become known to the model manager by the passed name. \end{DoxyCompactList}\item 
+{\bf G\+Luint} {\bf get\+Model\+Vertex} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Gets the vertex buffer of the model with the matching name. \end{DoxyCompactList}\item 
+{\bf G\+Luint} {\bf get\+Texture} ({\bf string} {\bf name})
+\item 
+{\bf G\+Luint} {\bf get\+Normal} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Gets the model's normal buffer of the model with the matching name. \end{DoxyCompactList}\item 
+int {\bf get\+Number\+Of\+Vertices} ({\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Gets the number of vertices the model with the matching name has. \end{DoxyCompactList}\item 
+{\bf void} {\bf draw} ({\bf string} m\+Name, {\bf string} t\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation)
+\begin{DoxyCompactList}\small\item\em Draws a model to the screen with a specified texture and translates it by a specified amount. \end{DoxyCompactList}\item 
+{\bf void} {\bf draw} ({\bf string} m\+Name, {\bf string} t\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation, {\bf Vec3} {\bf scale})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Model\+Manager} $\ast$ {\bf instance} ()
+\begin{DoxyCompactList}\small\item\em Gets the instance of the model manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Model\+Manager} ()
+\item 
+{\bf $\sim$\+Model\+Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ {\bf string}, {\bf Obj\+Mesh} $>$ {\bf models}
+\item 
+map$<$ {\bf string}, {\bf G\+Luint} $>$ {\bf modelvertex}
+\item 
+map$<$ {\bf string}, int $>$ {\bf Number\+Of\+Vertex}
+\item 
+map$<$ {\bf string}, {\bf G\+Luint} $>$ {\bf modeltexture}
+\item 
+map$<$ {\bf string}, {\bf G\+Luint} $>$ {\bf model\+Normal}
+\item 
+map$<$ {\bf string}, {\bf Min\+Max} $>$ {\bf model\+Min\+Max}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Model\+Manager@{Model\+Manager}!Model\+Manager@{Model\+Manager}}
+\index{Model\+Manager@{Model\+Manager}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{Model\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Model\+Manager\+::\+Model\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_model_manager_a9b0d22b1baf59c5b566e82fcd8ca424a}
+
+\begin{DoxyCode}
+130 \{\}                  \textcolor{comment}{// Creates a model manager object.}
+\end{DoxyCode}
+\index{Model\+Manager@{Model\+Manager}!````~Model\+Manager@{$\sim$\+Model\+Manager}}
+\index{````~Model\+Manager@{$\sim$\+Model\+Manager}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{$\sim$\+Model\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Model\+Manager\+::$\sim$\+Model\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_model_manager_a93f4eea50036cc5453014234aa921c7c}
+
+\begin{DoxyCode}
+131 \{\}                  \textcolor{comment}{// Deletes the model manager.}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Model\+Manager@{Model\+Manager}!add\+Model@{add\+Model}}
+\index{add\+Model@{add\+Model}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{add\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Model\+Manager\+::add\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Path, }
+\item[{{\bf string}}]{Name, }
+\item[{{\bf Vec3} $\ast$}]{min, }
+\item[{{\bf Vec3} $\ast$}]{max}
+\end{DoxyParamCaption}
+)}\label{class_model_manager_a95cf305712d097d0ff9cb96a2b71f9cd}
+
+
+Adds a model to the model manager by the file's path, which will become known to the model manager by the passed name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Path, string Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The model is added into the model manager and is known by the model manager by the name given. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+20 \{
+21     map<string, ObjMesh>::iterator iterator;
+22     iterator = models.find(name);
+23     \textcolor{keywordflow}{if}(iterator == models.end())
+24     \{
+25         ObjMesh tempObj;
+26         tempObj = LoadObjMesh(Path);
+27         models.insert(pair<string, ObjMesh>(name,tempObj));
+28 
+29         std::vector<float> ALL;
+30         std::vector<float> ALLT;
+31         std::vector<float> ALLN;
+32         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < tempObj.faces.size(); i++)
+33         \{
+34             ObjMeshFace& current\_face = tempObj.faces[i];
+35             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < 4; j++)
+36             \{
+37         
+38                 \textcolor{keywordflow}{if}(j != 3)
+39                 \{
+40                     ObjMeshVertex& vertex = current\_face.vertices[j];
+41                     \textcolor{comment}{//Find min and max of X}
+42                     ALL.push\_back(vertex.pos.x);
+43                     \textcolor{keywordflow}{if}(vertex.pos.x < min->getX())
+44                         min->setX(vertex.pos.x);
+45                     \textcolor{keywordflow}{if}(vertex.pos.x > max->getX())
+46                         max->setX(vertex.pos.x);
+47                     
+48                     \textcolor{comment}{//Find min and max of Y}
+49                     ALL.push\_back(vertex.pos.y);
+50                     \textcolor{keywordflow}{if}(vertex.pos.y < min->getY())
+51                         min->setY(vertex.pos.y);
+52                     \textcolor{keywordflow}{if}(vertex.pos.y > max->getY())
+53                         max->setY(vertex.pos.y);
+54 
+55                     \textcolor{comment}{//Find min and max of Z}
+56                     ALL.push\_back(vertex.pos.z);
+57                     \textcolor{keywordflow}{if}(vertex.pos.z < min->getZ())
+58                         min->setZ(vertex.pos.z);
+59                     \textcolor{keywordflow}{if}(vertex.pos.z > max->getZ())
+60                         max->setZ(vertex.pos.z);
+61 
+62                     ALLT.push\_back(vertex.texcoord.x);
+63                     ALLT.push\_back(vertex.texcoord.y);
+64                     ALLN.push\_back(vertex.normal.x);
+65                     ALLN.push\_back(vertex.normal.y);
+66                     ALLN.push\_back(vertex.normal.z);
+67                 \}
+68                 \textcolor{keywordflow}{else}
+69                 \{
+70                     ObjMeshVertex& vertex = current\_face.vertices[j-3];
+71                     
+72                     \textcolor{comment}{//Find min and max of X}
+73                     ALL.push\_back(vertex.pos.x);
+74                     \textcolor{keywordflow}{if}(vertex.pos.x < min->getX())
+75                         min->setX(vertex.pos.x);
+76                     \textcolor{keywordflow}{if}(vertex.pos.x > max->getX())
+77                         max->setX(vertex.pos.x);
+78                     
+79                     \textcolor{comment}{//Find min and max of Y}
+80                     ALL.push\_back(vertex.pos.y);
+81                     \textcolor{keywordflow}{if}(vertex.pos.y < min->getY())
+82                         min->setY(vertex.pos.y);
+83                     \textcolor{keywordflow}{if}(vertex.pos.y > max->getY())
+84                         max->setY(vertex.pos.y);
+85 
+86                     \textcolor{comment}{//Find min and max of Z}
+87                     ALL.push\_back(vertex.pos.z);
+88                     \textcolor{keywordflow}{if}(vertex.pos.z < min->getZ())
+89                         min->setZ(vertex.pos.z);
+90                     \textcolor{keywordflow}{if}(vertex.pos.z > max->getZ())
+91                         max->setZ(vertex.pos.z);
+92 
+93                     ALLT.push\_back(vertex.texcoord.x);
+94                     ALLT.push\_back(vertex.texcoord.y);
+95                     ALLN.push\_back(vertex.normal.x);
+96                     ALLN.push\_back(vertex.normal.y);
+97                     ALLN.push\_back(vertex.normal.z);
+98 
+99                     vertex = current\_face.vertices[j-1];
+100                     ALL.push\_back(vertex.pos.x);
+101                     ALL.push\_back(vertex.pos.y);
+102                     ALL.push\_back(vertex.pos.z);
+103                     ALLT.push\_back(vertex.texcoord.x);
+104                     ALLT.push\_back(vertex.texcoord.y);
+105                     ALLN.push\_back(vertex.normal.x);
+106                     ALLN.push\_back(vertex.normal.y);
+107                     ALLN.push\_back(vertex.normal.z);
+108                     
+109                     vertex = current\_face.vertices[j];
+110                     ALL.push\_back(vertex.pos.x);
+111                     ALL.push\_back(vertex.pos.y);
+112                     ALL.push\_back(vertex.pos.z);
+113                     ALLT.push\_back(vertex.texcoord.x);
+114                     ALLT.push\_back(vertex.texcoord.y);
+115                     ALLN.push\_back(vertex.normal.x);
+116                     ALLN.push\_back(vertex.normal.y);
+117                     ALLN.push\_back(vertex.normal.z);
+118                 \}
+119             \}
+120 
+121         \}
+122 
+123         GLuint elementbuffer;
+124         GLuint textureCoor;
+125         GLuint Texnormal;
+126         
+127         \textcolor{keywordtype}{float} * model = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[ALL.size()];
+128         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < ALL.size(); i++)
+129         \{
+130             model[i] = ALL[i];
+131         \}
+132 
+133         \textcolor{keywordtype}{float} * texture = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[ALLT.size()];
+134         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < ALLT.size(); i++)
+135         \{
+136             texture[i] = ALLT[i];
+137         \}
+138 
+139         \textcolor{keywordtype}{float} * normal = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[ALLN.size()];
+140         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < ALLN.size(); i++)
+141         \{
+142             normal[i] = ALLN[i];
+143         \}
+144 
+145         glGenBuffers(1, &elementbuffer);
+146         glBindBuffer(GL_ARRAY_BUFFER, elementbuffer);
+147         glBufferData(GL_ARRAY_BUFFER, ALL.size() * \textcolor{keyword}{sizeof}(float), model, 
+      GL_STATIC_DRAW);
+148     
+149         glGenBuffers(1, &textureCoor);
+150         glBindBuffer(GL_ARRAY_BUFFER, textureCoor);
+151         glBufferData(GL_ARRAY_BUFFER, ALLT.size() * \textcolor{keyword}{sizeof}(float), texture, 
+      GL_STATIC_DRAW);
+152 
+153         glGenBuffers(1, &Texnormal);
+154         glBindBuffer(GL_ARRAY_BUFFER, Texnormal);
+155         glBufferData(GL_ARRAY_BUFFER, ALLN.size() * \textcolor{keyword}{sizeof}(float), normal, 
+      GL_STATIC_DRAW);
+156 
+157         modelvertex.insert(pair<string, GLuint>(name,elementbuffer));
+158         modeltexture.insert(pair<string, GLuint>(name,textureCoor));
+159         modelNormal.insert(pair<string, GLuint>(name,Texnormal));
+160         NumberOfVertex.insert(pair<string,int>(name,ALL.size()));
+161 
+162         \textcolor{keyword}{delete}[] model;
+163         \textcolor{keyword}{delete}[] texture;
+164         \textcolor{keyword}{delete}[] normal;
+165 
+166         MinMax temp;
+167         temp.min.X = min->X;
+168         temp.min.Y = min->Y;
+169         temp.min.Z = min->Z;
+170 
+171         temp.max.X = max->X;
+172         temp.max.Y = max->Y;
+173         temp.max.Z = max->Z;
+174 
+175         modelMinMax.insert(pair<string,MinMax>(name, temp));
+176     \}
+177     \textcolor{keywordflow}{else}
+178     \{
+179         map<string, MinMax>::iterator iterator;
+180         iterator = modelMinMax.find(name);
+181         \textcolor{keywordflow}{if}(iterator != modelMinMax.end())
+182         \{
+183             min->X = iterator->second.min.X;
+184             min->Y = iterator->second.min.Y;
+185             min->Z = iterator->second.min.Z;
+186 
+187             max->X = iterator->second.max.X;
+188             max->Y = iterator->second.max.Y;
+189             max->Z = iterator->second.max.Z;
+190         \}
+191     \}
+192 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{d3/d3a/class_model_manager_a95cf305712d097d0ff9cb96a2b71f9cd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_a95cf305712d097d0ff9cb96a2b71f9cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Model\+Manager@{Model\+Manager}!draw@{draw}}
+\index{draw@{draw}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Model\+Manager\+::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{m\+Name, }
+\item[{{\bf string}}]{t\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation}
+\end{DoxyParamCaption}
+)}\label{class_model_manager_a5da488f1d7e4038152d357496fd5282b}
+
+
+Draws a model to the screen with a specified texture and translates it by a specified amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & m\+Name, string t\+Name, float trans\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The model is drawn with the specified texture and translation amount. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+247 \{
+248     glPushMatrix();
+249     glColor4f(1.0, 1.0, 1.0, transparency);
+250     
+251     glRotatef(rotation.getX(), 1,0,0);
+252     glRotatef(rotation.getY(), 0,1,0);
+253     glRotatef(rotation.getZ(), 0,0,1);
+254     glTranslatef(transition.getX(), transition.getY(), transition.getZ());
+255     \textcolor{comment}{//glEnable(GL\_ALPHA\_TEST);}
+256     \textcolor{comment}{//glAlphaFunc(GL\_GREATER, 0.1);}
+257 
+258     \textcolor{comment}{//glEnable(GL\_BLEND);}
+259     \textcolor{comment}{//glBlendFunc(GL\_SRC\_ALPHA,GL\_ONE\_MINUS\_SRC\_ALPHA);}
+260 
+261     glClientActiveTexture(GL_TEXTURE0);
+262     glEnableClientState(GL\_TEXTURE\_COORD\_ARRAY);
+263     glBindBuffer(GL_ARRAY_BUFFER, getTexture(mName));
+264     glTexCoordPointer(2,GL\_FLOAT,0,0);
+265 
+266     glActiveTexture(GL_TEXTURE0);
+267     glEnable(GL\_TEXTURE\_2D);
+268     glBindTexture(GL\_TEXTURE\_2D, TextureManager::Instance()->getTexture(tName));
+269 
+270     glEnableClientState(GL\_VERTEX\_ARRAY);
+271     glEnableClientState(GL\_NORMAL\_ARRAY);
+272 
+273     glBindBuffer(GL_ARRAY_BUFFER, getNormal(mName));
+274     glNormalPointer(GL\_FLOAT,0,0);
+275 
+276     glBindBuffer(GL_ARRAY_BUFFER, getModelVertex(mName));
+277     glVertexPointer(3, GL\_FLOAT, 0, 0); \textcolor{comment}{//0 is mean offset}
+278     
+279     glDrawArrays(GL\_TRIANGLES, 0, getNumberOfVertices(mName)); \textcolor{comment}{//0 start p}
+280 
+281     glDisableClientState(GL\_VERTEX\_ARRAY);
+282     glDisableClientState(GL\_TEXTURE\_COORD\_ARRAY);
+283     glDisableClientState(GL\_NORMAL\_ARRAY);
+284 
+285     \textcolor{comment}{//glDisable(GL\_BLEND);}
+286 
+287     \textcolor{comment}{//glDisable(GL\_ALPHA\_TEST);}
+288      
+289     glBindBuffer(GL_ARRAY_BUFFER, 0);
+290     glPopMatrix();
+291 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_a5da488f1d7e4038152d357496fd5282b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_a5da488f1d7e4038152d357496fd5282b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Model\+Manager@{Model\+Manager}!draw@{draw}}
+\index{draw@{draw}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Model\+Manager\+::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{m\+Name, }
+\item[{{\bf string}}]{t\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation, }
+\item[{{\bf Vec3}}]{scale}
+\end{DoxyParamCaption}
+)}\label{class_model_manager_acd57d32e327d2882420f2fbbca7c51fd}
+
+\begin{DoxyCode}
+294 \{
+295     glPushMatrix();
+296     glColor4f(1.0,1.0,1.0,transparency);
+297     \textcolor{comment}{//glRotatef(rotation.getX() * (180/boost::math::constants::pi<long double>()), 1,0,0);}
+298     \textcolor{comment}{//glRotatef(rotation.getY() * (180/boost::math::constants::pi<long double>()), 0,1,0);}
+299     \textcolor{comment}{//glRotatef(rotation.getZ() * (180/boost::math::constants::pi<long double>()), 0,0,1);}
+300     glScalef(scale.getX(), scale.getY(), scale.getZ());
+301     
+302     
+303     glRotatef(rotation.getX(), 1,0,0);
+304     glRotatef(rotation.getY(), 0,1,0);
+305     glRotatef(rotation.getZ(), 0,0,1);
+306     glTranslatef(transition.getX(), transition.getY(), transition.getZ());
+307 
+308     glEnable(GL\_BLEND);
+309     glBlendFunc(GL\_SRC\_ALPHA,GL\_ONE\_MINUS\_SRC\_ALPHA);
+310 
+311     glClientActiveTexture(GL_TEXTURE0);
+312     glEnableClientState(GL\_TEXTURE\_COORD\_ARRAY);
+313     glBindBuffer(GL_ARRAY_BUFFER, getTexture(mName));
+314     glTexCoordPointer(2,GL\_FLOAT,0,0);
+315 
+316     glActiveTexture(GL_TEXTURE0);
+317     glEnable(GL\_TEXTURE\_2D);
+318     glBindTexture(GL\_TEXTURE\_2D, TextureManager::Instance()->getTexture(tName));
+319 
+320     glEnableClientState(GL\_VERTEX\_ARRAY);
+321     glEnableClientState(GL\_NORMAL\_ARRAY);
+322 
+323     glBindBuffer(GL_ARRAY_BUFFER, getNormal(mName));
+324     glNormalPointer(GL\_FLOAT,0,0);
+325 
+326     glBindBuffer(GL_ARRAY_BUFFER, getModelVertex(mName));
+327     glVertexPointer(3, GL\_FLOAT, 0, 0); \textcolor{comment}{//0 is mean offset}
+328     
+329     glDrawArrays(GL\_TRIANGLES, 0, getNumberOfVertices(mName)); \textcolor{comment}{//0 start p}
+330 
+331     glDisableClientState(GL\_VERTEX\_ARRAY);
+332     glDisableClientState(GL\_TEXTURE\_COORD\_ARRAY);
+333     glDisableClientState(GL\_NORMAL\_ARRAY);
+334 
+335     glDisable(GL\_BLEND);
+336 
+337     glBindBuffer(GL_ARRAY_BUFFER, 0);
+338     glPopMatrix();
+339 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_acd57d32e327d2882420f2fbbca7c51fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Model\+Manager@{Model\+Manager}!get\+Model\+Vertex@{get\+Model\+Vertex}}
+\index{get\+Model\+Vertex@{get\+Model\+Vertex}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{get\+Model\+Vertex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Model\+Manager\+::get\+Model\+Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_model_manager_ac8216b9200d8cf9375bc8fbefcc18824}
+
+
+Gets the vertex buffer of the model with the matching name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The vertex buffer is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+195 \{
+196     map<string, GLuint>::iterator iterator;
+197     iterator = modelvertex.find(name);
+198     \textcolor{keywordflow}{if}(iterator != modelvertex.end())
+199     \{
+200         \textcolor{keywordflow}{return} (iterator->second);
+201     \}
+202 
+203     cout << \textcolor{stringliteral}{"The 3D model "} << name << \textcolor{stringliteral}{" does not exist in the Manager"} << endl;
+204     \textcolor{keywordflow}{return} -1;
+205 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_ac8216b9200d8cf9375bc8fbefcc18824_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Model\+Manager@{Model\+Manager}!get\+Normal@{get\+Normal}}
+\index{get\+Normal@{get\+Normal}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{get\+Normal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Model\+Manager\+::get\+Normal (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_model_manager_aca7258264727be34888eaf3cb79cba90}
+
+
+Gets the model's normal buffer of the model with the matching name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The model's normal buffer is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+221 \{
+222     map<string, GLuint>::iterator iterator;
+223     iterator = modelNormal.find(name);
+224     
+225     \textcolor{keywordflow}{if}(iterator != modelNormal.end())
+226     \{
+227         \textcolor{keywordflow}{return} (iterator->second);
+228     \}
+229 
+230     \textcolor{keywordflow}{return} -1;
+231 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_aca7258264727be34888eaf3cb79cba90_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Model\+Manager@{Model\+Manager}!get\+Number\+Of\+Vertices@{get\+Number\+Of\+Vertices}}
+\index{get\+Number\+Of\+Vertices@{get\+Number\+Of\+Vertices}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{get\+Number\+Of\+Vertices}]{\setlength{\rightskip}{0pt plus 5cm}int Model\+Manager\+::get\+Number\+Of\+Vertices (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_model_manager_ab7f05cc3c8a1e07c4cf55f3762df19c3}
+
+
+Gets the number of vertices the model with the matching name has. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & Name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The number of vertices the model has is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+234 \{
+235     map<string, int>::iterator iterator;
+236     iterator = NumberOfVertex.find(name);
+237     
+238     \textcolor{keywordflow}{if}(iterator != NumberOfVertex.end())
+239     \{
+240         \textcolor{keywordflow}{return} (iterator->second);
+241     \}
+242 
+243     \textcolor{keywordflow}{return} -1;
+244 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_ab7f05cc3c8a1e07c4cf55f3762df19c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Model\+Manager@{Model\+Manager}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+Luint} Model\+Manager\+::get\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_model_manager_ad2db7d85748c806251e69fbcf7632e7f}
+the I\+D of the texture of the model with the matching name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+A model with a matching name exists.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The texture's I\+D is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+208 \{
+209     map<string, GLuint>::iterator iterator;
+210     iterator = modeltexture.find(name);
+211     
+212     \textcolor{keywordflow}{if}(iterator != modeltexture.end())
+213     \{
+214         \textcolor{keywordflow}{return} (iterator->second);
+215     \}
+216 
+217     \textcolor{keywordflow}{return} -1;
+218 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_ad2db7d85748c806251e69fbcf7632e7f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Model\+Manager@{Model\+Manager}!instance@{instance}}
+\index{instance@{instance}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Manager} $\ast$ Model\+Manager\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_model_manager_a79cd41892a115d9f30912349624c6f5b}
+
+
+Gets the instance of the model manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+None.
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The instance of the model manager is returned. 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+14 \{
+15     \textcolor{keyword}{static} ModelManager Instance;
+16     \textcolor{keywordflow}{return} &Instance;
+17 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d3a/class_model_manager_a79cd41892a115d9f30912349624c6f5b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Model\+Manager@{Model\+Manager}!model\+Min\+Max@{model\+Min\+Max}}
+\index{model\+Min\+Max@{model\+Min\+Max}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{model\+Min\+Max}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, {\bf Min\+Max}$>$ Model\+Manager\+::model\+Min\+Max\hspace{0.3cm}{\ttfamily [private]}}\label{class_model_manager_a4de39b09fb069bc15db1daca1558c880}
+\index{Model\+Manager@{Model\+Manager}!model\+Normal@{model\+Normal}}
+\index{model\+Normal@{model\+Normal}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{model\+Normal}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, {\bf G\+Luint}$>$ Model\+Manager\+::model\+Normal\hspace{0.3cm}{\ttfamily [private]}}\label{class_model_manager_a78c2ec1110163e1a931f0b70b09feb82}
+\index{Model\+Manager@{Model\+Manager}!models@{models}}
+\index{models@{models}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{models}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, {\bf Obj\+Mesh}$>$ Model\+Manager\+::models\hspace{0.3cm}{\ttfamily [private]}}\label{class_model_manager_ab7b025cb1a6809571655ccab492007cb}
+\index{Model\+Manager@{Model\+Manager}!modeltexture@{modeltexture}}
+\index{modeltexture@{modeltexture}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{modeltexture}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, {\bf G\+Luint}$>$ Model\+Manager\+::modeltexture\hspace{0.3cm}{\ttfamily [private]}}\label{class_model_manager_af2b2f0c3995a0ea7c4cdf296e6091a67}
+\index{Model\+Manager@{Model\+Manager}!modelvertex@{modelvertex}}
+\index{modelvertex@{modelvertex}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{modelvertex}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, {\bf G\+Luint}$>$ Model\+Manager\+::modelvertex\hspace{0.3cm}{\ttfamily [private]}}\label{class_model_manager_a7663a14aa0ab83bc0609f7be359f80fb}
+\index{Model\+Manager@{Model\+Manager}!Number\+Of\+Vertex@{Number\+Of\+Vertex}}
+\index{Number\+Of\+Vertex@{Number\+Of\+Vertex}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{Number\+Of\+Vertex}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf string}, int$>$ Model\+Manager\+::\+Number\+Of\+Vertex\hspace{0.3cm}{\ttfamily [private]}}\label{class_model_manager_a127ce4c29287a9d29b60b4278158d6ff}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Model\+Manager.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Model\+Manager.\+cpp}\end{DoxyCompactItemize}

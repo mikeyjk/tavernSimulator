@@ -1,0 +1,9 @@
+<map id="World::AddEntity" name="World::AddEntity">
+<area shape="rect" id="node2" href="$d7/d86/class_world_factory.html#a95e904dd72c9459fb873f86bd4d1760e" title="CreateObject function. " alt="" coords="182,5,366,32"/>
+<area shape="rect" id="node3" href="$d0/dd1/class_game_object.html#a8b415958b6b1a8bccf290273f2fa8dcf" title="GameObject::setAffordances" alt="" coords="179,56,369,83"/>
+<area shape="rect" id="node4" href="$da/d3d/class_rendering_engine.html#ab971f4507a83b8d09979a251fe8b5d98" title="RenderingEngine::AddRefTo\lBuffer" alt="" coords="182,107,366,149"/>
+<area shape="rect" id="node5" href="$d0/dd1/class_game_object.html#add964e473761c04f3406efb37d23b37a" title="getID function " alt="" coords="207,173,341,200"/>
+<area shape="rect" id="node6" href="$d0/dd1/class_game_object.html#a18ede36e212416872af0a288c83cf306" title="getObjectType function " alt="" coords="183,224,365,251"/>
+<area shape="rect" id="node7" href="$d3/d21/class_world.html#a98e4b4b5f0836e11dd6b3a78b9f7c3e5" title="World::GetCollisionEntity" alt="" coords="190,275,358,301"/>
+<area shape="rect" id="node8" href="$d0/dd1/class_game_object.html#a6b351d6ff299b77ef91fd514b332af4a" title="GameObject::setTransparency" alt="" coords="175,325,373,352"/>
+</map>

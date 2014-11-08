@@ -1,0 +1,312 @@
+\section{Traits Class Reference}
+\label{class_traits}\index{Traits@{Traits}}
+
+
+{\ttfamily \#include $<$Traits.\+h$>$}
+
+
+
+Collaboration diagram for Traits\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{d2/df0/class_traits__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf st\+Trait} {\bf get\+Trait} ({\bf std\+::string} key)
+\begin{DoxyCompactList}\small\item\em get\+Trait function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Traits} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Traits} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Traits}{p.}{d5/de9/class_traits} constructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf insert\+To\+Trait\+Map} ({\bf std\+::string} str, {\bf st\+Trait} tr)
+\begin{DoxyCompactList}\small\item\em insert\+Totrait\+Map function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ {\bf std\+::string}, {\bf st\+Trait} $>$ {\bf all\+Traits}
+\begin{DoxyCompactList}\small\item\em needs a vector of traits... personality add\+Trait function asks traits for that trait and adds it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Traits@{Traits}!Traits@{Traits}}
+\index{Traits@{Traits}!Traits@{Traits}}
+\subsubsection[{Traits}]{\setlength{\rightskip}{0pt plus 5cm}Traits\+::\+Traits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_traits_a1dd6aefed8e075786e4236c72d97a01d}
+
+
+\doxyref{Traits}{p.}{d5/de9/class_traits} constructor. 
+
+This constructor initialised all of the trait types. to define a new trait, just reset tr to 0s and then add the values you want, give it a name and add it to the trait map
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+M\+I\+N\+O\+R T\+R\+A\+I\+T\+S ( Q\+U\+I\+R\+K\+S ) 
+\begin{DoxyCode}
+81     \{
+82         stTrait tr;
+83 
+84         \textcolor{comment}{//MAJOR TRAITS}
+85         \textcolor{comment}{// --- SOCIAL --- //}
+86         tr.HV.initHumanValues(&tr.HV, 0);
+87         tr.name = \textcolor{stringliteral}{"Social"};
+88         tr.HV.Vit.Toxication = 20;
+89         tr.HV.Ment.Talk = -25;
+90         tr.HV.Vit.Thirst = -20;
+91         insertToTraitMap(tr.name, tr);
+92 
+93         \textcolor{comment}{// --- ANTISOCIAL --- //}
+94         tr.HV.initHumanValues(&tr.HV, 0);
+95         tr.name = \textcolor{stringliteral}{"AntiSocial"};
+96         tr.HV.Vit.Toxication = -20;
+97         tr.HV.Ment.Talk = 25;
+98         tr.HV.Phys.Stomach = 20;
+99         insertToTraitMap(tr.name, tr);
+100 
+101         \textcolor{comment}{// --- CONSERVATIVE --- //}
+102         tr.HV.initHumanValues(&tr.HV, 0);
+103         tr.name = \textcolor{stringliteral}{"Conservative"};
+104         tr.HV.Ment.Talk = 25;
+105         tr.HV.Ment.Boredom = 20;
+106         tr.HV.Phys.Strength = -10;
+107         tr.HV.Ment.Emotion = 10;
+108         insertToTraitMap(tr.name, tr);
+109 
+110         \textcolor{comment}{// --- AGGRESSIVE --- //}
+111         tr.HV.initHumanValues(&tr.HV, 0);
+112         tr.name = \textcolor{stringliteral}{"Aggressive"};
+113         tr.HV.Ment.Talk = 10;
+114         tr.HV.Phys.Strength = 10;
+115         tr.HV.Ment.Emotion = -10;
+116         insertToTraitMap(tr.name, tr);
+117 
+118         \textcolor{comment}{// --- LIKES TO DRINK --- //}
+119         tr.HV.initHumanValues(&tr.HV, 0);
+120         tr.name = \textcolor{stringliteral}{"LikesToDrink"};
+121         tr.HV.Vit.Toxication = 20;
+122         tr.HV.Vit.Thirst = -20;
+123         insertToTraitMap(tr.name, tr);
+124 
+125         \textcolor{comment}{// --- LIKES TO EAT --- //}
+126         tr.HV.initHumanValues(&tr.HV, 0);
+127         tr.name = \textcolor{stringliteral}{"LikesToEat"};
+128         tr.HV.Vit.Hunger = -20;
+129         tr.HV.Phys.Stomach = 20;
+130         insertToTraitMap(tr.name, tr);
+131 
+132 
+133         
+135         \textcolor{comment}{// --- STRONG --- //}
+136         tr.HV.initHumanValues(&tr.HV, 0);
+137         tr.name = \textcolor{stringliteral}{"Strong"};
+138         tr.HV.Phys.Strength = 10;
+139 
+140         insertToTraitMap(tr.name, tr);
+141 
+142         \textcolor{comment}{// --- WEAK --- //}
+143         tr.HV.initHumanValues(&tr.HV, 0);
+144         tr.name = \textcolor{stringliteral}{"Weak"};
+145         tr.HV.Phys.Strength = -10;
+146         insertToTraitMap(tr.name, tr);
+147 
+148         \textcolor{comment}{// --- CHEERFUL --- //}
+149         tr.HV.initHumanValues(&tr.HV, 0);
+150         tr.name = \textcolor{stringliteral}{"Cheerful"};
+151         tr.HV.Ment.Emotion = 15;
+152         insertToTraitMap(tr.name, tr);
+153 
+154         \textcolor{comment}{// --- DEPRESSED --- //}
+155         tr.HV.initHumanValues(&tr.HV, 0);
+156         tr.name = \textcolor{stringliteral}{"Depressed"};
+157         tr.HV.Ment.Emotion = 15;
+158         insertToTraitMap(tr.name, tr);
+159 
+160         \textcolor{comment}{// --- FORGETFUL --- //}
+161         tr.HV.initHumanValues(&tr.HV, 0);
+162         tr.name = \textcolor{stringliteral}{"Forgetful"};
+163         tr.HV.Ment.Memory = -10;
+164         insertToTraitMap(tr.name, tr);
+165 
+166         \textcolor{comment}{// --- SLEEPY --- //}
+167         tr.HV.initHumanValues(&tr.HV, 0);
+168         tr.name = \textcolor{stringliteral}{"Sleepy"};
+169         tr.HV.Vit.Tiredness =-15;
+170         insertToTraitMap(tr.name, tr);
+171 
+172         \textcolor{comment}{// --- NIGHTOWL --- //}
+173         tr.HV.initHumanValues(&tr.HV, 0);
+174         tr.name = \textcolor{stringliteral}{"NightOwl"};
+175         tr.HV.Vit.Tiredness = 15;
+176         insertToTraitMap(tr.name, tr);
+177     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{d5/de9/class_traits_a1dd6aefed8e075786e4236c72d97a01d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{Traits@{Traits}!get\+Trait@{get\+Trait}}
+\index{get\+Trait@{get\+Trait}!Traits@{Traits}}
+\subsubsection[{get\+Trait}]{\setlength{\rightskip}{0pt plus 5cm}{\bf st\+Trait} Traits\+::get\+Trait (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_traits_af687da61f5ebe312585a59fa0736a18e}
+
+
+get\+Trait function 
+
+This tries to get the trait from the trait map, or it returns a trait called \char`\"{}empty\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+trait that correlates to the key 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+58     \{
+59         stTrait empty;
+60         empty.name = \textcolor{stringliteral}{"empty"};
+61         \textcolor{keywordflow}{if}(allTraits.find(key) != allTraits.end())
+62         \{
+63             \textcolor{keywordflow}{return} allTraits[key];
+64         \}
+65         
+66         \textcolor{keywordflow}{return} empty;
+67     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/de9/class_traits_af687da61f5ebe312585a59fa0736a18e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Traits@{Traits}!insert\+To\+Trait\+Map@{insert\+To\+Trait\+Map}}
+\index{insert\+To\+Trait\+Map@{insert\+To\+Trait\+Map}!Traits@{Traits}}
+\subsubsection[{insert\+To\+Trait\+Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Traits\+::insert\+To\+Trait\+Map (
+\begin{DoxyParamCaption}
+\item[{{\bf std\+::string}}]{str, }
+\item[{{\bf st\+Trait}}]{tr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_traits_a7aa8b393c68970b39a20283ded630f33}
+
+
+insert\+Totrait\+Map function 
+
+simple wrap of dictionary insert.. because im lazy..
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ string, tr -\/ \doxyref{st\+Trait}{p.}{d1/d8e/structst_trait} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+189     \{
+190         allTraits.insert(std::pair<std::string, stTrait>(str, tr));
+191     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{d5/de9/class_traits_a7aa8b393c68970b39a20283ded630f33_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Traits@{Traits}!Instance@{Instance}}
+\index{Instance@{Instance}!Traits@{Traits}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Traits}$\ast$ Traits\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_traits_a06481d84392a91914c7a3c208ffe3afe}
+
+
+Instance function. 
+
+This is getter for the singleton of \doxyref{Traits}{p.}{d5/de9/class_traits}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Traits$\ast$ Instance 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+44     \{
+45         \textcolor{keyword}{static} Traits Instance;
+46         \textcolor{keywordflow}{return} &Instance;
+47     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/de9/class_traits_a06481d84392a91914c7a3c208ffe3afe_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Traits@{Traits}!all\+Traits@{all\+Traits}}
+\index{all\+Traits@{all\+Traits}!Traits@{Traits}}
+\subsubsection[{all\+Traits}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<${\bf std\+::string}, {\bf st\+Trait}$>$ Traits\+::all\+Traits\hspace{0.3cm}{\ttfamily [private]}}\label{class_traits_a571fa7dd8116beb5f5b47619822776be}
+
+
+needs a vector of traits... personality add\+Trait function asks traits for that trait and adds it. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Traits.\+h}\end{DoxyCompactItemize}

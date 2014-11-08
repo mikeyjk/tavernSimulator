@@ -1,0 +1,15 @@
+<map id="ResourceManager::addModel" name="ResourceManager::addModel">
+<area shape="rect" id="node2" href="$d3/d3a/class_model_manager.html#a79cd41892a115d9f30912349624c6f5b" title="Gets the instance of the model manager. " alt="" coords="247,208,411,235"/>
+<area shape="rect" id="node3" href="$d3/d3a/class_model_manager.html#a95cf305712d097d0ff9cb96a2b71f9cd" title="Adds a model to the model manager by the file&#39;s path, which will become known to the model manager by..." alt="" coords="244,259,415,285"/>
+<area shape="rect" id="node4" href="$dd/dbc/_obj_loader_8cpp.html#aa84c4e033f99ef54ac11d3ac558c2f9c" title="LoadObjMesh" alt="" coords="463,5,565,32"/>
+<area shape="rect" id="node5" href="$df/d24/class_vec3.html#adf8fef45a6920dae9962e7f73c2694e1" title="getX function " alt="" coords="471,56,557,83"/>
+<area shape="rect" id="node6" href="$df/d24/class_vec3.html#ab951f3320ac854125cd9adecea8d5331" title="setX function " alt="" coords="471,107,557,133"/>
+<area shape="rect" id="node7" href="$df/d24/class_vec3.html#ab2b7ff578872d185d35479c8a9b77c29" title="getY function " alt="" coords="471,157,557,184"/>
+<area shape="rect" id="node8" href="$df/d24/class_vec3.html#a1fcc44395e5ad47d864fd0f7591d7615" title="setY function " alt="" coords="471,208,557,235"/>
+<area shape="rect" id="node9" href="$df/d24/class_vec3.html#a89e72080b8746be3e25ac992849a4e9d" title="getZ function " alt="" coords="471,259,557,285"/>
+<area shape="rect" id="node10" href="$df/d24/class_vec3.html#a899f6301df50d9a4851a1e64ce384fca" title="setZ function " alt="" coords="471,309,557,336"/>
+<area shape="rect" id="node11" href="$dc/dd2/glext_8h.html#a2f0c8cd5c21f9fcbd931c3f48bc90dfc" title="GLuint" alt="" coords="484,360,544,387"/>
+<area shape="rect" id="node12" href="$dc/dd2/glext_8h.html#af34191c863ddc3945fcdae744f2fb421" title="glGenBuffers" alt="" coords="466,411,562,437"/>
+<area shape="rect" id="node13" href="$dc/dd2/glext_8h.html#a89dfcf9f08fbfed6130cb983ad404f4e" title="glBindBuffer" alt="" coords="469,461,559,488"/>
+<area shape="rect" id="node14" href="$dc/dd2/glext_8h.html#a2752b3ad8c2fa99fecc3929b1f490242" title="glBufferData" alt="" coords="468,512,560,539"/>
+</map>

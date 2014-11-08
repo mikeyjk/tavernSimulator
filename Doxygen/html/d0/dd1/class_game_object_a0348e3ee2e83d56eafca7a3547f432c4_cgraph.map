@@ -1,0 +1,5 @@
+<map id="GameObject::GameObject" name="GameObject::GameObject">
+<area shape="rect" id="node2" href="$da/d3d/class_rendering_engine.html#a01527fd868d2d0cc73fa63b9ccf131e7" title="RenderingEngine::Instance" alt="" coords="229,5,407,32"/>
+<area shape="rect" id="node3" href="$d6/d57/class_id_generator.html#a0ae3ff56ccfa23f1471a07b02eb07804" title="IdGenerator::Instance" alt="" coords="245,80,391,107"/>
+<area shape="rect" id="node4" href="$d6/d57/class_id_generator.html#a22d48faaa3b7aa4ad76bce6db737f84a" title="IdGenerator::GetID" alt="" coords="253,131,383,157"/>
+</map>

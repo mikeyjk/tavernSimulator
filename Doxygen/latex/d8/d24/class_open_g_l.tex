@@ -1,0 +1,1253 @@
+\section{Open\+G\+L Class Reference}
+\label{class_open_g_l}\index{Open\+G\+L@{Open\+G\+L}}
+
+
+Implement all \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} A\+P\+I.  
+
+
+
+
+{\ttfamily \#include $<$Open\+G\+L.\+h$>$}
+
+
+
+Inheritance diagram for Open\+G\+L\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{dc/d32/class_open_g_l__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Open\+G\+L\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d0/df5/class_open_g_l__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Open\+G\+L} ({\bf void})
+\item 
+{\bf $\sim$\+Open\+G\+L} ({\bf void})
+\item 
+{\bf void} {\bf Init} (int \&argc, char $\ast$$\ast$argv, int Windowswidth, int {\bf Windows\+Height}, char $\ast${\bf name})
+\begin{DoxyCompactList}\small\item\em Initialization \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Add\+Ref\+To\+Buffer} (int Id, {\bf I\+\_\+\+Drawable\+Object} $\ast$Ref)
+\begin{DoxyCompactList}\small\item\em Add the reference of Object to \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Drawing list. \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw\+Grid} (int {\bf size})
+\item 
+{\bf void} {\bf Erase\+Ref\+From\+Buffer} (unsigned int)
+\begin{DoxyCompactList}\small\item\em Erase the reference of Object to \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Drawing list. \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw\+Model} ({\bf Vec3} Position)
+\begin{DoxyCompactList}\small\item\em Let \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Draw. \end{DoxyCompactList}\item 
+{\bf void} {\bf Create\+Lookat} ()
+\begin{DoxyCompactList}\small\item\em Reset \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} look at function. \end{DoxyCompactList}\item 
+{\bf Camera} $\ast$ {\bf Get\+Camera} ()
+\item 
+{\bf void} {\bf Draw\+Sphere} ({\bf Vec3} Position)
+\begin{DoxyCompactList}\small\item\em Draw\+Sphere. \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw\+Terrian} ({\bf Vec3} Position, {\bf std\+::string} texturename, {\bf std\+::string} Detail\+Map, {\bf G\+Luint} elementbuffer, {\bf G\+Luint} vetexbuffer, {\bf G\+Luint} color\+Buffer, {\bf G\+Luint} Texture\+Coorbuffer, {\bf G\+Luint} Texture\+Coorbuffer\+Detail, int sizeof\+Vertex, int sizeof\+Color, int sizeof\+Texture\+Coor, int sizeof\+Map, bool Wire\+Model)
+\begin{DoxyCompactList}\small\item\em Draw\+Terrian. \end{DoxyCompactList}\item 
+{\bf void} {\bf Render\+Overlay} (float start\+\_\+x, float start\+\_\+y, float {\bf w}, float {\bf h}, {\bf string} {\bf name})
+\begin{DoxyCompactList}\small\item\em Render\+Overlay. \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw\+Model} ({\bf string} Model\+Name, {\bf string} Texture\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation)
+\begin{DoxyCompactList}\small\item\em Draw \doxyref{Model}{p.}{d0/de3/class_model}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw\+Model} ({\bf string} Model\+Name, {\bf string} Texture\+Name, float transparency, {\bf Vec3} transition, {\bf Vec3} rotation, {\bf Vec3} {\bf scale})
+\begin{DoxyCompactList}\small\item\em Draw \doxyref{Model}{p.}{d0/de3/class_model}. \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Call\+Back\+Process} ({\bf void}($\ast${\bf Process})(double))
+\begin{DoxyCompactList}\small\item\em Set\+Call\+Back\+Process. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Fog} ({\bf G\+Lfloat} {\bf start}, {\bf G\+Lfloat} {\bf end})
+\begin{DoxyCompactList}\small\item\em set\+Fog \end{DoxyCompactList}\item 
+{\bf void} {\bf render\+String} (float start\+\_\+x, float start\+\_\+y, {\bf std\+::string} text, int Text\+Size)
+\begin{DoxyCompactList}\small\item\em render String \end{DoxyCompactList}\item 
+{\bf void} {\bf Draw\+Sky\+Box} ({\bf Vec3} Center, {\bf G\+Luint} vetexbuffer, {\bf G\+Luint} elementbuffer, {\bf G\+Luint} Texture\+Coorbuffer, {\bf string} Texture\+Name)
+\item 
+{\bf void} {\bf loop} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf void} {\bf Resize} (int {\bf w}, int {\bf h})
+\begin{DoxyCompactList}\small\item\em This function will be called when you resize the Windows. \end{DoxyCompactList}\item 
+static {\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em This function will be called when Open\+Gl draw frame. \end{DoxyCompactList}\item 
+static {\bf void} {\bf Update} (int {\bf value})
+\begin{DoxyCompactList}\small\item\em Update every frame. \end{DoxyCompactList}\item 
+static {\bf void} {\bf Key\+Board\+Fun} (unsigned char key, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em keyboardfunction \end{DoxyCompactList}\item 
+static {\bf void} {\bf Key\+Board\+Up\+Fun} (unsigned char key, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em keyboard up function \end{DoxyCompactList}\item 
+static {\bf void} {\bf mouse\+Click\+Function} (int button, int state, int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em Mouse Click function. \end{DoxyCompactList}\item 
+static {\bf void} {\bf mouse\+Move} (int {\bf x}, int {\bf y})
+\begin{DoxyCompactList}\small\item\em Mouse Move function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, {\bf I\+\_\+\+Drawable\+Object} $\ast$ $>$ {\bf Render\+Buff}
+\item 
+{\bf Camera} $\ast$ {\bf my\+Camera}
+\item 
+{\bf Input\+Engine} $\ast$ {\bf my\+Input}
+\item 
+{\bf void}($\ast$ {\bf Process} )(double)
+\item 
+int {\bf Windows\+Width}
+\item 
+int {\bf Windows\+Height}
+\item 
+float {\bf different\+X}
+\item 
+float {\bf different\+Y}
+\item 
+float {\bf Last\+X}
+\item 
+float {\bf Last\+Y}
+\item 
+bool {\bf fog\+Enbled}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implement all \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} A\+P\+I. 
+
+\begin{DoxyAuthor}{Author}
+\+: Liu Yi \+: \doxyref{I\+\_\+\+Graphic}{p.}{d4/dd3/class_i___graphic}  By\+: Rendering\+Factory; 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/12/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Open\+G\+L@{Open\+G\+L}!Open\+G\+L@{Open\+G\+L}}
+\index{Open\+G\+L@{Open\+G\+L}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Open\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}Open\+G\+L\+::\+Open\+G\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_af5a59472e49278dc51dd427d567791e0}
+
+\begin{DoxyCode}
+21 \{
+22     WindowsWidth = 0;
+23     WindowsHeight = 0;
+24     CurrentInstance = \textcolor{keyword}{this};
+25     myCamera = Camera::Instance();
+26     \textcolor{comment}{//fixedMouse = true;}
+27 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{d8/d24/class_open_g_l_af5a59472e49278dc51dd427d567791e0_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!````~Open\+G\+L@{$\sim$\+Open\+G\+L}}
+\index{````~Open\+G\+L@{$\sim$\+Open\+G\+L}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{$\sim$\+Open\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}Open\+G\+L\+::$\sim$\+Open\+G\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a1d65fee8f9f26edc0aa4e535729724c4}
+
+\begin{DoxyCode}
+30 \{
+31 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Open\+G\+L@{Open\+G\+L}!Add\+Ref\+To\+Buffer@{Add\+Ref\+To\+Buffer}}
+\index{Add\+Ref\+To\+Buffer@{Add\+Ref\+To\+Buffer}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Add\+Ref\+To\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Add\+Ref\+To\+Buffer (
+\begin{DoxyParamCaption}
+\item[{int}]{Id, }
+\item[{{\bf I\+\_\+\+Drawable\+Object} $\ast$}]{Ref}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_affeed6556f649f4ee23a758590f6cdd4}
+
+
+Add the reference of Object to \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Drawing list. 
+
+Add the pointer of object to internal \doxyref{Rendering}{p.}{d3/d32/class_rendering} buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Add the pointer into \doxyref{Rendering}{p.}{d3/d32/class_rendering} buff 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+119 \{   
+120     RenderBuff.insert(std::pair<int, I\_DrawableObject *>(Id, Ref));
+121 \}
+\end{DoxyCode}
+\index{Open\+G\+L@{Open\+G\+L}!Create\+Lookat@{Create\+Lookat}}
+\index{Create\+Lookat@{Create\+Lookat}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Create\+Lookat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Create\+Lookat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a6414a41910efb2e9942089dfb24b928d}
+
+
+Reset \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} look at function. 
+
+Reset new value to gl\+Lookat
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Update gl\+Lookat 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+153 \{
+154     glLoadIdentity();
+155     gluLookAt(myCamera->GetPosition().getX(),  myCamera->GetPosition().getY(), 
+      myCamera->GetPosition().getZ(),
+156               myCamera->GetPosition().getX() + myCamera->GetDirection().getX(), 
+      myCamera->GetPosition().getY() + myCamera->GetDirection().getY() , 
+157               myCamera->GetPosition().getZ() + myCamera->GetDirection().getZ(),
+158               myCamera->GetUp().getX() ,  myCamera->GetUp().getY(), myCamera->
+      GetUp().getZ());
+159 
+160 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{d8/d24/class_open_g_l_a6414a41910efb2e9942089dfb24b928d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a6414a41910efb2e9942089dfb24b928d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Draw@{Draw}}
+\index{Draw@{Draw}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_open_g_l_a697c5b98567a0e56c5ca1e28baad1dba}
+
+
+This function will be called when Open\+Gl draw frame. 
+
+This function will draw the frame on Screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Draw object on Screen 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+62 \{
+63     glClearColor(0.55f, 0.7f, 0.95f, 1);
+64     glClear(GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+65 
+66     \textcolor{keywordflow}{if}(!ControlSystem::Instance()->hud.getSplash())
+67     \{
+68         LightEngine::Instance()->drawLights();
+69     
+70         map<int,I\_DrawableObject*>::iterator it;
+71         \textcolor{keywordflow}{for}(it = CurrentInstance->RenderBuff.begin(); it != CurrentInstance->
+      RenderBuff.end(); it++)
+72         \{
+73             it->second->Draw();
+74         \}
+75     
+76         PhysicEngine::Instance()->Draw();
+77     \}
+78     \textcolor{keywordflow}{else}
+79     \{
+80         ControlSystem::Instance()->hud.DrawSplash();
+81     \}
+82 
+83     CurrentInstance->DrawGrid(gridSize);
+84 
+85     glutSwapBuffers();
+86 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a697c5b98567a0e56c5ca1e28baad1dba_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a697c5b98567a0e56c5ca1e28baad1dba_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Draw\+Grid@{Draw\+Grid}}
+\index{Draw\+Grid@{Draw\+Grid}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw\+Grid (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a29d50d7f9998beef9f71bacf9fd8806a}
+
+\begin{DoxyCode}
+313 \{
+314     glBegin(GL\_LINES);
+315     glColor3f(0.75f, 0.75f, 0.75f);
+316     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=-gridSize;i<=gridSize;i++)
+317     \{
+318         glVertex3f((\textcolor{keywordtype}{float})i,-45,(\textcolor{keywordtype}{float})-gridSize);
+319         glVertex3f((\textcolor{keywordtype}{float})i,-45,(\textcolor{keywordtype}{float})gridSize);
+320  
+321         glVertex3f((\textcolor{keywordtype}{float})-gridSize,-45,(\textcolor{keywordtype}{float})i);
+322         glVertex3f((\textcolor{keywordtype}{float})gridSize,-45,(\textcolor{keywordtype}{float})i);
+323     \}
+324     glEnd();
+325 \}\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a29d50d7f9998beef9f71bacf9fd8806a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Draw\+Model@{Draw\+Model}}
+\index{Draw\+Model@{Draw\+Model}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{Position}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_ab118ea583fa5c3a695e04005658b5edf}
+
+
+Let \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Draw. 
+
+This function do all the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} set up;
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Set up \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} A\+P\+I 
+\end{DoxyPostcond}
+\index{Open\+G\+L@{Open\+G\+L}!Draw\+Model@{Draw\+Model}}
+\index{Draw\+Model@{Draw\+Model}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Model\+Name, }
+\item[{{\bf string}}]{Texture\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a84785ff8362f9fe8b2fafba5116f81e1}
+
+
+Draw \doxyref{Model}{p.}{d0/de3/class_model}. 
+
+Draw \doxyref{Model}{p.}{d0/de3/class_model}
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+52 \{
+53     ResourceManager::Instance()->drawModel(ModelName, TextureName, transparency, transition, rotation);
+54 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a84785ff8362f9fe8b2fafba5116f81e1_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Draw\+Model@{Draw\+Model}}
+\index{Draw\+Model@{Draw\+Model}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{Model\+Name, }
+\item[{{\bf string}}]{Texture\+Name, }
+\item[{float}]{transparency, }
+\item[{{\bf Vec3}}]{transition, }
+\item[{{\bf Vec3}}]{rotation, }
+\item[{{\bf Vec3}}]{scale}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_abbc8bed3e8667250f22a797dd4773e3e}
+
+
+Draw \doxyref{Model}{p.}{d0/de3/class_model}. 
+
+Draw \doxyref{Model}{p.}{d0/de3/class_model}
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+57 \{
+58     ResourceManager::Instance()->drawModel(ModelName, TextureName, transparency, transition, rotation, 
+      scale);
+59 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_abbc8bed3e8667250f22a797dd4773e3e_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Draw\+Sky\+Box@{Draw\+Sky\+Box}}
+\index{Draw\+Sky\+Box@{Draw\+Sky\+Box}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw\+Sky\+Box}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw\+Sky\+Box (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{Center, }
+\item[{{\bf G\+Luint}}]{vetexbuffer, }
+\item[{{\bf G\+Luint}}]{elementbuffer, }
+\item[{{\bf G\+Luint}}]{Texture\+Coorbuffer, }
+\item[{{\bf string}}]{Texture\+Name}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a880a46133c57ededdcda769e84e46757}
+
+\begin{DoxyCode}
+266 \{
+267     glUseProgram(ResourceManager::Instance()->GetShaderProram(\textcolor{stringliteral}{"SkyBox"}));
+268     GLuint PVM = glGetUniformLocation(ResourceManager::Instance()->GetShaderProram(\textcolor{stringliteral}{"SkyBox"}), \textcolor{stringliteral}{"PVM"});
+269     glm::mat4 Project =   glm::perspective(60.0f, (\textcolor{keywordtype}{float})WindowsWidth/(\textcolor{keywordtype}{float})
+      WindowsHeight, 1.0f, 4000.0f);
+270     glm::mat4 view    =   glm::mat4(1.0f);
+271     glm::mat4 RotateY =   glm::rotate(glm::mat4(1.0f),   myCamera->GetRotateY() , glm::vec3(-1.0
+      f ,0.0f, 0.0f));
+272     glm::mat4 RotateX =   glm::rotate(RotateY ,          myCamera->GetRotateX() , glm::vec3( 0.0
+      f, 1.0f, 0.0f));
+273     glm::mat4 M = Project * view * RotateX;
+274     glUniformMatrix4fv(PVM, 1, GL\_FALSE, glm::value\_ptr(M));
+275     glPushMatrix();
+276     \textcolor{comment}{//glDepthMask (GL\_FALSE);}
+277     glTranslatef(Center.getX(), Center.getY(), Center.getZ());
+278     \textcolor{comment}{//glClientActiveTexture(GL\_TEXTURE1);}
+279     \textcolor{comment}{//glEnableClientState(GL\_TEXTURE\_COORD\_ARRAY);}
+280     \textcolor{comment}{//glBindBufferARB(GL\_ARRAY\_BUFFER, TextureCoorbuffer);}
+281     \textcolor{comment}{//glTexCoordPointer(2,GL\_FLOAT, 0, nullptr);}
+282     glActiveTexture(GL_TEXTURE1);
+283     glEnable(GL_TEXTURE_CUBE_MAP);
+284     glBindTexture(GL_TEXTURE_CUBE_MAP, ResourceManager::Instance()->getTexture(TextureName));
+285 
+286     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL\_TEXTURE\_MAG\_FILTER, GL\_NEAREST);
+287     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL\_TEXTURE\_MIN\_FILTER, GL\_NEAREST); 
+288     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL\_TEXTURE\_WRAP\_S, GL_CLAMP_TO_EDGE);
+289     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL\_TEXTURE\_WRAP\_T, GL_CLAMP_TO_EDGE);
+290     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+291 
+292 
+293     glEnableClientState(GL\_VERTEX\_ARRAY);
+294     glBindBuffer(GL_ARRAY_BUFFER, vetexbuffer);
+295     glVertexPointer(3, GL\_FLOAT,0, \textcolor{keyword}{nullptr});
+296     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementbuffer);
+297     glDrawElements(GL\_QUADS,  24 , GL\_UNSIGNED\_SHORT , \textcolor{keyword}{nullptr});
+298 
+299     glDisableClientState(GL\_VERTEX\_ARRAY);
+300     glDisable(GL_TEXTURE_CUBE_MAP);
+301     \textcolor{comment}{//glDisableClientState(GL\_TEXTURE\_COORD\_ARRAY);}
+302     \textcolor{comment}{//glDepthMask (GL\_TRUE);}
+303 
+304     glBindBuffer(GL_ARRAY_BUFFER, 0);
+305     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+306 
+307     glPopMatrix();
+308 
+309     glUseProgram(0);
+310 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a880a46133c57ededdcda769e84e46757_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Draw\+Sphere@{Draw\+Sphere}}
+\index{Draw\+Sphere@{Draw\+Sphere}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw\+Sphere}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw\+Sphere (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{Position}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a2dc18ab5d16196c73cc6e7d983ac00fc}
+
+
+Draw\+Sphere. 
+
+This function will Draw Sphere on the Screen
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\index{Open\+G\+L@{Open\+G\+L}!Draw\+Terrian@{Draw\+Terrian}}
+\index{Draw\+Terrian@{Draw\+Terrian}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Draw\+Terrian}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Draw\+Terrian (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3}}]{Position, }
+\item[{{\bf std\+::string}}]{texturename, }
+\item[{{\bf std\+::string}}]{Detail\+Map, }
+\item[{{\bf G\+Luint}}]{elementbuffer, }
+\item[{{\bf G\+Luint}}]{vetexbuffer, }
+\item[{{\bf G\+Luint}}]{color\+Buffer, }
+\item[{{\bf G\+Luint}}]{Texture\+Coorbuffer, }
+\item[{{\bf G\+Luint}}]{Texture\+Coorbuffer\+Detail, }
+\item[{int}]{sizeof\+Vertex, }
+\item[{int}]{sizeof\+Color, }
+\item[{int}]{sizeof\+Texture\+Coor, }
+\item[{int}]{sizeof\+Map, }
+\item[{bool}]{Wire\+Model}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_adfc37d290e569826747a500ac1842988}
+
+
+Draw\+Terrian. 
+
+Draw\+Terrian
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\index{Open\+G\+L@{Open\+G\+L}!Erase\+Ref\+From\+Buffer@{Erase\+Ref\+From\+Buffer}}
+\index{Erase\+Ref\+From\+Buffer@{Erase\+Ref\+From\+Buffer}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Erase\+Ref\+From\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Erase\+Ref\+From\+Buffer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{I\+D}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a6d8ed4a763dda96b8908cde1207a0116}
+
+
+Erase the reference of Object to \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} Drawing list. 
+
+Erase the pointer of object from internal \doxyref{Rendering}{p.}{d3/d32/class_rendering} buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Remove the pointer into \doxyref{Rendering}{p.}{d3/d32/class_rendering} buff 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+124 \{
+125     RenderBuff.erase(ID);
+126 \}
+\end{DoxyCode}
+\index{Open\+G\+L@{Open\+G\+L}!Get\+Camera@{Get\+Camera}}
+\index{Get\+Camera@{Get\+Camera}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Get\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera}$\ast$ Open\+G\+L\+::\+Get\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_open_g_l_ace579e4f054dc0ef87aaa43c86978611}
+
+\begin{DoxyCode}
+95 \{\textcolor{keywordflow}{return} myCamera;\}
+\end{DoxyCode}
+\index{Open\+G\+L@{Open\+G\+L}!Init@{Init}}
+\index{Init@{Init}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{int \&}]{argc, }
+\item[{char $\ast$$\ast$}]{argv, }
+\item[{int}]{Windowswidth, }
+\item[{int}]{Windows\+Height, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a082a48312c8032be282b49a9d6d7b5cc}
+
+
+Initialization \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l}. 
+
+This function do all the \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} set up;
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Set up \doxyref{Open\+G\+L}{p.}{d8/d24/class_open_g_l} A\+P\+I 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+34 \{
+35     glutInit(&argc, argv);
+36     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+37     glutInitWindowSize(Windowswidth, WindowsHeight);
+38     glutCreateWindow(name);
+39     glEnable(GL\_DEPTH\_TEST);
+40     glEnable(GL\_COLOR\_MATERIAL);
+41     this->WindowsWidth = Windowswidth;
+42     this->WindowsHeight = WindowsHeight;
+43     LastX = glutGet(GLUT_WINDOW_WIDTH)/2;
+44     LastY = glutGet(GLUT_WINDOW_HEIGHT)/2;
+45     glutReshapeFunc(Resize);
+46     glutDisplayFunc(Draw);
+47     glutTimerFunc(20,Update, 0);
+48     fogEnbled = \textcolor{keyword}{false};
+49 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a082a48312c8032be282b49a9d6d7b5cc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a082a48312c8032be282b49a9d6d7b5cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Key\+Board\+Fun@{Key\+Board\+Fun}}
+\index{Key\+Board\+Fun@{Key\+Board\+Fun}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Key\+Board\+Fun}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf void} Open\+G\+L\+::\+Key\+Board\+Fun (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_open_g_l_a59173a98a1b9b07d589f969dd7b07dd0}
+
+
+keyboardfunction 
+
+Detect Keyboard function
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\index{Open\+G\+L@{Open\+G\+L}!Key\+Board\+Up\+Fun@{Key\+Board\+Up\+Fun}}
+\index{Key\+Board\+Up\+Fun@{Key\+Board\+Up\+Fun}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Key\+Board\+Up\+Fun}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf void} Open\+G\+L\+::\+Key\+Board\+Up\+Fun (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_open_g_l_a17700b27b45176ef04c49908a70673f7}
+
+
+keyboard up function 
+
+Detect Keyboard up function
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+key up 
+\end{DoxyPostcond}
+\index{Open\+G\+L@{Open\+G\+L}!loop@{loop}}
+\index{loop@{loop}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a9288a59697f08de00e5119964b111099}
+
+\begin{DoxyCode}
+260 \{
+261     glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
+262     glutMainLoop();
+263 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{d8/d24/class_open_g_l_a9288a59697f08de00e5119964b111099_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a9288a59697f08de00e5119964b111099_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!mouse\+Click\+Function@{mouse\+Click\+Function}}
+\index{mouse\+Click\+Function@{mouse\+Click\+Function}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{mouse\+Click\+Function}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf void} Open\+G\+L\+::mouse\+Click\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_open_g_l_aa1055514a117ac3e66325048d51d41b9}
+
+
+Mouse Click function. 
+
+Detect mouse Click
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\index{Open\+G\+L@{Open\+G\+L}!mouse\+Move@{mouse\+Move}}
+\index{mouse\+Move@{mouse\+Move}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{mouse\+Move}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf void} Open\+G\+L\+::mouse\+Move (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_open_g_l_a7edbc341f36599d38a93ba8b66ef319c}
+
+
+Mouse Move function. 
+
+Detect mouse Click
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+\index{Open\+G\+L@{Open\+G\+L}!Render\+Overlay@{Render\+Overlay}}
+\index{Render\+Overlay@{Render\+Overlay}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Render\+Overlay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Render\+Overlay (
+\begin{DoxyParamCaption}
+\item[{float}]{start\+\_\+x, }
+\item[{float}]{start\+\_\+y, }
+\item[{float}]{w, }
+\item[{float}]{h, }
+\item[{{\bf string}}]{name}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a3892b6c7aed2981d146736a1150fcbe2}
+
+
+Render\+Overlay. 
+
+Render\+Overlay
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+163 \{
+164     \textcolor{keywordtype}{int} window\_W = glutGet(GLUT_WINDOW_WIDTH);
+165     \textcolor{keywordtype}{int} window\_H = glutGet(GLUT_WINDOW_HEIGHT);
+166 
+167     \textcolor{keywordtype}{int} fixed\_W = 1200, fixed\_H = 800;
+168     
+169     \textcolor{keywordtype}{float} stx =  (start\_x / fixed\_W) * window\_W;
+170     \textcolor{keywordtype}{float} endx = ((start\_x + w) / fixed\_W) * window\_W;
+171     \textcolor{keywordtype}{float} sty = (start\_y / fixed\_H) * window\_H;
+172     \textcolor{keywordtype}{float} endy =  ((start\_y + h)/fixed\_H) * window\_H;
+173 
+174     glDisable(GL\_LIGHTING);
+175     glActiveTexture(GL_TEXTURE0);
+176     glEnable(GL\_TEXTURE\_2D);
+177     glBindTexture(GL\_TEXTURE\_2D, (GLint)TextureManager::Instance()->getTexture(
+      name));
+178 
+179     glPushMatrix(); \textcolor{comment}{// store previous context on stack}
+180 
+181     glMatrixMode(GL\_PROJECTION); \textcolor{comment}{// swap to projection}
+182         glPushMatrix(); \textcolor{comment}{// preserve previous projection}
+183 
+184         \textcolor{comment}{// define 2D projection}
+185         glLoadIdentity(); \textcolor{comment}{// clear copy of previous projection}
+186         glOrtho(0, window\_W, 0, window\_H, 0 ,1); \textcolor{comment}{// define 2D size}
+187         
+188     glMatrixMode(GL\_MODELVIEW); \textcolor{comment}{// swap to model}
+189         glLoadIdentity(); \textcolor{comment}{// clear}
+190 
+191         glEnable(GL\_ALPHA\_TEST);
+192         glAlphaFunc(GL\_GREATER, 0.9);
+193         glColor3f(1.0, 1.0, 1.0); \textcolor{comment}{// reset color, this is needed it seems}
+194     
+195         glBegin(GL\_QUADS); \textcolor{comment}{// define overlay region and how the tex maps}
+196             glTexCoord2f(0,0);
+197             glVertex2f(stx, sty);
+198             glTexCoord2f(0,1);
+199             glVertex2f(stx, endy);
+200             glTexCoord2f(1,1);
+201             glVertex2f(endx , endy);
+202             glTexCoord2f(1,0);
+203             glVertex2f(endx , sty);
+204         glEnd();
+205         glDisable(GL\_ALPHA\_TEST);
+206 
+207     glMatrixMode(GL\_PROJECTION); \textcolor{comment}{// back to projection}
+208         glPopMatrix(); \textcolor{comment}{// restore 3D projection matrix}
+209     
+210     glMatrixMode(GL\_MODELVIEW); \textcolor{comment}{// back to model (?) required}
+211     glEnable(GL\_LIGHTING);
+212     glPopMatrix(); \textcolor{comment}{// return to original context prior to this function}
+213 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a3892b6c7aed2981d146736a1150fcbe2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a3892b6c7aed2981d146736a1150fcbe2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!render\+String@{render\+String}}
+\index{render\+String@{render\+String}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{render\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::render\+String (
+\begin{DoxyParamCaption}
+\item[{float}]{start\+\_\+x, }
+\item[{float}]{start\+\_\+y, }
+\item[{{\bf std\+::string}}]{text, }
+\item[{int}]{Text\+Size}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a18f4d107cc22e552df4e402716610293}
+
+
+render String 
+
+render String
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+216 \{
+217     \textcolor{keywordtype}{int} window\_W = glutGet(GLUT_WINDOW_WIDTH);
+218     \textcolor{keywordtype}{int} window\_H = glutGet(GLUT_WINDOW_HEIGHT);
+219 
+220     \textcolor{keywordtype}{int} fixed\_W = 1200;
+221     \textcolor{keywordtype}{int} fixed\_H = 800;
+222 
+223      \textcolor{keywordtype}{float} stx =  (start\_x / fixed\_W) * window\_W;
+224      \textcolor{keywordtype}{float} sty = (start\_y / fixed\_H) * window\_H;
+225 
+226     glColor3f(1.0, 1.0, 1.0);
+227     glWindowPos2f(stx, sty);
+228     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < text.size(); i++)
+229     \{
+230         \textcolor{keywordflow}{switch}(TextSize)
+231         \{
+232         \textcolor{keywordflow}{case} 1:
+233             glutBitmapCharacter(GLUT_BITMAP_HELVETICA_10,text[i]);
+234             \textcolor{keywordflow}{break};
+235         \textcolor{keywordflow}{case} 2:
+236             glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12,text[i]);
+237             \textcolor{keywordflow}{break};
+238         \textcolor{keywordflow}{case} 3:
+239             glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18,text[i]);
+240             \textcolor{keywordflow}{break};
+241         \textcolor{keywordflow}{case} 4:
+242             glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10,text[i]);
+243             \textcolor{keywordflow}{break};
+244         \textcolor{keywordflow}{case} 5:
+245             glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,text[i]);
+246             \textcolor{keywordflow}{break};
+247         \textcolor{keywordflow}{case} 6:
+248             glutBitmapCharacter(GLUT_BITMAP_8_BY_13,text[i]);
+249         \textcolor{keywordflow}{case} 7:
+250             glutBitmapCharacter(GLUT_BITMAP_9_BY_15,text[i]);
+251             \textcolor{keywordflow}{break};
+252         \textcolor{keywordflow}{default}:
+253             glutBitmapCharacter(GLUT_BITMAP_9_BY_15,text[i]);
+254             \textcolor{keywordflow}{break};
+255         \}
+256     \}
+257 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{d8/d24/class_open_g_l_a18f4d107cc22e552df4e402716610293_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a18f4d107cc22e552df4e402716610293_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Resize@{Resize}}
+\index{Resize@{Resize}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Resize (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_open_g_l_a02f01aaf2074429c03351a52d0a807f2}
+
+
+This function will be called when you resize the Windows. 
+
+This function will Resize the Window
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Resize the window 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+90 \{
+91     glViewport(0,0,w,h);
+92     glMatrixMode(GL\_PROJECTION);
+93     glLoadIdentity();
+94     gluPerspective(60.0, (\textcolor{keywordtype}{float})w/(\textcolor{keywordtype}{float})h, 1.0, 2100.0);
+95     glMatrixMode(GL\_MODELVIEW);
+96     glLoadIdentity();
+97 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a02f01aaf2074429c03351a52d0a807f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Set\+Call\+Back\+Process@{Set\+Call\+Back\+Process}}
+\index{Set\+Call\+Back\+Process@{Set\+Call\+Back\+Process}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Set\+Call\+Back\+Process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Set\+Call\+Back\+Process (
+\begin{DoxyParamCaption}
+\item[{{\bf void}($\ast$)(double)}]{Process}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_a1ae77f060a25e61277d77fe9975fd1d1}
+
+
+Set\+Call\+Back\+Process. 
+
+Set\+Call\+Back\+Process
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+129 \{
+130     this->Process = Callback;
+131 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a1ae77f060a25e61277d77fe9975fd1d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!set\+Fog@{set\+Fog}}
+\index{set\+Fog@{set\+Fog}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{set\+Fog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::set\+Fog (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Lfloat}}]{start, }
+\item[{{\bf G\+Lfloat}}]{end}
+\end{DoxyParamCaption}
+)}\label{class_open_g_l_ab3ac9e36ec7c0dc13778f04a0030dabb}
+
+
+set\+Fog 
+
+set Fog
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+134 \{
+135 
+136     GLfloat fogColor[4] = \{0.5, 0.5, 0.6, 1.0\}; \textcolor{comment}{//set the forcolor to grey}
+137     GLfloat density = 0.000005; \textcolor{comment}{//set the density to 0.3 which isacctually quite thick}
+138 
+139     glEnable (GL\_DEPTH\_TEST); \textcolor{comment}{//enable the depth testing}
+140     glEnable (GL\_FOG); \textcolor{comment}{//enable the fog}
+141     glFogi (GL\_FOG\_MODE, GL\_LINEAR); \textcolor{comment}{//set the fog mode to GL\_EXP2}
+142     glFogf (GL\_FOG\_START, start);
+143     glFogf (GL\_FOG\_END, end);
+144     glFogfv (GL\_FOG\_COLOR, fogColor); \textcolor{comment}{//set the fog color to our color chosen above}
+145     glFogf (GL\_FOG\_DENSITY, density); \textcolor{comment}{//set the density to the value above}
+146     glHint (GL\_FOG\_HINT, GL\_NICEST); \textcolor{comment}{// set the fog to look the nicest, may slow down on older cards}
+147 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{d8/d24/class_open_g_l_ab3ac9e36ec7c0dc13778f04a0030dabb_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Open\+G\+L@{Open\+G\+L}!Update@{Update}}
+\index{Update@{Update}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Open\+G\+L\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_open_g_l_a06c54c33292c0e23b3b8b4f876837cb4}
+
+
+Update every frame. 
+
+This function should be call for every frame
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Update the frame on Screen 
+\end{DoxyPostcond}
+
+\begin{DoxyCode}
+102 \{
+103     InputEngine* input;
+104     input = InputEngine::Instance();
+105 
+106     \textcolor{comment}{//update function for all of the game engine systems}
+107     \textcolor{comment}{//gameEngine->update(); change to}
+108     CurrentInstance->Process(0);
+109 
+110     \textcolor{comment}{//Update Camera LookAT function}
+111     CurrentInstance->CreateLookat();
+112 
+113     glutPostRedisplay();
+114     glutTimerFunc(20, CurrentInstance->Update, 0);
+115 
+116 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a06c54c33292c0e23b3b8b4f876837cb4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d24/class_open_g_l_a06c54c33292c0e23b3b8b4f876837cb4_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Open\+G\+L@{Open\+G\+L}!different\+X@{different\+X}}
+\index{different\+X@{different\+X}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{different\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Open\+G\+L\+::different\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_ad7cda2c94a9180f377b1338b94639cb5}
+\index{Open\+G\+L@{Open\+G\+L}!different\+Y@{different\+Y}}
+\index{different\+Y@{different\+Y}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{different\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Open\+G\+L\+::different\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a875d2a2363a040d350caf5715ebfa5d8}
+\index{Open\+G\+L@{Open\+G\+L}!fog\+Enbled@{fog\+Enbled}}
+\index{fog\+Enbled@{fog\+Enbled}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{fog\+Enbled}]{\setlength{\rightskip}{0pt plus 5cm}bool Open\+G\+L\+::fog\+Enbled\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a72fcf46d757e430ed0ac2850eb37fd29}
+\index{Open\+G\+L@{Open\+G\+L}!Last\+X@{Last\+X}}
+\index{Last\+X@{Last\+X}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Last\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Open\+G\+L\+::\+Last\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a73e0268ad147e759f9502652bee4013d}
+\index{Open\+G\+L@{Open\+G\+L}!Last\+Y@{Last\+Y}}
+\index{Last\+Y@{Last\+Y}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Last\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Open\+G\+L\+::\+Last\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a82f6be246a9b156385c0e79927d2a8ba}
+\index{Open\+G\+L@{Open\+G\+L}!my\+Camera@{my\+Camera}}
+\index{my\+Camera@{my\+Camera}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{my\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera}$\ast$ Open\+G\+L\+::my\+Camera\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a28454a9198e4dbbdc591fe12b6d6df34}
+\index{Open\+G\+L@{Open\+G\+L}!my\+Input@{my\+Input}}
+\index{my\+Input@{my\+Input}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{my\+Input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\+Engine}$\ast$ Open\+G\+L\+::my\+Input\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a5f25651c9ab7adbe3dac7476610e8a28}
+\index{Open\+G\+L@{Open\+G\+L}!Process@{Process}}
+\index{Process@{Process}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void}($\ast$ Open\+G\+L\+::\+Process)(double)\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a42e1556aff1bad52a22adafce07937bb}
+\index{Open\+G\+L@{Open\+G\+L}!Render\+Buff@{Render\+Buff}}
+\index{Render\+Buff@{Render\+Buff}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Render\+Buff}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,{\bf I\+\_\+\+Drawable\+Object}$\ast$$>$ Open\+G\+L\+::\+Render\+Buff\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a595aa2121c4fb04e8e6ab23e49c558ae}
+\index{Open\+G\+L@{Open\+G\+L}!Windows\+Height@{Windows\+Height}}
+\index{Windows\+Height@{Windows\+Height}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Windows\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Open\+G\+L\+::\+Windows\+Height\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a8199e72d93453d6bebddfe69fe8d5482}
+\index{Open\+G\+L@{Open\+G\+L}!Windows\+Width@{Windows\+Width}}
+\index{Windows\+Width@{Windows\+Width}!Open\+G\+L@{Open\+G\+L}}
+\subsubsection[{Windows\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Open\+G\+L\+::\+Windows\+Width\hspace{0.3cm}{\ttfamily [private]}}\label{class_open_g_l_a97bf671ace943dc7c52945492d1f8048}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Open\+G\+L.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Open\+G\+L.\+cpp}\end{DoxyCompactItemize}

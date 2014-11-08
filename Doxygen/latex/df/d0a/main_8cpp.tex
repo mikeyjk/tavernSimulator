@@ -1,0 +1,87 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/main.cpp File Reference}
+\label{main_8cpp}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/main.\+cpp@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/main.\+cpp}}
+{\ttfamily \#include \char`\"{}Game\+Engine.\+h\char`\"{}}\\*
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dce/main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf O\+P\+E\+N\+G\+L}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bf window\+Width} = 800
+\item 
+static const int {\bf window\+Height} = 600
+\item 
+static char $\ast$ {\bf window\+Title} = \char`\"{}I\+C\+T312\char`\"{}
+\item 
+static {\bf Game\+Engine} $\ast$ {\bf engine} = {\bf Game\+Engine\+::instance}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{main.\+cpp@{main.\+cpp}!O\+P\+E\+N\+G\+L@{O\+P\+E\+N\+G\+L}}
+\index{O\+P\+E\+N\+G\+L@{O\+P\+E\+N\+G\+L}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{O\+P\+E\+N\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\+P\+E\+N\+G\+L}\label{main_8cpp_ae8aef68be20c746de6b4a79b7ca7c3e5}
+
+
+\subsection{Function Documentation}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+17 \{
+18 \textcolor{preprocessor}{    #ifdef OPENGL}
+19         engine->start(\textcolor{stringliteral}{"OpenGL"}, argc, argv, windowWidth, windowHeight, 
+      windowTitle);
+20 \textcolor{preprocessor}{    #endif // OPENGL}
+21 
+22 \textcolor{preprocessor}{    #ifdef DX}
+23         \textcolor{comment}{// Direct X Logic}
+24 \textcolor{preprocessor}{    #endif // DX}
+25     \textcolor{keywordflow}{return}(EXIT\_SUCCESS);
+26 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{df/d0a/main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\index{main.\+cpp@{main.\+cpp}!engine@{engine}}
+\index{engine@{engine}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{engine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Engine}$\ast$ engine = {\bf Game\+Engine\+::instance}()\hspace{0.3cm}{\ttfamily [static]}}\label{main_8cpp_a6f87f331211985776ff3a637e341e819}
+\index{main.\+cpp@{main.\+cpp}!window\+Height@{window\+Height}}
+\index{window\+Height@{window\+Height}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{window\+Height}]{\setlength{\rightskip}{0pt plus 5cm}const int window\+Height = 600\hspace{0.3cm}{\ttfamily [static]}}\label{main_8cpp_ae754d7bb4fcb4ce8d3fa3406786f9a8c}
+\index{main.\+cpp@{main.\+cpp}!window\+Title@{window\+Title}}
+\index{window\+Title@{window\+Title}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{window\+Title}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ window\+Title = \char`\"{}I\+C\+T312\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\label{main_8cpp_af4342ea98fa18a26a38b86982e2f6d86}
+\index{main.\+cpp@{main.\+cpp}!window\+Width@{window\+Width}}
+\index{window\+Width@{window\+Width}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{window\+Width}]{\setlength{\rightskip}{0pt plus 5cm}const int window\+Width = 800\hspace{0.3cm}{\ttfamily [static]}}\label{main_8cpp_a28a80955f4c5ad4e8fd20b9097c5efd8}

@@ -1,0 +1,177 @@
+\section{Sleep\+State Class Reference}
+\label{class_sleep_state}\index{Sleep\+State@{Sleep\+State}}
+
+
+{\ttfamily \#include $<$A\+I\+Owned\+States.\+h$>$}
+
+
+
+Inheritance diagram for Sleep\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{d7/d20/class_sleep_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sleep\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{d7/deb/class_sleep_state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf void} {\bf Enter} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Enter function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Execute} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Execute function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Exit} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Exit function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Sleep\+State} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Sleep\+State} ()
+\begin{DoxyCompactList}\small\item\em flee state consructor \end{DoxyCompactList}\item 
+{\bf Sleep\+State} (const {\bf Sleep\+State} \&)
+\item 
+{\bf Sleep\+State} \& {\bf operator=} (const {\bf Sleep\+State} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Sleep\+State@{Sleep\+State}!Sleep\+State@{Sleep\+State}}
+\index{Sleep\+State@{Sleep\+State}!Sleep\+State@{Sleep\+State}}
+\subsubsection[{Sleep\+State}]{\setlength{\rightskip}{0pt plus 5cm}Sleep\+State\+::\+Sleep\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_sleep_state_a08c669c59282a397cd3ddee174696765}
+
+
+flee state consructor 
+
+
+\begin{DoxyCode}
+476 \{\}
+\end{DoxyCode}
+\index{Sleep\+State@{Sleep\+State}!Sleep\+State@{Sleep\+State}}
+\index{Sleep\+State@{Sleep\+State}!Sleep\+State@{Sleep\+State}}
+\subsubsection[{Sleep\+State}]{\setlength{\rightskip}{0pt plus 5cm}Sleep\+State\+::\+Sleep\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sleep\+State} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_sleep_state_adebd19a2c9a13eee11de975befc09cf1}
+
+
+\subsection{Member Function Documentation}
+\index{Sleep\+State@{Sleep\+State}!Enter@{Enter}}
+\index{Enter@{Enter}!Sleep\+State@{Sleep\+State}}
+\subsubsection[{Enter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Sleep\+State\+::\+Enter (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sleep_state_a9c92ab78bade9f958d997b425e38b314}
+
+
+Enter function. 
+
+Runs any functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to enter the state
+
+\begin{DoxyPostcond}{Postcondition}
+enters the state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a88e14ab108f9e28a53630c4557b9743d}.
+
+\index{Sleep\+State@{Sleep\+State}!Execute@{Execute}}
+\index{Execute@{Execute}!Sleep\+State@{Sleep\+State}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Sleep\+State\+::\+Execute (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sleep_state_a407b931d2ee408f5789e398c3746cc46}
+
+
+Execute function. 
+
+makes the ship flee from the player
+
+\begin{DoxyPostcond}{Postcondition}
+runs the flee execution 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_af12fe8dcc213356992ae0ad9f8d315ff}.
+
+\index{Sleep\+State@{Sleep\+State}!Exit@{Exit}}
+\index{Exit@{Exit}!Sleep\+State@{Sleep\+State}}
+\subsubsection[{Exit}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Sleep\+State\+::\+Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sleep_state_aa59c8d210853a2c20aa977caa8475ebc}
+
+
+Exit function. 
+
+runs and functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to exit the state
+
+\begin{DoxyPostcond}{Postcondition}
+exits flee state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a1dc07d3a42d904b7e954fcfa3d27f23f}.
+
+\index{Sleep\+State@{Sleep\+State}!Instance@{Instance}}
+\index{Instance@{Instance}!Sleep\+State@{Sleep\+State}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Sleep\+State}$\ast$ Sleep\+State\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_sleep_state_a040b7eab2439a94d2d04c51efa3db814}
+
+
+Instance function. 
+
+this is a singleton creates an instance of the flee state and returns it to the state machine
+
+\begin{DoxyReturn}{Returns}
+flee state 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the flee state 
+\end{DoxyPostcond}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/dbc/class_sleep_state_a040b7eab2439a94d2d04c51efa3db814_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Sleep\+State@{Sleep\+State}!operator=@{operator=}}
+\index{operator=@{operator=}!Sleep\+State@{Sleep\+State}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sleep\+State}\& Sleep\+State\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sleep\+State} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_sleep_state_ab84147f90ab18634cc7d77be43eeaf43}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf A\+I\+Owned\+States.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Game\+Object.h File Reference}
+\label{_game_object_8h}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Game\+Object.\+h@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Game\+Object.\+h}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}Vec3.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+\_\+\+Drawable\+Object.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Id\+Generator.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Physic\textbackslash{}\+Bbox.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Resource\+Manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Rendering\+Engine.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Global\+\_\+\+Structs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Affordance.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Traits.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Physic\textbackslash{}\+Physic\+Engine.\+h\char`\"{}}\\*
+Include dependency graph for Game\+Object.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/df2/_game_object_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d05/_game_object_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Game\+Object}
+\begin{DoxyCompactList}\small\item\em The Parent class of all the entities in the Engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf game\+Object\+Type} \{ {\bf game\+Object} = 0, 
+{\bf character}, 
+{\bf geometry}, 
+{\bf npc}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Game\+Object.\+h@{Game\+Object.\+h}!game\+Object\+Type@{game\+Object\+Type}}
+\index{game\+Object\+Type@{game\+Object\+Type}!Game\+Object.\+h@{Game\+Object.\+h}}
+\subsubsection[{game\+Object\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf game\+Object\+Type}}\label{_game_object_8h_a25430a4bd8f9fd089ed157eebe33bd1f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{game\+Object@{game\+Object}!Game\+Object.\+h@{Game\+Object.\+h}}\index{Game\+Object.\+h@{Game\+Object.\+h}!game\+Object@{game\+Object}}\item[{\em 
+game\+Object\label{_game_object_8h_a25430a4bd8f9fd089ed157eebe33bd1fa4354a43d527303214cd0908744288d43}
+}]\index{character@{character}!Game\+Object.\+h@{Game\+Object.\+h}}\index{Game\+Object.\+h@{Game\+Object.\+h}!character@{character}}\item[{\em 
+character\label{_game_object_8h_a25430a4bd8f9fd089ed157eebe33bd1fafa40ef3af4fea0001b535318130960b2}
+}]\index{geometry@{geometry}!Game\+Object.\+h@{Game\+Object.\+h}}\index{Game\+Object.\+h@{Game\+Object.\+h}!geometry@{geometry}}\item[{\em 
+geometry\label{_game_object_8h_a25430a4bd8f9fd089ed157eebe33bd1faca9fbb8566c4ed1c0d95df58034addaf}
+}]\index{npc@{npc}!Game\+Object.\+h@{Game\+Object.\+h}}\index{Game\+Object.\+h@{Game\+Object.\+h}!npc@{npc}}\item[{\em 
+npc\label{_game_object_8h_a25430a4bd8f9fd089ed157eebe33bd1fa2ff2e92a29da89efc1a2eb8140ca09a9}
+}]\end{description}
+\end{Desc}
+
+\begin{DoxyCode}
+19 \{
+20     gameObject = 0,
+21     character,
+22     geometry,
+23     npc
+24 \};
+\end{DoxyCode}

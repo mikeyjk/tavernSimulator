@@ -1,0 +1,31 @@
+<map id="E:/workdesk/Uni/ICT312/trunk/GameEngine/Camera.cpp" name="E:/workdesk/Uni/ICT312/trunk/GameEngine/Camera.cpp">
+<area shape="rect" id="node2" href="$d5/d91/_camera_8h.html" title="Camera.h" alt="" coords="842,721,921,748"/>
+<area shape="rect" id="node5" href="$d6/d64/3_d_matrix_transform_8h.html" title="3DMatrixTransform.h" alt="" coords="163,721,306,748"/>
+<area shape="rect" id="node6" href="$df/d7d/_quaternion_8h.html" title="Quaternion.h" alt="" coords="43,721,139,748"/>
+<area shape="rect" id="node8" href="$d8/d86/_world_8h.html" title="World.h" alt="" coords="1343,109,1409,136"/>
+<area shape="rect" id="node3" href="$d3/d42/_vec3_8h.html" title="Vec3.h" alt="" coords="351,796,414,823"/>
+<area shape="rect" id="node9" href="$da/dc0/_rendering_engine_8h.html" title="RenderingEngine.h" alt="" coords="1547,497,1677,524"/>
+<area shape="rect" id="node21" href="$da/d8c/_world_factory_8h.html" title="WorldFactory.h" alt="" coords="1083,199,1194,225"/>
+<area shape="rect" id="node26" href="$d6/da5/_global___structs_8h.html" title="Global_Structs.h" alt="" coords="889,572,1007,599"/>
+<area shape="rect" id="node10" href="$da/d35/_redering_factory_8h.html" title="RederingFactory.h" alt="" coords="1544,572,1672,599"/>
+<area shape="rect" id="node13" href="$d7/d72/_open_g_l_8h.html" title="OpenGL.h" alt="" coords="1405,647,1486,673"/>
+<area shape="rect" id="node20" href="$df/db6/_direct_x_8h.html" title="DirectX.h" alt="" coords="1511,647,1585,673"/>
+<area shape="rect" id="node14" href="$d3/dd4/_i___graphic_8h.html" title="I_Graphic.h" alt="" coords="1497,721,1585,748"/>
+<area shape="rect" id="node15" href="$dd/dad/_i___drawable_object_8h.html" title="I_DrawableObject.h" alt="" coords="1167,721,1302,748"/>
+<area shape="rect" id="node16" href="$d7/d27/freeglut_8h.html" title="GL\\freeglut.h" alt="" coords="1739,796,1835,823"/>
+<area shape="rect" id="node19" href="$d1/d83/_input_engine_8h.html" title="InputEngine.h" alt="" coords="2025,721,2127,748"/>
+<area shape="rect" id="node22" href="$df/d91/_game_object_8h.html" title="GameObject.h" alt="" coords="957,423,1064,449"/>
+<area shape="rect" id="node31" href="$d1/d4e/_geometry_8h.html" title="Geometry.h" alt="" coords="960,273,1051,300"/>
+<area shape="rect" id="node32" href="$d9/de5/_character_8h.html" title="Character.h" alt="" coords="1670,348,1759,375"/>
+<area shape="rect" id="node35" href="$d9/dbc/_n_p_c_8h.html" title="NPC.h" alt="" coords="1158,273,1218,300"/>
+<area shape="rect" id="node38" href="$d9/da1/_sky_box_8h.html" title="SkyBox.h" alt="" coords="681,348,759,375"/>
+<area shape="rect" id="node23" href="$d1/db1/_id_generator_8h.html" title="IdGenerator.h" alt="" coords="595,497,695,524"/>
+<area shape="rect" id="node25" href="$d1/d46/_resource_manager_8h.html" title="ResourceManager.h" alt="" coords="432,497,571,524"/>
+<area shape="rect" id="node27" href="$d4/db6/_affordance_8h.html" title="Affordance.h" alt="" coords="963,497,1058,524"/>
+<area shape="rect" id="node29" href="$d8/df1/_traits_8h.html" title="Traits.h" alt="" coords="771,497,837,524"/>
+<area shape="rect" id="node30" href="$dd/db5/_physic_engine_8h.html" title="Physic\\PhysicEngine.h" alt="" coords="1184,497,1341,524"/>
+<area shape="rect" id="node28" href="$dd/dae/_a_i_owned_states_8h.html" title="AIOwnedStates.h" alt="" coords="407,572,529,599"/>
+<area shape="rect" id="node33" href="$d1/d5f/_control_system_8h.html" title="ControlSystem.h" alt="" coords="1854,423,1973,449"/>
+<area shape="rect" id="node36" href="$df/dcf/_state_machine_8h.html" title="StateMachine.h" alt="" coords="1903,572,2017,599"/>
+<area shape="rect" id="node37" href="$df/d59/_brain_8h.html" title="Brain.h" alt="" coords="1011,348,1074,375"/>
+</map>

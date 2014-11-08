@@ -1,0 +1,444 @@
+\section{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Input\+Engine.cpp File Reference}
+\label{_input_engine_8cpp}\index{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Input\+Engine.\+cpp@{E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/\+Input\+Engine.\+cpp}}
+{\ttfamily \#include \char`\"{}Input\+Engine.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+Include dependency graph for Input\+Engine.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dc2/_input_engine_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char {\bf Shift\+Check} (unsigned char key)
+\item 
+bool {\bf switch\+Case} ({\bf Key\+Code} key, bool key\+State[256], bool special\+Keys[120])
+\item 
+bool {\bf mouse\+Switch\+Case} ({\bf Mouse\+Code} key, bool mouse[5])
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Input\+Engine.\+cpp@{Input\+Engine.\+cpp}!mouse\+Switch\+Case@{mouse\+Switch\+Case}}
+\index{mouse\+Switch\+Case@{mouse\+Switch\+Case}!Input\+Engine.\+cpp@{Input\+Engine.\+cpp}}
+\subsubsection[{mouse\+Switch\+Case}]{\setlength{\rightskip}{0pt plus 5cm}bool mouse\+Switch\+Case (
+\begin{DoxyParamCaption}
+\item[{{\bf Mouse\+Code}}]{key, }
+\item[{bool}]{mouse[5]}
+\end{DoxyParamCaption}
+)}\label{_input_engine_8cpp_a445758e63796a43b36a2682e8d74bf80}
+
+\begin{DoxyCode}
+524 \{
+525     \textcolor{keywordtype}{bool} keyDown = \textcolor{keyword}{false};
+526 
+527     \textcolor{keywordflow}{switch}(key)
+528     \{
+529     \textcolor{keywordflow}{case} MouseCode::LeftClick:
+530         keyDown = mouse[0];
+531         \textcolor{keywordflow}{break};
+532     \textcolor{keywordflow}{case} MouseCode::RightClick:
+533         keyDown = mouse[2];
+534         \textcolor{keywordflow}{break};
+535     \textcolor{keywordflow}{case} MouseCode::MiddleClick:
+536         keyDown = mouse[1];
+537         \textcolor{keywordflow}{break};
+538     \textcolor{keywordflow}{case} MouseCode::ScrollUp:
+539         keyDown = mouse[3];
+540         \textcolor{keywordflow}{break};
+541     \textcolor{keywordflow}{case} MouseCode::ScrollDown:
+542         keyDown = mouse[4];
+543         \textcolor{keywordflow}{break};
+544     \}
+545     \textcolor{keywordflow}{return} keyDown;
+546 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/df0/_input_engine_8cpp_a445758e63796a43b36a2682e8d74bf80_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine.\+cpp@{Input\+Engine.\+cpp}!Shift\+Check@{Shift\+Check}}
+\index{Shift\+Check@{Shift\+Check}!Input\+Engine.\+cpp@{Input\+Engine.\+cpp}}
+\subsubsection[{Shift\+Check}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Shift\+Check (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key}
+\end{DoxyParamCaption}
+)}\label{_input_engine_8cpp_a5c1e05c1fe83209d3463860a6b095fe6}
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{keywordflow}{switch} (key)
+51     \{
+52     \textcolor{keywordflow}{case} \textcolor{charliteral}{'~'}:
+53         key = \textcolor{charliteral}{'`'};
+54         \textcolor{keywordflow}{break};
+55     \textcolor{keywordflow}{case} \textcolor{charliteral}{'!'}:
+56         key = \textcolor{charliteral}{'1'};
+57         \textcolor{keywordflow}{break};
+58     \textcolor{keywordflow}{case} \textcolor{charliteral}{'@'}:
+59         key = \textcolor{charliteral}{'2'};
+60         \textcolor{keywordflow}{break};
+61     \textcolor{keywordflow}{case} \textcolor{charliteral}{'#'}:
+62         key = \textcolor{charliteral}{'3'};
+63         \textcolor{keywordflow}{break};
+64     \textcolor{keywordflow}{case} \textcolor{charliteral}{'$'}:
+65         key = \textcolor{charliteral}{'4'};
+66         \textcolor{keywordflow}{break};
+67     \textcolor{keywordflow}{case} \textcolor{charliteral}{'%'}:
+68         key = \textcolor{charliteral}{'5'};
+69         \textcolor{keywordflow}{break};
+70     \textcolor{keywordflow}{case} \textcolor{charliteral}{'^'}:
+71         key = \textcolor{charliteral}{'6'};
+72         \textcolor{keywordflow}{break};
+73     \textcolor{keywordflow}{case} \textcolor{charliteral}{'&'}:
+74         key = \textcolor{charliteral}{'7'};
+75         \textcolor{keywordflow}{break};
+76     \textcolor{keywordflow}{case} \textcolor{charliteral}{'*'}:
+77         key = \textcolor{charliteral}{'8'};
+78         \textcolor{keywordflow}{break};
+79     \textcolor{keywordflow}{case} \textcolor{charliteral}{'('}:
+80         key = \textcolor{charliteral}{'9'};
+81         \textcolor{keywordflow}{break};
+82     \textcolor{keywordflow}{case} \textcolor{charliteral}{')'}:
+83         key = \textcolor{charliteral}{'0'};
+84         \textcolor{keywordflow}{break};
+85     \textcolor{keywordflow}{case} \textcolor{charliteral}{'\_'}:
+86         key = \textcolor{charliteral}{'-'};
+87         \textcolor{keywordflow}{break};
+88     \textcolor{keywordflow}{case} \textcolor{charliteral}{'+'}:
+89         key = \textcolor{charliteral}{'='};
+90         \textcolor{keywordflow}{break};
+91     \textcolor{keywordflow}{case} \textcolor{charliteral}{'\{'}:
+92         key = \textcolor{charliteral}{'['};
+93         \textcolor{keywordflow}{break};
+94     \textcolor{keywordflow}{case} \textcolor{charliteral}{'\}'}:
+95         key = \textcolor{charliteral}{']'};
+96         \textcolor{keywordflow}{break};
+97     \textcolor{keywordflow}{case} \textcolor{charliteral}{':'}:
+98         key = \textcolor{charliteral}{';'};
+99         \textcolor{keywordflow}{break};
+100     \textcolor{keywordflow}{case} \textcolor{charliteral}{'"'}:
+101         key = 96;\textcolor{comment}{//ascii for "}
+102         \textcolor{keywordflow}{break};
+103     \textcolor{keywordflow}{case} \textcolor{charliteral}{'<'}:
+104         key = \textcolor{charliteral}{','};
+105         \textcolor{keywordflow}{break};
+106     \textcolor{keywordflow}{case} \textcolor{charliteral}{'>'}:
+107         key = \textcolor{charliteral}{'.'};
+108         \textcolor{keywordflow}{break};
+109     \textcolor{keywordflow}{case} \textcolor{charliteral}{'?'}:
+110         key = \textcolor{charliteral}{'/'};
+111         \textcolor{keywordflow}{break};
+112     \textcolor{keywordflow}{case} \textcolor{charliteral}{'|'}:
+113         key = 92; \textcolor{comment}{// ascii for}
+114             \textcolor{keywordflow}{break};
+115     \}
+116 
+117     \textcolor{keywordflow}{if}(key > 96 && key < 123)
+118     \{
+119         key -= 32;\textcolor{comment}{// cast any chars to upper case}
+120     \}
+121 
+122     \textcolor{keywordflow}{return} key;
+123 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{d5/df0/_input_engine_8cpp_a5c1e05c1fe83209d3463860a6b095fe6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Input\+Engine.\+cpp@{Input\+Engine.\+cpp}!switch\+Case@{switch\+Case}}
+\index{switch\+Case@{switch\+Case}!Input\+Engine.\+cpp@{Input\+Engine.\+cpp}}
+\subsubsection[{switch\+Case}]{\setlength{\rightskip}{0pt plus 5cm}bool switch\+Case (
+\begin{DoxyParamCaption}
+\item[{{\bf Key\+Code}}]{key, }
+\item[{bool}]{key\+State[256], }
+\item[{bool}]{special\+Keys[120]}
+\end{DoxyParamCaption}
+)}\label{_input_engine_8cpp_ab6b1584a4def992d2d2fe7aa1dc61474}
+
+\begin{DoxyCode}
+265 \{
+266     \textcolor{keywordtype}{bool} keyDown = \textcolor{keyword}{false};
+267 
+268     \textcolor{keywordflow}{switch}(key)
+269     \{
+270     \textcolor{keywordflow}{case} KeyCode::A:
+271         
+272         keyDown = keyState[\textcolor{charliteral}{'A'}];
+273         \textcolor{keywordflow}{break};
+274     \textcolor{keywordflow}{case} KeyCode::B:
+275         keyDown = keyState[\textcolor{charliteral}{'B'}];
+276         \textcolor{keywordflow}{break};
+277     \textcolor{keywordflow}{case} KeyCode::C:
+278         keyDown = keyState[\textcolor{charliteral}{'C'}];
+279         \textcolor{keywordflow}{break};
+280     \textcolor{keywordflow}{case} KeyCode::D:
+281         keyDown = keyState[\textcolor{charliteral}{'D'}];
+282         \textcolor{keywordflow}{break};
+283     \textcolor{keywordflow}{case} KeyCode::E:
+284         keyDown = keyState[\textcolor{charliteral}{'E'}];
+285         \textcolor{keywordflow}{break};
+286     \textcolor{keywordflow}{case} KeyCode::F:
+287         keyDown = keyState[\textcolor{charliteral}{'F'}];
+288         \textcolor{keywordflow}{break};
+289     \textcolor{keywordflow}{case} KeyCode::G:
+290         keyDown = keyState[\textcolor{charliteral}{'G'}];
+291         \textcolor{keywordflow}{break};
+292     \textcolor{keywordflow}{case} KeyCode::H:
+293         keyDown = keyState[\textcolor{charliteral}{'H'}];
+294         \textcolor{keywordflow}{break};
+295     \textcolor{keywordflow}{case} KeyCode::I:
+296         keyDown = keyState[\textcolor{charliteral}{'I'}];
+297         \textcolor{keywordflow}{break};
+298     \textcolor{keywordflow}{case} KeyCode::J:
+299         keyDown = keyState[\textcolor{charliteral}{'J'}];
+300         \textcolor{keywordflow}{break};
+301     \textcolor{keywordflow}{case} KeyCode::K:
+302         keyDown = keyState[\textcolor{charliteral}{'K'}];
+303         \textcolor{keywordflow}{break};
+304     \textcolor{keywordflow}{case} KeyCode::L:
+305         keyDown = keyState[\textcolor{charliteral}{'L'}];
+306         \textcolor{keywordflow}{break};
+307     \textcolor{keywordflow}{case} KeyCode::M:
+308         keyDown = keyState[\textcolor{charliteral}{'M'}];
+309         \textcolor{keywordflow}{break};
+310     \textcolor{keywordflow}{case} KeyCode::N:
+311         keyDown = keyState[\textcolor{charliteral}{'N'}];
+312         \textcolor{keywordflow}{break};
+313     \textcolor{keywordflow}{case} KeyCode::O:
+314         keyDown = keyState[\textcolor{charliteral}{'O'}];
+315         \textcolor{keywordflow}{break};
+316     \textcolor{keywordflow}{case} KeyCode::P:
+317         keyDown = keyState[\textcolor{charliteral}{'P'}];
+318         \textcolor{keywordflow}{break};
+319     \textcolor{keywordflow}{case} KeyCode::Q:
+320         keyDown = keyState[\textcolor{charliteral}{'Q'}];
+321         \textcolor{keywordflow}{break};
+322     \textcolor{keywordflow}{case} KeyCode::R:
+323         keyDown = keyState[\textcolor{charliteral}{'R'}];
+324         \textcolor{keywordflow}{break};
+325     \textcolor{keywordflow}{case} KeyCode::S:
+326         keyDown = keyState[\textcolor{charliteral}{'S'}];
+327         \textcolor{keywordflow}{break};
+328     \textcolor{keywordflow}{case} KeyCode::T:
+329         keyDown = keyState[\textcolor{charliteral}{'T'}];
+330         \textcolor{keywordflow}{break};
+331     \textcolor{keywordflow}{case} KeyCode::U:
+332         keyDown = keyState[\textcolor{charliteral}{'U'}];
+333         \textcolor{keywordflow}{break};
+334     \textcolor{keywordflow}{case} KeyCode::V:
+335         keyDown = keyState[\textcolor{charliteral}{'V'}];
+336         \textcolor{keywordflow}{break};
+337     \textcolor{keywordflow}{case} KeyCode::W:
+338         keyDown = keyState[\textcolor{charliteral}{'W'}];
+339         \textcolor{keywordflow}{break};
+340     \textcolor{keywordflow}{case} KeyCode::X:
+341         keyDown = keyState[\textcolor{charliteral}{'X'}];
+342         \textcolor{keywordflow}{break};
+343     \textcolor{keywordflow}{case} KeyCode::Y:
+344         keyDown = keyState[\textcolor{charliteral}{'Y'}];
+345         \textcolor{keywordflow}{break};
+346     \textcolor{keywordflow}{case} KeyCode::Z:
+347         keyDown = keyState[\textcolor{charliteral}{'Z'}];
+348         \textcolor{keywordflow}{break};
+349     \textcolor{keywordflow}{case} KeyCode::Alpha1:
+350         keyDown = keyState[\textcolor{charliteral}{'1'}];
+351         \textcolor{keywordflow}{break};
+352     \textcolor{keywordflow}{case} KeyCode::Alpha2:
+353         keyDown = keyState[\textcolor{charliteral}{'2'}];
+354         \textcolor{keywordflow}{break};
+355     \textcolor{keywordflow}{case} KeyCode::Alpha3:
+356         keyDown = keyState[\textcolor{charliteral}{'3'}];
+357         \textcolor{keywordflow}{break};
+358     \textcolor{keywordflow}{case} KeyCode::Alpha4:
+359         keyDown = keyState[\textcolor{charliteral}{'4'}];
+360         \textcolor{keywordflow}{break};
+361     \textcolor{keywordflow}{case} KeyCode::Alpha5:
+362         keyDown = keyState[\textcolor{charliteral}{'5'}];
+363         \textcolor{keywordflow}{break};
+364     \textcolor{keywordflow}{case} KeyCode::Alpha6:
+365         keyDown = keyState[\textcolor{charliteral}{'6'}];
+366         \textcolor{keywordflow}{break};
+367     \textcolor{keywordflow}{case} KeyCode::Alpha7:
+368         keyDown = keyState[\textcolor{charliteral}{'7'}];
+369         \textcolor{keywordflow}{break};
+370     \textcolor{keywordflow}{case} KeyCode::Alpha8:
+371         keyDown = keyState[\textcolor{charliteral}{'8'}];
+372         \textcolor{keywordflow}{break};
+373     \textcolor{keywordflow}{case} KeyCode::Alpha9:
+374         keyDown = keyState[\textcolor{charliteral}{'9'}];
+375         \textcolor{keywordflow}{break};
+376     \textcolor{keywordflow}{case} KeyCode::Alpha0:
+377         keyDown = keyState[\textcolor{charliteral}{'0'}];
+378         \textcolor{keywordflow}{break};
+379     \textcolor{keywordflow}{case} KeyCode::Space:
+380         keyDown = keyState[32];\textcolor{comment}{//ascii value for space}
+381         \textcolor{keywordflow}{break};
+382     \textcolor{keywordflow}{case} KeyCode::Tilde:
+383         keyDown = keyState[\textcolor{charliteral}{'`'}];
+384         \textcolor{keywordflow}{break};
+385     \textcolor{keywordflow}{case} KeyCode::Dash:
+386         keyDown = keyState[\textcolor{charliteral}{'-'}];
+387         \textcolor{keywordflow}{break};
+388     \textcolor{keywordflow}{case} KeyCode::Equals:
+389         keyDown = keyState[\textcolor{charliteral}{'='}];
+390         \textcolor{keywordflow}{break};
+391     \textcolor{keywordflow}{case} KeyCode::Backspace:
+392         keyDown = keyState[8];\textcolor{comment}{//ascii value for backspace}
+393         \textcolor{keywordflow}{break};
+394     \textcolor{keywordflow}{case} KeyCode::Tab:
+395         keyDown = keyState[9];\textcolor{comment}{//ascii value for Tab}
+396         \textcolor{keywordflow}{break};
+397     \textcolor{keywordflow}{case} KeyCode::CapsLock:
+398         keyDown = keyState[20];\textcolor{comment}{//acsii value for Caps}
+399         \textcolor{keywordflow}{break};
+400     \textcolor{keywordflow}{case} KeyCode::BackSlash:
+401         keyDown = keyState[92];\textcolor{comment}{//ascii value for backslash}
+402         \textcolor{keywordflow}{break};
+403     \textcolor{keywordflow}{case} KeyCode::Enter:
+404         keyDown = keyState[13];\textcolor{comment}{//ascii value for enter}
+405         \textcolor{keywordflow}{break};
+406     \textcolor{keywordflow}{case} KeyCode::OpenBracket:
+407         keyDown = keyState[\textcolor{charliteral}{'['}];
+408         \textcolor{keywordflow}{break};
+409     \textcolor{keywordflow}{case} KeyCode::ClosedBracket:
+410         keyDown = keyState[\textcolor{charliteral}{']'}];
+411         \textcolor{keywordflow}{break};
+412     \textcolor{keywordflow}{case} KeyCode::Colon:
+413         keyDown = keyState[\textcolor{charliteral}{';'}];
+414         \textcolor{keywordflow}{break};
+415     \textcolor{keywordflow}{case} KeyCode::Apostrophe:
+416         keyDown = keyState[39];\textcolor{comment}{//ascii value for apostrophe}
+417         \textcolor{keywordflow}{break};
+418     \textcolor{keywordflow}{case} KeyCode::Comma:
+419         keyDown = keyState[\textcolor{charliteral}{','}];
+420         \textcolor{keywordflow}{break};
+421     \textcolor{keywordflow}{case} KeyCode::Period:
+422         keyDown = keyState[\textcolor{charliteral}{'.'}];
+423         \textcolor{keywordflow}{break};
+424     \textcolor{keywordflow}{case} KeyCode::ForwardSlash:
+425         keyDown = keyState[\textcolor{charliteral}{'/'}];
+426         \textcolor{keywordflow}{break};
+427     \textcolor{keywordflow}{case} KeyCode::Delete:
+428         keyDown = keyState[127];
+429         \textcolor{keywordflow}{break};
+430     \textcolor{keywordflow}{case} KeyCode::Esc:
+431         keyDown = keyState[27];
+432         \textcolor{keywordflow}{break};
+433         \textcolor{comment}{//begin the cases for all the SpecialKeys}
+434     \textcolor{keywordflow}{case} KeyCode::Ins:
+435         keyDown = specialKeys[108];
+436         \textcolor{keywordflow}{break};
+437     \textcolor{keywordflow}{case} KeyCode::Home:
+438         keyDown = specialKeys[106];
+439         \textcolor{keywordflow}{break};
+440     \textcolor{keywordflow}{case} KeyCode::End:
+441         keyDown = specialKeys[107];
+442         \textcolor{keywordflow}{break};
+443     \textcolor{keywordflow}{case} KeyCode::PageUp:
+444         keyDown = specialKeys[104];
+445         \textcolor{keywordflow}{break};
+446     \textcolor{keywordflow}{case} KeyCode::PageDown:
+447         keyDown = specialKeys[105];
+448         \textcolor{keywordflow}{break};
+449     \textcolor{keywordflow}{case} KeyCode::F1:
+450         keyDown = specialKeys[1];
+451         \textcolor{keywordflow}{break};
+452     \textcolor{keywordflow}{case} KeyCode::F2:
+453         keyDown = specialKeys[2];
+454         \textcolor{keywordflow}{break};
+455     \textcolor{keywordflow}{case} KeyCode::F3:
+456         keyDown = specialKeys[3];
+457         \textcolor{keywordflow}{break};
+458     \textcolor{keywordflow}{case} KeyCode::F4:
+459         keyDown = specialKeys[4];
+460         \textcolor{keywordflow}{break};
+461     \textcolor{keywordflow}{case} KeyCode::F5:
+462         keyDown = specialKeys[5];
+463         \textcolor{keywordflow}{break};
+464     \textcolor{keywordflow}{case} KeyCode::F6:
+465         keyDown = specialKeys[6];
+466         \textcolor{keywordflow}{break};
+467     \textcolor{keywordflow}{case} KeyCode::F7:
+468         keyDown = specialKeys[7];
+469         \textcolor{keywordflow}{break};
+470     \textcolor{keywordflow}{case} KeyCode::F8:
+471         keyDown = specialKeys[8];
+472         \textcolor{keywordflow}{break};
+473     \textcolor{keywordflow}{case} KeyCode::F9:
+474         keyDown = specialKeys[9];
+475         \textcolor{keywordflow}{break};
+476     \textcolor{keywordflow}{case} KeyCode::F10:
+477         keyDown = specialKeys[10];
+478         \textcolor{keywordflow}{break};
+479     \textcolor{keywordflow}{case} KeyCode::F11:
+480         keyDown = specialKeys[11];
+481         \textcolor{keywordflow}{break};
+482     \textcolor{keywordflow}{case} KeyCode::F12:
+483         keyDown = specialKeys[12];
+484         \textcolor{keywordflow}{break};
+485     \textcolor{keywordflow}{case} KeyCode::LeftKey:
+486         keyDown = specialKeys[100];
+487         \textcolor{keywordflow}{break};
+488     \textcolor{keywordflow}{case} KeyCode::UpKey:
+489         keyDown = specialKeys[101];
+490         \textcolor{keywordflow}{break};
+491     \textcolor{keywordflow}{case} KeyCode::RightKey:
+492         keyDown = specialKeys[102];
+493         \textcolor{keywordflow}{break};
+494     \textcolor{keywordflow}{case} KeyCode::DownKey:
+495         keyDown = specialKeys[103];
+496         \textcolor{keywordflow}{break};
+497     \textcolor{keywordflow}{case} KeyCode::LeftShift:
+498         keyDown = specialKeys[112];
+499         \textcolor{keywordflow}{break};
+500     \textcolor{keywordflow}{case} KeyCode::LeftCtrl:
+501         keyDown = specialKeys[114];
+502         \textcolor{keywordflow}{break};
+503     \textcolor{keywordflow}{case} KeyCode::LeftAlt:
+504         keyDown = specialKeys[106];
+505         \textcolor{keywordflow}{break};
+506     \textcolor{keywordflow}{case} KeyCode::RightShift:
+507         keyDown = specialKeys[113];
+508         \textcolor{keywordflow}{break};
+509     \textcolor{keywordflow}{case} KeyCode::RightCtrl:
+510         keyDown = specialKeys[115];
+511         \textcolor{keywordflow}{break};
+512     \textcolor{keywordflow}{case} KeyCode::RightAlt:
+513         keyDown = specialKeys[117];
+514         \textcolor{keywordflow}{break};
+515 
+516         \}
+517     
+518 
+519 
+520     \textcolor{keywordflow}{return} keyDown;
+521 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{d5/df0/_input_engine_8cpp_ab6b1584a4def992d2d2fe7aa1dc61474_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,196 @@
+\section{Touch Class Reference}
+\label{class_touch}\index{Touch@{Touch}}
+
+
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} ships to \doxyref{Touch}{p.}{d1/dff/class_touch}.  
+
+
+
+
+{\ttfamily \#include $<$A\+I\+Owned\+States.\+h$>$}
+
+
+
+Inheritance diagram for Touch\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{dc/df7/class_touch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Touch\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{d4/d8e/class_touch__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf void} {\bf Enter} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Enter function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Execute} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Execute function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Exit} ({\bf N\+P\+C} $\ast$ai)
+\begin{DoxyCompactList}\small\item\em Exit function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Touch} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Touch} ()
+\begin{DoxyCompactList}\small\item\em flee state consructor \end{DoxyCompactList}\item 
+{\bf Touch} (const {\bf Touch} \&)
+\item 
+{\bf Touch} \& {\bf operator=} (const {\bf Touch} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is the state for the \doxyref{A\+I}{p.}{d9/d64/class_a_i} ships to \doxyref{Touch}{p.}{d1/dff/class_touch}. 
+
+\begin{DoxyAuthor}{Author}
+Karl 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+01 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/10/2013 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Touch@{Touch}!Touch@{Touch}}
+\index{Touch@{Touch}!Touch@{Touch}}
+\subsubsection[{Touch}]{\setlength{\rightskip}{0pt plus 5cm}Touch\+::\+Touch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_touch_a5de15620894cc276f2c0844fa0507246}
+
+
+flee state consructor 
+
+
+\begin{DoxyCode}
+608 \{\}
+\end{DoxyCode}
+\index{Touch@{Touch}!Touch@{Touch}}
+\index{Touch@{Touch}!Touch@{Touch}}
+\subsubsection[{Touch}]{\setlength{\rightskip}{0pt plus 5cm}Touch\+::\+Touch (
+\begin{DoxyParamCaption}
+\item[{const {\bf Touch} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_touch_aa58f9580263307063fa6538021956c11}
+
+
+\subsection{Member Function Documentation}
+\index{Touch@{Touch}!Enter@{Enter}}
+\index{Enter@{Enter}!Touch@{Touch}}
+\subsubsection[{Enter}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Touch\+::\+Enter (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_touch_a351763e6c5156dd033be604fa0b6af74}
+
+
+Enter function. 
+
+Runs any functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to enter the state
+
+\begin{DoxyPostcond}{Postcondition}
+enters the state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a88e14ab108f9e28a53630c4557b9743d}.
+
+\index{Touch@{Touch}!Execute@{Execute}}
+\index{Execute@{Execute}!Touch@{Touch}}
+\subsubsection[{Execute}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Touch\+::\+Execute (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_touch_ab541ed1c4e28059b604d3692be4c3e35}
+
+
+Execute function. 
+
+makes the ship flee from the player
+
+\begin{DoxyPostcond}{Postcondition}
+runs the flee execution 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_af12fe8dcc213356992ae0ad9f8d315ff}.
+
+\index{Touch@{Touch}!Exit@{Exit}}
+\index{Exit@{Exit}!Touch@{Touch}}
+\subsubsection[{Exit}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Touch\+::\+Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+P\+C} $\ast$}]{ai}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_touch_a7a75a20daa067517c2fcf14d1e58b2f8}
+
+
+Exit function. 
+
+runs and functions that allows the \doxyref{A\+I}{p.}{d9/d64/class_a_i} to exit the state
+
+\begin{DoxyPostcond}{Postcondition}
+exits flee state 
+\end{DoxyPostcond}
+
+
+Implements {\bf State$<$ N\+P\+C $>$} \doxyref{}{p.}{d0/d8b/class_state_a1dc07d3a42d904b7e954fcfa3d27f23f}.
+
+\index{Touch@{Touch}!Instance@{Instance}}
+\index{Instance@{Instance}!Touch@{Touch}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Touch}$\ast$ Touch\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_touch_a26cfa64f795ee141d3bd168ce49f5e3c}
+
+
+Instance function. 
+
+this is a singleton creates an instance of the flee state and returns it to the state machine
+
+\begin{DoxyReturn}{Returns}
+flee state 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+returns the flee state 
+\end{DoxyPostcond}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/dff/class_touch_a26cfa64f795ee141d3bd168ce49f5e3c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Touch@{Touch}!operator=@{operator=}}
+\index{operator=@{operator=}!Touch@{Touch}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Touch}\& Touch\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Touch} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_touch_af59b8b09625a7b80693393b62a716917}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf A\+I\+Owned\+States.\+h}\end{DoxyCompactItemize}

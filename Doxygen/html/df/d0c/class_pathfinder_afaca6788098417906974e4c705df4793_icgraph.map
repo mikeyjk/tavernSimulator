@@ -1,0 +1,4 @@
+<map id="Pathfinder::ClearClosedList" name="Pathfinder::ClearClosedList">
+<area shape="rect" id="node2" href="$df/d0c/class_pathfinder.html#a1c3bff25d4b79bddd191ecbb8f33861a" title="Destructor clears all memory. " alt="" coords="232,5,387,32"/>
+<area shape="rect" id="node3" href="$df/d0c/class_pathfinder.html#aa3444fbf5c27dba89810319547eef766" title="Find the best path from current position to target position. " alt="" coords="239,56,379,83"/>
+</map>

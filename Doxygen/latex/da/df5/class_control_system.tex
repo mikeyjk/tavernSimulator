@@ -1,0 +1,421 @@
+\section{Control\+System Class Reference}
+\label{class_control_system}\index{Control\+System@{Control\+System}}
+
+
+The Class that the user of the system programs into directly for the creation of thier game, Basically this is the Control system, that is separated from character control.  
+
+
+
+
+{\ttfamily \#include $<$Control\+System.\+h$>$}
+
+
+
+Collaboration diagram for Control\+System\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d07/class_control_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$\+Control\+System} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Control\+System}{p.}{da/df5/class_control_system} Destructor. \end{DoxyCompactList}\item 
+{\bf void} {\bf init} ()
+\begin{DoxyCompactList}\small\item\em init Function \end{DoxyCompactList}\item 
+{\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update Function. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Status} ({\bf Game\+Status} gs)
+\item 
+{\bf Game\+Status} {\bf get\+Status} ()
+\item 
+int {\bf get\+Harvest\+Time} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Control\+System} $\ast$ {\bf Instance} ()
+\begin{DoxyCompactList}\small\item\em Instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf H\+U\+D} {\bf hud}
+\begin{DoxyCompactList}\small\item\em Heads Up Display object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Control\+System} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Control\+System}{p.}{da/df5/class_control_system} Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Input\+Engine} $\ast$ {\bf input}
+\begin{DoxyCompactList}\small\item\em pointer to the input engine \end{DoxyCompactList}\item 
+{\bf Rendering\+Engine} $\ast$ {\bf render}
+\begin{DoxyCompactList}\small\item\em pointer to the render engine \end{DoxyCompactList}\item 
+{\bf Game\+Status} {\bf status}
+\item 
+int {\bf harvest\+Time}
+\item 
+bool {\bf player\+Dead}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Class that the user of the system programs into directly for the creation of thier game, Basically this is the Control system, that is separated from character control. 
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe \+: null  By\+: Game Engine; 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/03/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Control\+System@{Control\+System}!````~Control\+System@{$\sim$\+Control\+System}}
+\index{````~Control\+System@{$\sim$\+Control\+System}!Control\+System@{Control\+System}}
+\subsubsection[{$\sim$\+Control\+System}]{\setlength{\rightskip}{0pt plus 5cm}Control\+System\+::$\sim$\+Control\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_control_system_a449890897411186d4f245a79e8f2d016}
+
+
+\doxyref{Control\+System}{p.}{da/df5/class_control_system} Destructor. 
+
+This is the basic Destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+40 \{\};
+\end{DoxyCode}
+\index{Control\+System@{Control\+System}!Control\+System@{Control\+System}}
+\index{Control\+System@{Control\+System}!Control\+System@{Control\+System}}
+\subsubsection[{Control\+System}]{\setlength{\rightskip}{0pt plus 5cm}Control\+System\+::\+Control\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_control_system_a4b8f52561261c53303c3db0a06ddceed}
+
+
+\doxyref{Control\+System}{p.}{da/df5/class_control_system} Constructor. 
+
+This is the basic Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+92 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Control\+System@{Control\+System}!get\+Harvest\+Time@{get\+Harvest\+Time}}
+\index{get\+Harvest\+Time@{get\+Harvest\+Time}!Control\+System@{Control\+System}}
+\subsubsection[{get\+Harvest\+Time}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+System\+::get\+Harvest\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_control_system_aec72059e91b0f4b7e3029087b41bf24e}
+
+\begin{DoxyCode}
+79 \{\textcolor{keywordflow}{return} harvestTime;\}
+\end{DoxyCode}
+\index{Control\+System@{Control\+System}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Control\+System@{Control\+System}}
+\subsubsection[{get\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Status} Control\+System\+::get\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_control_system_aa3d50a8ae7fda53693f374b7cc7290df}
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{keywordflow}{return} status;
+35 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df5/class_control_system_aa3d50a8ae7fda53693f374b7cc7290df_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Control\+System@{Control\+System}!init@{init}}
+\index{init@{init}!Control\+System@{Control\+System}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Control\+System\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_control_system_a8091d03383d4ec163f15be07508f1a57}
+
+
+init Function 
+
+This function sets up all the pointers inside the \doxyref{Control\+System}{p.}{da/df5/class_control_system}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+20 \{
+21     input =  InputEngine::Instance();
+22     hud.SetBufferRef();
+23 
+24     status = GAME_STOP;
+25 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df5/class_control_system_a8091d03383d4ec163f15be07508f1a57_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df5/class_control_system_a8091d03383d4ec163f15be07508f1a57_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Control\+System@{Control\+System}!Instance@{Instance}}
+\index{Instance@{Instance}!Control\+System@{Control\+System}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Control\+System} $\ast$ Control\+System\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_control_system_aa3b24cbd4e40b867422d9cd4443e63db}
+
+
+Instance. 
+
+Returns a pointer to a singleton of the object
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+14 \{
+15     \textcolor{keyword}{static} ControlSystem Instance;
+16     \textcolor{keywordflow}{return} &Instance;
+17 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df5/class_control_system_aa3b24cbd4e40b867422d9cd4443e63db_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Control\+System@{Control\+System}!set\+Status@{set\+Status}}
+\index{set\+Status@{set\+Status}!Control\+System@{Control\+System}}
+\subsubsection[{set\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Control\+System\+::set\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Status}}]{gs}
+\end{DoxyParamCaption}
+)}\label{class_control_system_a0b2812e51d4bb7ce9c652ddf9d2b8859}
+
+\begin{DoxyCode}
+28 \{
+29     status = gs;
+30 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df5/class_control_system_a0b2812e51d4bb7ce9c652ddf9d2b8859_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Control\+System@{Control\+System}!Update@{Update}}
+\index{Update@{Update}!Control\+System@{Control\+System}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Control\+System\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)}\label{class_control_system_a0a7d8adf0a9ded23d3a524c69581e0e8}
+
+
+Update Function. 
+
+This is the update Function It is called every frame by the \doxyref{Game\+Engine}{p.}{da/da9/class_game_engine}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{if}(!hud.getSplash())
+40     \{
+41         \textcolor{keywordflow}{if}(status != GAME_EXIT)
+42         \{
+43             \textcolor{keywordflow}{if}(input->getKeyDown(KeyCode::Esc))
+44             \{
+45                 \textcolor{comment}{//hud.switchManual();}
+46                 MenuSystem::switchMenu();
+47                 InputEngine::Instance()->switchFixedMouse();
+48                 status = status == GAME_RUN ? GAME_STOP : GAME_RUN;
+49             \}
+50         \}
+51         \textcolor{keywordflow}{if}(status == GAME_RUN)
+52         \{
+53             \textcolor{keywordflow}{if}(input->getKeyDown(KeyCode::Esc))
+54             \{
+55                 \textcolor{comment}{//input->switchFixedMouse();}
+56                 \textcolor{comment}{//}
+57                 hud.setExit(\textcolor{keyword}{true});
+58             \}
+59 
+60             \textcolor{keywordflow}{if}(input->getMouseDown(MouseCode::LeftClick) && hud.getExit())
+61             \{
+62                 status = GAME_STOP;
+63                 MenuSystem::Instance()->MenuDisplay(\textcolor{stringliteral}{"cont2"});
+64                 MenuSystem::openMenu();
+65                 input->switchFixedMouse();
+66                 \textcolor{comment}{//exit(0);}
+67             \}
+68 
+69             \textcolor{keywordflow}{if}(input->getKeyUp(KeyCode::B))
+70             \{
+71                 PhysicEngine::Instance()->switchRenderMode();
+72             \}
+73         \}
+74         \textcolor{keywordflow}{else}
+75         \{
+76             \textcolor{keywordflow}{if}(input->getMouseDown(MouseCode::LeftClick))
+77             \{
+78                 MenuSystem::Instance()->checkPressedButton(input->getMousePoint());
+79             \}
+80             \textcolor{keywordflow}{if}(input->getMouseUp(MouseCode::LeftClick))
+81             \{
+82                 MenuSystem::Instance()->unpressButton(input->getMousePoint());
+83             \}
+84         \}
+85     \}
+86     \textcolor{keywordflow}{else}
+87     \{
+88         \textcolor{keywordflow}{if}(input->getMouseDown(MouseCode::LeftClick))
+89             \{
+90                 hud.turnOffSplash();
+91             \}
+92     \}
+93 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df5/class_control_system_a0a7d8adf0a9ded23d3a524c69581e0e8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/df5/class_control_system_a0a7d8adf0a9ded23d3a524c69581e0e8_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Control\+System@{Control\+System}!harvest\+Time@{harvest\+Time}}
+\index{harvest\+Time@{harvest\+Time}!Control\+System@{Control\+System}}
+\subsubsection[{harvest\+Time}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+System\+::harvest\+Time\hspace{0.3cm}{\ttfamily [private]}}\label{class_control_system_a984a3a3f2bb58f274553cd47011b8a07}
+\index{Control\+System@{Control\+System}!hud@{hud}}
+\index{hud@{hud}!Control\+System@{Control\+System}}
+\subsubsection[{hud}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+U\+D} Control\+System\+::hud}\label{class_control_system_affe9231546651ec5e66dc7f456990e36}
+
+
+Heads Up Display object. 
+
+\index{Control\+System@{Control\+System}!input@{input}}
+\index{input@{input}!Control\+System@{Control\+System}}
+\subsubsection[{input}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Input\+Engine}$\ast$ Control\+System\+::input\hspace{0.3cm}{\ttfamily [private]}}\label{class_control_system_a8b04b0b062597cb41fd3bb88dc4967d1}
+
+
+pointer to the input engine 
+
+\index{Control\+System@{Control\+System}!player\+Dead@{player\+Dead}}
+\index{player\+Dead@{player\+Dead}!Control\+System@{Control\+System}}
+\subsubsection[{player\+Dead}]{\setlength{\rightskip}{0pt plus 5cm}bool Control\+System\+::player\+Dead\hspace{0.3cm}{\ttfamily [private]}}\label{class_control_system_a1bb2981ae6fcef61625c6445fdab18f8}
+\index{Control\+System@{Control\+System}!render@{render}}
+\index{render@{render}!Control\+System@{Control\+System}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rendering\+Engine}$\ast$ Control\+System\+::render\hspace{0.3cm}{\ttfamily [private]}}\label{class_control_system_a01115c0436cd54c85decc4c6bd712e2c}
+
+
+pointer to the render engine 
+
+\index{Control\+System@{Control\+System}!status@{status}}
+\index{status@{status}!Control\+System@{Control\+System}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Game\+Status} Control\+System\+::status\hspace{0.3cm}{\ttfamily [private]}}\label{class_control_system_a0c8a3eccfe8911cd6063467d675ef261}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Control\+System.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Control\+System.\+cpp}\end{DoxyCompactItemize}

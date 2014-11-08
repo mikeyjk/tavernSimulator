@@ -1,0 +1,620 @@
+\section{C3\+D\+Matrix Class Reference}
+\label{class_c3_d_matrix}\index{C3\+D\+Matrix@{C3\+D\+Matrix}}
+
+
+{\ttfamily \#include $<$3\+D\+Matrix\+Transform.\+h$>$}
+
+
+
+Collaboration diagram for C3\+D\+Matrix\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{de/d0a/class_c3_d_matrix__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C3\+D\+Matrix} ()
+\item 
+{\bf void} {\bf Create\+Identity} ()
+\item 
+{\bf void} {\bf Create\+Translate\+Matrix} (double {\bf x}, double {\bf y}, double {\bf z})
+\item 
+{\bf void} {\bf Create\+Scale\+Matrix} (double x\+Scale, double y\+Scale, double z\+Scale)
+\item 
+{\bf void} {\bf Create\+Rotate\+Mat\+By\+X} (double randians)
+\item 
+{\bf void} {\bf Create\+Rotate\+Mat\+By\+Y} (double randians)
+\item 
+{\bf void} {\bf Create\+Rotate\+Mat\+By\+Z} (double randians)
+\item 
+{\bf void} {\bf Transform\+Vector3\+D} ({\bf Vec3} \&Vec)
+\item 
+float {\bf degrees\+To\+Radians} (float deg)
+\item 
+{\bf void} {\bf \+\_\+11} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+12} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+13} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+14} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+21} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+22} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+23} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+24} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+31} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+32} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+33} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+34} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+41} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+42} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+43} (double {\bf val})
+\item 
+{\bf void} {\bf \+\_\+44} (double {\bf val})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf void} {\bf Matrix\+Multiply} ({\bf Matrix} \&m\+In)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} {\bf m\+\_\+\+Matrix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{C3\+D\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}C3\+D\+Matrix\+::\+C3\+D\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_aa08f8071e1c53a896ef500c774c61adb}
+
+\begin{DoxyCode}
+46     \{
+47         CreateIdentity();
+48     \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_aa08f8071e1c53a896ef500c774c61adb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+11@{\+\_\+11}}
+\index{\+\_\+11@{\+\_\+11}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+11}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+11 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_acdbb8bd142a4581ce571acdb9a4b424c}
+
+\begin{DoxyCode}
+71 \{m_Matrix._11 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+12@{\+\_\+12}}
+\index{\+\_\+12@{\+\_\+12}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+12}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+12 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a2282cef7975c45502230a8205275e793}
+
+\begin{DoxyCode}
+72 \{m_Matrix._12 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+13@{\+\_\+13}}
+\index{\+\_\+13@{\+\_\+13}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+13}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+13 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a5db91c6b4525f103173feb62495a88c7}
+
+\begin{DoxyCode}
+73 \{m_Matrix._13 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+14@{\+\_\+14}}
+\index{\+\_\+14@{\+\_\+14}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+14}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+14 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a3a456570b2bba1fb1e809e8fd1b9df26}
+
+\begin{DoxyCode}
+74 \{m_Matrix._14 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+21@{\+\_\+21}}
+\index{\+\_\+21@{\+\_\+21}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+21}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+21 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a6cdfa3255b0db607b1218fe9f0b936de}
+
+\begin{DoxyCode}
+76 \{m_Matrix._21 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+22@{\+\_\+22}}
+\index{\+\_\+22@{\+\_\+22}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+22}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+22 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a867bc5db594c7bff4a62b0341e541239}
+
+\begin{DoxyCode}
+77 \{m_Matrix._22 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+23@{\+\_\+23}}
+\index{\+\_\+23@{\+\_\+23}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+23}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+23 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_ae4759a4b7f96a4cfcb89e8a224f594aa}
+
+\begin{DoxyCode}
+78 \{m_Matrix._23 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+24@{\+\_\+24}}
+\index{\+\_\+24@{\+\_\+24}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+24}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+24 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_ace5bfe9626a00779b747004e40793ce9}
+
+\begin{DoxyCode}
+79 \{m_Matrix._24 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+31@{\+\_\+31}}
+\index{\+\_\+31@{\+\_\+31}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+31}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+31 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_ab10a3b6839859eaac014a01ce9968c57}
+
+\begin{DoxyCode}
+81 \{m_Matrix._31 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+32@{\+\_\+32}}
+\index{\+\_\+32@{\+\_\+32}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+32 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_ab15c0cd31748a8e4a80af6beb3c0f47a}
+
+\begin{DoxyCode}
+82 \{m_Matrix._32 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+33@{\+\_\+33}}
+\index{\+\_\+33@{\+\_\+33}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+33}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+33 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a89f2243edd84694bfde33bf69c006526}
+
+\begin{DoxyCode}
+83 \{m_Matrix._33 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+34@{\+\_\+34}}
+\index{\+\_\+34@{\+\_\+34}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+34}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+34 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a6e580f31ddb42e05e52efd00bc77038a}
+
+\begin{DoxyCode}
+84 \{m_Matrix._34 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+41@{\+\_\+41}}
+\index{\+\_\+41@{\+\_\+41}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+41}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+41 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_ac03c6c26c45ea582ddc791ef46482dc7}
+
+\begin{DoxyCode}
+87 \{m_Matrix._41 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+42@{\+\_\+42}}
+\index{\+\_\+42@{\+\_\+42}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+42}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+42 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_ab41bb029fcc0b45e06c2eace72e4463c}
+
+\begin{DoxyCode}
+88 \{m_Matrix._42 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+43@{\+\_\+43}}
+\index{\+\_\+43@{\+\_\+43}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+43}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+43 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a9e5f7ac5b5c30dbe25a5e1500e81b793}
+
+\begin{DoxyCode}
+89 \{m_Matrix._43 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!\+\_\+44@{\+\_\+44}}
+\index{\+\_\+44@{\+\_\+44}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{\+\_\+44}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+\_\+44 (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a773272066f16ad12cb3a925401a174ef}
+
+\begin{DoxyCode}
+90 \{m_Matrix._44 = val;\}
+\end{DoxyCode}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Create\+Identity@{Create\+Identity}}
+\index{Create\+Identity@{Create\+Identity}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Create\+Identity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Create\+Identity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a501b1b2b9870ae1403fee23e8a697f28}
+
+\begin{DoxyCode}
+131 \{
+132     m_Matrix._11 = 1;  m_Matrix._12 = 0;  m_Matrix._13 = 0;  m_Matrix._14 = 0;
+133     m_Matrix._21 = 0;  m_Matrix._22 = 1;  m_Matrix._23 = 0;  m_Matrix._24 = 0;
+134     m_Matrix._31 = 0;  m_Matrix._32 = 0;  m_Matrix._33 = 1;  m_Matrix._34 = 0;
+135     m_Matrix._41 = 0;  m_Matrix._42 = 0;  m_Matrix._43 = 0;  m_Matrix._44 = 1;
+136 
+137 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_a501b1b2b9870ae1403fee23e8a697f28_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Create\+Rotate\+Mat\+By\+X@{Create\+Rotate\+Mat\+By\+X}}
+\index{Create\+Rotate\+Mat\+By\+X@{Create\+Rotate\+Mat\+By\+X}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Create\+Rotate\+Mat\+By\+X}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Create\+Rotate\+Mat\+By\+X (
+\begin{DoxyParamCaption}
+\item[{double}]{randians}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a61e93292a6f2a0fe80b4846329040272}
+
+\begin{DoxyCode}
+168 \{
+169     C3DMatrix::Matrix mat;
+170     \textcolor{keywordtype}{double} Sin = sin(degreesToRadians(deg));
+171     \textcolor{keywordtype}{double} Cos = cos(degreesToRadians(deg));
+172 
+173     
+174      mat._11 = 1; mat._12  = 0 ;   mat._13 = 0 ;    mat._14 = 0;
+175      mat._21 = 0; mat._22  = Cos ; mat._23 = -Sin ; mat._24 = 0;
+176      mat._31 = 0; mat._32  = Sin ; mat._33 = Cos ;  mat._34 = 0;
+177      mat._41 = 0; mat._42  = 0 ;   mat._43 = 0 ;    mat._44 = 1;
+178 
+179 
+180     MatrixMultiply(mat);
+181 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_a61e93292a6f2a0fe80b4846329040272_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Create\+Rotate\+Mat\+By\+Y@{Create\+Rotate\+Mat\+By\+Y}}
+\index{Create\+Rotate\+Mat\+By\+Y@{Create\+Rotate\+Mat\+By\+Y}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Create\+Rotate\+Mat\+By\+Y}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Create\+Rotate\+Mat\+By\+Y (
+\begin{DoxyParamCaption}
+\item[{double}]{randians}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a8c5d97595a1ab03156e696bbbfe99578}
+
+\begin{DoxyCode}
+186 \{
+187     C3DMatrix::Matrix mat;
+188     \textcolor{keywordtype}{double} Sin = sin(degreesToRadians(deg));
+189     \textcolor{keywordtype}{double} Cos = cos(degreesToRadians(deg));
+190     
+191      mat._11 = Cos; mat._12  =  0;   mat._13 = Sin;     mat._14 = 0;
+192      mat._21 = 0;   mat._22  =  1;   mat._23 = 0;       mat._24 = 0;
+193      mat._31 = -Sin;mat._32  =  0;   mat._33 = Cos;     mat._34 = 0;
+194      mat._41 = 0   ;mat._42  =  0;   mat._43 = 0;       mat._44 = 1;
+195 
+196     MatrixMultiply(mat);
+197 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_a8c5d97595a1ab03156e696bbbfe99578_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Create\+Rotate\+Mat\+By\+Z@{Create\+Rotate\+Mat\+By\+Z}}
+\index{Create\+Rotate\+Mat\+By\+Z@{Create\+Rotate\+Mat\+By\+Z}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Create\+Rotate\+Mat\+By\+Z}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Create\+Rotate\+Mat\+By\+Z (
+\begin{DoxyParamCaption}
+\item[{double}]{randians}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_a87a1b9981f0370416a15afaaebf0e3ab}
+
+\begin{DoxyCode}
+200 \{
+201     C3DMatrix::Matrix mat;
+202     \textcolor{keywordtype}{double} Sin = sin(degreesToRadians(deg));
+203     \textcolor{keywordtype}{double} Cos = cos(degreesToRadians(deg));
+204     
+205      mat._11 = Cos; mat._12  =  -Sin;   mat._13 = 0;     mat._14 = 0;
+206      mat._21 = Sin; mat._22  =  Cos;    mat._23 = 0;     mat._24 = 0;
+207      mat._31 = 0 ;  mat._32  =  0;      mat._33 = 1;     mat._34 = 0;
+208      mat._41 = 0   ;mat._42  =  0;      mat._43 = 0;     mat._44 = 1;
+209 
+210     MatrixMultiply(mat);
+211 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_a87a1b9981f0370416a15afaaebf0e3ab_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Create\+Scale\+Matrix@{Create\+Scale\+Matrix}}
+\index{Create\+Scale\+Matrix@{Create\+Scale\+Matrix}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Create\+Scale\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Create\+Scale\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{x\+Scale, }
+\item[{double}]{y\+Scale, }
+\item[{double}]{z\+Scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_aed01f048b4bc76eacb5a4bb91324cbb3}
+
+\begin{DoxyCode}
+156 \{
+157 
+158      C3DMatrix::Matrix mat;
+159      mat._11 = xScale ; mat._12  = 0      ; mat._13 = 0      ; mat._14 = 0;
+160      mat._21 = 0      ; mat._22  = yScale ; mat._23 = 0      ; mat._24 = 0;
+161      mat._31 = 0      ; mat._32  = 0      ; mat._33 = zScale ; mat._34 = 0;
+162      mat._41 = 0      ; mat._42  = 0      ; mat._43 = 0      ; mat._44 = 1;
+163      MatrixMultiply(mat);
+164 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_aed01f048b4bc76eacb5a4bb91324cbb3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Create\+Translate\+Matrix@{Create\+Translate\+Matrix}}
+\index{Create\+Translate\+Matrix@{Create\+Translate\+Matrix}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Create\+Translate\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Create\+Translate\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_ae0a911b070c284e02954f9c37eaa115c}
+
+\begin{DoxyCode}
+143 \{
+144      C3DMatrix::Matrix mat;
+145 
+146      mat._11 = 1; mat._12  = 0 ; mat._13 = 0 ; mat._14 = x;
+147      mat._21 = 0; mat._22  = 1 ; mat._23 = 0 ; mat._24 = y;
+148      mat._31 = 0; mat._32  = 0 ; mat._33 = 1 ; mat._34 = z;
+149      mat._41 = 0; mat._42  = 0 ; mat._43 = 0 ; mat._44 = 1;
+150      
+151      MatrixMultiply(mat);
+152 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_ae0a911b070c284e02954f9c37eaa115c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!degrees\+To\+Radians@{degrees\+To\+Radians}}
+\index{degrees\+To\+Radians@{degrees\+To\+Radians}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{degrees\+To\+Radians}]{\setlength{\rightskip}{0pt plus 5cm}float C3\+D\+Matrix\+::degrees\+To\+Radians (
+\begin{DoxyParamCaption}
+\item[{float}]{deg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_afae84f57a3834dfb1d87bd5a88881644}
+
+\begin{DoxyCode}
+227 \{
+228     \textcolor{keyword}{const} \textcolor{keywordtype}{float} pi = 3.14159f;
+229     \textcolor{keywordflow}{return} (deg / 180) * pi;    
+230 \}\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_afae84f57a3834dfb1d87bd5a88881644_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Matrix\+Multiply@{Matrix\+Multiply}}
+\index{Matrix\+Multiply@{Matrix\+Multiply}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Matrix\+Multiply}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Matrix\+Multiply (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{m\+In}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\label{class_c3_d_matrix_a18ddf10baddcd11af2143b1b734c859f}
+
+\begin{DoxyCode}
+96 \{
+97     C3DMatrix::Matrix mat\_temp;
+98 
+99 
+100   \textcolor{comment}{//firstrow}
+101   mat\_temp._11 = (m_Matrix._11*mIn.\_11) + (m_Matrix._12*mIn.\_21) + (m_Matrix._13*mIn.\_31) + (
+      m_Matrix._14*mIn.\_41);
+102   mat\_temp._12 = (m_Matrix._11*mIn.\_12) + (m_Matrix._12*mIn.\_22) + (m_Matrix._13*mIn.\_32) + (
+      m_Matrix._14*mIn.\_42);
+103   mat\_temp._13 = (m_Matrix._11*mIn.\_13) + (m_Matrix._12*mIn.\_23) + (m_Matrix._13*mIn.\_33) + (
+      m_Matrix._14*mIn.\_43);
+104   mat\_temp._14 = (m_Matrix._11*mIn.\_14) + (m_Matrix._12*mIn.\_24) + (m_Matrix._13*mIn.\_34) + (
+      m_Matrix._14*mIn.\_44);
+105 
+106   \textcolor{comment}{//second}
+107   mat\_temp._21 = (m_Matrix._21*mIn.\_11) + (m_Matrix._22*mIn.\_21) + (m_Matrix._23*mIn.\_31) + (
+      m_Matrix._24*mIn.\_41);
+108   mat\_temp._22 = (m_Matrix._21*mIn.\_12) + (m_Matrix._22*mIn.\_22) + (m_Matrix._23*mIn.\_32) + (
+      m_Matrix._24*mIn.\_42);
+109   mat\_temp._23 = (m_Matrix._21*mIn.\_13) + (m_Matrix._22*mIn.\_23) + (m_Matrix._23*mIn.\_33) + (
+      m_Matrix._24*mIn.\_43);
+110   mat\_temp._24 = (m_Matrix._21*mIn.\_14) + (m_Matrix._22*mIn.\_24) + (m_Matrix._23*mIn.\_34) + (
+      m_Matrix._24*mIn.\_44);
+111 
+112   \textcolor{comment}{//third}
+113   mat\_temp._31 = (m_Matrix._31*mIn.\_11) + (m_Matrix._32*mIn.\_21) + (m_Matrix._33*mIn.\_31) + (
+      m_Matrix._34*mIn.\_41);
+114   mat\_temp._32 = (m_Matrix._31*mIn.\_12) + (m_Matrix._32*mIn.\_22) + (m_Matrix._33*mIn.\_32) + (
+      m_Matrix._34*mIn.\_42);
+115   mat\_temp._33 = (m_Matrix._31*mIn.\_13) + (m_Matrix._32*mIn.\_23) + (m_Matrix._33*mIn.\_33) + (
+      m_Matrix._34*mIn.\_43);
+116   mat\_temp._34 = (m_Matrix._31*mIn.\_14) + (m_Matrix._32*mIn.\_24) + (m_Matrix._33*mIn.\_34) + (
+      m_Matrix._34*mIn.\_44);
+117 
+118   \textcolor{comment}{//forth}
+119   mat\_temp._41 = (m_Matrix._41*mIn.\_11) + (m_Matrix._42*mIn.\_21) + (m_Matrix._43*mIn.\_31) + (
+      m_Matrix._44*mIn.\_41);
+120   mat\_temp._42 = (m_Matrix._41*mIn.\_12) + (m_Matrix._42*mIn.\_22) + (m_Matrix._43*mIn.\_32) + (
+      m_Matrix._44*mIn.\_42);
+121   mat\_temp._43 = (m_Matrix._41*mIn.\_13) + (m_Matrix._42*mIn.\_23) + (m_Matrix._43*mIn.\_33) + (
+      m_Matrix._44*mIn.\_43);
+122   mat\_temp._44 = (m_Matrix._41*mIn.\_14) + (m_Matrix._42*mIn.\_24) + (m_Matrix._43*mIn.\_34) + (
+      m_Matrix._44*mIn.\_44);
+123 
+124   m_Matrix = mat\_temp;
+125 
+126 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d7f/class_c3_d_matrix_a18ddf10baddcd11af2143b1b734c859f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!Transform\+Vector3\+D@{Transform\+Vector3\+D}}
+\index{Transform\+Vector3\+D@{Transform\+Vector3\+D}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{Transform\+Vector3\+D}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} C3\+D\+Matrix\+::\+Transform\+Vector3\+D (
+\begin{DoxyParamCaption}
+\item[{{\bf Vec3} \&}]{Vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c3_d_matrix_aa1913cf0c0edd307f72f67bba050f0f4}
+
+\begin{DoxyCode}
+215 \{
+216     \textcolor{keywordtype}{double} tempX = (m_Matrix._11 * Vec.getX() ) + (m_Matrix._12 * Vec.getY()) + (
+      m_Matrix._13 * Vec.getZ()) + (m_Matrix._14 * 0);
+217     \textcolor{keywordtype}{double} tempY = (m_Matrix._21 * Vec.getX() ) + (m_Matrix._22 * Vec.getY()) + (
+      m_Matrix._23 * Vec.getZ()) + (m_Matrix._24 * 0);
+218     \textcolor{keywordtype}{double} tempZ = (m_Matrix._31 * Vec.getX() ) + (m_Matrix._32 * Vec.getY()) + (
+      m_Matrix._33 * Vec.getZ()) + (m_Matrix._34 * 0);
+219 
+220     
+221     Vec.setX(tempX);
+222     Vec.setY(tempY);
+223     Vec.setZ(tempZ);
+224 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{d7/d7f/class_c3_d_matrix_aa1913cf0c0edd307f72f67bba050f0f4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{C3\+D\+Matrix@{C3\+D\+Matrix}!m\+\_\+\+Matrix@{m\+\_\+\+Matrix}}
+\index{m\+\_\+\+Matrix@{m\+\_\+\+Matrix}!C3\+D\+Matrix@{C3\+D\+Matrix}}
+\subsubsection[{m\+\_\+\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} C3\+D\+Matrix\+::m\+\_\+\+Matrix\hspace{0.3cm}{\ttfamily [private]}}\label{class_c3_d_matrix_a1fd424471816d06c41f85885db7f36b9}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf 3\+D\+Matrix\+Transform.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="ResourceManager::addCubeTexture" name="ResourceManager::addCubeTexture">
+<area shape="rect" id="node2" href="$db/ddf/class_texture_manager.html#abab38cdb8503fde6288cb07330c10dc6" title="Gets the instance of the texture manager. " alt="" coords="263,5,435,32"/>
+<area shape="rect" id="node3" href="$db/ddf/class_texture_manager.html#a9eed0a527feeba21e377fdcb0852c85a" title="TextureManager::addCubeTexture" alt="" coords="240,56,457,83"/>
+<area shape="rect" id="node4" href="$dc/dd2/glext_8h.html#a2f0c8cd5c21f9fcbd931c3f48bc90dfc" title="GLuint" alt="" coords="789,31,849,57"/>
+<area shape="rect" id="node5" href="$db/ddf/class_texture_manager.html#a59c6885c0bd41f478442791f63e3ba22" title="TextureManager::loadCube" alt="" coords="505,81,683,108"/>
+<area shape="rect" id="node6" href="$d2/d93/_s_o_i_l_8h.html#af7696abc4c7a08046d134b9298f56912" title="SOIL_load_OGL_cubemap" alt="" coords="731,81,907,108"/>
+</map>

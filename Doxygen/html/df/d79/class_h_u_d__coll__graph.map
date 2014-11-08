@@ -1,0 +1,11 @@
+<map id="HUD" name="HUD">
+<area shape="rect" id="node2" href="$d2/da6/class_i___drawable_object.html" title="{I_DrawableObject\n||+ Draw()\l+ SetBufferRef()\l+ Destory()\l}" alt="" coords="5,277,128,384"/>
+<area shape="rect" id="node3" href="$d6/d57/class_id_generator.html" title="{IdGenerator\n|&#45; ID\l|+ GetID()\l+ Instance()\l&#45; IdGenerator()\l&#45; ~IdGenerator()\l}" alt="" coords="153,270,266,391"/>
+<area shape="rect" id="node4" href="$da/d3d/class_rendering_engine.html" title="{RenderingEngine\n||+ CreateRenderAPI()\l+ GetRenderHandle()\l+ GetCamera()\l+ AddRefToBuffer()\l+ EraseRefFromBuffer()\l+ RenderOverlay()\l+ DrawModel()\l+ DrawModel()\l+ Instance()\l&#45; RenderingEngine()\l&#45; ~RenderingEngine()\l}" alt="" coords="290,219,449,443"/>
+<area shape="rect" id="node5" href="$d4/dd3/class_i___graphic.html" title="{I_Graphic\n||+ ~I_Graphic()\l}" alt="" coords="167,42,273,119"/>
+<area shape="rect" id="node6" href="$de/d2a/class_redering_factory.html" title="Create the Rendering APi. " alt="" coords="297,27,442,134"/>
+<area shape="rect" id="node8" href="$df/d9e/struct_human_values.html" title="Human Values struct, used in the Personality class as the main structure for the needs system..." alt="" coords="553,292,693,369"/>
+<area shape="rect" id="node9" href="$de/d7c/struct_physical.html" title="internal HV struct Physical " alt="" coords="466,13,553,149"/>
+<area shape="rect" id="node10" href="$d7/d40/struct_vital.html" title="internal HV struct Vital " alt="" coords="577,13,671,149"/>
+<area shape="rect" id="node11" href="$d8/d7a/struct_mental.html" title="internal HV struct Mental " alt="" coords="695,5,782,156"/>
+</map>

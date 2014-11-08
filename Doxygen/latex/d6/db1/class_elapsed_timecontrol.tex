@@ -1,0 +1,117 @@
+\section{Elapsed\+Timecontrol Class Reference}
+\label{class_elapsed_timecontrol}\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+
+
+{\ttfamily \#include $<$Timer\+Class.\+h$>$}
+
+
+
+Collaboration diagram for Elapsed\+Timecontrol\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{d1/d11/class_elapsed_timecontrol__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf Get\+Elapsed\+Time} () const 
+\item 
+float {\bf Get\+Current\+Timef} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Elapsed\+Timecontrol} $\ast$ {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Elapsed\+Timecontrol} (float max\+Time\+Step)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf m\+\_\+f\+Max\+Time\+Step}
+\item 
+float {\bf m\+\_\+f\+Previous}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}!Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}!Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+\subsubsection[{Elapsed\+Timecontrol}]{\setlength{\rightskip}{0pt plus 5cm}Elapsed\+Timecontrol\+::\+Elapsed\+Timecontrol (
+\begin{DoxyParamCaption}
+\item[{float}]{max\+Time\+Step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_elapsed_timecontrol_a5a4ffbc0fa4910db9b013f5cca1a0106}
+
+\begin{DoxyCode}
+6 \{
+7     m_fMaxTimeStep = maxTimeStep;
+8     m_fPrevious = clock()/(float)CLOCKS\_PER\_SEC;
+9 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}!Get\+Current\+Timef@{Get\+Current\+Timef}}
+\index{Get\+Current\+Timef@{Get\+Current\+Timef}!Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+\subsubsection[{Get\+Current\+Timef}]{\setlength{\rightskip}{0pt plus 5cm}float Elapsed\+Timecontrol\+::\+Get\+Current\+Timef (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_elapsed_timecontrol_af65643910491911b6dabc1bf505a7760}
+
+\begin{DoxyCode}
+28 \{
+29     \textcolor{keywordflow}{return} clock()/(float)CLOCKS\_PER\_SEC;
+30 \}\end{DoxyCode}
+\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}!Get\+Elapsed\+Time@{Get\+Elapsed\+Time}}
+\index{Get\+Elapsed\+Time@{Get\+Elapsed\+Time}!Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+\subsubsection[{Get\+Elapsed\+Time}]{\setlength{\rightskip}{0pt plus 5cm}float Elapsed\+Timecontrol\+::\+Get\+Elapsed\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_elapsed_timecontrol_a22ff7cac2ebc7c1e2ca2a40ef11e6797}
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{keywordtype}{float} fCurrentTime = clock()/(float)CLOCKS\_PER\_SEC;
+21     \textcolor{keywordtype}{float} fDeltaTime = fCurrentTime - m_fPrevious;
+22     m\_fPrevious = fCurrentTime;
+23     fDeltaTime = std::min(fDeltaTime, m_fMaxTimeStep);
+24     \textcolor{keywordflow}{return} fDeltaTime;
+25 \}
+\end{DoxyCode}
+\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}!Instance@{Instance}}
+\index{Instance@{Instance}!Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+\subsubsection[{Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Elapsed\+Timecontrol} $\ast$ Elapsed\+Timecontrol\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_elapsed_timecontrol_a0d6e240966e256ccbbf064a0f2268955}
+
+\begin{DoxyCode}
+13 \{
+14     \textcolor{keyword}{static} ElapsedTimecontrol Instance(0.33333f);
+15     \textcolor{keywordflow}{return} &Instance;
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}!m\+\_\+f\+Max\+Time\+Step@{m\+\_\+f\+Max\+Time\+Step}}
+\index{m\+\_\+f\+Max\+Time\+Step@{m\+\_\+f\+Max\+Time\+Step}!Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+\subsubsection[{m\+\_\+f\+Max\+Time\+Step}]{\setlength{\rightskip}{0pt plus 5cm}float Elapsed\+Timecontrol\+::m\+\_\+f\+Max\+Time\+Step\hspace{0.3cm}{\ttfamily [private]}}\label{class_elapsed_timecontrol_a9148ff335b4ed930cc815e8fcc5c387d}
+\index{Elapsed\+Timecontrol@{Elapsed\+Timecontrol}!m\+\_\+f\+Previous@{m\+\_\+f\+Previous}}
+\index{m\+\_\+f\+Previous@{m\+\_\+f\+Previous}!Elapsed\+Timecontrol@{Elapsed\+Timecontrol}}
+\subsubsection[{m\+\_\+f\+Previous}]{\setlength{\rightskip}{0pt plus 5cm}float Elapsed\+Timecontrol\+::m\+\_\+f\+Previous\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}\label{class_elapsed_timecontrol_af65fb08776e737ccd3f8adcaccb1185a}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Timer\+Class.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Timer\+Class.\+cpp}\end{DoxyCompactItemize}

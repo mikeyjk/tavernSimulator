@@ -1,0 +1,7 @@
+<map id="TextureManager::loadCube" name="TextureManager::loadCube">
+<area shape="rect" id="node2" href="$db/ddf/class_texture_manager.html#a9eed0a527feeba21e377fdcb0852c85a" title="TextureManager::addCubeTexture" alt="" coords="231,13,448,39"/>
+<area shape="rect" id="node3" href="$d1/da9/class_resource_manager.html#a964b3b09b06de305cd289700a1cc200b" title="ResourceManager::addCube\lTexture" alt="" coords="496,5,683,47"/>
+<area shape="rect" id="node4" href="$da/da9/class_game_engine.html#a6ac03e07bd33b978dda30e0ad2a95c0e" title="GameEngine::loadAssets" alt="" coords="731,13,901,39"/>
+<area shape="rect" id="node5" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="949,13,1080,39"/>
+<area shape="rect" id="node6" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1128,13,1179,39"/>
+</map>

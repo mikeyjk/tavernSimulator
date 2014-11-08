@@ -1,0 +1,282 @@
+\section{Menu\+Component Class Reference}
+\label{class_menu_component}\index{Menu\+Component@{Menu\+Component}}
+
+
+The \doxyref{Menu\+Component}{p.}{d6/dee/class_menu_component} class is a parent class for components like buttons and panels.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+Component.\+h$>$}
+
+
+
+Inheritance diagram for Menu\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{d9/d2c/class_menu_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Menu\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{de/dec/class_menu_component__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Menu\+Component} ()
+\begin{DoxyCompactList}\small\item\em structure function \end{DoxyCompactList}\item 
+{\bf Menu\+Component} (float {\bf x}, float {\bf y}, float {\bf w}, float {\bf h}, {\bf string} {\bf t})
+\begin{DoxyCompactList}\small\item\em structure function \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em virtual draw function \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf check\+Pressed\+Button} (float {\bf x}, float {\bf y})
+\begin{DoxyCompactList}\small\item\em check\+Pressed\+Button function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Texture} ({\bf string} {\bf t})
+\begin{DoxyCompactList}\small\item\em set the texture of the component \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf string} {\bf texture}
+\begin{DoxyCompactList}\small\item\em name of the texture \end{DoxyCompactList}\item 
+float {\bf size\+W}
+\begin{DoxyCompactList}\small\item\em width \end{DoxyCompactList}\item 
+float {\bf size\+H}
+\begin{DoxyCompactList}\small\item\em height \end{DoxyCompactList}\item 
+float {\bf pos\+X}
+\begin{DoxyCompactList}\small\item\em position x \end{DoxyCompactList}\item 
+float {\bf pos\+Y}
+\begin{DoxyCompactList}\small\item\em position y \end{DoxyCompactList}\item 
+unsigned int {\bf m\+\_\+object\+I\+D}
+\begin{DoxyCompactList}\small\item\em id for rendering engine for drawing \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \doxyref{Menu\+Component}{p.}{d6/dee/class_menu_component} class is a parent class for components like buttons and panels. 
+
+\begin{DoxyAuthor}{Author}
+Fang Xiang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+026/05/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Menu\+Component@{Menu\+Component}!Menu\+Component@{Menu\+Component}}
+\index{Menu\+Component@{Menu\+Component}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{Menu\+Component}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+Component\+::\+Menu\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_menu_component_a08d5630b09372eb586da7d9085ee7342}
+
+
+structure function 
+
+
+\begin{DoxyCode}
+6 \{
+7     posY = 0;
+8     posX = 0;
+9     sizeW = 0;
+10     sizeH = 0;
+11     texture = \textcolor{stringliteral}{""};
+12 \}
+\end{DoxyCode}
+\index{Menu\+Component@{Menu\+Component}!Menu\+Component@{Menu\+Component}}
+\index{Menu\+Component@{Menu\+Component}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{Menu\+Component}]{\setlength{\rightskip}{0pt plus 5cm}Menu\+Component\+::\+Menu\+Component (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{w, }
+\item[{float}]{h, }
+\item[{{\bf string}}]{t}
+\end{DoxyParamCaption}
+)}\label{class_menu_component_aebf2951ed38b91b0f3531cc2b1119e5c}
+
+
+structure function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ position x \\
+\hline
+{\em y} & -\/ position y \\
+\hline
+{\em w} & -\/ width \\
+\hline
+{\em y} & -\/ height \\
+\hline
+{\em t} & -\/ texture name \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+15 \{
+16     posY = y;
+17     posX = x;
+18     sizeW = w;
+19     sizeH = h;
+20     texture = t;
+21 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Menu\+Component@{Menu\+Component}!check\+Pressed\+Button@{check\+Pressed\+Button}}
+\index{check\+Pressed\+Button@{check\+Pressed\+Button}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{check\+Pressed\+Button}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Menu\+Component\+::check\+Pressed\+Button (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_menu_component_a1abca66a179b539e69fcb1e78418fc63}
+
+
+check\+Pressed\+Button function 
+
+virtual function for check if buttons are pressed; 
+\begin{DoxyParams}{Parameters}
+{\em x,y} & -\/ mouse position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in {\bf Menu\+Button} \doxyref{}{p.}{d1/d1b/class_menu_button_a19617cf1c1bcea87b1e5a1edd0900674}, and {\bf Menu\+Container} \doxyref{}{p.}{d8/d38/class_menu_container_ad4e3c4ccf44c2a7f6674cc30787fcda4}.
+
+
+\begin{DoxyCode}
+47 \{\};
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dee/class_menu_component_a1abca66a179b539e69fcb1e78418fc63_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Component@{Menu\+Component}!Draw@{Draw}}
+\index{Draw@{Draw}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf void} Menu\+Component\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_menu_component_ad572f0e556e76f1ce068ab8118f322bd}
+
+
+virtual draw function 
+
+
+
+Reimplemented in {\bf Menu\+Button} \doxyref{}{p.}{d1/d1b/class_menu_button_aac414152e785dbc256aa307b23792143}, and {\bf Menu\+Container} \doxyref{}{p.}{d8/d38/class_menu_container_a547bf602682b16ef0d0d92e8f45cd2df}.
+
+
+\begin{DoxyCode}
+39 \{\};
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d6/dee/class_menu_component_ad572f0e556e76f1ce068ab8118f322bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Menu\+Component@{Menu\+Component}!set\+Texture@{set\+Texture}}
+\index{set\+Texture@{set\+Texture}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{set\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} Menu\+Component\+::set\+Texture (
+\begin{DoxyParamCaption}
+\item[{{\bf string}}]{t}
+\end{DoxyParamCaption}
+)}\label{class_menu_component_a727ba64650baab21b39e0eb2bcf5897a}
+
+
+set the texture of the component 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & -\/ the texture \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+24 \{
+25     texture = t;
+26 \}\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dee/class_menu_component_a727ba64650baab21b39e0eb2bcf5897a_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{Menu\+Component@{Menu\+Component}!m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}}
+\index{m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{m\+\_\+object\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Menu\+Component\+::m\+\_\+object\+I\+D\hspace{0.3cm}{\ttfamily [protected]}}\label{class_menu_component_a6348e8bca843859f9fbbf38b145527ad}
+
+
+id for rendering engine for drawing 
+
+\index{Menu\+Component@{Menu\+Component}!pos\+X@{pos\+X}}
+\index{pos\+X@{pos\+X}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{pos\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Menu\+Component\+::pos\+X\hspace{0.3cm}{\ttfamily [protected]}}\label{class_menu_component_a43a5ec3b06793579753d4f11a3cb2e34}
+
+
+position x 
+
+\index{Menu\+Component@{Menu\+Component}!pos\+Y@{pos\+Y}}
+\index{pos\+Y@{pos\+Y}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{pos\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Menu\+Component\+::pos\+Y\hspace{0.3cm}{\ttfamily [protected]}}\label{class_menu_component_aa72dc84d2eb9b7eff2c9c10c2d0196b9}
+
+
+position y 
+
+\index{Menu\+Component@{Menu\+Component}!size\+H@{size\+H}}
+\index{size\+H@{size\+H}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{size\+H}]{\setlength{\rightskip}{0pt plus 5cm}float Menu\+Component\+::size\+H\hspace{0.3cm}{\ttfamily [protected]}}\label{class_menu_component_a3666e3aab7dc33ee35826bdf9afa853b}
+
+
+height 
+
+\index{Menu\+Component@{Menu\+Component}!size\+W@{size\+W}}
+\index{size\+W@{size\+W}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{size\+W}]{\setlength{\rightskip}{0pt plus 5cm}float Menu\+Component\+::size\+W\hspace{0.3cm}{\ttfamily [protected]}}\label{class_menu_component_a6898521b4cfd0c20d7120a06c9fd7565}
+
+
+width 
+
+\index{Menu\+Component@{Menu\+Component}!texture@{texture}}
+\index{texture@{texture}!Menu\+Component@{Menu\+Component}}
+\subsubsection[{texture}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} Menu\+Component\+::texture\hspace{0.3cm}{\ttfamily [protected]}}\label{class_menu_component_aa202197c75c5ee3469087bf29d54448c}
+
+
+name of the texture 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+Component.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf Menu\+Component.\+cpp}\end{DoxyCompactItemize}

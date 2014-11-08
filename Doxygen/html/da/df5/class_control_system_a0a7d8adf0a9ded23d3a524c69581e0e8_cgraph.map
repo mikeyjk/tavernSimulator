@@ -1,0 +1,25 @@
+<map id="ControlSystem::Update" name="ControlSystem::Update">
+<area shape="rect" id="node2" href="$d7/d05/class_h_u_d.html#ac2c0a66d421017c2bc6081ca63f27106" title="HUD::getSplash" alt="" coords="263,5,378,32"/>
+<area shape="rect" id="node3" href="$df/dcb/class_menu_system.html#ac02b4d58d088becdce4646d2bfe50c60" title="switchMenu function " alt="" coords="233,107,409,133"/>
+<area shape="rect" id="node4" href="$df/dcb/class_menu_system.html#a09f1f4a0afa29c4b700769ebdf52fabf" title="Instance function. " alt="" coords="506,107,662,133"/>
+<area shape="rect" id="node8" href="$d3/d7b/class_input_engine.html#a1f67c167338a95cfdffb01fabf28eb92" title="Instance. " alt="" coords="247,325,394,352"/>
+<area shape="rect" id="node9" href="$d3/d7b/class_input_engine.html#a7a44d8397064f560cdb8134e76beb3ba" title="InputEngine::switchFixed\lMouse" alt="" coords="237,377,404,418"/>
+<area shape="rect" id="node11" href="$d7/d05/class_h_u_d.html#af30c1242917045b41e61d97a03874624" title="HUD::setExit" alt="" coords="271,443,370,469"/>
+<area shape="rect" id="node12" href="$d7/d05/class_h_u_d.html#a4256136a25e54f3ec82c83b527f15ca5" title="HUD::getExit" alt="" coords="271,493,370,520"/>
+<area shape="rect" id="node13" href="$df/dcb/class_menu_system.html#a30270e90b287383f421c04e45b324718" title="MenuDisplay function. " alt="" coords="229,544,412,571"/>
+<area shape="rect" id="node14" href="$df/dcb/class_menu_system.html#a5bfa8050e2a7d8c4a992ebc3c5c57472" title="openMenu function " alt="" coords="237,157,404,184"/>
+<area shape="rect" id="node15" href="$d5/d43/class_physic_engine.html#a4c6f86eea01ee51a782ad48fcbc7eba1" title="Singleton. " alt="" coords="241,595,400,621"/>
+<area shape="rect" id="node16" href="$d5/d43/class_physic_engine.html#a5ea97f3f6cc1305bce8de50b4c20a0a4" title="switchRenderMode " alt="" coords="211,645,431,672"/>
+<area shape="rect" id="node17" href="$df/dcb/class_menu_system.html#a00f6c94cdc0b2c4a1755570a0473638e" title="checkPressedButton function " alt="" coords="225,209,416,250"/>
+<area shape="rect" id="node20" href="$df/dcb/class_menu_system.html#ae898363ac4d57515581d42c132fc3bdd" title="unpressButton function " alt="" coords="225,275,416,301"/>
+<area shape="rect" id="node24" href="$d7/d05/class_h_u_d.html#a429b2533b08b5aef939c7fbb38aed4b5" title="HUD::turnOffSplash" alt="" coords="253,696,388,723"/>
+<area shape="rect" id="node5" href="$df/dcb/class_menu_system.html#ad3eaf9c3c98d39f1211aa2db8b7d3728" title="MenuSystem::MenuSystem" alt="" coords="740,107,924,133"/>
+<area shape="rect" id="node6" href="$d6/d57/class_id_generator.html#a0ae3ff56ccfa23f1471a07b02eb07804" title="IdGenerator::Instance" alt="" coords="975,81,1121,108"/>
+<area shape="rect" id="node7" href="$d6/d57/class_id_generator.html#a22d48faaa3b7aa4ad76bce6db737f84a" title="IdGenerator::GetID" alt="" coords="983,132,1113,159"/>
+<area shape="rect" id="node10" href="$d7/d1c/freeglut__std_8h.html#a95949b291c9c776c3462107d33c3cd95" title="glutSetCursor" alt="" coords="533,384,635,411"/>
+<area shape="rect" id="node18" href="$d7/d1c/freeglut__std_8h.html#a74f7774cc8619e5cce6f39cf629c5683" title="glutGet" alt="" coords="552,224,616,251"/>
+<area shape="rect" id="node19" href="$d6/dee/class_menu_component.html#a1abca66a179b539e69fcb1e78418fc63" title="checkPressedButton function " alt="" coords="479,158,689,199"/>
+<area shape="rect" id="node21" href="$d1/d1b/class_menu_button.html#ac4b6c137f1b64c7728a320ee8df9e8cc" title="popUp function " alt="" coords="515,275,653,301"/>
+<area shape="rect" id="node23" href="$d1/d1b/class_menu_button.html#a448bfa95f4b6750275b466bdc75f84c9" title="Active function. " alt="" coords="517,325,651,352"/>
+<area shape="rect" id="node22" href="$d6/dee/class_menu_component.html#a727ba64650baab21b39e0eb2bcf5897a" title="set the texture of the component " alt="" coords="737,275,927,301"/>
+</map>

@@ -1,0 +1,40 @@
+<map id="Vec3::getZ" name="Vec3::getZ">
+<area shape="rect" id="node2" href="$d7/d7f/class_c3_d_matrix.html#aa1913cf0c0edd307f72f67bba050f0f4" title="C3DMatrix::TransformVector3D" alt="" coords="139,5,341,32"/>
+<area shape="rect" id="node3" href="$da/dbb/class_camera.html#a20b5fe8c98508c6e251604497400622e" title="Camera::UpdateRotation" alt="" coords="641,791,805,817"/>
+<area shape="rect" id="node5" href="$d7/da7/class_character.html#a495652bce60ee4c5557cfb250b814d75" title="Update. " alt="" coords="1068,867,1195,893"/>
+<area shape="rect" id="node8" href="$da/dbb/class_camera.html#a1296c75191df3e155323844313844b58" title="Camera::RotateYaw3rd" alt="" coords="861,411,1017,437"/>
+<area shape="rect" id="node9" href="$d0/dd1/class_game_object.html#a77b518b7c9e56349111fac5b01087efc" title="GameObject Constructor. " alt="" coords="635,284,811,311"/>
+<area shape="rect" id="node10" href="$da/d9a/class_graph.html#ae9a1ab84d7be4cc2e8624ea9901249cb" title="Adds a waypoint to the list of waypoints. " alt="" coords="169,259,311,285"/>
+<area shape="rect" id="node11" href="$d8/dbf/class_light_engine.html#ac57d11e61b9fedf8f801af149e4976bd" title="createLight " alt="" coords="159,107,321,133"/>
+<area shape="rect" id="node15" href="$d3/d3a/class_model_manager.html#a95cf305712d097d0ff9cb96a2b71f9cd" title="Adds a model to the model manager by the file&#39;s path, which will become known to the model manager by..." alt="" coords="155,208,325,235"/>
+<area shape="rect" id="node17" href="$d3/d3a/class_model_manager.html#a5da488f1d7e4038152d357496fd5282b" title="Draws a model to the screen with a specified texture and translates it by a specified amount..." alt="" coords="169,360,311,387"/>
+<area shape="rect" id="node20" href="$d8/d24/class_open_g_l.html#a6414a41910efb2e9942089dfb24b928d" title="Reset OpenGL look at function. " alt="" coords="163,56,317,83"/>
+<area shape="rect" id="node23" href="$d8/d24/class_open_g_l.html#a880a46133c57ededdcda769e84e46757" title="OpenGL::DrawSkyBox" alt="" coords="163,512,317,539"/>
+<area shape="rect" id="node24" href="$df/d0c/class_pathfinder.html#aa3444fbf5c27dba89810319547eef766" title="Find the best path from current position to target position. " alt="" coords="170,563,310,589"/>
+<area shape="rect" id="node25" href="$dc/de3/class_quaternion.html#a148788b151595ab4fd00713b23c3dd1a" title="Quaternion::Quaternion" alt="" coords="162,613,318,640"/>
+<area shape="rect" id="node26" href="$dc/de3/class_quaternion.html#a13d33b343567f992208ac9ae0b3630f0" title="Quaternion::mult" alt="" coords="181,664,299,691"/>
+<area shape="rect" id="node27" href="$df/d24/class_vec3.html#a8f1919faffa42fa73ee72d8f321402d2" title="dot Product function " alt="" coords="435,588,541,615"/>
+<area shape="rect" id="node28" href="$df/d24/class_vec3.html#abc6e5cfcbbfb6b3f0948382375c5f858" title="cross product function " alt="" coords="441,867,535,893"/>
+<area shape="rect" id="node30" href="$df/d24/class_vec3.html#a83f735a0f3fb84e34b3225801cfc1df8" title="Length function. " alt="" coords="193,765,287,792"/>
+<area shape="rect" id="node31" href="$df/d24/class_vec3.html#addb4fc8b8f3a27a0b95d0a07fbb98a7a" title="Normalize function. " alt="" coords="430,765,546,792"/>
+<area shape="rect" id="node32" href="$df/d24/class_vec3.html#ab9f4d9c5b5376161994482e86c8c3e65" title="operator+ override " alt="" coords="183,917,297,944"/>
+<area shape="rect" id="node33" href="$df/d24/class_vec3.html#a4ab007ea472c5fbd5725fb75d4b1a9d4" title="operator&#45; override " alt="" coords="185,968,295,995"/>
+<area shape="rect" id="node34" href="$df/d24/class_vec3.html#a4e71bab6fb3520b76092b5bb69c1af27" title="operator* override " alt="" coords="184,1019,296,1045"/>
+<area shape="rect" id="node35" href="$df/d24/class_vec3.html#ae00f8cc5d27c669565c2c3723d569f60" title="operator= override " alt="" coords="183,1069,297,1096"/>
+<area shape="rect" id="node36" href="$df/d24/class_vec3.html#ac6b1a7155241bb07c4436ce9b63a4c40" title="operator+= override " alt="" coords="179,1120,301,1147"/>
+<area shape="rect" id="node37" href="$df/d24/class_vec3.html#ab6e2e4f4fbe07e0de3701677ce669b58" title="operator&#45;= override " alt="" coords="181,1171,299,1197"/>
+<area shape="rect" id="node38" href="$df/d24/class_vec3.html#a70306b3b5637afe23b63b7c7eb09cb6a" title="operator== override " alt="" coords="179,1221,301,1248"/>
+<area shape="rect" id="node39" href="$df/d24/class_vec3.html#a50f693e3bfd8ed139309b5aebd78bc73" title="Vec3::rotateByPoint" alt="" coords="653,208,792,235"/>
+<area shape="rect" id="node4" href="$da/dbb/class_camera.html#ab14bf413828e51f5685b0001c4247f88" title="This function will rotate the Camera by Yaw. " alt="" coords="870,765,1009,792"/>
+<area shape="rect" id="node6" href="$da/dbb/class_camera.html#a8491685022f64ab54b477a45026c40d3" title="This function will rotate the Camera by Pitch. " alt="" coords="868,816,1011,843"/>
+<area shape="rect" id="node7" href="$da/dbb/class_camera.html#a873b77f84501fbdf055e6b70e42ffd9e" title="Camera::RotatePitch3rd" alt="" coords="859,867,1020,893"/>
+<area shape="rect" id="node12" href="$d8/dbf/class_light_engine.html#afb39bf63c48320ff39eabd095fbd9b3e" title="Initialise. " alt="" coords="650,107,795,133"/>
+<area shape="rect" id="node13" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="874,81,1005,108"/>
+<area shape="rect" id="node14" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1106,81,1157,108"/>
+<area shape="rect" id="node16" href="$d1/da9/class_resource_manager.html#a4d02fa64d47f63cc3613e8fcc922c168" title="Adds a model to the model manager by the file&#39;s path, which will become known to the model manager by..." alt="" coords="393,233,583,260"/>
+<area shape="rect" id="node18" href="$d1/da9/class_resource_manager.html#ab9310e278d9a01869b3309b17d87e09b" title="Draws a model to the screen. " alt="" coords="389,360,587,387"/>
+<area shape="rect" id="node19" href="$d8/d24/class_open_g_l.html#a84785ff8362f9fe8b2fafba5116f81e1" title="Draw Model. " alt="" coords="651,360,794,387"/>
+<area shape="rect" id="node21" href="$d8/d24/class_open_g_l.html#a06c54c33292c0e23b3b8b4f876837cb4" title="Update every frame. " alt="" coords="429,56,547,83"/>
+<area shape="rect" id="node22" href="$d8/d24/class_open_g_l.html#a082a48312c8032be282b49a9d6d7b5cc" title="Initialization OpenGL. " alt="" coords="675,56,770,83"/>
+<area shape="rect" id="node29" href="$da/dbb/class_camera.html#a2b84f2cf9643be746323e37cfd900909" title="This function will Get the side vector of Camera. " alt="" coords="661,867,784,893"/>
+</map>

@@ -1,0 +1,31 @@
+<map id="RenderingEngine::GetRenderHandle" name="RenderingEngine::GetRenderHandle">
+<area shape="rect" id="node2" href="$d7/da7/class_character.html#adc64dd2ccc01050e59e3ebe3f37c7be2" title="i_DrawableObject Destroy " alt="" coords="272,5,403,32"/>
+<area shape="rect" id="node4" href="$d7/da7/class_character.html#af0b9eefe47647ce706a7d2bda31a515b" title="i_DrawableObject SetBufferRef " alt="" coords="258,56,417,83"/>
+<area shape="rect" id="node6" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="909,385,1040,412"/>
+<area shape="rect" id="node8" href="$db/d0b/class_geometry.html#a3efb7bdf562dcef8d2766c7b12ab5fc1" title="i_DrawableObject Destroy " alt="" coords="271,157,403,184"/>
+<area shape="rect" id="node9" href="$db/d0b/class_geometry.html#a6d04090067816eb17bc4076e3b361237" title="i_DrawableObject SetBufferRef " alt="" coords="258,208,417,235"/>
+<area shape="rect" id="node10" href="$d7/d05/class_h_u_d.html#a3b5d3e30acab1d2b9b2561bfa15c8396" title="I_DrawableObject Destroy function. " alt="" coords="286,259,389,285"/>
+<area shape="rect" id="node12" href="$d7/d05/class_h_u_d.html#a3108f898ea1cb5be13935d310b608072" title="I_DrawableObject Draw function. " alt="" coords="294,309,381,336"/>
+<area shape="rect" id="node13" href="$d7/d05/class_h_u_d.html#a6af94ce6a85c9e2a7dca86b015c9cb59" title="HUD::DrawSplash" alt="" coords="274,360,401,387"/>
+<area shape="rect" id="node16" href="$d7/d05/class_h_u_d.html#aff2cb95ec753a26bd7930127125928f3" title="I_DrawableObject SetBufferRef function. " alt="" coords="503,411,633,437"/>
+<area shape="rect" id="node18" href="$d1/d1b/class_menu_button.html#aac414152e785dbc256aa307b23792143" title="draw function inherit from menu component " alt="" coords="273,461,402,488"/>
+<area shape="rect" id="node19" href="$d8/d38/class_menu_container.html#a547bf602682b16ef0d0d92e8f45cd2df" title="draw function inherit from menu component " alt="" coords="264,512,411,539"/>
+<area shape="rect" id="node20" href="$df/dcb/class_menu_system.html#a005626d2bbb489e6c8e30363c4c9ca42" title="SetBufferRef function. " alt="" coords="479,537,657,564"/>
+<area shape="rect" id="node22" href="$df/dcb/class_menu_system.html#a89cf703dadae35504f3f2a3a37bdd74c" title="Destory function. " alt="" coords="261,613,413,640"/>
+<area shape="rect" id="node23" href="$d0/d2a/class_n_p_c.html#a4f7afe3bfedfbbfafe43b7b7cb36dfe1" title="i_DrawableObject Destroy " alt="" coords="286,664,389,691"/>
+<area shape="rect" id="node25" href="$d0/d2a/class_n_p_c.html#a20e0f185219efbae958bf994d56ebf3f" title="i_DrawableObject SetBufferRef " alt="" coords="273,715,402,741"/>
+<area shape="rect" id="node27" href="$de/dda/class_sky_box.html#a96695f89ed3843655b826467cf93b375" title="SkyBox::UpdateSkyBoxPos" alt="" coords="244,765,431,792"/>
+<area shape="rect" id="node28" href="$de/dda/class_sky_box.html#ab9db46f2e34683cae517ba97a44aee9e" title="virtual i_DrawableObject Draw " alt="" coords="515,791,621,817"/>
+<area shape="rect" id="node29" href="$de/dda/class_sky_box.html#aeeb16ac3c6e20b83ea10a4658acba83d" title="virtual i_DrawableObject SetBufferRef " alt="" coords="263,867,411,893"/>
+<area shape="rect" id="node30" href="$de/dda/class_sky_box.html#a04a507e77b90d469d77fdae3271de731" title="virtual i_DrawableObject Destroy " alt="" coords="277,917,398,944"/>
+<area shape="rect" id="node3" href="$d7/da7/class_character.html#a377a3df3823a38d5aee3332a30285a04" title="Chracter Destructor. " alt="" coords="493,5,643,32"/>
+<area shape="rect" id="node5" href="$d7/da7/class_character.html#a7870aec530f1d006e0f9c1335e9e4495" title="Chracter Constructor. " alt="" coords="497,56,639,83"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1088,385,1139,412"/>
+<area shape="rect" id="node11" href="$d7/d05/class_h_u_d.html#a1e1140a40e4bf72a45acf9f7b2119323" title="HUD Destructor. " alt="" coords="522,259,614,285"/>
+<area shape="rect" id="node14" href="$d8/d24/class_open_g_l.html#a697c5b98567a0e56c5ca1e28baad1dba" title="This function will be called when OpenGl draw frame. " alt="" coords="515,360,621,387"/>
+<area shape="rect" id="node15" href="$d8/d24/class_open_g_l.html#a082a48312c8032be282b49a9d6d7b5cc" title="Initialization OpenGL. " alt="" coords="736,360,831,387"/>
+<area shape="rect" id="node17" href="$da/df5/class_control_system.html#a8091d03383d4ec163f15be07508f1a57" title="init Function " alt="" coords="717,411,850,437"/>
+<area shape="rect" id="node21" href="$df/dcb/class_menu_system.html#ab249368d82b06724047d8b7951588f8a" title="MenuInit function. " alt="" coords="705,512,861,539"/>
+<area shape="rect" id="node24" href="$d0/d2a/class_n_p_c.html#a67c0caca129b56c82bb7ec8bce6be52b" title="NPC dtor.. " alt="" coords="522,664,614,691"/>
+<area shape="rect" id="node26" href="$d0/d2a/class_n_p_c.html#a60bec493b743680f16ea7152cf6d2ddd" title="NPC ctor. " alt="" coords="526,715,610,741"/>
+</map>

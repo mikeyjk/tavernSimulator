@@ -1,0 +1,761 @@
+\section{N\+P\+C Class Reference}
+\label{class_n_p_c}\index{N\+P\+C@{N\+P\+C}}
+
+
+\doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} Class. Defines non playable character / artifically intelligent agents.  
+
+
+
+
+{\ttfamily \#include $<$N\+P\+C.\+h$>$}
+
+
+
+Inheritance diagram for N\+P\+C\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d5/d51/class_n_p_c__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for N\+P\+C\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d0d/class_n_p_c__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf N\+P\+C} ({\bf Rendering\+Engine} $\ast$Ref, {\bf Vec3} pos, float rot\+X, float rot\+Y, {\bf string} {\bf model}, {\bf string} {\bf texture}, bool bound, std\+::vector$<$ {\bf Affordance} $>$ affordances, std\+::vector$<$ {\bf std\+::string} $>$ traits, float {\bf weight})
+\begin{DoxyCompactList}\small\item\em \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} ctor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+N\+P\+C} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} dtor.. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Terrain} (Terrain $\ast$ter)
+\begin{DoxyCompactList}\small\item\em set\+Terrain Function \end{DoxyCompactList}\item 
+{\bf State\+Machine}$<$ {\bf N\+P\+C} $>$ $\ast$ {\bf Get\+F\+S\+M} () const 
+\item 
+{\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Draw \end{DoxyCompactList}\item 
+{\bf void} {\bf Set\+Buffer\+Ref} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref \end{DoxyCompactList}\item 
+{\bf void} {\bf Destory} ()
+\begin{DoxyCompactList}\small\item\em i\+\_\+\+Drawable\+Object Destroy \end{DoxyCompactList}\item 
+{\bf void} {\bf Update} (double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update. \end{DoxyCompactList}\item 
+{\bf void} {\bf change\+State} ({\bf State}$<$ {\bf N\+P\+C} $>$ \&new\+State)
+\item 
+{\bf void} {\bf previous\+State} ({\bf State}$<$ {\bf N\+P\+C} $>$ \&new\+State)
+\item 
+{\bf void} {\bf give\+Hud\+Data} ()
+\item 
+{\bf void} {\bf give\+Hud\+More\+Data} ()
+\item 
+std\+::vector$<$ {\bf Tag} $>$ {\bf get\+Needs} ()
+\item 
+std\+::vector$<$ {\bf Game\+Object} $\ast$ $>$ {\bf get\+Local\+Affordances} ()
+\item 
+float {\bf get\+Speed} ()
+\item 
+{\bf std\+::string} {\bf get\+State} ()
+\item 
+{\bf Brain} $\ast$ {\bf get\+Brain} ()
+\item 
+{\bf State\+Machine}$<$ {\bf N\+P\+C} $>$ $\ast$ {\bf get\+Statemachine} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf can\+Pick}
+\item 
+cyclone\+::\+Collision\+Primitive $\ast$ {\bf picked\+Obj}
+\item 
+std\+::map$<$ int, {\bf Game\+Object} $\ast$ $>$ {\bf m\+\_\+get\+All\+Collidable}
+\item 
+std\+::map$<$ int, {\bf N\+P\+C} $\ast$ $>$ {\bf m\+\_\+get\+All\+N\+P\+C}
+\item 
+Physical\+World\+Simulation $\ast$ {\bf m\+\_\+ps}
+\item 
+Bbox $\ast$ {\bf body}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf State\+Machine}$<$ {\bf N\+P\+C} $>$ $\ast$ {\bf m\+\_\+state\+Machine}
+\begin{DoxyCompactList}\small\item\em finite state machine \end{DoxyCompactList}\item 
+{\bf Brain} {\bf my\+Brain}
+\item 
+{\bf Pathfinder} $\ast$ {\bf m\+\_\+\+Pathfinder}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} Class. Defines non playable character / artifically intelligent agents. 
+
+Class \begin{DoxyAuthor}{Author}
+\+: Michael J. Kiernan \+: \doxyref{Game\+Object}{p.}{d0/dd1/class_game_object} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+21/09/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{N\+P\+C@{N\+P\+C}!N\+P\+C@{N\+P\+C}}
+\index{N\+P\+C@{N\+P\+C}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{N\+P\+C}]{\setlength{\rightskip}{0pt plus 5cm}N\+P\+C\+::\+N\+P\+C (
+\begin{DoxyParamCaption}
+\item[{{\bf Rendering\+Engine} $\ast$}]{Ref, }
+\item[{{\bf Vec3}}]{pos, }
+\item[{float}]{rot\+X, }
+\item[{float}]{rot\+Y, }
+\item[{{\bf string}}]{model, }
+\item[{{\bf string}}]{texture, }
+\item[{bool}]{bound, }
+\item[{std\+::vector$<$ {\bf Affordance} $>$}]{affordances, }
+\item[{std\+::vector$<$ {\bf std\+::string} $>$}]{traits, }
+\item[{float}]{weight}
+\end{DoxyParamCaption}
+)}\label{class_n_p_c_a60bec493b743680f16ea7152cf6d2ddd}
+
+
+\doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} ctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxyref{Rendering\+Engine}{p.}{da/d3d/class_rendering_engine}} & $\ast$ Ref, \doxyref{Vec3}{p.}{df/d24/class_vec3} pos, float rot\+X, float rot\+Y, string model, string texture \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+5          :GameObject(Ref, pos, rotX, rotY, model, texture, bound, trans, weight)
+6 \{
+7     this->RederingHandle = Ref;
+8     \textcolor{comment}{// type = gameObjectType::character;}
+9 
+10     m_ps =  PhysicalWorldSimulation::Instance();
+11 
+12     m_stateMachine = \textcolor{keyword}{new} StateMachine<NPC>(\textcolor{keyword}{this}); 
+13     m_stateMachine->SetCurrentState(Wander::Instance());
+14 
+15     m_Pathfinder = \textcolor{keyword}{new} Pathfinder();
+16 
+17     \textcolor{comment}{// Create the BoundingBox for Camera}
+18     \textcolor{comment}{//body = new Bbox(20,35,20, glm::vec3(pos.X, pos.Y, pos.Z),100.0,
+       cyclone::collisionType::STATIC,0,0,0);}
+19     \textcolor{comment}{//PhysicalWorldSimulation::Instance()->WorldContainer.push\_back(body);}
+20     canPick  = \textcolor{keyword}{true};
+21     pickedObj = \textcolor{keyword}{nullptr};
+22     SetBufferRef();
+23 
+24     myBrain.initPersonality(\textcolor{stringliteral}{"null"},\textcolor{stringliteral}{"null"},\textcolor{stringliteral}{"null"},\textcolor{stringliteral}{"null"});
+25 
+26     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} i: traits)
+27     \{
+28         std::string tr = i;
+29         tr.replace(tr.begin(), tr.begin()+7, \textcolor{stringliteral}{""});
+30         myBrain.addTrait(tr);
+31     \}
+32 
+33     setAffordances(affordances);
+34     type = npc;
+35 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_a60bec493b743680f16ea7152cf6d2ddd_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!````~N\+P\+C@{$\sim$\+N\+P\+C}}
+\index{````~N\+P\+C@{$\sim$\+N\+P\+C}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{$\sim$\+N\+P\+C}]{\setlength{\rightskip}{0pt plus 5cm}N\+P\+C\+::$\sim$\+N\+P\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_n_p_c_a67c0caca129b56c82bb7ec8bce6be52b}
+
+
+\doxyref{N\+P\+C}{p.}{d0/d2a/class_n_p_c} dtor.. 
+
+
+\begin{DoxyCode}
+38 \{
+39     this->Destory();
+40 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_a67c0caca129b56c82bb7ec8bce6be52b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{N\+P\+C@{N\+P\+C}!change\+State@{change\+State}}
+\index{change\+State@{change\+State}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{change\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::change\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State}$<$ {\bf N\+P\+C} $>$ \&}]{new\+State}
+\end{DoxyParamCaption}
+)}\label{class_n_p_c_ae6864757cf1e1ab34a9793c711388011}
+\index{N\+P\+C@{N\+P\+C}!Destory@{Destory}}
+\index{Destory@{Destory}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{Destory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::\+Destory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_n_p_c_a4f7afe3bfedfbbfafe43b7b7cb36dfe1}
+
+
+i\+\_\+\+Drawable\+Object Destroy 
+
+This deletes the object from the render\+Engine buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a9f5e20361956b3181420f2f040ef496a}.
+
+
+\begin{DoxyCode}
+43 \{
+44     ((OpenGL *)RederingHandle->GetRenderHandle())->EraseRefFromBuffer(m_objectID);
+45 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d0/d2a/class_n_p_c_a4f7afe3bfedfbbfafe43b7b7cb36dfe1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d0/d2a/class_n_p_c_a4f7afe3bfedfbbfafe43b7b7cb36dfe1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!Draw@{Draw}}
+\index{Draw@{Draw}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_n_p_c_a8109b8858cace4f2e8afe78ae7d1a6d3}
+
+
+i\+\_\+\+Drawable\+Object Draw 
+
+This calls the render engine funciton to draw a box
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a54f25ff4076e03a40309085bcf826e53}.
+
+
+\begin{DoxyCode}
+127 \{
+128     \textcolor{keywordflow}{if}(isBounding)
+129     \{
+130         m_position.X = Bounding->body->getPosition().x;
+131         m_position.Y = Bounding->body->getPosition().y;
+132         m_position.Z = Bounding->body->getPosition().z;
+133 
+134         \textcolor{keywordtype}{float} q0 = Bounding->body->getOrientation().r;
+135         \textcolor{keywordtype}{float} q1 = Bounding->body->getOrientation().i;
+136         \textcolor{keywordtype}{float} q2 = Bounding->body->getOrientation().j;
+137         \textcolor{keywordtype}{float} q3 = Bounding->body->getOrientation().k;
+138         
+139         m_rotation.X = std::atan2( 2 * (q0 * q1 + q2 * q3),  1 - 2 * ( q1 * q1 + q2 * q2)); 
+140         m_rotation.Y = std::asin( 2 * (q0 * q2 - q3 * q1));
+141         m_rotation.Z = std::atan2( 2 * (q0 * q3 + q1 * q2), 1 - 2 * (q2 * q2 + q3 * q3));
+142 
+143         \textcolor{keywordtype}{float} temp = 180.0 / 3.1415926;
+144         m_rotation.X *= temp;
+145         m_rotation.Y *= temp;
+146         m_rotation.Z *= temp;
+147 
+148         \textcolor{comment}{//std::cout << " X:" << m\_rotation.X << "  Y:" << m\_rotation.Y << " Z:" << m\_rotation.Z <<
+       std::endl; }
+149         
+150         glPushMatrix();
+151         GLfloat mat[16];
+152         Bounding->body->getGLTransform(mat);
+153         ((Bbox*)Bounding->body)->halfSize;
+154         glMultMatrixf(mat);
+155         RederingHandle->DrawModel(model, texture, trans, Vec3(0,0,0), Vec3(0,0,0), 
+      Vec3(1, 1, 1));
+156         glPopMatrix();
+157     \}
+158     \textcolor{keywordflow}{else}
+159     \{   
+160         glPushMatrix();
+161         GLfloat mat[16];
+162         Bounding->body->getGLTransform(mat);
+163         glMultMatrixf(mat);
+164         RederingHandle->DrawModel(model, texture, trans, Vec3(0,0,0), Vec3(0,0,0), 
+      Vec3(1, 1, 1));
+165         glPopMatrix();
+166     \}
+167 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{d0/d2a/class_n_p_c_a8109b8858cace4f2e8afe78ae7d1a6d3_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!get\+Brain@{get\+Brain}}
+\index{get\+Brain@{get\+Brain}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{get\+Brain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Brain}$\ast$ N\+P\+C\+::get\+Brain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_p_c_abf5693e38b2b018a5dcebf7c875c7d6c}
+
+\begin{DoxyCode}
+118 \{\textcolor{keywordflow}{return} &myBrain;\}
+\end{DoxyCode}
+\index{N\+P\+C@{N\+P\+C}!Get\+F\+S\+M@{Get\+F\+S\+M}}
+\index{Get\+F\+S\+M@{Get\+F\+S\+M}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{Get\+F\+S\+M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\+Machine}$<${\bf N\+P\+C}$>$$\ast$ N\+P\+C\+::\+Get\+F\+S\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_n_p_c_a01b08b263406fed6adfe6952b80f1533}
+\index{N\+P\+C@{N\+P\+C}!get\+Local\+Affordances@{get\+Local\+Affordances}}
+\index{get\+Local\+Affordances@{get\+Local\+Affordances}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{get\+Local\+Affordances}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Game\+Object} $\ast$ $>$ N\+P\+C\+::get\+Local\+Affordances (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_n_p_c_af4378d6d0057872add55770c5d3fac95}
+
+\begin{DoxyCode}
+83 \{
+84     std::vector<GameObject*> afforded;
+85 
+86     \textcolor{comment}{// check all of NPC's needs}
+87     \textcolor{keywordflow}{for}(Tag need : myBrain.getNeeds())
+88     \{
+89         \textcolor{comment}{// for every collidable object (we have a local copy)}
+90         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} gameObj : m_getAllCollidable)
+91         \{   
+92             \textcolor{comment}{// if there is a valid GameObject* ptr}
+93             \textcolor{keywordflow}{if}(gameObj.second != \textcolor{keyword}{nullptr})
+94             \{
+95                 \textcolor{comment}{// don't check against self}
+96                 \textcolor{keywordflow}{if}(gameObj.second != \textcolor{keyword}{this})
+97                 \{
+98                     \textcolor{comment}{// check if within range of NPC}
+99                     Vec3 target = gameObj.second->getPos();
+100                     Vec3 pos = getPos();
+101 
+102                     \textcolor{keywordtype}{float} targetDistance = (target - pos).length();
+103 
+104                     \textcolor{keywordflow}{if}(targetDistance < myBrain.getSight() * 3)
+105                     \{
+106                         \textcolor{comment}{// iterate through this GameObjects's affordances}
+107                         \textcolor{keywordflow}{for}(Affordance& affordance : gameObj.second->getAffordances())
+108                         \{
+109                             \textcolor{comment}{// if affordance = need}
+110                             \textcolor{keywordflow}{if}(need == affordance.getTag())
+111                             \{
+112                                 \textcolor{comment}{// a need of this NPC is afforded to it}
+113                                 \textcolor{comment}{// return this information}
+114                                 afforded.push\_back(gameObj.second);
+115                             \}
+116                         \}
+117                     \}
+118                 \}
+119             \}
+120         \}
+121     \}
+122     
+123     \textcolor{keywordflow}{return}(afforded);
+124 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_af4378d6d0057872add55770c5d3fac95_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{d0/d2a/class_n_p_c_af4378d6d0057872add55770c5d3fac95_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!get\+Needs@{get\+Needs}}
+\index{get\+Needs@{get\+Needs}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{get\+Needs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Tag}$>$ N\+P\+C\+::get\+Needs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_p_c_a8c0a16041790f47e9bd2aa63c510e5ce}
+
+\begin{DoxyCode}
+106 \{\textcolor{keywordflow}{return}(myBrain.getNeeds());\}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d0/d2a/class_n_p_c_a8c0a16041790f47e9bd2aa63c510e5ce_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{get\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float N\+P\+C\+::get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_p_c_a7bcb2af1654126c7120294f20d26f82d}
+
+\begin{DoxyCode}
+114 \{ \textcolor{keywordflow}{return} myBrain.getSpeed(); \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_a7bcb2af1654126c7120294f20d26f82d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{get\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} N\+P\+C\+::get\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_n_p_c_a019aecf088d8d052266c1736650e4500}
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keywordflow}{return}(m_stateMachine->GetNameOfCurrentState());
+55 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_a019aecf088d8d052266c1736650e4500_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!get\+Statemachine@{get\+Statemachine}}
+\index{get\+Statemachine@{get\+Statemachine}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{get\+Statemachine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\+Machine}$<${\bf N\+P\+C}$>$$\ast$ N\+P\+C\+::get\+Statemachine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_p_c_aff36b8ec27273098702c931a9391836c}
+
+\begin{DoxyCode}
+120 \{\textcolor{keywordflow}{return} m_stateMachine;\}
+\end{DoxyCode}
+\index{N\+P\+C@{N\+P\+C}!give\+Hud\+Data@{give\+Hud\+Data}}
+\index{give\+Hud\+Data@{give\+Hud\+Data}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{give\+Hud\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::give\+Hud\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_p_c_ac1476c6a002620b58490693e901aa51c}
+
+\begin{DoxyCode}
+99         \{
+100             myBrain.giveHudData();
+101             ControlSystem::Instance()->hud.giveHudAffordance(m_affordances);
+102         \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_ac1476c6a002620b58490693e901aa51c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!give\+Hud\+More\+Data@{give\+Hud\+More\+Data}}
+\index{give\+Hud\+More\+Data@{give\+Hud\+More\+Data}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{give\+Hud\+More\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::give\+Hud\+More\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_n_p_c_a972a07e56116037b2325de72ecc20e45}
+
+\begin{DoxyCode}
+104 \{ myBrain.giveHudMoreData(getID(), m_stateMachine->GetNameOfCurrentState()); \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_a972a07e56116037b2325de72ecc20e45_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{d0/d2a/class_n_p_c_a972a07e56116037b2325de72ecc20e45_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!previous\+State@{previous\+State}}
+\index{previous\+State@{previous\+State}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{previous\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::previous\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State}$<$ {\bf N\+P\+C} $>$ \&}]{new\+State}
+\end{DoxyParamCaption}
+)}\label{class_n_p_c_a088a04f9c6390a9eea2b7534ddb65897}
+\index{N\+P\+C@{N\+P\+C}!Set\+Buffer\+Ref@{Set\+Buffer\+Ref}}
+\index{Set\+Buffer\+Ref@{Set\+Buffer\+Ref}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{Set\+Buffer\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::\+Set\+Buffer\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_n_p_c_a20e0f185219efbae958bf994d56ebf3f}
+
+
+i\+\_\+\+Drawable\+Object Set\+Buffer\+Ref 
+
+This sends the object to the render\+Engine render buffer
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a34436ba977aafaff056f3f5022f992b9}.
+
+
+\begin{DoxyCode}
+48 \{
+49     ((OpenGL *)RederingHandle->GetRenderHandle())->AddRefToBuffer(m_objectID, \textcolor{keyword}{this});
+50 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_a20e0f185219efbae958bf994d56ebf3f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{d0/d2a/class_n_p_c_a20e0f185219efbae958bf994d56ebf3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{N\+P\+C@{N\+P\+C}!set\+Terrain@{set\+Terrain}}
+\index{set\+Terrain@{set\+Terrain}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{set\+Terrain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::set\+Terrain (
+\begin{DoxyParamCaption}
+\item[{Terrain $\ast$}]{ter}
+\end{DoxyParamCaption}
+)}\label{class_n_p_c_acdcdb8510cd0a5694be8b81297fb5f78}
+
+
+set\+Terrain Function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Terrain$\ast$} & ter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+\index{N\+P\+C@{N\+P\+C}!Update@{Update}}
+\index{Update@{Update}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} N\+P\+C\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{delta\+Time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_n_p_c_a49d73fb1d0b5fc4dab086a15a9fca058}
+
+
+Update. 
+
+This is the character control function
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Reimplemented from {\bf Game\+Object} \doxyref{}{p.}{d0/dd1/class_game_object_a67476ffb30d41305f25be7b3fee11173}.
+
+
+\begin{DoxyCode}
+58 \{
+59     myBrain.update(deltaTime);
+60     giveHudMoreData();
+61 
+62     \textcolor{comment}{// if we have needs}
+63     \textcolor{keywordflow}{if}(myBrain.getNeeds().size() > 0)
+64     \{
+65         \textcolor{comment}{// check to see if we can find things afforded to us}
+66         myBrain.giveAffordancesThatMeetNeeds(getLocalAffordances());
+67         \textcolor{keywordflow}{if}(!targetObject || m_stateMachine->GetNameOfCurrentState() == \textcolor{stringliteral}{"Wander"})
+68         \{
+69             Tag newState;
+70             targetObject = myBrain.calculateTarget(newState);
+71             m_stateMachine->ChangeState(Affordance::tagToState(newState));
+72         \}
+73     \}
+74 
+75    m_stateMachine->Update();
+76 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d2a/class_n_p_c_a49d73fb1d0b5fc4dab086a15a9fca058_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{N\+P\+C@{N\+P\+C}!body@{body}}
+\index{body@{body}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{body}]{\setlength{\rightskip}{0pt plus 5cm}Bbox$\ast$ N\+P\+C\+::body}\label{class_n_p_c_abe165fd8001e910460aab4598f4999bf}
+\index{N\+P\+C@{N\+P\+C}!can\+Pick@{can\+Pick}}
+\index{can\+Pick@{can\+Pick}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{can\+Pick}]{\setlength{\rightskip}{0pt plus 5cm}bool N\+P\+C\+::can\+Pick}\label{class_n_p_c_a380644be0aed19a76fef4d9fdd89a379}
+\index{N\+P\+C@{N\+P\+C}!m\+\_\+get\+All\+Collidable@{m\+\_\+get\+All\+Collidable}}
+\index{m\+\_\+get\+All\+Collidable@{m\+\_\+get\+All\+Collidable}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{m\+\_\+get\+All\+Collidable}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, {\bf Game\+Object}$\ast$$>$ N\+P\+C\+::m\+\_\+get\+All\+Collidable}\label{class_n_p_c_af750a762f8816a2a7c5d28b36fd05f01}
+\index{N\+P\+C@{N\+P\+C}!m\+\_\+get\+All\+N\+P\+C@{m\+\_\+get\+All\+N\+P\+C}}
+\index{m\+\_\+get\+All\+N\+P\+C@{m\+\_\+get\+All\+N\+P\+C}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{m\+\_\+get\+All\+N\+P\+C}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, {\bf N\+P\+C}$\ast$$>$ N\+P\+C\+::m\+\_\+get\+All\+N\+P\+C}\label{class_n_p_c_a35d8a48cf3690838f69e56c83e3e5ce0}
+\index{N\+P\+C@{N\+P\+C}!m\+\_\+\+Pathfinder@{m\+\_\+\+Pathfinder}}
+\index{m\+\_\+\+Pathfinder@{m\+\_\+\+Pathfinder}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{m\+\_\+\+Pathfinder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pathfinder}$\ast$ N\+P\+C\+::m\+\_\+\+Pathfinder\hspace{0.3cm}{\ttfamily [private]}}\label{class_n_p_c_a2835901b31950a8e1fb84e4186c9714a}
+\index{N\+P\+C@{N\+P\+C}!m\+\_\+ps@{m\+\_\+ps}}
+\index{m\+\_\+ps@{m\+\_\+ps}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{m\+\_\+ps}]{\setlength{\rightskip}{0pt plus 5cm}Physical\+World\+Simulation$\ast$ N\+P\+C\+::m\+\_\+ps}\label{class_n_p_c_afeaf8452705609fedef798ac123f4823}
+\index{N\+P\+C@{N\+P\+C}!m\+\_\+state\+Machine@{m\+\_\+state\+Machine}}
+\index{m\+\_\+state\+Machine@{m\+\_\+state\+Machine}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{m\+\_\+state\+Machine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\+Machine}$<${\bf N\+P\+C}$>$$\ast$ N\+P\+C\+::m\+\_\+state\+Machine\hspace{0.3cm}{\ttfamily [private]}}\label{class_n_p_c_a0ad2ece5ced9ee021d6f25358d85aaf3}
+
+
+finite state machine 
+
+\index{N\+P\+C@{N\+P\+C}!my\+Brain@{my\+Brain}}
+\index{my\+Brain@{my\+Brain}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{my\+Brain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Brain} N\+P\+C\+::my\+Brain\hspace{0.3cm}{\ttfamily [private]}}\label{class_n_p_c_a0334a5f559a06f2d480589cf55886885}
+\index{N\+P\+C@{N\+P\+C}!picked\+Obj@{picked\+Obj}}
+\index{picked\+Obj@{picked\+Obj}!N\+P\+C@{N\+P\+C}}
+\subsubsection[{picked\+Obj}]{\setlength{\rightskip}{0pt plus 5cm}cyclone\+::\+Collision\+Primitive$\ast$ N\+P\+C\+::picked\+Obj}\label{class_n_p_c_a6f8837d8f6884b32965b564e3acc8f79}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf N\+P\+C.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf N\+P\+C.\+cpp}\end{DoxyCompactItemize}

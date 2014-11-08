@@ -1,0 +1,936 @@
+\section{H\+U\+D Class Reference}
+\label{class_h_u_d}\index{H\+U\+D@{H\+U\+D}}
+
+
+The Class that is renderable by the rendering engine with all \doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} elements.  
+
+
+
+
+{\ttfamily \#include $<$H\+U\+D.\+h$>$}
+
+
+
+Inheritance diagram for H\+U\+D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{da/d6f/class_h_u_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for H\+U\+D\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d79/class_h_u_d__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf H\+U\+D} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+H\+U\+D} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} Destructor. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Draw} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object} Draw function. \end{DoxyCompactList}\item 
+{\bf void} {\bf turn\+Off\+Splash} ()
+\item 
+bool {\bf get\+Splash} ()
+\item 
+{\bf void} {\bf Draw\+Splash} ()
+\item 
+virtual {\bf void} {\bf Set\+Buffer\+Ref} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object} Set\+Buffer\+Ref function. \end{DoxyCompactList}\item 
+virtual {\bf void} {\bf Destory} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object} Destroy function. \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Manual} (bool {\bf m})
+\begin{DoxyCompactList}\small\item\em set\+Manual function \end{DoxyCompactList}\item 
+bool {\bf get\+Manual} ()
+\begin{DoxyCompactList}\small\item\em get\+Manual function \end{DoxyCompactList}\item 
+{\bf void} {\bf switch\+Manual} ()
+\begin{DoxyCompactList}\small\item\em switch\+Manual function \end{DoxyCompactList}\item 
+{\bf void} {\bf set\+Exit} (bool e)
+\item 
+bool {\bf get\+Exit} ()
+\item 
+{\bf void} {\bf give\+Hud\+N\+P\+C\+Data} (int {\bf npcid}, {\bf std\+::string} {\bf state\+Name}, std\+::vector$<$ {\bf std\+::string} $>$ {\bf needs}, std\+::vector$<$ int $>$ afford)
+\item 
+{\bf void} {\bf give\+Hud\+H\+V\+Data} ({\bf Human\+Values} $\ast${\bf data}, {\bf Human\+Values} $\ast$thresh, std\+::vector$<$ {\bf st\+Trait} $>$ tr, {\bf en\+Emotion} $\ast$emot)
+\item 
+{\bf void} {\bf give\+Hud\+Affordance} (std\+::vector$<$ {\bf Affordance} $>$ affordances)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf std\+::string} {\bf en\+Emotion\+To\+String} ({\bf en\+Emotion} em)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Manual}
+\begin{DoxyCompactList}\small\item\em boolean for control of Manual dispaly \end{DoxyCompactList}\item 
+bool {\bf Ex}
+\item 
+{\bf Id\+Generator} $\ast$ {\bf Id\+Gen}
+\begin{DoxyCompactList}\small\item\em pointer for the I\+Dgenerator \end{DoxyCompactList}\item 
+{\bf Rendering\+Engine} $\ast$ {\bf Redering\+Handle}
+\begin{DoxyCompactList}\small\item\em pointer for the Render Engine \end{DoxyCompactList}\item 
+unsigned int {\bf m\+\_\+object\+I\+D}
+\begin{DoxyCompactList}\small\item\em I\+D int. \end{DoxyCompactList}\item 
+{\bf Human\+Values} $\ast$ {\bf overlay\+Data}
+\item 
+{\bf Human\+Values} $\ast$ {\bf overlay\+Threshold}
+\item 
+std\+::vector$<$ {\bf st\+Trait} $>$ {\bf Trait\+Data}
+\item 
+std\+::vector$<$ {\bf Affordance} $>$ {\bf m\+\_\+affordances}
+\item 
+{\bf en\+Emotion} $\ast$ {\bf disp\+Emotion}
+\item 
+std\+::vector$<$ {\bf std\+::string} $>$ {\bf needs}
+\item 
+std\+::vector$<$ int $>$ {\bf afforded}
+\item 
+{\bf std\+::string} {\bf state\+Name}
+\item 
+int {\bf npcid}
+\item 
+bool {\bf splash}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Class that is renderable by the rendering engine with all \doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} elements. 
+
+\begin{DoxyAuthor}{Author}
+\+: Karl Tysoe \+: \doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object}  By\+: Game System, \doxyref{Rendering}{p.}{d3/d32/class_rendering} Engine; 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26/03/2014 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{H\+U\+D@{H\+U\+D}!H\+U\+D@{H\+U\+D}}
+\index{H\+U\+D@{H\+U\+D}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{H\+U\+D}]{\setlength{\rightskip}{0pt plus 5cm}H\+U\+D\+::\+H\+U\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a568b8ee1591f9ba3ed36ae05966f6b56}
+
+
+\doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} Constructor. 
+
+This is the basic Constructor Sets the \doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} up with its own I\+D for the rendering engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+10 \{
+11     RederingHandle = RenderingEngine::Instance();
+12     IdGen = IdGenerator::Instance();
+13     m_objectID = IdGen->GetID();
+14     isManual = \textcolor{keyword}{false};
+15     Ex = \textcolor{keyword}{false};
+16     splash = \textcolor{keyword}{true};
+17 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{d7/d05/class_h_u_d_a568b8ee1591f9ba3ed36ae05966f6b56_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!````~H\+U\+D@{$\sim$\+H\+U\+D}}
+\index{````~H\+U\+D@{$\sim$\+H\+U\+D}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{$\sim$\+H\+U\+D}]{\setlength{\rightskip}{0pt plus 5cm}H\+U\+D\+::$\sim$\+H\+U\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a1e1140a40e4bf72a45acf9f7b2119323}
+
+
+\doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} Destructor. 
+
+This is the basic Destructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+20 \{
+21     Destory();
+22 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a1e1140a40e4bf72a45acf9f7b2119323_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{H\+U\+D@{H\+U\+D}!Destory@{Destory}}
+\index{Destory@{Destory}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Destory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::\+Destory (
+\begin{DoxyParamCaption}
+\item[{{\bf void}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_u_d_a3b5d3e30acab1d2b9b2561bfa15c8396}
+
+
+\doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object} Destroy function. 
+
+takes the object out of the rendering engine
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_aa4f2b2580134165b3d1aad0b6a9d1a4f}.
+
+
+\begin{DoxyCode}
+25 \{
+26     ((OpenGL *)RederingHandle->GetRenderHandle())->EraseRefFromBuffer(m_objectID);
+27 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{d7/d05/class_h_u_d_a3b5d3e30acab1d2b9b2561bfa15c8396_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{d7/d05/class_h_u_d_a3b5d3e30acab1d2b9b2561bfa15c8396_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!Draw@{Draw}}
+\index{Draw@{Draw}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_u_d_a3108f898ea1cb5be13935d310b608072}
+
+
+\doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object} Draw function. 
+
+Draws the \doxyref{H\+U\+D}{p.}{d7/d05/class_h_u_d} elements
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_a3ac7ece844fc14e2b179fb2cdb55ccf6}.
+
+
+\begin{DoxyCode}
+30 \{
+31     OpenGL* openGL = ((OpenGL *)RederingHandle->GetRenderHandle());
+32 
+33     \textcolor{keywordflow}{if}(Ex == \textcolor{keyword}{true})
+34     \{
+35         openGL->RenderOverlay(250, 250, 500, 500, \textcolor{stringliteral}{"thanks"});
+36     \}
+37     \textcolor{keywordflow}{else}
+38     \{
+39         \textcolor{keywordflow}{if}(overlayData)
+40         \{
+41             \textcolor{keywordtype}{int} x1 = 55;
+42             \textcolor{comment}{//row 1 75}
+43             std::ostringstream ssStr;
+44             ssStr.precision(4);
+45             ssStr << overlayData->Phys.Strength << \textcolor{stringliteral}{"/"} << overlayThreshold->Phys.
+      Strength;
+46             std::string strength(ssStr.str());
+47             openGL->renderString(x1, 160, strength, 2);
+48 
+49             std::ostringstream ssAg;
+50             ssAg << overlayData->Phys.Agile << \textcolor{stringliteral}{"/"} << overlayThreshold->Phys.
+      Agile;
+51             std::string Agile(ssAg.str());
+52             openGL->renderString(x1, 143, Agile, 2);
+53 
+54             std::ostringstream ssStom;
+55             ssStom << overlayData->Phys.Stomach << \textcolor{stringliteral}{"/"} << overlayThreshold->Phys.
+      Stomach;
+56             std::string Stomach(ssStom.str());
+57             openGL->renderString(x1, 126, Stomach, 2);
+58 
+59             std::ostringstream ssSight;
+60             ssSight << overlayData->Phys.Sight << \textcolor{stringliteral}{"/"} << overlayThreshold->Phys.
+      Sight;
+61             std::string Sight(ssSight.str());
+62             openGL->renderString(x1, 109, Sight, 2);
+63 
+64             std::ostringstream ssHealth;
+65             ssHealth << overlayData->Phys.Health << \textcolor{stringliteral}{"/"} << overlayThreshold->
+      Phys.Health;
+66             std::string health(ssHealth.str());
+67             openGL->renderString(x1, 92, health, 2);
+68 
+69             \textcolor{keywordtype}{int} x2 = 160;
+70             \textcolor{comment}{//row 2 175}
+71             std::ostringstream ss21;
+72             ss21 << overlayData->Vit.Hunger << \textcolor{stringliteral}{"/"} << overlayThreshold->Vit.
+      Hunger;
+73             std::string hunger(ss21.str());
+74             openGL->renderString(x2, 160, hunger, 2);
+75 
+76             std::ostringstream ss22;
+77             ss22 << overlayData->Vit.Thirst << \textcolor{stringliteral}{"/"} << overlayThreshold->Vit.
+      Thirst;
+78             std::string Thirst(ss22.str());
+79             openGL->renderString(x2, 143, Thirst, 2);
+80 
+81             std::ostringstream ss23;
+82             ss23 << overlayData->Vit.Bladder << \textcolor{stringliteral}{"/"} << overlayThreshold->Vit.
+      Bladder;
+83             std::string Bladder(ss23.str());
+84             openGL->renderString(x2, 126, Bladder, 2);
+85 
+86             std::ostringstream ss24;
+87             ss24 << overlayData->Vit.Tiredness << \textcolor{stringliteral}{"/"} << overlayThreshold->Vit.
+      Tiredness;
+88             std::string Tiredness(ss24.str());
+89             openGL->renderString(x2, 109, Tiredness, 2);
+90 
+91             std::ostringstream ss25;
+92             ss25 << overlayData->Vit.Toxication << \textcolor{stringliteral}{"/"} << overlayThreshold->Vit.
+      Toxication;
+93             std::string Toxication(ss25.str());
+94             openGL->renderString(x2, 92, Toxication, 2);
+95 
+96 
+97             \textcolor{comment}{//row 3 275}
+98             \textcolor{keywordtype}{int} x3 = 262;
+99             std::ostringstream ss31;
+100             ss31 << overlayData->Ment.Memory << \textcolor{stringliteral}{"/"} << overlayThreshold->Ment.
+      Memory;
+101             std::string Memory(ss31.str());
+102             openGL->renderString(x3, 160, Memory, 2);
+103 
+104             std::ostringstream ss32;
+105             ss32 << overlayData->Ment.Talk << \textcolor{stringliteral}{"/"} << overlayThreshold->Ment.Talk;
+106             std::string Talk(ss32.str());
+107             openGL->renderString(x3, 143, Talk, 2);
+108 
+109             std::ostringstream ss33;
+110             ss33 << overlayData->Ment.Curiosity << \textcolor{stringliteral}{"/"} << overlayThreshold->Ment.
+      Curiosity;
+111             std::string Curiosity(ss33.str());
+112             openGL->renderString(x3, 126, Curiosity, 2);
+113 
+114             std::ostringstream ss34;
+115             ss34 << overlayData->Ment.Boredom << \textcolor{stringliteral}{"/"} << overlayThreshold->Ment.
+      Boredom;
+116             std::string Boredom(ss34.str());
+117             openGL->renderString(x3, 109, Boredom, 2);
+118 
+119             std::ostringstream ss35;
+120             ss35 << overlayData->Ment.Fear << \textcolor{stringliteral}{"/"} << overlayThreshold->Ment.Fear;
+121             std::string Fear(ss35.str());
+122             openGL->renderString(x3, 92, Fear, 2);
+123 
+124             std::ostringstream ssTrait;
+125             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} t : TraitData)
+126             \{
+127                 ssTrait << t.name << \textcolor{stringliteral}{", "};
+128             \}
+129             std::string traitStr(ssTrait.str());
+130 
+131             openGL->renderString(x1, 61, traitStr, 2);
+132 
+133             std::ostringstream ssAfford1;
+134 
+135             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} a : m_affordances)
+136             \{
+137                 ssAfford1 << Affordance::tagToString(a.getTag()) << \textcolor{stringliteral}{", "};
+138             \}
+139             std::string affordStr1(ssAfford1.str());
+140 
+141             openGL->renderString(x1+33, 48, affordStr1, 2);
+142 
+143             std::ostringstream ssEm;
+144             ssEm << enEmotionToString(*dispEmotion);
+145             std::string Emotion(ssEm.str());
+146             openGL->renderString(x1+10, 75, Emotion, 2);
+147 
+148             \textcolor{comment}{//Michaels Stuff}
+149             std::ostringstream npcido;
+150             npcido << npcid;
+151             std::string npcids(npcido.str());
+152 
+153             openGL->renderString(500, 170, \textcolor{stringliteral}{"NPC# "} + npcids, 3);
+154             openGL->renderString(500, 140, \textcolor{stringliteral}{"    State: "} + stateName, 3);
+155 
+156             std::ostringstream ssNeeds;
+157             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} need : needs)
+158             \{
+159                 ssNeeds << need + \textcolor{stringliteral}{", "};
+160             \}
+161             std::string needstr(ssNeeds.str());
+162             openGL->renderString(500, 110, \textcolor{stringliteral}{"    Needs: "} + needstr, 3);
+163 
+164             std::ostringstream ssAfford;
+165             \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} aff : afforded)
+166             \{
+167                 \textcolor{comment}{//Tag temp = static\_cast<Tag>(aff);}
+168                 ssAfford << to\_string(aff) + \textcolor{stringliteral}{", "};
+169             \}
+170             std::string affordStr(ssAfford.str());
+171             openGL->renderString(500, 90, \textcolor{stringliteral}{" Afforded by local entity: "} + affordStr, 3);
+172 
+173 
+174             openGL->RenderOverlay(10,40,300, 150, \textcolor{stringliteral}{"AIPanel"});
+175             openGL->RenderOverlay(470,80,250, 120, \textcolor{stringliteral}{"menu"});
+176         \}
+177     \}
+178 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a3108f898ea1cb5be13935d310b608072_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!Draw\+Splash@{Draw\+Splash}}
+\index{Draw\+Splash@{Draw\+Splash}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Draw\+Splash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::\+Draw\+Splash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a6af94ce6a85c9e2a7dca86b015c9cb59}
+
+\begin{DoxyCode}
+189 \{
+190     OpenGL* openGL = ((OpenGL *)RederingHandle->GetRenderHandle());
+191     openGL->renderString(512, 125, \textcolor{stringliteral}{"Click to continue"}, 3);
+192     openGL->RenderOverlay(100,100,1024, 512, \textcolor{stringliteral}{"BeerTek"});
+193 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a6af94ce6a85c9e2a7dca86b015c9cb59_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a6af94ce6a85c9e2a7dca86b015c9cb59_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!en\+Emotion\+To\+String@{en\+Emotion\+To\+String}}
+\index{en\+Emotion\+To\+String@{en\+Emotion\+To\+String}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{en\+Emotion\+To\+String}]{\setlength{\rightskip}{0pt plus 5cm}{\bf string} H\+U\+D\+::en\+Emotion\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf en\+Emotion}}]{em}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a0a665e6d142b3bcef7b06ae8d3369d65}
+
+\begin{DoxyCode}
+217 \{
+218     \textcolor{keywordflow}{switch}(em)
+219     \{
+220     \textcolor{keywordflow}{case} Esctatic:
+221         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Esctatic"};
+222         \textcolor{keywordflow}{break};
+223         
+224     \textcolor{keywordflow}{case} Joy:
+225         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Joy"};
+226         \textcolor{keywordflow}{break};
+227         
+228     \textcolor{keywordflow}{case} Happy:
+229         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Happy"};
+230         \textcolor{keywordflow}{break};
+231         
+232     \textcolor{keywordflow}{case} Fine:
+233         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Fine"};
+234         \textcolor{keywordflow}{break};
+235         
+236     \textcolor{keywordflow}{case} Complacent:
+237         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Complacent"};
+238         \textcolor{keywordflow}{break};
+239         
+240     \textcolor{keywordflow}{case} Sad:
+241         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Sad"};
+242         \textcolor{keywordflow}{break};
+243         
+244     \textcolor{keywordflow}{case} Desolate:
+245         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Desolate"};
+246         \textcolor{keywordflow}{break};
+247         
+248     \textcolor{keywordflow}{case} Angry:
+249         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Angry"};
+250         \textcolor{keywordflow}{break};
+251         
+252     \textcolor{keywordflow}{case} Rage:
+253         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Rage"};
+254         \textcolor{keywordflow}{break};
+255     \textcolor{keywordflow}{default}:
+256         \textcolor{keywordflow}{break};
+257     \}
+258 
+259 
+260 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{d7/d05/class_h_u_d_a0a665e6d142b3bcef7b06ae8d3369d65_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!get\+Exit@{get\+Exit}}
+\index{get\+Exit@{get\+Exit}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{get\+Exit}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+U\+D\+::get\+Exit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_h_u_d_a4256136a25e54f3ec82c83b527f15ca5}
+
+\begin{DoxyCode}
+120 \{\textcolor{keywordflow}{return} Ex;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a4256136a25e54f3ec82c83b527f15ca5_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!get\+Manual@{get\+Manual}}
+\index{get\+Manual@{get\+Manual}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{get\+Manual}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+U\+D\+::get\+Manual (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a9845c16aa6b6c8b61fcf0a8d2631a907}
+
+
+get\+Manual function 
+
+returns the bool is\+Manual
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is\+Manual -\/ bool 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+206 \{
+207     \textcolor{keywordflow}{return} isManual;
+208 \}
+\end{DoxyCode}
+\index{H\+U\+D@{H\+U\+D}!get\+Splash@{get\+Splash}}
+\index{get\+Splash@{get\+Splash}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{get\+Splash}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+U\+D\+::get\+Splash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_h_u_d_ac2c0a66d421017c2bc6081ca63f27106}
+
+\begin{DoxyCode}
+63     \{
+64         \textcolor{keywordflow}{return} splash;
+65     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_ac2c0a66d421017c2bc6081ca63f27106_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!give\+Hud\+Affordance@{give\+Hud\+Affordance}}
+\index{give\+Hud\+Affordance@{give\+Hud\+Affordance}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{give\+Hud\+Affordance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::give\+Hud\+Affordance (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Affordance} $>$}]{affordances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_h_u_d_ac3334f6ffbb8c2b33d7908448f81d3bc}
+
+\begin{DoxyCode}
+133     \{
+134         m_affordances = affordances;
+135     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{d7/d05/class_h_u_d_ac3334f6ffbb8c2b33d7908448f81d3bc_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!give\+Hud\+H\+V\+Data@{give\+Hud\+H\+V\+Data}}
+\index{give\+Hud\+H\+V\+Data@{give\+Hud\+H\+V\+Data}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{give\+Hud\+H\+V\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::give\+Hud\+H\+V\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Human\+Values} $\ast$}]{data, }
+\item[{{\bf Human\+Values} $\ast$}]{thresh, }
+\item[{std\+::vector$<$ {\bf st\+Trait} $>$}]{tr, }
+\item[{{\bf en\+Emotion} $\ast$}]{emot}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_h_u_d_a7999acb384a496c32e7fab7fbfdd7ed0}
+
+\begin{DoxyCode}
+125     \{
+126         overlayData = data;
+127         overlayThreshold = thresh;
+128         TraitData = tr;
+129         dispEmotion = emot;
+130     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a7999acb384a496c32e7fab7fbfdd7ed0_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!give\+Hud\+N\+P\+C\+Data@{give\+Hud\+N\+P\+C\+Data}}
+\index{give\+Hud\+N\+P\+C\+Data@{give\+Hud\+N\+P\+C\+Data}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{give\+Hud\+N\+P\+C\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::give\+Hud\+N\+P\+C\+Data (
+\begin{DoxyParamCaption}
+\item[{int}]{npcid, }
+\item[{{\bf std\+::string}}]{state\+Name, }
+\item[{std\+::vector$<$ {\bf std\+::string} $>$}]{needs, }
+\item[{std\+::vector$<$ int $>$}]{afford}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a17d80fb1334f544a7198d9ae4289fb09}
+
+\begin{DoxyCode}
+181 \{
+182     this->npcid = npcid;
+183     this->stateName = stateName;
+184     this->needs = needs;
+185     this->afforded = afford;
+186 \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a17d80fb1334f544a7198d9ae4289fb09_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!Set\+Buffer\+Ref@{Set\+Buffer\+Ref}}
+\index{Set\+Buffer\+Ref@{Set\+Buffer\+Ref}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Set\+Buffer\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::\+Set\+Buffer\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_u_d_aff2cb95ec753a26bd7930127125928f3}
+
+
+\doxyref{I\+\_\+\+Drawable\+Object}{p.}{d2/da6/class_i___drawable_object} Set\+Buffer\+Ref function. 
+
+Passes the object to the render engine for rendering
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+
+Implements {\bf I\+\_\+\+Drawable\+Object} \doxyref{}{p.}{d2/da6/class_i___drawable_object_a5d623d75130432ad07cddf78e165f8fc}.
+
+
+\begin{DoxyCode}
+196 \{
+197     ((OpenGL *)RederingHandle->GetRenderHandle())->AddRefToBuffer(m_objectID, \textcolor{keyword}{this});
+198 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_aff2cb95ec753a26bd7930127125928f3_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_aff2cb95ec753a26bd7930127125928f3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!set\+Exit@{set\+Exit}}
+\index{set\+Exit@{set\+Exit}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{set\+Exit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::set\+Exit (
+\begin{DoxyParamCaption}
+\item[{bool}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_h_u_d_af30c1242917045b41e61d97a03874624}
+
+\begin{DoxyCode}
+119 \{Ex = e;\}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_af30c1242917045b41e61d97a03874624_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{H\+U\+D@{H\+U\+D}!set\+Manual@{set\+Manual}}
+\index{set\+Manual@{set\+Manual}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{set\+Manual}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::set\+Manual (
+\begin{DoxyParamCaption}
+\item[{bool}]{m}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_a59433e27919b22c1a7b33a811e749657}
+
+
+set\+Manual function 
+
+Sets the boolean is\+Manual to the param provided
+
+
+\begin{DoxyParams}{Parameters}
+{\em bool} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+201 \{
+202     isManual = m;
+203 \}
+\end{DoxyCode}
+\index{H\+U\+D@{H\+U\+D}!switch\+Manual@{switch\+Manual}}
+\index{switch\+Manual@{switch\+Manual}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{switch\+Manual}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::switch\+Manual (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_u_d_ae806604257d49201cdd060ff63d95b79}
+
+
+switch\+Manual function 
+
+swaps is\+Manual to true if false, or false if true
+
+
+\begin{DoxyParams}{Parameters}
+{\em nil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nil 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+211 \{
+212     isManual = !isManual;
+213 \}
+\end{DoxyCode}
+\index{H\+U\+D@{H\+U\+D}!turn\+Off\+Splash@{turn\+Off\+Splash}}
+\index{turn\+Off\+Splash@{turn\+Off\+Splash}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{turn\+Off\+Splash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} H\+U\+D\+::turn\+Off\+Splash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_h_u_d_a429b2533b08b5aef939c7fbb38aed4b5}
+
+\begin{DoxyCode}
+58     \{
+59         splash = \textcolor{keyword}{false};
+60     \}
+\end{DoxyCode}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d05/class_h_u_d_a429b2533b08b5aef939c7fbb38aed4b5_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\index{H\+U\+D@{H\+U\+D}!afforded@{afforded}}
+\index{afforded@{afforded}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{afforded}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ H\+U\+D\+::afforded\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a65d0661177f59bc773e244b7d0907846}
+\index{H\+U\+D@{H\+U\+D}!disp\+Emotion@{disp\+Emotion}}
+\index{disp\+Emotion@{disp\+Emotion}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{disp\+Emotion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf en\+Emotion}$\ast$ H\+U\+D\+::disp\+Emotion\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a10a9fa6dc0e22e66248f6854e55141cf}
+\index{H\+U\+D@{H\+U\+D}!Ex@{Ex}}
+\index{Ex@{Ex}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Ex}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+U\+D\+::\+Ex\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a11830d522e9fae871ae3f1367063758a}
+\index{H\+U\+D@{H\+U\+D}!Id\+Gen@{Id\+Gen}}
+\index{Id\+Gen@{Id\+Gen}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Id\+Gen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Id\+Generator}$\ast$ H\+U\+D\+::\+Id\+Gen\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a0e2accd008f6dce1b0b688e65672a946}
+
+
+pointer for the I\+Dgenerator 
+
+\index{H\+U\+D@{H\+U\+D}!is\+Manual@{is\+Manual}}
+\index{is\+Manual@{is\+Manual}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{is\+Manual}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+U\+D\+::is\+Manual\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a1c8b2dd4c0f02244925f52b1eabbd7c5}
+
+
+boolean for control of Manual dispaly 
+
+\index{H\+U\+D@{H\+U\+D}!m\+\_\+affordances@{m\+\_\+affordances}}
+\index{m\+\_\+affordances@{m\+\_\+affordances}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{m\+\_\+affordances}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Affordance}$>$ H\+U\+D\+::m\+\_\+affordances\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_af4d57e234dbc29f8de61dbbedde45f41}
+\index{H\+U\+D@{H\+U\+D}!m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}}
+\index{m\+\_\+object\+I\+D@{m\+\_\+object\+I\+D}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{m\+\_\+object\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int H\+U\+D\+::m\+\_\+object\+I\+D\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_aa4e685a8a9ac84c320a6736abc1c8647}
+
+
+I\+D int. 
+
+\index{H\+U\+D@{H\+U\+D}!needs@{needs}}
+\index{needs@{needs}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{needs}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf std\+::string}$>$ H\+U\+D\+::needs\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a4779ce6774a527386e346a0e2f5605c6}
+\index{H\+U\+D@{H\+U\+D}!npcid@{npcid}}
+\index{npcid@{npcid}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{npcid}]{\setlength{\rightskip}{0pt plus 5cm}int H\+U\+D\+::npcid\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a532e574e398f745f4b853fe7b7690503}
+\index{H\+U\+D@{H\+U\+D}!overlay\+Data@{overlay\+Data}}
+\index{overlay\+Data@{overlay\+Data}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{overlay\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Human\+Values}$\ast$ H\+U\+D\+::overlay\+Data\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a312564740b8cd96f9dcfc29cee56e907}
+\index{H\+U\+D@{H\+U\+D}!overlay\+Threshold@{overlay\+Threshold}}
+\index{overlay\+Threshold@{overlay\+Threshold}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{overlay\+Threshold}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Human\+Values}$\ast$ H\+U\+D\+::overlay\+Threshold\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a608e81e842a9c51b1901d468b7354156}
+\index{H\+U\+D@{H\+U\+D}!Redering\+Handle@{Redering\+Handle}}
+\index{Redering\+Handle@{Redering\+Handle}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Redering\+Handle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rendering\+Engine}$\ast$ H\+U\+D\+::\+Redering\+Handle\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a5084086fc10b9dff7a2e83ec0e91afd4}
+
+
+pointer for the Render Engine 
+
+\index{H\+U\+D@{H\+U\+D}!splash@{splash}}
+\index{splash@{splash}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{splash}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+U\+D\+::splash\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a9820c91e9e89b8e08fbff1d71b649e8b}
+\index{H\+U\+D@{H\+U\+D}!state\+Name@{state\+Name}}
+\index{state\+Name@{state\+Name}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{state\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf std\+::string} H\+U\+D\+::state\+Name\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a01d486b3488d6066abb9ebb8c0d9284d}
+\index{H\+U\+D@{H\+U\+D}!Trait\+Data@{Trait\+Data}}
+\index{Trait\+Data@{Trait\+Data}!H\+U\+D@{H\+U\+D}}
+\subsubsection[{Trait\+Data}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf st\+Trait}$>$ H\+U\+D\+::\+Trait\+Data\hspace{0.3cm}{\ttfamily [private]}}\label{class_h_u_d_a1be55b2a93b97376b5aea4c5759119f9}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf H\+U\+D.\+h}\item 
+E\+:/workdesk/\+Uni/\+I\+C\+T312/trunk/\+Game\+Engine/{\bf H\+U\+D.\+cpp}\end{DoxyCompactItemize}

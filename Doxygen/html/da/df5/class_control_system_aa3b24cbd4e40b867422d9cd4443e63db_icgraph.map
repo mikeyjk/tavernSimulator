@@ -1,0 +1,18 @@
+<map id="ControlSystem::Instance" name="ControlSystem::Instance">
+<area shape="rect" id="node2" href="$d7/da7/class_character.html#a7870aec530f1d006e0f9c1335e9e4495" title="Chracter Constructor. " alt="" coords="245,5,388,32"/>
+<area shape="rect" id="node3" href="$da/da9/class_game_engine.html#a64c430f74d72e2745646fdbffbd97930" title="GameEngine Constructor. " alt="" coords="227,56,407,83"/>
+<area shape="rect" id="node4" href="$df/dc8/_menu_system_8cpp.html#a41de8150eff044a237990c271d57ea27" title="resume" alt="" coords="284,208,349,235"/>
+<area shape="rect" id="node8" href="$df/dc8/_menu_system_8cpp.html#aa1fd24f4f2561736e211d8bd8d22b6f2" title="showexit" alt="" coords="280,157,353,184"/>
+<area shape="rect" id="node9" href="$d0/d2a/class_n_p_c.html#ac1476c6a002620b58490693e901aa51c" title="NPC::giveHudData" alt="" coords="687,284,816,311"/>
+<area shape="rect" id="node10" href="$d8/d24/class_open_g_l.html#a697c5b98567a0e56c5ca1e28baad1dba" title="This function will be called when OpenGl draw frame. " alt="" coords="263,107,370,133"/>
+<area shape="rect" id="node12" href="$d1/da8/class_personality.html#afee72a4d6c673003bcc450cb13545bef" title="giveHudData function " alt="" coords="233,309,400,336"/>
+<area shape="rect" id="node14" href="$d1/da8/class_personality.html#adaf5627e1a67b5d93c3281fdf957bd0b" title="giveHudMoreData function " alt="" coords="219,360,415,387"/>
+<area shape="rect" id="node5" href="$df/dcb/class_menu_system.html#ab249368d82b06724047d8b7951588f8a" title="MenuInit function. " alt="" coords="465,157,621,184"/>
+<area shape="rect" id="node6" href="$da/da9/class_game_engine.html#a15c742a04d8dc688d69a2106b58f99c6" title="Get Redering engine. " alt="" coords="686,132,817,159"/>
+<area shape="rect" id="node7" href="$df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="903,132,953,159"/>
+<area shape="rect" id="node11" href="$d8/d24/class_open_g_l.html#a082a48312c8032be282b49a9d6d7b5cc" title="Initialization OpenGL. " alt="" coords="496,107,591,133"/>
+<area shape="rect" id="node13" href="$d3/dde/class_brain.html#a32b4574600c3e13f8501c6e64caa5c00" title="giveHudData function " alt="" coords="477,309,609,336"/>
+<area shape="rect" id="node15" href="$d3/dde/class_brain.html#a6d9f401d3f51b3636b04d3a4c128357b" title="giveHudModeData function " alt="" coords="463,360,624,387"/>
+<area shape="rect" id="node16" href="$d0/d2a/class_n_p_c.html#a972a07e56116037b2325de72ecc20e45" title="NPC::giveHudMoreData" alt="" coords="672,360,831,387"/>
+<area shape="rect" id="node17" href="$d0/d2a/class_n_p_c.html#a49d73fb1d0b5fc4dab086a15a9fca058" title="Update. " alt="" coords="879,360,977,387"/>
+</map>
